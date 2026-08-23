@@ -3,145 +3,258 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Services — Content • Design • Research</title>
+<title>AI Services — Content, Design, Research, Automation</title>
+<meta name="description" content="AI-powered content writing, web design, video scripts, research, and automation services. Pay per project. UPI, Card, Netbanking. Zero budget, maximum results.">
+<meta name="keywords" content="AI services, content writing India, web design, SEO articles, video scripts, AI automation, Hindi content, Razorpay payment">
+<meta name="author" content="AI Services">
+<meta property="og:title" content="AI Services — Content, Design, Research, Automation">
+<meta property="og:description" content="AI-powered services delivered automatically. Pay only when satisfied.">
+<meta property="og:type" content="website">
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7976263974924090" crossorigin="anonymous"></script>
 <style>
-*{font-family:'Inter',sans-serif}
-body{background:#0f0f10;color:#fff}
-.hero-bg{background:radial-gradient(ellipse at top,#1a1a2e 0%,#0f0f10 70%)}
-.card{background:#1a1a2e;border:1px solid #2a2a3e;transition:all .3s}
-.card:hover{border-color:#6366f1;transform:translateY(-4px);box-shadow:0 12px 40px rgba(99,102,241,.2)}
-.glow{box-shadow:0 0 30px rgba(99,102,241,.3)}
-.btn-primary{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);transition:all .3s}
-.btn-primary:hover{box-shadow:0 8px 30px rgba(99,102,241,.5);transform:translateY(-2px)}
-.fade-in{animation:fadeIn .8s ease-out}
-@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+*{font-family:'Inter',sans-serif;scroll-behavior:smooth}
+.font-display{font-family:'Space Grotesk',sans-serif}
+body{background:#08080a;color:#fff;overflow-x:hidden}
+.glow-bg{background:radial-gradient(ellipse 80% 50% at 50% -20%,rgba(99,102,241,.15),transparent)}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(20px);transition:all .4s cubic-bezier(.4,0,.2,1)}
+.card:hover{border-color:rgba(99,102,241,.4);transform:translateY(-6px);box-shadow:0 20px 60px rgba(99,102,241,.15);background:rgba(99,102,241,.05)}
+.btn-primary{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#d946ef 100%);transition:all .3s;position:relative;overflow:hidden}
+.btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transition:left .6s}
+.btn-primary:hover::before{left:100%}
+.btn-primary:hover{box-shadow:0 10px 40px rgba(99,102,241,.5);transform:translateY(-2px)}
+.gradient-text{background:linear-gradient(135deg,#818cf8 0%,#c084fc 50%,#e879f9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.fade-in{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.4,0,.2,1)}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.float-anim{animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+.pulse-dot{animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+.nav-blur{background:rgba(8,8,10,.7);backdrop-filter:blur(20px) saturate(180%)}
+.ad-container{min-height:90px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:16px;margin:24px 0}
+.marquee{display:flex;animation:marquee 30s linear infinite;gap:48px}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.stat-num{font-variant-numeric:tabular-nums}
 </style>
 </head>
-<body class="hero-bg min-h-screen">
-<nav class="fixed top-0 w-full bg-black/50 backdrop-blur-xl border-b border-white/5 z-50">
-<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center font-bold text-sm">AI</div>
-<span class="font-bold text-lg">AI Services</span>
+<body>
+<nav class="fixed top-0 w-full nav-blur border-b border-white/5 z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 flex items-center justify-center font-bold text-sm float-anim">AI</div>
+<span class="font-display font-bold text-lg">AI Services</span>
 </div>
-<div class="hidden md:flex gap-6 text-sm text-gray-400">
+<div class="hidden md:flex gap-8 text-sm text-gray-400">
 <a href="#services" class="hover:text-white transition">Services</a>
 <a href="#pricing" class="hover:text-white transition">Pricing</a>
+<a href="#tools" class="hover:text-white transition">AI Tools</a>
+<a href="#blog" class="hover:text-white transition">Blog</a>
 <a href="#portfolio" class="hover:text-white transition">Portfolio</a>
 <a href="#contact" class="hover:text-white transition">Contact</a>
 </div>
-<a href="#pricing" class="btn-primary px-5 py-2 rounded-full text-sm font-semibold">Get Started</a>
+<a href="#pricing" class="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold">Get Started</a>
 </div>
 </nav>
-<section class="pt-32 pb-20 px-6">
-<div class="max-w-4xl mx-auto text-center fade-in">
-<div class="inline-block px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">⚡ AI-Powered • Zero Budget • 24/7 Auto-Pilot</div>
-<h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Your Ideas,<br><span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Delivered Automatically</span></h1>
-<p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">Content writing, web design, AI research, video scripts — all generated by AI, delivered to your inbox. Pay only when satisfied.</p>
-<div class="flex gap-4 justify-center flex-wrap">
-<a href="#pricing" class="btn-primary px-8 py-4 rounded-full font-bold text-lg">Start Now — ₹0</a>
-<a href="#services" class="px-8 py-4 rounded-full border border-white/20 font-bold text-lg hover:bg-white/5 transition">See Services</a>
+<section class="glow-bg pt-36 pb-24 px-6 relative overflow-hidden">
+<div class="max-w-5xl mx-auto text-center relative z-10">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-8 fade-in">
+<span class="w-2 h-2 rounded-full bg-green-400 pulse-dot"></span>
+AI-Powered, Zero Budget, 24/7 Auto-Pilot, Online Now
 </div>
-<div class="mt-12 flex gap-8 justify-center text-gray-500 text-sm">
-<div>✓ No upfront payment</div>
-<div>✓ Pay after delivery</div>
-<div>✓ UPI / Card / Netbanking</div>
+<h1 class="text-5xl md:text-8xl font-display font-extrabold mb-8 leading-[1.05] fade-in">
+Your Ideas,<br>
+<span class="gradient-text">Delivered Automatically</span>
+</h1>
+<p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed fade-in">
+Content writing, web design, AI research, video scripts — all generated by AI, delivered to your inbox. Pay only when satisfied.
+</p>
+<div class="flex gap-4 justify-center flex-wrap fade-in">
+<a href="#pricing" class="btn-primary px-10 py-5 rounded-full font-bold text-lg">Start Now — Rs 0</a>
+<a href="#services" class="px-10 py-5 rounded-full border border-white/15 font-bold text-lg hover:bg-white/5 transition">Explore Services</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto fade-in">
+<div class="text-center"><div class="text-4xl font-display font-bold gradient-text stat-num">424+</div><div class="text-sm text-gray-500 mt-1">AI APIs</div></div>
+<div class="text-center"><div class="text-4xl font-display font-bold gradient-text stat-num">15</div><div class="text-sm text-gray-500 mt-1">Services Connected</div></div>
+<div class="text-center"><div class="text-4xl font-display font-bold gradient-text stat-num">24h</div><div class="text-sm text-gray-500 mt-1">Fast Delivery</div></div>
+<div class="text-center"><div class="text-4xl font-display font-bold gradient-text stat-num">100%</div><div class="text-sm text-gray-500 mt-1">Original Content</div></div>
 </div>
 </div>
 </section>
-<section id="services" class="py-20 px-6">
-<div class="max-w-6xl mx-auto">
-<h2 class="text-4xl font-bold text-center mb-4">What We Do</h2>
-<p class="text-gray-400 text-center mb-12">AI-powered services, delivered fast, priced for India</p>
+<div class="max-w-5xl mx-auto px-6">
+<div class="ad-container">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="2842044467" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<section class="py-8 overflow-hidden border-y border-white/5">
+<div class="marquee">
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Groq AI</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Google Cloud</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Razorpay</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">GitHub</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Canva</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Hugging Face</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Slack</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Firecrawl</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Groq AI</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Google Cloud</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Razorpay</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">GitHub</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Canva</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Hugging Face</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Slack</span>
+<span class="text-gray-600 font-display text-lg whitespace-nowrap">Firecrawl</span>
+</div>
+</section>
+<section id="services" class="py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-5xl font-display font-bold mb-4">What We Do</h2>
+<p class="text-gray-400 text-lg">AI-powered services, delivered fast, priced for India</p>
+</div>
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="card rounded-2xl p-8"><div class="text-4xl mb-4">📝</div><h3 class="text-xl font-bold mb-2">Content Writing</h3><p class="text-gray-400 text-sm mb-4">SEO articles, blog posts, website copy, social media content. Hindi and English.</p><div class="text-indigo-400 font-bold">From ₹499</div></div>
-<div class="card rounded-2xl p-8"><div class="text-4xl mb-4">🎨</div><h3 class="text-xl font-bold mb-2">Logo and Design</h3><p class="text-gray-400 text-sm mb-4">Logos, social media posts, thumbnails, flyers. Professional quality.</p><div class="text-indigo-400 font-bold">From ₹299</div></div>
-<div class="card rounded-2xl p-8"><div class="text-4xl mb-4">💻</div><h3 class="text-xl font-bold mb-2">Website Build</h3><p class="text-gray-400 text-sm mb-4">Landing pages, portfolio sites, business websites. HTML/CSS/JS.</p><div class="text-indigo-400 font-bold">From ₹999</div></div>
-<div class="card rounded-2xl p-8"><div class="text-4xl mb-4">📊</div><h3 class="text-xl font-bold mb-2">Data Research</h3><p class="text-gray-400 text-sm mb-4">Market research, competitor analysis, data scraping, reports.</p><div class="text-indigo-400 font-bold">From ₹799</div></div>
-<div class="card rounded-2xl p-8"><div class="text-4xl mb-4">🎬</div><h3 class="text-xl font-bold mb-2">Video Scripts</h3><p class="text-gray-400 text-sm mb-4">YouTube scripts, ad scripts, voiceover scripts. Engaging content.</p><div class="text-indigo-400 font-bold">From ₹399</div></div>
-<div class="card rounded-2xl p-8"><div class="text-4xl mb-4">🤖</div><h3 class="text-xl font-bold mb-2">AI Consultation</h3><p class="text-gray-400 text-sm mb-4">AI strategy, tool selection, automation setup. Google Meet session.</p><div class="text-indigo-400 font-bold">From ₹499</div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-5"><span class="text-3xl">📝</span></div><h3 class="text-xl font-bold mb-2">Content Writing</h3><p class="text-gray-400 text-sm mb-4">SEO articles, blog posts, website copy, social media content. Hindi and English.</p><div class="flex justify-between items-center"><span class="text-indigo-400 font-bold">From Rs 499</span><span class="text-xs text-gray-500">24hr delivery</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-fuchsia-500/10 flex items-center justify-center mb-5"><span class="text-3xl">🎨</span></div><h3 class="text-xl font-bold mb-2">Logo and Design</h3><p class="text-gray-400 text-sm mb-4">Logos, social media posts, thumbnails, flyers. Professional quality.</p><div class="flex justify-between items-center"><span class="text-fuchsia-400 font-bold">From Rs 299</span><span class="text-xs text-gray-500">24hr delivery</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-5"><span class="text-3xl">💻</span></div><h3 class="text-xl font-bold mb-2">Website Build</h3><p class="text-gray-400 text-sm mb-4">Landing pages, portfolio sites, business websites. HTML/CSS/JS.</p><div class="flex justify-between items-center"><span class="text-purple-400 font-bold">From Rs 999</span><span class="text-xs text-gray-500">48hr delivery</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-5"><span class="text-3xl">📊</span></div><h3 class="text-xl font-bold mb-2">Data Research</h3><p class="text-gray-400 text-sm mb-4">Market research, competitor analysis, data scraping, reports.</p><div class="flex justify-between items-center"><span class="text-blue-400 font-bold">From Rs 799</span><span class="text-xs text-gray-500">48hr delivery</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-5"><span class="text-3xl">🎬</span></div><h3 class="text-xl font-bold mb-2">Video Scripts</h3><p class="text-gray-400 text-sm mb-4">YouTube scripts, ad scripts, voiceover scripts. Engaging content.</p><div class="flex justify-between items-center"><span class="text-orange-400 font-bold">From Rs 399</span><span class="text-xs text-gray-500">24hr delivery</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-5"><span class="text-3xl">🤖</span></div><h3 class="text-xl font-bold mb-2">AI Consultation</h3><p class="text-gray-400 text-sm mb-4">AI strategy, tool selection, automation setup. Google Meet session.</p><div class="flex justify-between items-center"><span class="text-green-400 font-bold">From Rs 499</span><span class="text-xs text-gray-500">1hr session</span></div></div>
 </div>
 </div>
 </section>
-<section id="pricing" class="py-20 px-6">
-<div class="max-w-5xl mx-auto">
-<h2 class="text-4xl font-bold text-center mb-4">Simple Pricing</h2>
-<p class="text-gray-400 text-center mb-12">Pay per project. No subscriptions. UPI / Card / Netbanking.</p>
-<div class="grid md:grid-cols-3 gap-6">
-<div class="card rounded-2xl p-8">
+<div class="max-w-5xl mx-auto px-6">
+<div class="ad-container">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="5808108837" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<section id="tools" class="py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-5xl font-display font-bold mb-4">AI Tools We Use</h2>
+<p class="text-gray-400 text-lg">424+ free APIs powering our services</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="card rounded-2xl p-6 fade-in"><div class="text-2xl mb-3">🧠</div><h4 class="font-bold mb-1">AI / LLM (40+)</h4><p class="text-xs text-gray-500">Groq, Gemini, DeepSeek, Claude, GPT, Puter.js</p></div>
+<div class="card rounded-2xl p-6 fade-in"><div class="text-2xl mb-3">🎤</div><h4 class="font-bold mb-1">Speech (20+)</h4><p class="text-xs text-gray-500">Whisper, ElevenLabs, Sarvam AI, Edge-TTS</p></div>
+<div class="card rounded-2xl p-6 fade-in"><div class="text-2xl mb-3">🖼️</div><h4 class="font-bold mb-1">Image (13+)</h4><p class="text-xs text-gray-500">FLUX, Leonardo, Pollinations, Stable Diffusion</p></div>
+<div class="card rounded-2xl p-6 fade-in"><div class="text-2xl mb-3">🎥</div><h4 class="font-bold mb-1">Video (13+)</h4><p class="text-xs text-gray-500">Runway, D-ID, HeyGen, Pika, Luma</p></div>
+<div class="card rounded-2xl p-6 fade-in"><div class="text-2xl mb-3">👁️</div><h4 class="font-bold mb-1">Vision (16+)</h4><p class="text-xs text-gray-500">Gemini Vision, Roboflow, Tesseract.js</p></div>
+<div class="card rounded-2xl p-6 fade-in"><div class="text-2xl mb-3">🌤️</div><h4 class="font-bold mb-1">Weather (14+)</h4><p class="text-xs text-gray-500">Open-Meteo (no key), NOAA, NASA</p></div>
+<div class="card rounded-2xl p-6 fade-in"><div class="text-2xl mb-3">📰</div><h4 class="font-bold mb-1">News (41+)</h4><p class="text-xs text-gray-500">NewsAPI, RSS, Hacker News, GNews</p></div>
+<div class="card rounded-2xl p-6 fade-in"><div class="text-2xl mb-3">💰</div><h4 class="font-bold mb-1">Finance (8+)</h4><p class="text-xs text-gray-500">CoinGecko, Binance, RBI, Alpha Vantage</p></div>
+</div>
+</div>
+</section>
+<section id="pricing" class="py-24 px-6">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-5xl font-display font-bold mb-4">Simple Pricing</h2>
+<p class="text-gray-400 text-lg">Pay per project. No subscriptions. UPI / Card / Netbanking.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="card rounded-3xl p-8 fade-in">
 <h3 class="text-2xl font-bold mb-2">Starter</h3>
 <p class="text-gray-400 text-sm mb-6">Perfect for one-time needs</p>
-<div class="text-4xl font-extrabold mb-1">₹499</div>
-<p class="text-gray-500 text-sm mb-6">per project</p>
-<ul class="space-y-3 text-sm text-gray-300">
-<li>✓ 1 Article (1000 words)</li>
-<li>✓ Or 1 Logo Design</li>
-<li>✓ Or 1 Video Script</li>
-<li>✓ Hindi / English</li>
-<li>✓ 24-hour delivery</li>
+<div class="text-5xl font-display font-extrabold mb-1">Rs 499</div>
+<p class="text-gray-500 text-sm mb-8">per project</p>
+<ul class="space-y-3 text-sm text-gray-300 mb-8">
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 Article (1000 words)</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> Or 1 Logo Design</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> Or 1 Video Script</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> Hindi / English</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 24-hour delivery</li>
 </ul>
-<button onclick="payNow(49900,'Starter Package')" class="btn-primary w-full py-3 rounded-xl font-bold mt-8">Pay ₹499</button>
+<button onclick="payNow(49900,'Starter Package')" class="btn-primary w-full py-4 rounded-2xl font-bold">Pay Rs 499</button>
 </div>
-<div class="card rounded-2xl p-8 glow relative">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-xs font-bold px-4 py-1 rounded-full">POPULAR</div>
+<div class="card rounded-3xl p-8 fade-in relative" style="border-color:rgba(99,102,241,.3);box-shadow:0 0 60px rgba(99,102,241,.1)">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white text-xs font-bold px-6 py-1.5 rounded-full">MOST POPULAR</div>
 <h3 class="text-2xl font-bold mb-2">Professional</h3>
 <p class="text-gray-400 text-sm mb-6">For growing businesses</p>
-<div class="text-4xl font-extrabold mb-1">₹1,499</div>
-<p class="text-gray-500 text-sm mb-6">per project</p>
-<ul class="space-y-3 text-sm text-gray-300">
-<li>✓ 3 Articles (1000 words each)</li>
-<li>✓ 2 Social Media Designs</li>
-<li>✓ 1 Landing Page (HTML)</li>
-<li>✓ SEO optimized</li>
-<li>✓ 48-hour delivery</li>
-<li>✓ 2 revisions included</li>
+<div class="text-5xl font-display font-extrabold mb-1">Rs 1,499</div>
+<p class="text-gray-500 text-sm mb-8">per project</p>
+<ul class="space-y-3 text-sm text-gray-300 mb-8">
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 3 Articles (1000 words each)</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 2 Social Media Designs</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 Landing Page (HTML)</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> SEO optimized</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 48-hour delivery</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 2 revisions included</li>
 </ul>
-<button onclick="payNow(149900,'Professional Package')" class="btn-primary w-full py-3 rounded-xl font-bold mt-8">Pay ₹1,499</button>
+<button onclick="payNow(149900,'Professional Package')" class="btn-primary w-full py-4 rounded-2xl font-bold">Pay Rs 1,499</button>
 </div>
-<div class="card rounded-2xl p-8">
+<div class="card rounded-3xl p-8 fade-in">
 <h3 class="text-2xl font-bold mb-2">Business</h3>
 <p class="text-gray-400 text-sm mb-6">Complete solution</p>
-<div class="text-4xl font-extrabold mb-1">₹4,999</div>
-<p class="text-gray-500 text-sm mb-6">per project</p>
-<ul class="space-y-3 text-sm text-gray-300">
-<li>✓ 10 Articles</li>
-<li>✓ 5 Social Media Designs</li>
-<li>✓ 1 Full Website (5 pages)</li>
-<li>✓ 1 Video Script</li>
-<li>✓ 1 Research Report</li>
-<li>✓ 72-hour delivery</li>
-<li>✓ Unlimited revisions</li>
+<div class="text-5xl font-display font-extrabold mb-1">Rs 4,999</div>
+<p class="text-gray-500 text-sm mb-8">per project</p>
+<ul class="space-y-3 text-sm text-gray-300 mb-8">
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 10 Articles</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 5 Social Media Designs</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 Full Website (5 pages)</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 Video Script</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 Research Report</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 72-hour delivery</li>
+<li class="flex items-center gap-2"><span class="text-green-400">✓</span> Unlimited revisions</li>
 </ul>
-<button onclick="payNow(499900,'Business Package')" class="btn-primary w-full py-3 rounded-xl font-bold mt-8">Pay ₹4,999</button>
+<button onclick="payNow(499900,'Business Package')" class="btn-primary w-full py-4 rounded-2xl font-bold">Pay Rs 4,999</button>
 </div>
 </div>
 </div>
 </section>
-<section id="portfolio" class="py-20 px-6">
-<div class="max-w-4xl mx-auto text-center">
-<h2 class="text-4xl font-bold mb-4">Why Choose Us?</h2>
-<div class="grid md:grid-cols-4 gap-6 mt-12">
-<div class="card rounded-2xl p-6"><div class="text-3xl font-bold text-indigo-400">AI</div><div class="text-sm text-gray-400 mt-2">Powered</div></div>
-<div class="card rounded-2xl p-6"><div class="text-3xl font-bold text-indigo-400">24h</div><div class="text-sm text-gray-400 mt-2">Fast Delivery</div></div>
-<div class="card rounded-2xl p-6"><div class="text-3xl font-bold text-indigo-400">100%</div><div class="text-sm text-gray-400 mt-2">Original Content</div></div>
-<div class="card rounded-2xl p-6"><div class="text-3xl font-bold text-indigo-400">₹0</div><div class="text-sm text-gray-400 mt-2">Upfront Cost</div></div>
+<div class="max-w-5xl mx-auto px-6">
+<div class="ad-container">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="8822119130" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<section id="blog" class="py-24 px-6">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-5xl font-display font-bold mb-4">Latest from Blog</h2>
+<p class="text-gray-400 text-lg">AI insights, tips, and trends</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="card rounded-3xl p-8 fade-in"><div class="text-xs text-indigo-400 mb-2 font-medium">AI TOOLS</div><h4 class="font-bold text-lg mb-3">10 Free AI Tools Every Indian Business Should Use in 2026</h4><p class="text-gray-400 text-sm">Discover free AI tools that can automate your business — from content writing to customer support...</p><div class="mt-4 text-xs text-gray-500">5 min read</div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="text-xs text-fuchsia-400 mb-2 font-medium">CONTENT</div><h4 class="font-bold text-lg mb-3">How AI is Changing Content Creation in India</h4><p class="text-gray-400 text-sm">From Hindi blog posts to YouTube scripts — AI is making content creation 10x faster and cheaper...</p><div class="mt-4 text-xs text-gray-500">7 min read</div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="text-xs text-green-400 mb-2 font-medium">AUTOMATION</div><h4 class="font-bold text-lg mb-3">Zero-Budget Automation: A Complete Guide</h4><p class="text-gray-400 text-sm">Learn how to automate your entire workflow using free tools — GitHub, Cloudflare, Supabase...</p><div class="mt-4 text-xs text-gray-500">10 min read</div></div>
 </div>
 </div>
 </section>
-<section id="contact" class="py-20 px-6 border-t border-white/5">
-<div class="max-w-2xl mx-auto text-center">
-<h2 class="text-4xl font-bold mb-4">Ready to Start?</h2>
-<p class="text-gray-400 mb-8">Choose a package above and pay securely via Razorpay. Your project starts immediately after payment.</p>
-<div class="flex gap-4 justify-center flex-wrap">
-<a href="#pricing" class="btn-primary px-8 py-4 rounded-full font-bold">View Pricing</a>
-<a href="mailto:hiranyajyotidas1@gmail.com" class="px-8 py-4 rounded-full border border-white/20 font-bold hover:bg-white/5 transition">Email Us</a>
+<section id="portfolio" class="py-24 px-6">
+<div class="max-w-5xl mx-auto text-center fade-in">
+<h2 class="text-5xl font-display font-bold mb-4">Why Choose Us?</h2>
+<div class="grid md:grid-cols-4 gap-6 mt-16">
+<div class="card rounded-3xl p-8"><div class="text-4xl font-display font-bold gradient-text">AI</div><div class="text-sm text-gray-400 mt-3">Powered</div></div>
+<div class="card rounded-3xl p-8"><div class="text-4xl font-display font-bold gradient-text">24h</div><div class="text-sm text-gray-400 mt-3">Fast Delivery</div></div>
+<div class="card rounded-3xl p-8"><div class="text-4xl font-display font-bold gradient-text">100%</div><div class="text-sm text-gray-400 mt-3">Original Content</div></div>
+<div class="card rounded-3xl p-8"><div class="text-4xl font-display font-bold gradient-text">Rs 0</div><div class="text-sm text-gray-400 mt-3">Upfront Cost</div></div>
 </div>
-<div class="mt-12 text-gray-600 text-sm">
-<p>Payments secured by Razorpay • UPI • Cards • Netbanking</p>
-<p>Email: hiranyajyotidas1@gmail.com | hello.omnicraft@gmail.com</p>
-<p style="margin-top:8px;font-size:12px;color:#444">Built with AI • Deployed on GitHub Pages • Powered by Groq</p>
+</div>
+</section>
+<div class="max-w-5xl mx-auto px-6">
+<div class="ad-container">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="1135200803" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<section id="contact" class="py-24 px-6 border-t border-white/5">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-5xl font-display font-bold mb-4 fade-in">Ready to Start?</h2>
+<p class="text-gray-400 mb-10 text-lg fade-in">Choose a package above and pay securely via Razorpay. Your project starts immediately after payment.</p>
+<div class="flex gap-4 justify-center flex-wrap fade-in">
+<a href="#pricing" class="btn-primary px-10 py-5 rounded-full font-bold text-lg">View Pricing</a>
+<a href="mailto:hiranyajyotidas1@gmail.com" class="px-10 py-5 rounded-full border border-white/15 font-bold text-lg hover:bg-white/5 transition">Email Us</a>
+</div>
+<div class="mt-16 grid md:grid-cols-3 gap-8 text-left">
+<div><h4 class="font-bold text-sm mb-3 text-gray-300">Services</h4><ul class="space-y-2 text-xs text-gray-500"><li>Content Writing</li><li>Logo and Design</li><li>Website Build</li><li>Data Research</li><li>Video Scripts</li><li>AI Consultation</li></ul></div>
+<div><h4 class="font-bold text-sm mb-3 text-gray-300">AI Tools</h4><ul class="space-y-2 text-xs text-gray-500"><li>Groq AI (Free)</li><li>Google Gemini (Free)</li><li>Hugging Face</li><li>Canva</li><li>Firecrawl</li><li>424+ APIs</li></ul></div>
+<div><h4 class="font-bold text-sm mb-3 text-gray-300">Contact</h4><ul class="space-y-2 text-xs text-gray-500"><li>hiranyajyotidas1@gmail.com</li><li>hello.omnicraft@gmail.com</li><li>UPI / Card / Netbanking</li><li>Razorpay Secured</li><li>GitHub Pages Hosted</li><li>24/7 Auto-Pilot</li></ul></div>
+</div>
+<div class="mt-12 text-gray-600 text-xs">
+<p>Built with AI • Deployed on GitHub Pages • Powered by Groq • AdSense Integrated</p>
 </div>
 </div>
 </section>
@@ -155,7 +268,7 @@ function payNow(amountPaise, description) {
         name: "AI Services",
         description: description,
         handler: function(response) {
-            alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+            alert("Payment Successful! ID: " + response.razorpay_payment_id);
         },
         prefill: { email: "", contact: "" },
         theme: { color: "#6366f1" },
@@ -165,6 +278,11 @@ function payNow(amountPaise, description) {
     rzp.on("payment.failed", function(resp) { alert("Payment failed: " + resp.error.description); });
     rzp.open();
 }
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+if (window.lucide) lucide.createIcons();
 </script>
 </body>
 </html>
