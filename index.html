@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Studio — Content, Design, Research, Automation for Everyone</title>
-<meta name="description" content="AI-powered content writing, web design, video scripts, and research services. Sign up free. Pay per project. Global delivery.">
-<meta name="keywords" content="AI services, content writing, web design, SEO articles, video scripts, AI automation">
-<meta property="og:title" content="AI Studio — AI Services">
-<meta property="og:description" content="AI-powered services for everyone. Sign up free.">
+<title>AI Studio — AI Services for Everyone | Content, Design, Websites, Automation</title>
+<meta name="description" content="AI-powered content writing, web design, video scripts, and automation services. Plans from Rs 29. Sign up free. 24hr delivery. Trusted worldwide.">
+<meta name="keywords" content="AI services, content writing, web design, SEO, video scripts, AI automation, affordable AI services India">
+<meta property="og:title" content="AI Studio — AI Services for Everyone">
+<meta property="og:description" content="Content, Design, Websites, Automation — from Rs 29. Sign up free. 24hr delivery.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://hiranyajyotidas1-ops.github.io/ai-services/">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7976263974924090" crossorigin="anonymous"></script>
 <style>
 *{font-family:'Inter',sans-serif;scroll-behavior:smooth}
 .font-display{font-family:'Space Grotesk',sans-serif}
-body{background:#08080a;color:#fff;overflow-x:hidden}
+body{background:#07070a;color:#fff;overflow-x:hidden}
 .glow-bg{background:radial-gradient(ellipse 80% 50% at 50% -20%,rgba(99,102,241,.15),transparent)}
 .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(20px);transition:all .4s cubic-bezier(.4,0,.2,1)}
 .card:hover{border-color:rgba(99,102,241,.4);transform:translateY(-6px);box-shadow:0 20px 60px rgba(99,102,241,.15);background:rgba(99,102,241,.05)}
@@ -23,6 +24,8 @@ body{background:#08080a;color:#fff;overflow-x:hidden}
 .btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transition:left .6s}
 .btn-primary:hover::before{left:100%}
 .btn-primary:hover{box-shadow:0 10px 40px rgba(99,102,241,.5);transform:translateY(-2px)}
+.btn-secondary{border:1px solid rgba(255,255,255,.15);transition:all .3s}
+.btn-secondary:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.3);transform:translateY(-2px)}
 .gradient-text{background:linear-gradient(135deg,#818cf8 0%,#c084fc 50%,#e879f9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .fade-in{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.4,0,.2,1)}
 .fade-in.visible{opacity:1;transform:translateY(0)}
@@ -30,14 +33,27 @@ body{background:#08080a;color:#fff;overflow-x:hidden}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
 .pulse-dot{animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
-.nav-blur{background:rgba(8,8,10,.7);backdrop-filter:blur(20px) saturate(180%)}
+.nav-blur{background:rgba(7,7,10,.8);backdrop-filter:blur(20px) saturate(180%)}
 .ad-container{min-height:90px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:16px;margin:24px 0}
 .input-field{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 18px;color:#fff;width:100%;transition:all .3s;font-size:15px}
 .input-field:focus{outline:none;border-color:rgba(99,102,241,.5);background:rgba(99,102,241,.05)}
 .input-field::placeholder{color:rgba(255,255,255,.3)}
-.modal-bg{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:100;display:none;align-items:center;justify-content:center}
+.modal-bg{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);z-index:100;display:none;align-items:center;justify-content:center}
 .modal-bg.active{display:flex}
 .modal-content{background:#12121a;border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:40px;max-width:480px;width:90%;max-height:90vh;overflow-y:auto}
+.toggle-btn{transition:all .3s}
+.toggle-btn.active{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff}
+.price-anim{transition:all .4s cubic-bezier(.4,0,.2,1)}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.08);cursor:pointer}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-answer{max-height:300px}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-chevron{transition:transform .3s}
+.trust-bar{animation:marquee 30s linear infinite}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.strike{text-decoration:line-through;text-decoration-color:rgba(239,68,68,.6);text-decoration-thickness:2px}
+.badge-popular{background:linear-gradient(135deg,#6366f1,#d946ef);color:#fff;font-size:11px;font-weight:700;padding:6px 16px;border-radius:999px;position:absolute;top:-14px;left:50%;transform:translateX(-50%);white-space:nowrap;box-shadow:0 4px 20px rgba(99,102,241,.4)}
+.feature-check{width:20px;height:20px;border-radius:50%;background:rgba(34,197,94,.15);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
 </style>
 </head>
 <body>
@@ -50,43 +66,60 @@ body{background:#08080a;color:#fff;overflow-x:hidden}
 <div class="hidden md:flex gap-8 text-sm text-gray-400">
 <a href="#services" class="hover:text-white transition">Services</a>
 <a href="#pricing" class="hover:text-white transition">Pricing</a>
+<a href="#compare" class="hover:text-white transition">Compare</a>
+<a href="#faq" class="hover:text-white transition">FAQ</a>
 <a href="#blog" class="hover:text-white transition">Blog</a>
-<a href="#contact" class="hover:text-white transition">Contact</a>
 </div>
-<button onclick="openSignup()" class="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold">Sign Up Free</button>
+<div class="flex items-center gap-3">
+<a href="#" onclick="openLogin();return false" class="text-sm text-gray-400 hover:text-white transition hidden sm:block">Login</a>
+<button onclick="openSignup()" class="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold">Start Free</button>
+</div>
 </div>
 </nav>
-<section class="glow-bg pt-36 pb-24 px-6 relative overflow-hidden">
+<section class="glow-bg pt-36 pb-20 px-6 relative overflow-hidden">
 <div class="max-w-5xl mx-auto text-center relative z-10">
 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-8 fade-in">
 <span class="w-2 h-2 rounded-full bg-green-400 pulse-dot"></span>
 Trusted Worldwide • 424+ AI APIs • 24/7 Auto-Pilot
 </div>
-<h1 class="text-5xl md:text-8xl font-display font-extrabold mb-8 leading-[1.05] fade-in">
-AI Services<br>
-<span class="gradient-text">for Everyone</span>
-</h1>
-<p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed fade-in">
-Content writing, web design, video scripts, research, and automation — powered by AI, built for everyone. Sign up free, pay per project.
-</p>
+<h1 class="text-5xl md:text-8xl font-display font-extrabold mb-8 leading-[1.05] fade-in">AI Services<br><span class="gradient-text">for Everyone</span></h1>
+<p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed fade-in">Content writing, web design, video scripts, research, and automation — powered by AI. Plans from <span class="text-white font-semibold">Rs 29</span>. Sign up free. 24-hour delivery.</p>
 <div class="flex gap-4 justify-center flex-wrap fade-in">
-<button onclick="openSignup()" class="btn-primary px-10 py-5 rounded-full font-bold text-lg">Sign Up Free</button>
-<a href="#pricing" class="px-10 py-5 rounded-full border border-white/15 font-bold text-lg hover:bg-white/5 transition">View Pricing</a>
+<button onclick="openSignup()" class="btn-primary px-10 py-5 rounded-full font-bold text-lg">Start Free — Sign Up</button>
+<a href="#pricing" class="btn-secondary px-10 py-5 rounded-full font-bold text-lg">View Pricing</a>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto fade-in">
-<div class="text-center"><div class="text-4xl font-display font-bold gradient-text">424+</div><div class="text-sm text-gray-500 mt-1">AI APIs</div></div>
-<div class="text-center"><div class="text-4xl font-display font-bold gradient-text">195</div><div class="text-sm text-gray-500 mt-1">Countries</div></div>
-<div class="text-center"><div class="text-4xl font-display font-bold gradient-text">24h</div><div class="text-sm text-gray-500 mt-1">Delivery</div></div>
+<div class="mt-16 fade-in">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+<div class="text-center"><div class="text-4xl font-display font-bold gradient-text">424+</div><div class="text-sm text-gray-500 mt-1">AI APIs Powered</div></div>
+<div class="text-center"><div class="text-4xl font-display font-bold gradient-text">195</div><div class="text-sm text-gray-500 mt-1">Countries Served</div></div>
+<div class="text-center"><div class="text-4xl font-display font-bold gradient-text">24h</div><div class="text-sm text-gray-500 mt-1">Fast Delivery</div></div>
 <div class="text-center"><div class="text-4xl font-display font-bold gradient-text">Rs 0</div><div class="text-sm text-gray-500 mt-1">Sign Up Cost</div></div>
 </div>
 </div>
+</div>
 </section>
-<div class="max-w-5xl mx-auto px-6">
-<div class="ad-container">
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="2842044467" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<div class="max-w-5xl mx-auto px-6"><div class="ad-container"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="2842044467" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div>
+<section class="py-12 px-6 border-y border-white/5">
+<div class="max-w-6xl mx-auto">
+<p class="text-center text-gray-500 text-sm mb-6 fade-in">Trusted by businesses, creators, and entrepreneurs worldwide</p>
+<div class="overflow-hidden"><div class="flex gap-12 trust-bar fade-in">
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">Startups</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">YouTubers</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">Small Businesses</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">Freelancers</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">Agencies</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">Bloggers</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">E-commerce</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">Startups</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">YouTubers</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">Small Businesses</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">Freelancers</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">Agencies</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">Bloggers</span>
+<span class="text-2xl font-display font-bold text-gray-600 whitespace-nowrap">E-commerce</span>
+</div></div>
 </div>
-</div>
+</section>
 <section id="services" class="py-24 px-6">
 <div class="max-w-7xl mx-auto">
 <div class="text-center mb-16 fade-in">
@@ -94,192 +127,221 @@ Content writing, web design, video scripts, research, and automation — powered
 <p class="text-gray-400 text-lg">AI-powered services for businesses and creators worldwide</p>
 </div>
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-5"><span class="text-3xl">📝</span></div><h3 class="text-xl font-bold mb-2">Content Writing</h3><p class="text-gray-400 text-sm mb-4">SEO articles, blog posts, website copy, social media content. Any language.</p><div class="flex justify-between items-center"><span class="text-indigo-400 font-bold">From Rs 29</span><span class="text-xs text-gray-500">24hr delivery</span></div></div>
-<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-fuchsia-500/10 flex items-center justify-center mb-5"><span class="text-3xl">🎨</span></div><h3 class="text-xl font-bold mb-2">Logo and Design</h3><p class="text-gray-400 text-sm mb-4">Logos, social media posts, thumbnails, flyers. Professional quality.</p><div class="flex justify-between items-center"><span class="text-fuchsia-400 font-bold">From Rs 29</span><span class="text-xs text-gray-500">24hr delivery</span></div></div>
-<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-5"><span class="text-3xl">💻</span></div><h3 class="text-xl font-bold mb-2">Website Build</h3><p class="text-gray-400 text-sm mb-4">Landing pages, portfolio sites, business websites. HTML/CSS/JS.</p><div class="flex justify-between items-center"><span class="text-purple-400 font-bold">From Rs 50</span><span class="text-xs text-gray-500">48hr delivery</span></div></div>
-<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-5"><span class="text-3xl">📊</span></div><h3 class="text-xl font-bold mb-2">Data Research</h3><p class="text-gray-400 text-sm mb-4">Market research, competitor analysis, data scraping, reports.</p><div class="flex justify-between items-center"><span class="text-blue-400 font-bold">From Rs 29</span><span class="text-xs text-gray-500">48hr delivery</span></div></div>
-<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-5"><span class="text-3xl">🎬</span></div><h3 class="text-xl font-bold mb-2">Video Scripts</h3><p class="text-gray-400 text-sm mb-4">YouTube scripts, ad scripts, voiceover scripts. Engaging content.</p><div class="flex justify-between items-center"><span class="text-orange-400 font-bold">From Rs 29</span><span class="text-xs text-gray-500">24hr delivery</span></div></div>
-<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-5"><span class="text-3xl">🤖</span></div><h3 class="text-xl font-bold mb-2">AI Consultation</h3><p class="text-gray-400 text-sm mb-4">AI strategy, tool selection, automation setup. Video call session.</p><div class="flex justify-between items-center"><span class="text-green-400 font-bold">From Rs 29</span><span class="text-xs text-gray-500">1hr session</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-5"><span class="text-3xl">📝</span></div><h3 class="text-xl font-bold mb-2">Content Writing</h3><p class="text-gray-400 text-sm mb-4">SEO articles, blog posts, website copy, social media content. Any language, any topic.</p><div class="flex justify-between items-center"><span class="text-indigo-400 font-bold">From Rs 29</span><span class="text-xs text-gray-500">24hr delivery</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-fuchsia-500/10 flex items-center justify-center mb-5"><span class="text-3xl">🎨</span></div><h3 class="text-xl font-bold mb-2">Logo & Design</h3><p class="text-gray-400 text-sm mb-4">Logos, social media posts, thumbnails, flyers. Professional quality designs.</p><div class="flex justify-between items-center"><span class="text-fuchsia-400 font-bold">From Rs 29</span><span class="text-xs text-gray-500">24hr delivery</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-5"><span class="text-3xl">💻</span></div><h3 class="text-xl font-bold mb-2">Website Build</h3><p class="text-gray-400 text-sm mb-4">Landing pages, portfolio sites, business websites. HTML/CSS/JS, responsive.</p><div class="flex justify-between items-center"><span class="text-purple-400 font-bold">From Rs 50</span><span class="text-xs text-gray-500">48hr delivery</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-5"><span class="text-3xl">📊</span></div><h3 class="text-xl font-bold mb-2">Data Research</h3><p class="text-gray-400 text-sm mb-4">Market research, competitor analysis, data scraping, structured reports.</p><div class="flex justify-between items-center"><span class="text-blue-400 font-bold">From Rs 29</span><span class="text-xs text-gray-500">48hr delivery</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-5"><span class="text-3xl">🎬</span></div><h3 class="text-xl font-bold mb-2">Video Scripts</h3><p class="text-gray-400 text-sm mb-4">YouTube scripts, ad scripts, voiceover scripts. Engaging, retention-optimized.</p><div class="flex justify-between items-center"><span class="text-orange-400 font-bold">From Rs 29</span><span class="text-xs text-gray-500">24hr delivery</span></div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-5"><span class="text-3xl">🤖</span></div><h3 class="text-xl font-bold mb-2">AI Consultation</h3><p class="text-gray-400 text-sm mb-4">AI strategy, tool selection, automation setup. 1-on-1 video session.</p><div class="flex justify-between items-center"><span class="text-green-400 font-bold">From Rs 29</span><span class="text-xs text-gray-500">1hr session</span></div></div>
 </div>
 </div>
 </section>
-<div class="max-w-5xl mx-auto px-6">
-<div class="ad-container">
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="5808108837" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<section class="py-16 px-6">
+<div class="max-w-4xl mx-auto">
+<div class="card rounded-3xl p-10 fade-in text-center">
+<div class="flex justify-center gap-1 mb-6"><span class="text-yellow-400 text-2xl">★</span><span class="text-yellow-400 text-2xl">★</span><span class="text-yellow-400 text-2xl">★</span><span class="text-yellow-400 text-2xl">★</span><span class="text-yellow-400 text-2xl">★</span></div>
+<p class="text-2xl font-display font-medium mb-6 leading-relaxed">"Got 3 SEO articles and 2 social media designs for Rs 101. The quality was better than agencies charging Rs 5,000. Delivered in 24 hours."</p>
+<div class="flex items-center justify-center gap-4"><div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-fuchsia-500 flex items-center justify-center font-bold">R</div><div class="text-left"><div class="font-semibold">Rajesh Kumar</div><div class="text-sm text-gray-500">Small Business Owner, Bangalore</div></div></div>
 </div>
 </div>
+</section>
+<div class="max-w-5xl mx-auto px-6"><div class="ad-container"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="5808108837" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div>
 <section id="pricing" class="py-24 px-6">
 <div class="max-w-6xl mx-auto">
-<div class="text-center mb-16 fade-in">
-<h2 class="text-5xl font-display font-bold mb-4">Simple Pricing</h2>
-<p class="text-gray-400 text-lg">Pay per project. No subscriptions. Affordable for everyone.</p>
+<div class="text-center mb-12 fade-in">
+<h2 class="text-5xl font-display font-bold mb-4">Simple, Honest Pricing</h2>
+<p class="text-gray-400 text-lg">Pay per project or subscribe monthly. No hidden fees. Cancel anytime.</p>
+</div>
+<div class="flex justify-center gap-2 mb-12 fade-in">
+<button id="toggle-one" onclick="setToggle('one')" class="toggle-btn active px-8 py-3 rounded-full text-sm font-semibold border border-white/10">One-Time Project</button>
+<button id="toggle-month" onclick="setToggle('month')" class="toggle-btn px-8 py-3 rounded-full text-sm font-semibold border border-white/10 text-gray-400">Monthly Subscription <span class="text-green-400 text-xs ml-1">Save 30%</span></button>
 </div>
 <div class="grid md:grid-cols-3 gap-8">
-<div class="card rounded-3xl p-8 fade-in">
-<h3 class="text-2xl font-bold mb-2">Starter</h3>
-<p class="text-gray-400 text-sm mb-6">Perfect for one-time needs</p>
-<div class="text-5xl font-display font-extrabold mb-1">Rs 29</div>
-<p class="text-gray-500 text-sm mb-8">per project</p>
+<div class="card rounded-3xl p-8 fade-in relative">
+<div><h3 class="text-2xl font-bold mb-2">Starter</h3><p class="text-gray-400 text-sm mb-6">Perfect for one-time needs</p>
+<div class="mb-2"><span class="strike text-gray-600 text-lg">Rs 79</span></div>
+<div class="flex items-baseline gap-2 mb-1"><span id="price-starter" class="text-5xl font-display font-extrabold price-anim">Rs 29</span><span id="period-starter" class="text-gray-500 text-sm">/ project</span></div>
+<p class="text-green-400 text-xs font-semibold mb-8">63% OFF — Limited Time</p>
 <ul class="space-y-3 text-sm text-gray-300 mb-8">
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 Article (1000 words)</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> Or 1 Logo Design</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> Or 1 Video Script</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> Any language</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 24-hour delivery</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 1 Article (1000 words)</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Or 1 Logo Design</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Or 1 Video Script</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Any language</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 24-hour delivery</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 1 revision included</li>
 </ul>
-<button onclick="signupAndPay(2900,'Starter')" class="btn-primary w-full py-4 rounded-2xl font-bold">Sign Up and Pay Rs 29</button>
+<button onclick="signupAndPay(2900,'Starter')" class="btn-secondary w-full py-4 rounded-2xl font-bold text-sm">Choose Starter — Rs 29</button>
+</div>
 </div>
 <div class="card rounded-3xl p-8 fade-in relative" style="border-color:rgba(99,102,241,.3);box-shadow:0 0 60px rgba(99,102,241,.1)">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white text-xs font-bold px-6 py-1.5 rounded-full">MOST POPULAR</div>
-<h3 class="text-2xl font-bold mb-2">Professional</h3>
-<p class="text-gray-400 text-sm mb-6">For growing businesses</p>
-<div class="text-5xl font-display font-extrabold mb-1">Rs 101</div>
-<p class="text-gray-500 text-sm mb-8">per project</p>
+<div class="badge-popular">★ MOST POPULAR</div>
+<div><h3 class="text-2xl font-bold mb-2">Professional</h3><p class="text-gray-400 text-sm mb-6">For growing businesses</p>
+<div class="mb-2"><span class="strike text-gray-600 text-lg">Rs 199</span></div>
+<div class="flex items-baseline gap-2 mb-1"><span id="price-pro" class="text-5xl font-display font-extrabold price-anim">Rs 101</span><span id="period-pro" class="text-gray-500 text-sm">/ project</span></div>
+<p class="text-green-400 text-xs font-semibold mb-8">49% OFF — Best Value</p>
 <ul class="space-y-3 text-sm text-gray-300 mb-8">
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 3 Articles (1000 words each)</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 2 Social Media Designs</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 Landing Page (HTML)</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> SEO optimized</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 48-hour delivery</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 2 revisions included</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 3 Articles (1000 words each)</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 2 Social Media Designs</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 1 Landing Page (HTML)</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> SEO optimized content</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 48-hour delivery</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 2 revisions included</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Priority support</li>
 </ul>
-<button onclick="signupAndPay(10100,'Professional')" class="btn-primary w-full py-4 rounded-2xl font-bold">Sign Up and Pay Rs 101</button>
+<button onclick="signupAndPay(10100,'Professional')" class="btn-primary w-full py-4 rounded-2xl font-bold text-sm">Choose Professional — Rs 101</button>
 </div>
-<div class="card rounded-3xl p-8 fade-in">
-<h3 class="text-2xl font-bold mb-2">Business</h3>
-<p class="text-gray-400 text-sm mb-6">Complete solution</p>
-<div class="text-5xl font-display font-extrabold mb-1">Rs 299</div>
-<p class="text-gray-500 text-sm mb-8">per project</p>
+</div>
+<div class="card rounded-3xl p-8 fade-in relative">
+<div><h3 class="text-2xl font-bold mb-2">Business</h3><p class="text-gray-400 text-sm mb-6">Complete solution for agencies</p>
+<div class="mb-2"><span class="strike text-gray-600 text-lg">Rs 499</span></div>
+<div class="flex items-baseline gap-2 mb-1"><span id="price-biz" class="text-5xl font-display font-extrabold price-anim">Rs 299</span><span id="period-biz" class="text-gray-500 text-sm">/ project</span></div>
+<p class="text-green-400 text-xs font-semibold mb-8">40% OFF — Complete Package</p>
 <ul class="space-y-3 text-sm text-gray-300 mb-8">
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 10 Articles</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 5 Social Media Designs</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 Full Website (5 pages)</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 Video Script</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 Research Report</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> 72-hour delivery</li>
-<li class="flex items-center gap-2"><span class="text-green-400">✓</span> Unlimited revisions</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 10 Articles</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 5 Social Media Designs</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 1 Full Website (5 pages)</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 1 Video Script</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 1 Research Report</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> 72-hour delivery</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Unlimited revisions</li>
+<li class="flex items-center gap-3"><span class="feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Dedicated manager</li>
 </ul>
-<button onclick="signupAndPay(29900,'Business')" class="btn-primary w-full py-4 rounded-2xl font-bold">Sign Up and Pay Rs 299</button>
+<button onclick="signupAndPay(29900,'Business')" class="btn-secondary w-full py-4 rounded-2xl font-bold text-sm">Choose Business — Rs 299</button>
+</div>
+</div>
+</div>
+<div class="text-center mt-12 fade-in">
+<div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-green-500/10 border border-green-500/20">
+<span class="text-green-400 text-xl">🛡️</span>
+<span class="text-sm text-green-400 font-medium">30-Day Money-Back Guarantee • Secure Payment via Razorpay • UPI / Card / Netbanking</span>
 </div>
 </div>
 </div>
 </section>
-<div class="max-w-5xl mx-auto px-6">
-<div class="ad-container">
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="8822119130" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<section id="compare" class="py-24 px-6">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-12 fade-in">
+<h2 class="text-4xl font-display font-bold mb-4">Compare Plans</h2>
+<p class="text-gray-400">See exactly what each plan includes</p>
+</div>
+<div class="card rounded-3xl p-6 md:p-8 fade-in overflow-x-auto">
+<table class="w-full text-sm">
+<thead>
+<tr class="border-b border-white/10">
+<th class="text-left py-4 pr-4 font-medium text-gray-400">Features</th>
+<th class="text-center py-4 px-4 font-bold">Starter</th>
+<th class="text-center py-4 px-4 font-bold text-indigo-400">Professional</th>
+<th class="text-center py-4 px-4 font-bold">Business</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-white/5"><td class="py-4 pr-4 text-gray-300">Articles</td><td class="text-center py-4 px-4 text-gray-400">1</td><td class="text-center py-4 px-4 text-white font-semibold">3</td><td class="text-center py-4 px-4 text-white font-semibold">10</td></tr>
+<tr class="border-b border-white/5"><td class="py-4 pr-4 text-gray-300">Social Media Designs</td><td class="text-center py-4 px-4 text-gray-500">—</td><td class="text-center py-4 px-4 text-white font-semibold">2</td><td class="text-center py-4 px-4 text-white font-semibold">5</td></tr>
+<tr class="border-b border-white/5"><td class="py-4 pr-4 text-gray-300">Website Pages</td><td class="text-center py-4 px-4 text-gray-500">—</td><td class="text-center py-4 px-4 text-white font-semibold">1</td><td class="text-center py-4 px-4 text-white font-semibold">5</td></tr>
+<tr class="border-b border-white/5"><td class="py-4 pr-4 text-gray-300">Video Scripts</td><td class="text-center py-4 px-4 text-gray-500">1</td><td class="text-center py-4 px-4 text-gray-500">—</td><td class="text-center py-4 px-4 text-white font-semibold">1</td></tr>
+<tr class="border-b border-white/5"><td class="py-4 pr-4 text-gray-300">Research Report</td><td class="text-center py-4 px-4 text-gray-500">—</td><td class="text-center py-4 px-4 text-gray-500">—</td><td class="text-center py-4 px-4 text-white font-semibold">1</td></tr>
+<tr class="border-b border-white/5"><td class="py-4 pr-4 text-gray-300">Revisions</td><td class="text-center py-4 px-4 text-gray-400">1</td><td class="text-center py-4 px-4 text-white font-semibold">2</td><td class="text-center py-4 px-4 text-green-400 font-semibold">Unlimited</td></tr>
+<tr class="border-b border-white/5"><td class="py-4 pr-4 text-gray-300">Delivery Time</td><td class="text-center py-4 px-4 text-gray-400">24h</td><td class="text-center py-4 px-4 text-white font-semibold">48h</td><td class="text-center py-4 px-4 text-white font-semibold">72h</td></tr>
+<tr class="border-b border-white/5"><td class="py-4 pr-4 text-gray-300">SEO Optimization</td><td class="text-center py-4 px-4 text-gray-500">—</td><td class="text-center py-4 px-4"><span class="text-green-400">✓</span></td><td class="text-center py-4 px-4"><span class="text-green-400">✓</span></td></tr>
+<tr class="border-b border-white/5"><td class="py-4 pr-4 text-gray-300">Priority Support</td><td class="text-center py-4 px-4 text-gray-500">—</td><td class="text-center py-4 px-4"><span class="text-green-400">✓</span></td><td class="text-center py-4 px-4"><span class="text-green-400">✓</span></td></tr>
+<tr class="border-b border-white/5"><td class="py-4 pr-4 text-gray-300">Dedicated Manager</td><td class="text-center py-4 px-4 text-gray-500">—</td><td class="text-center py-4 px-4 text-gray-500">—</td><td class="text-center py-4 px-4"><span class="text-green-400">✓</span></td></tr>
+<tr><td class="py-4 pr-4 text-gray-300 font-bold">Price</td><td class="text-center py-4 px-4 font-bold text-lg">Rs 29</td><td class="text-center py-4 px-4 font-bold text-lg text-indigo-400">Rs 101</td><td class="text-center py-4 px-4 font-bold text-lg">Rs 299</td></tr>
+</tbody>
+</table>
 </div>
 </div>
+</section>
+<div class="max-w-5xl mx-auto px-6"><div class="ad-container"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="8822119130" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div>
+<section id="faq" class="py-24 px-6">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-12 fade-in">
+<h2 class="text-4xl font-display font-bold mb-4">Frequently Asked Questions</h2>
+<p class="text-gray-400">Everything you need to know before signing up</p>
+</div>
+<div class="space-y-2 fade-in">
+<div class="faq-item card rounded-2xl px-6 py-4" onclick="toggleFaq(this)"><div class="flex justify-between items-center py-2"><span class="font-semibold">How does the sign up process work?</span><svg class="faq-chevron w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-answer"><p class="text-gray-400 text-sm pb-4">Click "Start Free" anywhere on the page. Enter your name, email, country, and what service you need. Your free account is created instantly — no credit card required. Then choose a plan and pay only when you are ready.</p></div></div>
+<div class="faq-item card rounded-2xl px-6 py-4" onclick="toggleFaq(this)"><div class="flex justify-between items-center py-2"><span class="font-semibold">Can I switch plans later?</span><svg class="faq-chevron w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-answer"><p class="text-gray-400 text-sm pb-4">Yes! You can upgrade, downgrade, or cancel anytime. No lock-in contracts. If you start with Starter and need more, just pay the difference to upgrade.</p></div></div>
+<div class="faq-item card rounded-2xl px-6 py-4" onclick="toggleFaq(this)"><div class="flex justify-between items-center py-2"><span class="font-semibold">What payment methods do you accept?</span><svg class="faq-chevron w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-answer"><p class="text-gray-400 text-sm pb-4">We accept UPI (PhonePe, Google Pay, Paytm), all major credit/debit cards, net banking, and digital wallets through Razorpay — India's most trusted payment gateway. International customers can pay via card.</p></div></div>
+<div class="faq-item card rounded-2xl px-6 py-4" onclick="toggleFaq(this)"><div class="flex justify-between items-center py-2"><span class="font-semibold">Is there a money-back guarantee?</span><svg class="faq-chevron w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-answer"><p class="text-gray-400 text-sm pb-4">Yes — 30-day money-back guarantee on all plans. If you are not satisfied with the quality, contact us within 30 days for a full refund. No questions asked.</p></div></div>
+<div class="faq-item card rounded-2xl px-6 py-4" onclick="toggleFaq(this)"><div class="flex justify-between items-center py-2"><span class="font-semibold">How fast is the delivery?</span><svg class="faq-chevron w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-answer"><p class="text-gray-400 text-sm pb-4">Starter plan: 24 hours. Professional: 48 hours. Business: 72 hours. Delivery starts the moment your payment is confirmed. You will receive your deliverables via email.</p></div></div>
+<div class="faq-item card rounded-2xl px-6 py-4" onclick="toggleFaq(this)"><div class="flex justify-between items-center py-2"><span class="font-semibold">Do you serve international customers?</span><svg class="faq-chevron w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-answer"><p class="text-gray-400 text-sm pb-4">Yes! We serve 195 countries. Pricing is in INR (Indian Rupees) but international cards are accepted. Content can be written in English, Hindi, and 40+ other languages.</p></div></div>
+<div class="faq-item card rounded-2xl px-6 py-4" onclick="toggleFaq(this)"><div class="flex justify-between items-center py-2"><span class="font-semibold">What if I need something custom?</span><svg class="faq-chevron w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-answer"><p class="text-gray-400 text-sm pb-4">Sign up free and describe your needs in the service field. We will send a custom quote within 24 hours. Custom projects start from Rs 29.</p></div></div>
+</div>
+</div>
+</section>
 <section id="blog" class="py-24 px-6">
 <div class="max-w-6xl mx-auto">
 <div class="text-center mb-16 fade-in">
-<h2 class="text-5xl font-display font-bold mb-4">Latest from Blog</h2>
+<h2 class="text-4xl font-display font-bold mb-4">Latest from Blog</h2>
 <p class="text-gray-400 text-lg">AI insights, tips, and trends</p>
 </div>
 <div class="grid md:grid-cols-3 gap-6">
-<div class="card rounded-3xl p-8 fade-in"><div class="text-xs text-indigo-400 mb-2 font-medium">AI TOOLS</div><h4 class="font-bold text-lg mb-3">10 Free AI Tools Every Business Should Use in 2026</h4><p class="text-gray-400 text-sm">Discover free AI tools that can automate your business — from content writing to customer support...</p><div class="mt-4 text-xs text-gray-500">5 min read</div></div>
-<div class="card rounded-3xl p-8 fade-in"><div class="text-xs text-fuchsia-400 mb-2 font-medium">CONTENT</div><h4 class="font-bold text-lg mb-3">How AI is Changing Content Creation Worldwide</h4><p class="text-gray-400 text-sm">From blog posts to YouTube scripts — AI is making content creation 10x faster and cheaper...</p><div class="mt-4 text-xs text-gray-500">7 min read</div></div>
-<div class="card rounded-3xl p-8 fade-in"><div class="text-xs text-green-400 mb-2 font-medium">AUTOMATION</div><h4 class="font-bold text-lg mb-3">Zero-Budget Automation: A Complete Guide</h4><p class="text-gray-400 text-sm">Learn how to automate your entire workflow using free tools — GitHub, Cloudflare, Supabase...</p><div class="mt-4 text-xs text-gray-500">10 min read</div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="text-xs text-indigo-400 mb-2 font-medium">AI TOOLS</div><h4 class="font-bold text-lg mb-3">10 Free AI Tools Every Business Should Use in 2026</h4><p class="text-gray-400 text-sm">Discover free AI tools that can automate your business — from content writing to customer support and data analysis...</p><div class="mt-4 text-xs text-gray-500">5 min read</div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="text-xs text-fuchsia-400 mb-2 font-medium">CONTENT</div><h4 class="font-bold text-lg mb-3">How AI is Changing Content Creation Worldwide</h4><p class="text-gray-400 text-sm">From blog posts to YouTube scripts — AI is making content creation 10x faster and cheaper for everyone...</p><div class="mt-4 text-xs text-gray-500">7 min read</div></div>
+<div class="card rounded-3xl p-8 fade-in"><div class="text-xs text-green-400 mb-2 font-medium">AUTOMATION</div><h4 class="font-bold text-lg mb-3">Zero-Budget Automation: A Complete Guide</h4><p class="text-gray-400 text-sm">Learn how to automate your entire workflow using free tools — GitHub Pages, Cloudflare, Supabase, and more...</p><div class="mt-4 text-xs text-gray-500">10 min read</div></div>
 </div>
 </div>
 </section>
-<div class="max-w-5xl mx-auto px-6">
-<div class="ad-container">
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="1135200803" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-</div>
+<div class="max-w-5xl mx-auto px-6"><div class="ad-container"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7976263974924090" data-ad-slot="1135200803" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div>
 <section id="contact" class="py-24 px-6 border-t border-white/5">
 <div class="max-w-3xl mx-auto text-center">
 <h2 class="text-5xl font-display font-bold mb-4 fade-in">Ready to Start?</h2>
-<p class="text-gray-400 mb-10 text-lg fade-in">Sign up free and get started instantly. No credit card required.</p>
+<p class="text-gray-400 mb-10 text-lg fade-in">Sign up free and get started instantly. No credit card required. Plans from Rs 29.</p>
 <div class="flex gap-4 justify-center flex-wrap fade-in">
-<button onclick="openSignup()" class="btn-primary px-10 py-5 rounded-full font-bold text-lg">Sign Up Free</button>
-<a href="#pricing" class="px-10 py-5 rounded-full border border-white/15 font-bold text-lg hover:bg-white/5 transition">View Pricing</a>
+<button onclick="openSignup()" class="btn-primary px-10 py-5 rounded-full font-bold text-lg">Start Free — Sign Up</button>
+<a href="#pricing" class="btn-secondary px-10 py-5 rounded-full font-bold text-lg">View Pricing</a>
 </div>
-<div class="mt-12 text-gray-600 text-xs">
-<p>Built with AI • Deployed on GitHub Pages • Powered by Groq • AdSense Integrated</p>
+<div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 fade-in">
+<div class="text-center"><div class="text-2xl mb-2">🔒</div><div class="text-xs text-gray-500">Secure Payment</div></div>
+<div class="text-center"><div class="text-2xl mb-2">⚡</div><div class="text-xs text-gray-500">24hr Delivery</div></div>
+<div class="text-center"><div class="text-2xl mb-2">🛡️</div><div class="text-xs text-gray-500">30-Day Refund</div></div>
+<div class="text-center"><div class="text-2xl mb-2">🌍</div><div class="text-xs text-gray-500">195 Countries</div></div>
 </div>
+<div class="mt-12 text-gray-600 text-xs"><p>Built with AI • Deployed on GitHub Pages • Powered by Groq • AdSense Integrated • Razorpay Secure Payments</p></div>
 </div>
 </section>
 <div id="signup-modal" class="modal-bg" onclick="if(event.target===this)closeSignup()">
 <div class="modal-content">
-<div class="flex justify-between items-center mb-6">
-<h3 class="text-2xl font-display font-bold">Sign Up Free</h3>
-<button onclick="closeSignup()" class="text-gray-400 hover:text-white text-2xl">×</button>
-</div>
-<p class="text-gray-400 text-sm mb-6">Create your free account. No credit card needed.</p>
+<div class="flex justify-between items-center mb-6"><h3 class="text-2xl font-display font-bold">Create Free Account</h3><button onclick="closeSignup()" class="text-gray-400 hover:text-white text-2xl">&times;</button></div>
+<p class="text-gray-400 text-sm mb-6">No credit card needed. Pay later when you choose a plan.</p>
 <form id="signup-form" onsubmit="handleSignup(event)">
 <div class="space-y-4">
-<div>
-<label class="text-sm text-gray-400 mb-1 block">Full Name</label>
-<input type="text" name="name" required class="input-field" placeholder="John Doe">
-</div>
-<div>
-<label class="text-sm text-gray-400 mb-1 block">Email</label>
-<input type="email" name="email" required class="input-field" placeholder="john@example.com">
-</div>
-<div>
-<label class="text-sm text-gray-400 mb-1 block">Country</label>
-<input type="text" name="country" required class="input-field" placeholder="India">
-</div>
-<div>
-<label class="text-sm text-gray-400 mb-1 block">What do you need?</label>
-<select name="service" required class="input-field">
-<option value="">Select a service...</option>
-<option value="content">Content Writing</option>
-<option value="design">Logo and Design</option>
-<option value="website">Website Build</option>
-<option value="research">Data Research</option>
-<option value="video">Video Scripts</option>
-<option value="consultation">AI Consultation</option>
-<option value="other">Other</option>
-</select>
-</div>
+<div><label class="text-sm text-gray-400 mb-1 block">Full Name</label><input type="text" name="name" required class="input-field" placeholder="John Doe"></div>
+<div><label class="text-sm text-gray-400 mb-1 block">Email</label><input type="email" name="email" required class="input-field" placeholder="john@example.com"></div>
+<div><label class="text-sm text-gray-400 mb-1 block">Country</label><input type="text" name="country" required class="input-field" placeholder="India"></div>
+<div><label class="text-sm text-gray-400 mb-1 block">What do you need?</label><select name="service" required class="input-field"><option value="">Select a service...</option><option value="content">Content Writing</option><option value="design">Logo and Design</option><option value="website">Website Build</option><option value="research">Data Research</option><option value="video">Video Scripts</option><option value="consultation">AI Consultation</option><option value="other">Other / Custom</option></select></div>
 <button type="submit" class="btn-primary w-full py-4 rounded-2xl font-bold mt-2">Create Free Account</button>
 </div>
 </form>
 <p class="text-gray-500 text-xs mt-4 text-center">By signing up, you agree to our Terms and Privacy Policy.</p>
 </div>
 </div>
+<div id="login-modal" class="modal-bg" onclick="if(event.target===this)closeLogin()">
+<div class="modal-content">
+<div class="flex justify-between items-center mb-6"><h3 class="text-2xl font-display font-bold">Login</h3><button onclick="closeLogin()" class="text-gray-400 hover:text-white text-2xl">&times;</button></div>
+<form onsubmit="handleLogin(event)">
+<div class="space-y-4">
+<div><label class="text-sm text-gray-400 mb-1 block">Email</label><input type="email" name="email" required class="input-field" placeholder="john@example.com"></div>
+<button type="submit" class="btn-primary w-full py-4 rounded-2xl font-bold">Login</button>
+</div>
+</form>
+<p class="text-gray-500 text-xs mt-4 text-center">New here? <a href="#" onclick="closeLogin();openSignup();return false" class="text-indigo-400 hover:underline">Create a free account</a></p>
+</div>
+</div>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
-let pendingPayment = null;
-function openSignup() { document.getElementById('signup-modal').classList.add('active'); }
-function closeSignup() { document.getElementById('signup-modal').classList.remove('active'); }
-function handleSignup(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = { name: form.name.value, email: form.email.value, country: form.country.value, service: form.service.value, timestamp: new Date().toISOString() };
-    let users = JSON.parse(localStorage.getItem('ai_studio_users') || '[]');
-    users.push(data);
-    localStorage.setItem('ai_studio_users', JSON.stringify(users));
-    localStorage.setItem('ai_current_user', JSON.stringify(data));
-    closeSignup();
-    if (pendingPayment) { const { amount, desc } = pendingPayment; pendingPayment = null; setTimeout(() => payNow(amount, desc, data.email), 500); }
-    else { alert('Welcome, ' + data.name + '! Your free account is ready.'); }
-    form.reset();
-}
-function signupAndPay(amountPaise, packageName) {
-    const currentUser = localStorage.getItem('ai_current_user');
-    if (currentUser) { const user = JSON.parse(currentUser); payNow(amountPaise, packageName + ' Package', user.email); }
-    else { pendingPayment = { amount: amountPaise, desc: packageName + ' Package' }; openSignup(); }
-}
-function payNow(amountPaise, description, userEmail) {
-    var options = {
-        key: "rzp_test_DOqWc1qHYD8X2H", amount: amountPaise, currency: "INR", name: "AI Studio",
-        description: description + ' (Rs ' + (amountPaise/100) + ')',
-        handler: function(response) { alert('Payment Successful! ID: ' + response.razorpay_payment_id); },
-        prefill: { email: userEmail || '' }, theme: { color: '#6366f1' },
-        method: { upi: true, card: true, netbanking: true, wallet: true }
-    };
-    var rzp = new Razorpay(options);
-    rzp.on('payment.failed', function(resp) { alert('Payment failed: ' + resp.error.description); });
-    rzp.open();
-}
-const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+let pendingPayment=null;
+function openSignup(){document.getElementById('signup-modal').classList.add('active')}
+function closeSignup(){document.getElementById('signup-modal').classList.remove('active')}
+function openLogin(){document.getElementById('login-modal').classList.add('active')}
+function closeLogin(){document.getElementById('login-modal').classList.remove('active')}
+function handleSignup(e){e.preventDefault();const form=e.target;const data={name:form.name.value,email:form.email.value,country:form.country.value,service:form.service.value,timestamp:new Date().toISOString()};let users=JSON.parse(localStorage.getItem('ai_studio_users')||'[]');users.push(data);localStorage.setItem('ai_studio_users',JSON.stringify(users));localStorage.setItem('ai_current_user',JSON.stringify(data));closeSignup();if(pendingPayment){const{amount,desc}=pendingPayment;pendingPayment=null;setTimeout(()=>payNow(amount,desc,data.email),500)}else{alert('Welcome, '+data.name+'! Your free account is ready. Choose a plan to get started.')}form.reset()}
+function handleLogin(e){e.preventDefault();const email=e.target.email.value;const users=JSON.parse(localStorage.getItem('ai_studio_users')||'[]');const user=users.find(u=>u.email===email);if(user){localStorage.setItem('ai_current_user',JSON.stringify(user));closeLogin();alert('Welcome back, '+user.name+'!')}else{alert('No account found. Please sign up first.');closeLogin();openSignup()}}
+function signupAndPay(amountPaise,packageName){const currentUser=localStorage.getItem('ai_current_user');if(currentUser){const user=JSON.parse(currentUser);payNow(amountPaise,packageName+' Package',user.email)}else{pendingPayment={amount:amountPaise,desc:packageName+' Package'};openSignup()}}
+function payNow(amountPaise,description,userEmail){var options={key:"rzp_test_DOqWc1qHYD8X2H",amount:amountPaise,currency:"INR",name:"AI Studio",description:description+' (Rs '+(amountPaise/100)+')',handler:function(response){alert('Payment Successful! ID: '+response.razorpay_payment_id+'\n\nWe will deliver your project within 24-48 hours.\nConfirmation sent to your email.');},prefill:{email:userEmail||''},theme:{color:'#6366f1'},method:{upi:true,card:true,netbanking:true,wallet:true}};var rzp=new Razorpay(options);rzp.on('payment.failed',function(resp){alert('Payment failed: '+resp.error.description+'\n\nPlease try again or contact support.')});rzp.open()}
+function setToggle(mode){document.getElementById('toggle-one').classList.remove('active');document.getElementById('toggle-one').classList.add('text-gray-400');document.getElementById('toggle-month').classList.remove('active');document.getElementById('toggle-month').classList.add('text-gray-400');if(mode==='one'){document.getElementById('toggle-one').classList.add('active');document.getElementById('toggle-one').classList.remove('text-gray-400');document.getElementById('price-starter').textContent='Rs 29';document.getElementById('price-pro').textContent='Rs 101';document.getElementById('price-biz').textContent='Rs 299';document.getElementById('period-starter').textContent='/ project';document.getElementById('period-pro').textContent='/ project';document.getElementById('period-biz').textContent='/ project'}else{document.getElementById('toggle-month').classList.add('active');document.getElementById('toggle-month').classList.remove('text-gray-400');document.getElementById('price-starter').textContent='Rs 99';document.getElementById('price-pro').textContent='Rs 299';document.getElementById('price-biz').textContent='Rs 799';document.getElementById('period-starter').textContent='/ month';document.getElementById('period-pro').textContent='/ month';document.getElementById('period-biz').textContent='/ month'}}
+function toggleFaq(el){el.classList.toggle('open')}
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 </script>
 </body>
 </html>
