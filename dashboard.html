@@ -2,62 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dashboard — AI Studio</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <style>
-*{font-family:'Inter',sans-serif}
-.font-display{font-family:'Space Grotesk',sans-serif}
-body{background:#07070a;color:#fff;overflow-x:hidden}
-.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(20px);transition:all .3s}
-.card:hover{border-color:rgba(99,102,241,.3)}
-.btn-primary{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#d946ef 100%);transition:all .3s}
-.btn-primary:hover{box-shadow:0 10px 40px rgba(99,102,241,.5);transform:translateY(-2px)}
-.btn-secondary{border:1px solid rgba(255,255,255,.15);transition:all .3s}
-.btn-secondary:hover{background:rgba(255,255,255,.05)}
-.gradient-text{background:linear-gradient(135deg,#818cf8 0%,#c084fc 50%,#e879f9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.nav-blur{background:rgba(7,7,10,.8);backdrop-filter:blur(20px) saturate(180%)}
-.pulse-dot{animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+*{font-family:'Inter',sans-serif;box-sizing:border-box}
+.fd{font-family:'Space Grotesk',sans-serif}
+body{background:#f8fafc;color:#0f172a;overflow-x:hidden}
+.card{background:rgba(255,255,255,.8);backdrop-filter:blur(12px);border:1px solid rgba(0,0,0,.06);box-shadow:0 4px 24px rgba(0,0,0,.04);transition:all .3s}
+.card:hover{box-shadow:0 8px 32px rgba(0,0,0,.06);transform:translateY(-2px)}
+.btn{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff;transition:all .3s;cursor:pointer;border:none}
+.btn:hover{box-shadow:0 8px 32px rgba(99,102,241,.3);transform:translateY(-2px)}
+.btn2{background:#fff;border:1px solid #e2e8f0;color:#0f172a;transition:all .3s;cursor:pointer}
+.btn2:hover{border-color:#6366f1;background:#f8fafc;transform:translateY(-2px)}
+.gt{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nb{background:rgba(255,255,255,.85);backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid rgba(0,0,0,.05)}
+.pd{animation:ps 2s ease-in-out infinite}
+@keyframes ps{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+.badge{background:linear-gradient(135deg,#6366f1,#d946ef);color:#fff;font-size:11px;font-weight:700;padding:6px 16px;border-radius:999px;position:absolute;top:-14px;left:50%;transform:translateX(-50%);white-space:nowrap;box-shadow:0 4px 20px rgba(99,102,241,.3)}
+.link{color:#6366f1;text-decoration:none}
+.link:hover{text-decoration:underline}
 </style>
 </head>
 <body>
-<nav class="fixed top-0 w-full nav-blur border-b border-white/5 z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
-<div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 flex items-center justify-center font-bold text-sm">AI</div><span class="font-display font-bold text-lg">AI Studio</span></div>
-<div class="flex items-center gap-3"><span id="user-name" class="text-sm text-gray-400 hidden sm:block"></span><a href="index.html" onclick="localStorage.removeItem('ai_current_user')" class="text-sm text-gray-400 hover:text-white transition">Logout</a></div>
-</div>
-</nav>
+<nav class="fixed top-0 w-full nb z-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">AI</div><span class="fd font-bold text-lg" style="color:#0f172a">AI Studio</span></div><div class="flex items-center gap-3"><span id="user-name" class="text-sm hidden sm:block" style="color:#64748b"></span><a href="index.html" onclick="localStorage.removeItem('ai_current_user')" class="text-sm link">Logout</a></div></div></nav>
 <div class="pt-24 sm:pt-28 px-4 sm:px-6 pb-16">
 <div class="max-w-5xl mx-auto">
 <div class="mb-8">
-<h1 class="text-3xl sm:text-4xl font-display font-bold mb-2">Welcome, <span id="welcome-name" class="gradient-text">User</span>!</h1>
-<p class="text-gray-400 text-sm sm:text-base">Your free account is ready. Choose a plan to get started.</p>
+<h1 class="text-3xl sm:text-4xl fd font-bold mb-2" style="color:#0f172a">Welcome, <span id="welcome-name" class="gt">User</span>!</h1>
+<p style="color:#64748b" class="text-sm sm:text-base">Your free account is ready. Choose a plan to get started.</p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">📋</div><div class="text-xs sm:text-sm text-gray-400">Projects</div><div class="text-xl sm:text-2xl font-bold mt-1">0</div></div>
-<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">💬</div><div class="text-xs sm:text-sm text-gray-400">Messages</div><div class="text-xl sm:text-2xl font-bold mt-1">0</div></div>
-<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">💳</div><div class="text-xs sm:text-sm text-gray-400">Payments</div><div class="text-xl sm:text-2xl font-bold mt-1">0</div></div>
-<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">⭐</div><div class="text-xs sm:text-sm text-gray-400">Plan</div><div class="text-sm sm:text-base font-bold mt-1 text-gray-500">Free</div></div>
+<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">📋</div><div class="text-xs sm:text-sm" style="color:#64748b">Projects</div><div class="text-xl sm:text-2xl font-bold mt-1" style="color:#0f172a">0</div></div>
+<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">💬</div><div class="text-xs sm:text-sm" style="color:#64748b">Messages</div><div class="text-xl sm:text-2xl font-bold mt-1" style="color:#0f172a">0</div></div>
+<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">💳</div><div class="text-xs sm:text-sm" style="color:#64748b">Payments</div><div class="text-xl sm:text-2xl font-bold mt-1" style="color:#0f172a">0</div></div>
+<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">⭐</div><div class="text-xs sm:text-sm" style="color:#64748b">Plan</div><div class="text-sm sm:text-base font-bold mt-1" style="color:#94a3b8">Free</div></div>
 </div>
 <div class="mb-8">
-<h2 class="text-xl sm:text-2xl font-display font-bold mb-4">Choose Your Plan</h2>
+<h2 class="text-xl sm:text-2xl fd font-bold mb-4" style="color:#0f172a">Choose Your Plan</h2>
 <div class="grid sm:grid-cols-3 gap-4">
-<div class="card rounded-2xl p-5 sm:p-6"><h3 class="font-bold text-lg mb-1">Starter</h3><p class="text-gray-400 text-xs mb-3">1 Article or Design</p><div class="text-2xl font-display font-bold mb-3">Rs 29</div><button onclick="payNow(2900,'Starter')" class="btn-secondary w-full py-3 rounded-xl font-bold text-sm">Choose Starter</button></div>
-<div class="card rounded-2xl p-5 sm:p-6" style="border-color:rgba(99,102,241,.3)"><h3 class="font-bold text-lg mb-1">Professional</h3><p class="text-gray-400 text-xs mb-3">3 Articles + 2 Designs + 1 Page</p><div class="text-2xl font-display font-bold mb-3">Rs 101</div><button onclick="payNow(10100,'Professional')" class="btn-primary w-full py-3 rounded-xl font-bold text-sm">Choose Professional</button></div>
-<div class="card rounded-2xl p-5 sm:p-6"><h3 class="font-bold text-lg mb-1">Business</h3><p class="text-gray-400 text-xs mb-3">10 Articles + Website + More</p><div class="text-2xl font-display font-bold mb-3">Rs 299</div><button onclick="payNow(29900,'Business')" class="btn-secondary w-full py-3 rounded-xl font-bold text-sm">Choose Business</button></div>
+<div class="card rounded-2xl p-5 sm:p-6"><h3 class="font-bold text-lg mb-1" style="color:#0f172a">Starter</h3><p class="text-xs mb-3" style="color:#64748b">1 Article or Design</p><div class="text-2xl fd font-bold mb-3" style="color:#0f172a">Rs 29</div><button onclick="payNow(2900,'Starter')" class="btn2 w-full py-3 rounded-xl font-bold text-sm">Choose Starter</button></div>
+<div class="card rounded-2xl p-5 sm:p-6 relative" style="border-color:rgba(99,102,241,.2);box-shadow:0 0 40px rgba(99,102,241,.05)"><div class="badge">★ MOST POPULAR</div><h3 class="font-bold text-lg mb-1" style="color:#0f172a">Professional</h3><p class="text-xs mb-3" style="color:#64748b">3 Articles + 2 Designs + 1 Page</p><div class="text-2xl fd font-bold mb-3" style="color:#0f172a">Rs 101</div><button onclick="payNow(10100,'Professional')" class="btn w-full py-3 rounded-xl font-bold text-sm">Choose Professional</button></div>
+<div class="card rounded-2xl p-5 sm:p-6"><h3 class="font-bold text-lg mb-1" style="color:#0f172a">Business</h3><p class="text-xs mb-3" style="color:#64748b">10 Articles + Website + More</p><div class="text-2xl fd font-bold mb-3" style="color:#0f172a">Rs 299</div><button onclick="payNow(29900,'Business')" class="btn2 w-full py-3 rounded-xl font-bold text-sm">Choose Business</button></div>
 </div>
 </div>
 <div class="card rounded-2xl p-5 sm:p-6">
-<h2 class="text-lg sm:text-xl font-bold mb-3">Account Details</h2>
+<h2 class="text-lg sm:text-xl font-bold mb-3" style="color:#0f172a">Account Details</h2>
 <div class="space-y-2 text-sm">
-<div class="flex justify-between"><span class="text-gray-400">Name</span><span id="acc-name">—</span></div>
-<div class="flex justify-between"><span class="text-gray-400">Email</span><span id="acc-email">—</span></div>
-<div class="flex justify-between"><span class="text-gray-400">Country</span><span id="acc-country">—</span></div>
-<div class="flex justify-between"><span class="text-gray-400">Service Needed</span><span id="acc-service">—</span></div>
-<div class="flex justify-between"><span class="text-gray-400">Member Since</span><span id="acc-since">—</span></div>
+<div class="flex justify-between"><span style="color:#64748b">Name</span><span id="acc-name" style="color:#0f172a">—</span></div>
+<div class="flex justify-between"><span style="color:#64748b">Email</span><span id="acc-email" style="color:#0f172a">—</span></div>
+<div class="flex justify-between"><span style="color:#64748b">Country</span><span id="acc-country" style="color:#0f172a">—</span></div>
+<div class="flex justify-between"><span style="color:#64748b">Service Needed</span><span id="acc-service" style="color:#0f172a">—</span></div>
+<div class="flex justify-between"><span style="color:#64748b">Member Since</span><span id="acc-since" style="color:#0f172a">—</span></div>
 </div>
 </div>
 </div>

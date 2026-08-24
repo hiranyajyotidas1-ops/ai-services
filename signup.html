@@ -8,49 +8,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
-*{font-family:'Inter',sans-serif}
+*{font-family:'Inter',sans-serif;box-sizing:border-box}
 .fd{font-family:'Space Grotesk',sans-serif}
-body{background:#07070a;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem}
-.glow{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(99,102,241,.15),transparent);z-index:-1}
-.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(20px)}
-.btn{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);transition:all .3s;cursor:pointer}
-.btn:hover{box-shadow:0 10px 40px rgba(99,102,241,.5);transform:translateY(-2px)}
+body{background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 50%,#f8fafc 100%);color:#0f172a;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem}
+.glow{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(99,102,241,.08),transparent);z-index:-1;pointer-events:none}
+.card{background:rgba(255,255,255,.8);backdrop-filter:blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 4px 32px rgba(0,0,0,.04)}
+.btn{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff;transition:all .3s;cursor:pointer;border:none}
+.btn:hover{box-shadow:0 8px 32px rgba(99,102,241,.3);transform:translateY(-2px)}
 .btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
-.input{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 18px;color:#fff;width:100%;transition:all .3s;font-size:15px;box-sizing:border-box}
-.input:focus{outline:none;border-color:rgba(99,102,241,.5);background:rgba(99,102,241,.05)}
-.input::placeholder{color:rgba(255,255,255,.3)}
-.gt{background:linear-gradient(135deg,#818cf8,#c084fc,#e879f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.input{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px 18px;color:#0f172a;width:100%;transition:all .3s;font-size:15px;box-sizing:border-box}
+.input:focus{outline:none;border-color:#6366f1;background:#fff;box-shadow:0 0 0 3px rgba(99,102,241,.1)}
+.input::placeholder{color:#94a3b8}
+.gt{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .fa{animation:fl 6s ease-in-out infinite}
-@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
-.error{color:#ef4444;font-size:13px;margin-top:8px;display:none}
-.success{color:#22c55e;font-size:14px;display:none;padding:12px;border-radius:12px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);margin-top:16px}
-select.input option{background:#07070a}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.error{color:#ef4444;font-size:13px;margin-top:8px;display:none;padding:8px 12px;border-radius:8px;background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.1)}
+.success{color:#16a34a;font-size:14px;display:none;padding:12px;border-radius:12px;background:rgba(22,163,74,.05);border:1px solid rgba(22,163,74,.15);margin-top:16px}
+select.input option{background:#fff;color:#0f172a}
+.link{color:#6366f1;text-decoration:none;transition:color .2s}
+.link:hover{color:#4f46e5;text-decoration:underline}
 </style>
 </head>
 <body>
 <div class="glow"></div>
 <div class="w-full max-w-md">
 <div class="text-center mb-8">
-<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 flex items-center justify-center font-bold text-lg fa mx-auto mb-4">AI</div>
-<h1 class="text-3xl fd font-bold mb-2">Create Free Account</h1>
-<p class="text-gray-400 text-sm">No credit card needed. Pay later when you choose a plan.</p>
+<div class="w-14 h-14 rounded-2xl flex items-center justify-center font-bold text-lg fa mx-auto mb-4" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">AI</div>
+<h1 class="text-3xl fd font-bold mb-2" style="color:#0f172a">Create Free Account</h1>
+<p style="color:#64748b" class="text-sm">No credit card needed. Pay later when you choose a plan.</p>
 </div>
 <div class="card rounded-3xl p-6 sm:p-8">
 <form id="signupForm" onsubmit="return handleSignup(event)">
 <div class="space-y-4">
-<div><label class="text-sm text-gray-400 mb-2 block">Full Name</label><input type="text" id="name" required class="input" placeholder="John Doe"></div>
-<div><label class="text-sm text-gray-400 mb-2 block">Email</label><input type="email" id="email" required class="input" placeholder="john@example.com"></div>
-<div><label class="text-sm text-gray-400 mb-2 block">Password</label><input type="password" id="password" required class="input" placeholder="Min 6 characters" minlength="6"></div>
-<div><label class="text-sm text-gray-400 mb-2 block">Country</label><input type="text" id="country" required class="input" placeholder="India" value="India"></div>
-<div><label class="text-sm text-gray-400 mb-2 block">What do you need?</label><select id="service" required class="input"><option value="">Select a service...</option><option value="content">Content Writing</option><option value="design">Logo and Design</option><option value="website">Website Build</option><option value="research">Data Research</option><option value="video">Video Scripts</option><option value="consultation">AI Consultation</option><option value="other">Other / Custom</option></select></div>
+<div><label class="text-sm font-medium mb-2 block" style="color:#475569">Full Name</label><input type="text" id="name" required class="input" placeholder="John Doe"></div>
+<div><label class="text-sm font-medium mb-2 block" style="color:#475569">Email</label><input type="email" id="email" required class="input" placeholder="john@example.com"></div>
+<div><label class="text-sm font-medium mb-2 block" style="color:#475569">Password</label><input type="password" id="password" required class="input" placeholder="Min 6 characters" minlength="6"></div>
+<div><label class="text-sm font-medium mb-2 block" style="color:#475569">Country</label><input type="text" id="country" required class="input" placeholder="India" value="India"></div>
+<div><label class="text-sm font-medium mb-2 block" style="color:#475569">What do you need?</label><select id="service" required class="input"><option value="">Select a service...</option><option value="content">Content Writing</option><option value="design">Logo and Design</option><option value="website">Website Build</option><option value="research">Data Research</option><option value="video">Video Scripts</option><option value="consultation">AI Consultation</option><option value="other">Other / Custom</option></select></div>
 <div id="error-msg" class="error"></div>
 <div id="success-msg" class="success"></div>
 <button type="submit" id="submit-btn" class="btn w-full py-4 rounded-2xl font-bold mt-2">Create Free Account</button>
 </div>
 </form>
-<p class="text-center text-gray-500 text-sm mt-6">Already have an account? <a href="login.html" class="text-indigo-400 hover:underline font-medium">Login</a></p>
+<p class="text-center text-sm mt-6" style="color:#64748b">Already have an account? <a href="login.html" class="link font-medium">Login</a></p>
 </div>
-<div class="text-center mt-6"><a href="index.html" class="text-gray-500 text-sm hover:text-white transition">Back to home</a></div>
+<div class="text-center mt-6"><a href="index.html" class="text-sm transition" style="color:#94a3b8" onmouseover="this.style.color='#475569'" onmouseout="this.style.color='#94a3b8'">Back to home</a></div>
 </div>
 <script>
 const SUPABASE_URL='https://ocuyxgocmtucdckiqqeh.supabase.co';
@@ -82,7 +84,7 @@ successEl.style.display='block';
 successEl.textContent='Account created successfully! Redirecting to dashboard...';
 setTimeout(function(){window.location.href='dashboard.html';},1500);
 }catch(err){
-errEl.textContent='Something went wrong. Please try again.';
+errEl.textContent='Network error. Please check your connection and try again.';
 errEl.style.display='block';btn.disabled=false;btn.textContent='Create Free Account';
 }
 return false;
