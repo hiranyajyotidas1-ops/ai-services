@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — AI Studio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<style>
+*{font-family:'Inter',sans-serif}
+.font-display{font-family:'Space Grotesk',sans-serif}
+body{background:#07070a;color:#fff;overflow-x:hidden}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(20px);transition:all .3s}
+.card:hover{border-color:rgba(99,102,241,.3)}
+.btn-primary{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#d946ef 100%);transition:all .3s}
+.btn-primary:hover{box-shadow:0 10px 40px rgba(99,102,241,.5);transform:translateY(-2px)}
+.btn-secondary{border:1px solid rgba(255,255,255,.15);transition:all .3s}
+.btn-secondary:hover{background:rgba(255,255,255,.05)}
+.gradient-text{background:linear-gradient(135deg,#818cf8 0%,#c084fc 50%,#e879f9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-blur{background:rgba(7,7,10,.8);backdrop-filter:blur(20px) saturate(180%)}
+.pulse-dot{animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+</style>
+</head>
+<body>
+<nav class="fixed top-0 w-full nav-blur border-b border-white/5 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+<div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 flex items-center justify-center font-bold text-sm">AI</div><span class="font-display font-bold text-lg">AI Studio</span></div>
+<div class="flex items-center gap-3"><span id="user-name" class="text-sm text-gray-400 hidden sm:block"></span><a href="index.html" onclick="localStorage.removeItem('ai_current_user')" class="text-sm text-gray-400 hover:text-white transition">Logout</a></div>
+</div>
+</nav>
+<div class="pt-24 sm:pt-28 px-4 sm:px-6 pb-16">
+<div class="max-w-5xl mx-auto">
+<div class="mb-8">
+<h1 class="text-3xl sm:text-4xl font-display font-bold mb-2">Welcome, <span id="welcome-name" class="gradient-text">User</span>!</h1>
+<p class="text-gray-400 text-sm sm:text-base">Your free account is ready. Choose a plan to get started.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">📋</div><div class="text-xs sm:text-sm text-gray-400">Projects</div><div class="text-xl sm:text-2xl font-bold mt-1">0</div></div>
+<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">💬</div><div class="text-xs sm:text-sm text-gray-400">Messages</div><div class="text-xl sm:text-2xl font-bold mt-1">0</div></div>
+<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">💳</div><div class="text-xs sm:text-sm text-gray-400">Payments</div><div class="text-xl sm:text-2xl font-bold mt-1">0</div></div>
+<div class="card rounded-2xl p-4 sm:p-6 text-center"><div class="text-2xl sm:text-3xl mb-1">⭐</div><div class="text-xs sm:text-sm text-gray-400">Plan</div><div class="text-sm sm:text-base font-bold mt-1 text-gray-500">Free</div></div>
+</div>
+<div class="mb-8">
+<h2 class="text-xl sm:text-2xl font-display font-bold mb-4">Choose Your Plan</h2>
+<div class="grid sm:grid-cols-3 gap-4">
+<div class="card rounded-2xl p-5 sm:p-6"><h3 class="font-bold text-lg mb-1">Starter</h3><p class="text-gray-400 text-xs mb-3">1 Article or Design</p><div class="text-2xl font-display font-bold mb-3">Rs 29</div><button onclick="payNow(2900,'Starter')" class="btn-secondary w-full py-3 rounded-xl font-bold text-sm">Choose Starter</button></div>
+<div class="card rounded-2xl p-5 sm:p-6" style="border-color:rgba(99,102,241,.3)"><h3 class="font-bold text-lg mb-1">Professional</h3><p class="text-gray-400 text-xs mb-3">3 Articles + 2 Designs + 1 Page</p><div class="text-2xl font-display font-bold mb-3">Rs 101</div><button onclick="payNow(10100,'Professional')" class="btn-primary w-full py-3 rounded-xl font-bold text-sm">Choose Professional</button></div>
+<div class="card rounded-2xl p-5 sm:p-6"><h3 class="font-bold text-lg mb-1">Business</h3><p class="text-gray-400 text-xs mb-3">10 Articles + Website + More</p><div class="text-2xl font-display font-bold mb-3">Rs 299</div><button onclick="payNow(29900,'Business')" class="btn-secondary w-full py-3 rounded-xl font-bold text-sm">Choose Business</button></div>
+</div>
+</div>
+<div class="card rounded-2xl p-5 sm:p-6">
+<h2 class="text-lg sm:text-xl font-bold mb-3">Account Details</h2>
+<div class="space-y-2 text-sm">
+<div class="flex justify-between"><span class="text-gray-400">Name</span><span id="acc-name">—</span></div>
+<div class="flex justify-between"><span class="text-gray-400">Email</span><span id="acc-email">—</span></div>
+<div class="flex justify-between"><span class="text-gray-400">Country</span><span id="acc-country">—</span></div>
+<div class="flex justify-between"><span class="text-gray-400">Service Needed</span><span id="acc-service">—</span></div>
+<div class="flex justify-between"><span class="text-gray-400">Member Since</span><span id="acc-since">—</span></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var user=JSON.parse(localStorage.getItem('ai_current_user')||'null');
+if(!user){window.location.href='signup.html'}
+else{
+document.getElementById('user-name').textContent=user.name;
+document.getElementById('welcome-name').textContent=user.name;
+document.getElementById('acc-name').textContent=user.name;
+document.getElementById('acc-email').textContent=user.email;
+document.getElementById('acc-country').textContent=user.country;
+document.getElementById('acc-service').textContent=user.service||'Not specified';
+document.getElementById('acc-since').textContent=new Date(user.timestamp||Date.now()).toLocaleDateString();
+}
+function payNow(amt,desc){
+var user=JSON.parse(localStorage.getItem('ai_current_user')||'{}');
+var opt={key:"rzp_test_DOqWc1qHYD8X2H",amount:amt,currency:"INR",name:"AI Studio",description:desc+' (Rs '+(amt/100)+')',handler:function(r){alert('Payment Successful! ID: '+r.razorpay_payment_id+'\n\nYour project will be delivered within 24-48 hours.');},prefill:{email:user.email||''},theme:{color:'#6366f1'},method:{upi:true,card:true,netbanking:true,wallet:true}};
+var rzp=new Razorpay(opt);
+rzp.on('payment.failed',function(r){alert('Payment failed: '+r.error.description)});
+rzp.open();
+}
+</script>
+</body>
+</html>

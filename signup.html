@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — AI Studio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{font-family:'Inter',sans-serif}
+.font-display{font-family:'Space Grotesk',sans-serif}
+body{background:#07070a;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem}
+.glow-bg{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(99,102,241,.12),transparent);z-index:-1}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(20px)}
+.btn-primary{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#d946ef 100%);transition:all .3s;position:relative;overflow:hidden}
+.btn-primary:hover{box-shadow:0 10px 40px rgba(99,102,241,.5);transform:translateY(-2px)}
+.input-field{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 18px;color:#fff;width:100%;transition:all .3s;font-size:15px}
+.input-field:focus{outline:none;border-color:rgba(99,102,241,.5);background:rgba(99,102,241,.05)}
+.input-field::placeholder{color:rgba(255,255,255,.3)}
+.gradient-text{background:linear-gradient(135deg,#818cf8 0%,#c084fc 50%,#e879f9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.float-anim{animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+</style>
+</head>
+<body>
+<div class="glow-bg"></div>
+<div class="w-full max-w-md">
+<div class="text-center mb-8">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 flex items-center justify-center font-bold text-lg float-anim mx-auto mb-4">AI</div>
+<h1 class="text-3xl font-display font-bold mb-2">Create Free Account</h1>
+<p class="text-gray-400 text-sm">No credit card needed. Pay later when you choose a plan.</p>
+</div>
+<div class="card rounded-3xl p-6 sm:p-8">
+<form onsubmit="handleSignup(event)">
+<div class="space-y-4">
+<div><label class="text-sm text-gray-400 mb-2 block">Full Name</label><input type="text" name="name" required class="input-field" placeholder="John Doe"></div>
+<div><label class="text-sm text-gray-400 mb-2 block">Email</label><input type="email" name="email" required class="input-field" placeholder="john@example.com"></div>
+<div><label class="text-sm text-gray-400 mb-2 block">Country</label><input type="text" name="country" required class="input-field" placeholder="India"></div>
+<div><label class="text-sm text-gray-400 mb-2 block">What do you need?</label>
+<select name="service" required class="input-field">
+<option value="">Select a service...</option>
+<option value="content">Content Writing</option>
+<option value="design">Logo and Design</option>
+<option value="website">Website Build</option>
+<option value="research">Data Research</option>
+<option value="video">Video Scripts</option>
+<option value="consultation">AI Consultation</option>
+<option value="other">Other / Custom</option>
+</select></div>
+<button type="submit" class="btn-primary w-full py-4 rounded-2xl font-bold mt-2">Create Free Account</button>
+</div>
+</form>
+<p class="text-center text-gray-500 text-sm mt-6">Already have an account? <a href="login.html" class="text-indigo-400 hover:underline font-medium">Login</a></p>
+</div>
+<div class="text-center mt-6"><a href="index.html" class="text-gray-500 text-sm hover:text-white transition">← Back to home</a></div>
+</div>
+<script>
+function handleSignup(e){
+e.preventDefault();
+var form=e.target;
+var data={name:form.name.value,email:form.email.value,country:form.country.value,service:form.service.value,timestamp:new Date().toISOString()};
+var users=JSON.parse(localStorage.getItem('ai_studio_users')||'[]');
+users.push(data);
+localStorage.setItem('ai_studio_users',JSON.stringify(users));
+localStorage.setItem('ai_current_user',JSON.stringify(data));
+window.location.href='dashboard.html';
+}
+</script>
+</body>
+</html>
