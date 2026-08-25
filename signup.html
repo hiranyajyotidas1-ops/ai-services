@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sign Up — AI Studio</title>
+<title>Sign Up — Clevora</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -35,7 +35,7 @@ select.input option{background:#fff;color:#0f172a}
 <div class="glow"></div>
 <div class="w-full max-w-md">
 <div class="text-center mb-8">
-<div class="w-14 h-14 rounded-2xl flex items-center justify-center font-bold text-lg fa mx-auto mb-4" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">AI</div>
+<div class="w-14 h-14 rounded-2xl flex items-center justify-center font-bold text-lg fa mx-auto mb-4" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">C</div>
 <h1 class="text-3xl fd font-bold mb-2">Create Free Account</h1>
 <p class="text-sm" style="color:var(--muted)">No credit card needed. Pay later when you choose a plan.</p>
 </div>
@@ -66,8 +66,8 @@ select.input option{background:#fff;color:#0f172a}
 const SUPABASE_URL='https://ocuyxgocmtucdckiqqeh.supabase.co';
 const SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9jdXl4Z29jbXR1Y2Rja2lxcWVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1NzM2NzAsImV4cCI6MjEwMTE0OTY3MH0.UYQ6U2WcrTbQVRUTni_BcQxx8_AJ5ahpx5SWHqQJ140';
 const supabase=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
-var t=localStorage.getItem('ai_theme')||'light';document.documentElement.setAttribute('data-theme',t);
-var sc=localStorage.getItem('ai_country');
+var t=localStorage.getItem('clevora_theme')||'light';document.documentElement.setAttribute('data-theme',t);
+var sc=localStorage.getItem('clevora_country');
 if(sc){var m={IN:'India',US:'USA',GB:'UK',CA:'Canada',AU:'Australia',AE:'UAE',SG:'Singapore'};var v=m[sc]||'Other';var sel=document.getElementById('country');for(var i=0;i<sel.options.length;i++){if(sel.options[i].value===v){sel.selectedIndex=i;break;}}}
 async function handleSignup(e){
 e.preventDefault();
@@ -91,7 +91,7 @@ else{errEl.textContent='Error: '+error.message;}
 errEl.style.display='block';btn.disabled=false;btn.textContent='Create Free Account';return false;
 }
 var user={name:name,email:email,phone:phone,country:country,service:service,timestamp:new Date().toISOString()};
-localStorage.setItem('ai_current_user',JSON.stringify(user));
+localStorage.setItem('clevora_user',JSON.stringify(user));
 successEl.style.display='block';
 successEl.innerHTML='Account created successfully! Redirecting to dashboard...';
 setTimeout(function(){window.location.href='dashboard.html';},1500);
