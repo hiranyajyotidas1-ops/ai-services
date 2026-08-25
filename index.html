@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Studio — AI Services for Everyone</title>
+<title>Clevora — Smart AI Services for Everyone</title>
 <meta name="description" content="AI-powered content writing, design, website building, research, and automation. Plans from Rs 29. 24-hour delivery.">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -35,18 +35,14 @@ body{background:var(--bg);color:var(--text);transition:background .3s;overflow-x
 .nav-link:hover{color:var(--text)}
 .link{color:var(--accent1);text-decoration:none}
 .link:hover{text-decoration:underline}
-.toggle{width:48px;height:24px;background:#cbd5e1;border-radius:999px;position:relative;cursor:pointer;transition:background .3s}
-.toggle.on{background:var(--accent1)}
-.toggle::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;background:#fff;border-radius:50%;transition:transform .3s}
-.toggle.on::after{transform:translateX(24px)}
 </style>
 </head>
 <body>
 <nav class="fixed top-0 w-full nb z-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
 <div class="flex items-center gap-3">
-<div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm fa" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">AI</div>
-<span class="fd font-bold text-lg">AI Studio</span>
+<div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm fa" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">C</div>
+<span class="fd font-bold text-lg">Clevora</span>
 </div>
 <div class="hidden md:flex items-center gap-6">
 <a href="#services" class="nav-link text-sm">Services</a>
@@ -225,7 +221,7 @@ Content writing, web design, video scripts, research, and automation — powered
 <section class="py-20 px-4 sm:px-6">
 <div class="max-w-3xl mx-auto text-center glass rounded-3xl p-8 sm:p-12">
 <h2 class="fade text-3xl sm:text-4xl fd font-bold mb-4">Ready to Start?</h2>
-<p class="fade mb-8" style="color:var(--muted)">Join thousands of creators and businesses using AI Studio. Free to start — pay only when you're ready.</p>
+<p class="fade mb-8" style="color:var(--muted)">Join thousands of creators and businesses using Clevora. Free to start — pay only when you're ready.</p>
 <div class="fade flex flex-wrap gap-4 justify-center">
 <a href="signup.html" class="btn-g px-8 py-4 rounded-2xl font-bold">Start Free — Sign Up</a>
 <a href="#pricing" class="btn-w px-8 py-4 rounded-2xl font-bold">View Pricing</a>
@@ -235,10 +231,10 @@ Content writing, web design, video scripts, research, and automation — powered
 <footer class="py-12 px-4 sm:px-6 border-t" style="border-color:var(--border)">
 <div class="max-w-6xl mx-auto text-center">
 <div class="flex items-center justify-center gap-3 mb-4">
-<div class="w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">AI</div>
-<span class="fd font-bold">AI Studio</span>
+<div class="w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">C</div>
+<span class="fd font-bold">Clevora</span>
 </div>
-<p class="text-sm mb-4" style="color:var(--muted)">AI-powered services for everyone. Built with AI • GitHub Pages • Supabase • Razorpay</p>
+<p class="text-sm mb-4" style="color:var(--muted)">Smart AI Services for Everyone. Built with AI • GitHub Pages • Supabase • Razorpay</p>
 <div class="flex flex-wrap justify-center gap-4 mb-4">
 <a href="about.html" class="link text-sm">About</a>
 <a href="privacy.html" class="link text-sm">Privacy</a>
@@ -247,17 +243,17 @@ Content writing, web design, video scripts, research, and automation — powered
 <a href="dashboard.html" class="link text-sm">Dashboard</a>
 <a href="settings.html" class="link text-sm">Settings</a>
 </div>
-<p class="text-xs" style="color:var(--muted)">© 2026 AI Studio. All rights reserved.</p>
+<p class="text-xs" style="color:var(--muted)">© 2026 Clevora. All rights reserved.</p>
 </div>
 </footer>
 <script>
 var prices={IN:{s:'29',p:'101',b:'299',sym:'Rs ',old:['79','199','499']},US:{s:'$1',p:'$3',b:'$9',sym:'',old:['$3','$6','$15']},GB:{s:'£2',p:'£5',b:'£12',sym:'',old:['£5','$12','£25']},DEFAULT:{s:'$1',p:'$3',b:'$9',sym:'',old:['$3','$6','$15']}};
-function setCountry(c){var p=prices[c]||prices.DEFAULT;document.getElementById('hero-price').textContent=p.sym+p.s;document.getElementById('p1').textContent=p.sym+p.s;document.getElementById('p2').textContent=p.sym+p.p;document.getElementById('p3').textContent=p.sym+p.b;document.getElementById('p1-old').textContent=p.sym+p.old[0];document.getElementById('p2-old').textContent=p.sym+p.old[1];document.getElementById('p3-old').textContent=p.sym+p.old[2];for(var i=1;i<=6;i++){var el=document.getElementById('srv'+i);if(el)el.textContent=p.sym+p.s;}localStorage.setItem('ai_country',c);}
-var t=localStorage.getItem('ai_theme')||'light';document.documentElement.setAttribute('data-theme',t);
+function setCountry(c){var p=prices[c]||prices.DEFAULT;document.getElementById('hero-price').textContent=p.sym+p.s;document.getElementById('p1').textContent=p.sym+p.s;document.getElementById('p2').textContent=p.sym+p.p;document.getElementById('p3').textContent=p.sym+p.b;document.getElementById('p1-old').textContent=p.sym+p.old[0];document.getElementById('p2-old').textContent=p.sym+p.old[1];document.getElementById('p3-old').textContent=p.sym+p.old[2];for(var i=1;i<=6;i++){var el=document.getElementById('srv'+i);if(el)el.textContent=p.sym+p.s;}localStorage.setItem('clevora_country',c);}
+var t=localStorage.getItem('clevora_theme')||'light';document.documentElement.setAttribute('data-theme',t);
 function toggleAcc(b){var d=b.nextElementSibling;d.classList.toggle('open');b.querySelector('span').textContent=d.classList.contains('open')?'−':'+';}
 var obs=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting)i.target.classList.add('in');});},{threshold:0.1});
 document.querySelectorAll('.fade').forEach(function(el){obs.observe(el);});
-var sc=localStorage.getItem('ai_country');if(sc){document.getElementById('country-sel').value=sc;setCountry(sc);}
+var sc=localStorage.getItem('clevora_country');if(sc){document.getElementById('country-sel').value=sc;setCountry(sc);}
 </script>
 </body>
 </html>
