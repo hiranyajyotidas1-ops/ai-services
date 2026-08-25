@@ -2,47 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us — AI Studio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About — AI Studio</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>*{font-family:'Inter',sans-serif}.font-display{font-family:'Space Grotesk',sans-serif}body{background:#07070a;color:#fff}</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{font-family:'Inter',sans-serif;box-sizing:border-box}
+.fd{font-family:'Space Grotesk',sans-serif}
+:root{--bg:#f8fafc;--card:rgba(255,255,255,.8);--text:#0f172a;--muted:#64748b;--border:rgba(0,0,0,.06)}
+[data-theme="dark"]{--bg:#0f172a;--card:rgba(30,41,59,.6);--text:#f1f5f9;--muted:#94a3b8;--border:rgba(255,255,255,.08)}
+body{background:var(--bg);color:var(--text);transition:background .3s}
+.nb{background:var(--card);backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--border)}
+.card{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--border);box-shadow:0 4px 24px rgba(0,0,0,.04)}
+.gt{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.link{color:#6366f1;text-decoration:none}
+.link:hover{text-decoration:underline}
+</style>
 </head>
 <body>
-<nav class="border-b border-white/5 p-4"><div class="max-w-4xl mx-auto flex justify-between items-center"><a href="index.html" class="font-display font-bold text-lg">← AI Studio</a></div></nav>
-<div class="max-w-3xl mx-auto px-6 py-16">
-<h1 class="text-4xl font-display font-bold mb-8">About AI Studio</h1>
-<div class="space-y-6 text-gray-300">
-<p>AI Studio is an AI-powered digital services platform built to make professional content, design, and web development accessible to everyone — regardless of budget or technical expertise.</p>
-<p>Founded in 2026, we believe that high-quality digital services should not cost thousands of rupees. By leveraging 424+ AI APIs and automation, we deliver professional-grade content, designs, and websites at prices starting from just Rs 29.</p>
-<div class="bg-white/5 rounded-2xl p-6">
-<h2 class="text-xl font-bold mb-4 text-white">What We Offer</h2>
-<ul class="space-y-2">
-<li>• Content Writing — SEO articles, blog posts, website copy in 40+ languages</li>
-<li>• Logo & Design — Professional logos, social media graphics, thumbnails</li>
-<li>• Website Build — Landing pages, portfolios, business websites</li>
-<li>• Data Research — Market research, competitor analysis, data scraping</li>
-<li>• Video Scripts — YouTube, ads, voiceovers</li>
-<li>• AI Consultation — Strategy, tool selection, automation setup</li>
-</ul>
+<nav class="fixed top-0 w-full nb z-50"><div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">AI</div><span class="fd font-bold text-lg">AI Studio</span></div><a href="index.html" class="text-sm link">← Home</a></div></nav>
+<div class="pt-24 sm:pt-28 px-4 sm:px-6 pb-16 max-w-3xl mx-auto">
+<h1 class="text-4xl fd font-bold mb-4">About <span class="gt">AI Studio</span></h1>
+<div class="card rounded-3xl p-8 mb-6">
+<p class="text-lg mb-4" style="color:var(--muted)">AI Studio is an AI-powered services marketplace that makes professional content, design, web development, and research accessible to everyone — at prices anyone can afford.</p>
+<p class="mb-4" style="color:var(--muted)">Founded in 2026, we believe that AI should work for everyone, not just big corporations. Our platform combines cutting-edge AI with human creativity to deliver high-quality services in 24-72 hours, at a fraction of traditional costs.</p>
 </div>
-<div class="bg-white/5 rounded-2xl p-6">
-<h2 class="text-xl font-bold mb-4 text-white">Our Mission</h2>
-<p>To democratize access to professional digital services worldwide. We serve 195 countries with AI-powered solutions that are affordable, fast, and reliable.</p>
+<div class="grid sm:grid-cols-2 gap-6 mb-6">
+<div class="card rounded-3xl p-6"><div class="text-3xl mb-3">🎯</div><h3 class="font-bold mb-2">Our Mission</h3><p class="text-sm" style="color:var(--muted)">Make professional AI services accessible to creators, businesses, and entrepreneurs worldwide — starting at just Rs 29.</p></div>
+<div class="card rounded-3xl p-6"><div class="text-3xl mb-3">🌍</div><h3 class="font-bold mb-2">Our Vision</h3><p class="text-sm" style="color:var(--muted)">A world where anyone can start a business, create content, or build a website — regardless of budget or technical skills.</p></div>
 </div>
-<div class="bg-white/5 rounded-2xl p-6">
-<h2 class="text-xl font-bold mb-4 text-white">How We Work</h2>
-<p>Our system is fully automated and runs 24/7. When you sign up and choose a plan, AI APIs start working on your project immediately. Each project is handled in parallel — meaning 1,000+ users can be served simultaneously without any queue.</p>
-</div>
-<div class="bg-white/5 rounded-2xl p-6">
-<h2 class="text-xl font-bold mb-4 text-white">Contact</h2>
-<p>Email: hiranyajyotidas1@gmail.com</p>
-<p>Hours: 24/7 Automated (AI-powered)</p>
+<div class="card rounded-3xl p-8 mb-6">
+<h3 class="font-bold text-lg mb-4 fd">What We Offer</h3>
+<div class="grid sm:grid-cols-2 gap-3 text-sm">
+<div>✍️ Content Writing</div><div>🎨 Logo & Design</div>
+<div>🌐 Website Building</div><div>📊 Data Research</div>
+<div>🎬 Video Scripts</div><div>💬 AI Consultation</div>
 </div>
 </div>
-<div class="mt-12 pt-8 border-t border-white/5">
-<a href="index.html" class="text-indigo-400 hover:underline">← Back to AI Studio</a>
+<div class="card rounded-3xl p-8">
+<h3 class="font-bold text-lg mb-4 fd">Technology</h3>
+<p class="text-sm" style="color:var(--muted)">Built on Supabase (PostgreSQL), Razorpay payments, GitHub Pages hosting, and cutting-edge AI. Secure, scalable, and reliable.</p>
 </div>
 </div>
+<script>var t=localStorage.getItem('ai_theme')||'light';if(t==='system'){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);</script>
 </body>
 </html>
