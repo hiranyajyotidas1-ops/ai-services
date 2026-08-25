@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Settings — AI Studio</title>
+<title>Settings — Clevora</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -30,11 +30,11 @@ body{background:var(--bg);color:var(--text);transition:background .3s}
 </style>
 </head>
 <body>
-<nav class="fixed top-0 w-full nb z-50"><div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">AI</div><span class="fd font-bold text-lg">Settings</span></div><a href="dashboard.html" class="text-sm link">← Dashboard</a></div></nav>
+<nav class="fixed top-0 w-full nb z-50"><div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">C</div><span class="fd font-bold text-lg">Settings</span></div><a href="dashboard.html" class="text-sm link">← Dashboard</a></div></nav>
 <div class="pt-24 sm:pt-28 px-4 sm:px-6 pb-16 max-w-3xl mx-auto">
 <div class="card rounded-3xl p-6 mb-6">
 <h2 class="text-lg font-bold mb-4 fd">Appearance</h2>
-<p class="text-sm mb-4" style="color:var(--muted)">Choose how AI Studio looks to you</p>
+<p class="text-sm mb-4" style="color:var(--muted)">Choose how Clevora looks to you</p>
 <div class="grid grid-cols-3 gap-4">
 <div class="theme-opt" data-theme-val="light" onclick="setTheme('light')"><div class="text-2xl mb-2">☀️</div><div class="text-sm font-medium">Light</div></div>
 <div class="theme-opt" data-theme-val="dark" onclick="setTheme('dark')"><div class="text-2xl mb-2">🌙</div><div class="text-sm font-medium">Dark</div></div>
@@ -72,29 +72,29 @@ body{background:var(--bg);color:var(--text);transition:background .3s}
 </div>
 </div>
 <div class="card rounded-3xl p-6 text-center">
-<div class="text-sm font-bold fd mb-2">AI Studio</div>
+<div class="text-sm font-bold fd mb-2">Clevora</div>
 <div class="text-xs" style="color:var(--muted)">Version 1.0.0 · Built with AI</div>
 <div class="text-xs mt-2" style="color:var(--muted)">Powered by Supabase · Razorpay · GitHub Pages</div>
 </div>
 </div>
 <script>
 function setTheme(t){
-localStorage.setItem('ai_theme',t);
+localStorage.setItem('clevora_theme',t);
 if(t==='system'){var d=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',d);}
 else{document.documentElement.setAttribute('data-theme',t);}
 document.querySelectorAll('.theme-opt').forEach(function(el){el.classList.toggle('active',el.dataset.themeVal===t);});
 }
-function setLang(l){localStorage.setItem('ai_lang',l);}
+function setLang(l){localStorage.setItem('clevora_lang',l);}
 function saveAccount(){
-var user=JSON.parse(localStorage.getItem('ai_current_user')||'{}');
+var user=JSON.parse(localStorage.getItem('clevora_user')||'{}');
 user.name=document.getElementById('acc-name').value;
 user.phone=document.getElementById('acc-phone').value;
-localStorage.setItem('ai_current_user',JSON.stringify(user));
+localStorage.setItem('clevora_user',JSON.stringify(user));
 alert('Settings saved!');
 }
-var t=localStorage.getItem('ai_theme')||'light';
+var t=localStorage.getItem('clevora_theme')||'light';
 setTheme(t);
-var user=JSON.parse(localStorage.getItem('ai_current_user')||'null');
+var user=JSON.parse(localStorage.getItem('clevora_user')||'null');
 if(!user){window.location.href='login.html';}
 else{
 document.getElementById('acc-name').value=user.name||'';
