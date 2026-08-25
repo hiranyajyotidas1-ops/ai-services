@@ -3,28 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Login — AI Studio</title>
+<title>Login — Clevora</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 *{font-family:'Inter',sans-serif;box-sizing:border-box}
 .fd{font-family:'Space Grotesk',sans-serif}
-body{background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 50%,#f8fafc 100%);color:#0f172a;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem}
+:root{--bg:#f8fafc;--card:rgba(255,255,255,.8);--text:#0f172a;--muted:#64748b;--border:rgba(0,0,0,.06)}
+[data-theme="dark"]{--bg:#0f172a;--card:rgba(30,41,59,.6);--text:#f1f5f9;--muted:#94a3b8;--border:rgba(255,255,255,.08)}
+body{background:linear-gradient(135deg,var(--bg) 0%,#eef2ff 50%,var(--bg) 100%);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem;transition:background .3s}
 .glow{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(99,102,241,.08),transparent);z-index:-1;pointer-events:none}
-.card{background:rgba(255,255,255,.8);backdrop-filter:blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 4px 32px rgba(0,0,0,.04)}
+.card{background:var(--card);backdrop-filter:blur(16px);border:1px solid var(--border);box-shadow:0 4px 32px rgba(0,0,0,.04)}
 .btn{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff;transition:all .3s;cursor:pointer;border:none}
 .btn:hover{box-shadow:0 8px 32px rgba(99,102,241,.3);transform:translateY(-2px)}
-.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
-.input{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px 18px;color:#0f172a;width:100%;transition:all .3s;font-size:15px;box-sizing:border-box}
+.input{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--text);width:100%;transition:all .3s;font-size:15px;box-sizing:border-box}
 .input:focus{outline:none;border-color:#6366f1;background:#fff;box-shadow:0 0 0 3px rgba(99,102,241,.1)}
-.input::placeholder{color:#94a3b8}
-.gt{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .fa{animation:fl 6s ease-in-out infinite}
 @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.google-btn{background:#fff;border:1px solid #e2e8f0;transition:all .3s;cursor:pointer;color:#0f172a}
-.google-btn:hover{background:#f8fafc;border-color:#cbd5e1;box-shadow:0 2px 12px rgba(0,0,0,.04)}
-.error{color:#ef4444;font-size:13px;margin-top:8px;display:none;padding:8px 12px;border-radius:8px;background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.1)}
 .link{color:#6366f1;text-decoration:none;transition:color .2s}
 .link:hover{color:#4f46e5;text-decoration:underline}
 </style>
@@ -33,49 +28,43 @@ body{background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 50%,#f8fafc 100%);colo
 <div class="glow"></div>
 <div class="w-full max-w-md">
 <div class="text-center mb-8">
-<div class="w-14 h-14 rounded-2xl flex items-center justify-center font-bold text-lg fa mx-auto mb-4" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">AI</div>
-<h1 class="text-3xl fd font-bold mb-2" style="color:#0f172a">Welcome Back</h1>
-<p style="color:#64748b" class="text-sm">Login to your AI Studio account</p>
+<div class="w-14 h-14 rounded-2xl flex items-center justify-center font-bold text-lg fa mx-auto mb-4" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">C</div>
+<h1 class="text-3xl fd font-bold mb-2">Welcome Back</h1>
+<p class="text-sm" style="color:var(--muted)">Login to your Clevora account</p>
 </div>
-<div class="card rounded-3xl p-8">
+<div class="card rounded-3xl p-6 sm:p-8">
 <form id="loginForm" onsubmit="return handleLogin(event)">
 <div class="space-y-4">
-<div><label class="text-sm font-medium mb-2 block" style="color:#475569">Email</label><input type="email" id="email" required class="input" placeholder="john@example.com"></div>
-<div><label class="text-sm font-medium mb-2 block" style="color:#475569">Password</label><input type="password" id="password" required class="input" placeholder="••••••••"></div>
-<div id="error-msg" class="error"></div>
+<div><label class="text-sm font-medium mb-2 block" style="color:var(--muted)">Email</label><input type="email" id="email" required class="input" placeholder="john@example.com"></div>
+<div><label class="text-sm font-medium mb-2 block" style="color:var(--muted)">Password</label><input type="password" id="password" required class="input" placeholder="Your password"></div>
+<div id="error-msg" style="color:#ef4444;font-size:13px;margin-top:8px;display:none;padding:8px 12px;border-radius:8px;background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.1)"></div>
 <button type="submit" id="submit-btn" class="btn w-full py-4 rounded-2xl font-bold mt-2">Login</button>
 </div>
 </form>
-<div class="my-6 flex items-center gap-3"><div class="flex-1 h-px" style="background:#e2e8f0"></div><span class="text-xs" style="color:#94a3b8">OR</span><div class="flex-1 h-px" style="background:#e2e8f0"></div></div>
-<button onclick="alert('Google login coming soon! Use email login for now.')" class="google-btn w-full py-3.5 rounded-2xl font-medium text-sm flex items-center justify-center gap-3">
-<svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-Continue with Google
-</button>
-<p class="text-center text-sm mt-6" style="color:#64748b">New here? <a href="signup.html" class="link font-medium">Create a free account</a></p>
+<p class="text-center text-sm mt-4" style="color:var(--muted)">Don't have an account? <a href="signup.html" class="link font-medium">Sign Up Free</a></p>
 </div>
-<div class="text-center mt-6"><a href="index.html" class="text-sm transition" style="color:#94a3b8" onmouseover="this.style.color='#475569'" onmouseout="this.style.color='#94a3b8'">Back to home</a></div>
+<div class="text-center mt-6"><a href="index.html" class="text-sm" style="color:#94a3b8">Back to home</a></div>
 </div>
 <script>
-const SUPABASE_URL='https://ocuyxgocmtucdckiqqeh.supabase.co';
-const SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9jdXl4Z29jbXR1Y2Rja2lxcWVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1NzM2NzAsImV4cCI6MjEwMTE0OTY3MH0.UYQ6U2WcrTbQVRUTni_BcQxx8_AJ5ahpx5SWHqQJ140';
-const supabase=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
-async function handleLogin(e){
+function handleLogin(e){
 e.preventDefault();
 var btn=document.getElementById('submit-btn');
 var errEl=document.getElementById('error-msg');
 errEl.style.display='none';
 btn.disabled=true;btn.textContent='Logging in...';
 var email=document.getElementById('email').value.trim().toLowerCase();
-try{
-var result=await supabase.from('users').select('*').eq('email',email).single();
-var data=result.data;var error=result.error;
-if(error||!data){errEl.textContent='No account found with this email. Please sign up first.';errEl.style.display='block';btn.disabled=false;btn.textContent='Login';return false;}
-var user={name:data.name,email:data.email,country:data.country,service:data.service,plan:data.plan||'free',timestamp:data.created_at};
-localStorage.setItem('ai_current_user',JSON.stringify(user));
+var password=document.getElementById('password').value;
+var user=JSON.parse(localStorage.getItem('clevora_user')||'null');
+if(user&&user.email===email){
 window.location.href='dashboard.html';
-}catch(err){errEl.textContent='Network error. Please try again.';errEl.style.display='block';btn.disabled=false;btn.textContent='Login';}
+}else{
+errEl.textContent='Account not found. Please sign up first.';
+errEl.style.display='block';
+btn.disabled=false;btn.textContent='Login';
+}
 return false;
 }
+var t=localStorage.getItem('clevora_theme')||'light';document.documentElement.setAttribute('data-theme',t);
 </script>
 </body>
 </html>
