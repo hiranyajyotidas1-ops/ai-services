@@ -3,70 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sign Up — Clevora</title>
+<title>Sign Up — Clevora | Create Free Account</title>
+<meta name="description" content="Create your free Clevora account. No credit card needed. AI-powered content, design, web, research services from Rs 29.">
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{font-family:'Inter',sans-serif;box-sizing:border-box}
+*{font-family:'Inter',sans-serif;box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
 .fd{font-family:'Space Grotesk',sans-serif}
-:root{--bg:#f8fafc;--card:rgba(255,255,255,.8);--text:#0f172a;--muted:#64748b;--border:rgba(0,0,0,.06)}
-[data-theme="dark"]{--bg:#0f172a;--card:rgba(30,41,59,.6);--text:#f1f5f9;--muted:#94a3b8;--border:rgba(255,255,255,.08)}
-body{background:linear-gradient(135deg,var(--bg) 0%,#eef2ff 50%,var(--bg) 100%);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem;transition:background .3s}
-.glow{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(99,102,241,.08),transparent);z-index:-1;pointer-events:none}
-.card{background:var(--card);backdrop-filter:blur(16px);border:1px solid var(--border);box-shadow:0 4px 32px rgba(0,0,0,.04)}
-.btn{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff;transition:all .3s;cursor:pointer;border:none}
-.btn:hover{box-shadow:0 8px 32px rgba(99,102,241,.3);transform:translateY(-2px)}
-.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
-.input{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--text);width:100%;transition:all .3s;font-size:15px;box-sizing:border-box}
-.input:focus{outline:none;border-color:#6366f1;background:#fff;box-shadow:0 0 0 3px rgba(99,102,241,.1)}
-.input::placeholder{color:#94a3b8}
-.fa{animation:fl 6s ease-in-out infinite}
-@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.error{color:#ef4444;font-size:13px;margin-top:8px;display:none;padding:8px 12px;border-radius:8px;background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.1)}
-.success{color:#16a34a;font-size:14px;display:none;padding:12px;border-radius:12px;background:rgba(22,163,74,.05);border:1px solid rgba(22,163,74,.15);margin-top:16px}
-select.input option{background:#fff;color:#0f172a}
-.link{color:#6366f1;text-decoration:none;transition:color .2s}
-.link:hover{color:#4f46e5;text-decoration:underline}
-.trust{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px}
+:root{--bg:#fafafa;--card:#fff;--text:#0a0a0a;--muted:#525252;--dim:#a3a3a3;--border:#e5e5e5;--a1:#6366f1;--a2:#8b5cf6;--a3:#d946ef;--warm1:#f97316;--warm2:#ec4899;--surface:#f5f5f5}
+[data-theme="dark"]{--bg:#0a0a0a;--card:#161616;--text:#fafafa;--muted:#a3a3a3;--dim:#737373;--border:#262626;--surface:#1a1a1a}
+body{background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;transition:background .3s,color .3s}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(80px);opacity:.15;z-index:0;pointer-events:none;animation:bfloat 20s ease-in-out infinite}
+.bg-blob.b1{width:500px;height:500px;background:#6366f1;top:-10%;left:-10%;animation-delay:0s}
+.bg-blob.b2{width:400px;height:400px;background:#d946ef;bottom:-10%;right:-5%;animation-delay:-7s}
+.bg-blob.b3{width:350px;height:350px;background:#f97316;top:40%;left:50%;animation-delay:-14s}
+@keyframes bfloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(60px,-40px) scale(1.1)}66%{transform:translate(-40px,60px) scale(.95)}}
+.grid-bg{position:fixed;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:48px 48px;opacity:.15;z-index:0;pointer-events:none}
+.wrapper{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.5rem}
+.glass{background:var(--card);backdrop-filter:blur(20px);border:1px solid var(--border);box-shadow:0 8px 40px rgba(0,0,0,.06)}
+.btn-g{background:linear-gradient(135deg,var(--a1),var(--a2),var(--a3));color:#fff;transition:all .3s;cursor:pointer;border:none;position:relative;overflow:hidden}
+.btn-g::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transition:left .5s}
+.btn-g:hover::before{left:100%}
+.btn-g:hover{box-shadow:0 12px 40px rgba(99,102,241,.4);transform:translateY(-2px)}
+.btn-g:active{transform:translateY(0)}
+.btn-g:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-g:disabled::before{display:none}
+.field{width:100%;padding:13px 16px;border-radius:12px;font-size:14px;background:var(--surface);border:1px solid var(--border);color:var(--text);transition:all .2s;box-sizing:border-box}
+.field:focus{outline:none;border-color:var(--a1);background:var(--card);box-shadow:0 0 0 3px rgba(99,102,241,.1)}
+.field::placeholder{color:var(--dim)}
+.gt{background:linear-gradient(135deg,var(--a1),var(--a2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gt-warm{background:linear-gradient(135deg,var(--warm1),var(--warm2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo{width:64px;height:64px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:#fff;background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);animation:logoFloat 4s ease-in-out infinite;box-shadow:0 8px 32px rgba(99,102,241,.3)}
+@keyframes logoFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+.logo::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.3),transparent);animation:shine 3s ease-in-out infinite}
+@keyframes shine{0%,100%{opacity:.3}50%{opacity:.7}}
+.error-box{color:#ef4444;font-size:13px;display:none;padding:10px 14px;border-radius:10px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.15);margin-top:12px}
+.success-box{color:#16a34a;font-size:14px;display:none;padding:14px;border-radius:12px;background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.15);margin-top:12px;text-align:center}
+.link{color:var(--a1);text-decoration:none;transition:color .2s;font-weight:500}
+.link:hover{color:var(--a2);text-decoration:underline}
+.fade-in{animation:fadeIn .8s cubic-bezier(.23,1,.32,1)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fade-in-delay{animation:fadeIn .8s cubic-bezier(.23,1,.32,1) .2s both}
+.fade-in-delay2{animation:fadeIn .8s cubic-bezier(.23,1,.32,1) .4s both}
+.dot{animation:blink 1.4s infinite}
+@keyframes blink{0%,100%{opacity:.2}50%{opacity:1}}
+select.field option{background:var(--card);color:var(--text)}
 </style>
 </head>
 <body>
-<div class="glow"></div>
-<div class="w-full max-w-md">
-<div class="text-center mb-8">
-<div class="w-14 h-14 rounded-2xl flex items-center justify-center font-bold text-lg fa mx-auto mb-4" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">C</div>
-<h1 class="text-3xl fd font-bold mb-2">Create Free Account</h1>
-<p class="text-sm" style="color:var(--muted)">No credit card needed. Pay later when you choose a plan.</p>
+<div class="bg-blob b1"></div>
+<div class="bg-blob b2"></div>
+<div class="bg-blob b3"></div>
+<div class="grid-bg"></div>
+<div class="wrapper">
+<div class="glass rounded-3xl p-8 sm:p-10 w-full max-w-md fade-in">
+<div class="flex flex-col items-center mb-6">
+<div class="logo mb-4">C</div>
+<h1 class="text-2xl fd font-bold text-center">Create <span class="gt">Free Account</span></h1>
+<p class="text-sm text-center mt-2" style="color:var(--muted)">No credit card needed. Pay later when you choose a plan.</p>
 </div>
-<div class="card rounded-3xl p-6 sm:p-8">
-<form id="signupForm" onsubmit="return handleSignup(event)">
-<div class="space-y-4">
-<div><label class="text-sm font-medium mb-2 block" style="color:var(--muted)">Full Name</label><input type="text" id="name" required class="input" placeholder="John Doe"></div>
-<div><label class="text-sm font-medium mb-2 block" style="color:var(--muted)">Email</label><input type="email" id="email" required class="input" placeholder="john@example.com"></div>
-<div><label class="text-sm font-medium mb-2 block" style="color:var(--muted)">Phone Number <span class="text-xs" style="color:#94a3b8">(for updates)</span></label><input type="tel" id="phone" class="input" placeholder="+91 98765 43210"></div>
-<div><label class="text-sm font-medium mb-2 block" style="color:var(--muted)">Password</label><input type="password" id="password" required class="input" placeholder="Min 6 characters" minlength="6"></div>
+<form id="signup-form" onsubmit="return handleSignup(event)" class="space-y-4 fade-in-delay">
+<div>
+<label class="text-xs font-semibold mb-1.5 block" style="color:var(--muted)">FULL NAME</label>
+<input id="name" type="text" required class="field" placeholder="Your name">
+</div>
+<div>
+<label class="text-xs font-semibold mb-1.5 block" style="color:var(--muted)">EMAIL</label>
+<input id="email" type="email" required class="field" placeholder="you@email.com">
+</div>
+<div>
+<label class="text-xs font-semibold mb-1.5 block" style="color:var(--muted)">PHONE <span style="font-weight:400;color:var(--dim)">(optional)</span></label>
+<input id="phone" type="tel" class="field" placeholder="+91 98XXX XXXXX">
+</div>
+<div>
+<label class="text-xs font-semibold mb-1.5 block" style="color:var(--muted)">PASSWORD</label>
+<input id="password" type="password" required class="field" placeholder="Min 6 characters">
+</div>
 <div class="grid grid-cols-2 gap-3">
-<div><label class="text-sm font-medium mb-2 block" style="color:var(--muted)">Country</label><select id="country" required class="input"><option value="India">India</option><option value="USA">USA</option><option value="UK">UK</option><option value="Canada">Canada</option><option value="Australia">Australia</option><option value="UAE">UAE</option><option value="Singapore">Singapore</option><option value="Other">Other</option></select></div>
-<div><label class="text-sm font-medium mb-2 block" style="color:var(--muted)">Service Needed</label><select id="service" required class="input"><option value="">Select...</option><option value="content">Content Writing</option><option value="design">Logo & Design</option><option value="website">Website Build</option><option value="research">Data Research</option><option value="video">Video Scripts</option><option value="consultation">AI Consultation</option><option value="other">Other</option></select></div>
+<div>
+<label class="text-xs font-semibold mb-1.5 block" style="color:var(--muted)">COUNTRY</label>
+<select id="country" class="field">
+<option value="India">India</option>
+<option value="USA">USA</option>
+<option value="UK">UK</option>
+<option value="Canada">Canada</option>
+<option value="Australia">Australia</option>
+<option value="UAE">UAE</option>
+<option value="Singapore">Singapore</option>
+<option value="Other">Other</option>
+</select>
 </div>
-<div id="error-msg" class="error"></div>
-<div id="success-msg" class="success"></div>
-<button type="submit" id="submit-btn" class="btn w-full py-4 rounded-2xl font-bold mt-2">Create Free Account</button>
+<div>
+<label class="text-xs font-semibold mb-1.5 block" style="color:var(--muted)">SERVICE NEEDED</label>
+<select id="service" class="field">
+<option value="">Select...</option>
+<option value="Content Writing">Content Writing</option>
+<option value="Logo & Design">Logo & Design</option>
+<option value="Website Build">Website Build</option>
+<option value="Data Research">Data Research</option>
+<option value="Video Scripts">Video Scripts</option>
+<option value="AI Consultation">AI Consultation</option>
+<option value="Other">Other</option>
+</select>
 </div>
+</div>
+<div id="error-msg" class="error-box"></div>
+<div id="success-msg" class="success-box"></div>
+<button id="submit-btn" type="submit" class="btn-g w-full py-3.5 rounded-xl font-bold text-sm">Create Free Account</button>
 </form>
-<div class="flex flex-wrap justify-center gap-4 mt-6">
-<span class="trust">Secure</span><span class="trust">30-sec signup</span><span class="trust">No card needed</span>
+<div class="flex justify-center items-center gap-4 mt-5 text-xs fade-in-delay2" style="color:var(--dim)">
+<span>Secure 30-sec signup</span>
+<span>·</span>
+<span>No card needed</span>
 </div>
-<p class="text-center text-sm mt-4" style="color:var(--muted)">Already have an account? <a href="login.html" class="link font-medium">Login</a></p>
+<div class="text-center mt-5 text-sm fade-in-delay2">Already have an account? <a href="login.html" class="link">Login</a></div>
+<div class="text-center mt-3"><a href="index.html" class="text-xs" style="color:var(--dim)">← Back to home</a></div>
 </div>
-<div class="text-center mt-6"><a href="index.html" class="text-sm" style="color:#94a3b8">Back to home</a></div>
 </div>
 <script>
 const SUPABASE_URL='https://ocuyxgocmtucdckiqqeh.supabase.co';
 const SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9jdXl4Z29jbXR1Y2Rja2lxcWVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1NzM2NzAsImV4cCI6MjEwMTE0OTY3MH0.UYQ6U2WcrTbQVRUTni_BcQxx8_AJ5ahpx5SWHqQJ140';
 const supabase=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
-var t=localStorage.getItem('clevora_theme')||'light';document.documentElement.setAttribute('data-theme',t);
+var t=localStorage.getItem('clevora_theme')||'light';
+document.documentElement.setAttribute('data-theme',t);
 var sc=localStorage.getItem('clevora_country');
 if(sc){var m={IN:'India',US:'USA',GB:'UK',CA:'Canada',AU:'Australia',AE:'UAE',SG:'Singapore'};var v=m[sc]||'Other';var sel=document.getElementById('country');for(var i=0;i<sel.options.length;i++){if(sel.options[i].value===v){sel.selectedIndex=i;break;}}}
 async function handleSignup(e){
@@ -75,32 +135,26 @@ var btn=document.getElementById('submit-btn');
 var errEl=document.getElementById('error-msg');
 var successEl=document.getElementById('success-msg');
 errEl.style.display='none';successEl.style.display='none';
-btn.disabled=true;btn.textContent='Creating account...';
+btn.disabled=true;
+btn.innerHTML='Creating account<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>';
 var name=document.getElementById('name').value.trim();
 var email=document.getElementById('email').value.trim().toLowerCase();
 var phone=document.getElementById('phone').value.trim();
 var password=document.getElementById('password').value;
 var country=document.getElementById('country').value;
 var service=document.getElementById('service').value;
+if(password.length<6){errEl.textContent='Password must be at least 6 characters.';errEl.style.display='block';btn.disabled=false;btn.textContent='Create Free Account';return false;}
 try{
 var result=await supabase.from('users').insert([{name:name,email:email,phone:phone,country:country,service:service,plan:'free'}]).select();
 var data=result.data;var error=result.error;
-if(error){
-if(error.code==='23505'){errEl.textContent='This email is already registered. Try logging in.';}
-else{errEl.textContent='Error: '+error.message;}
-errEl.style.display='block';btn.disabled=false;btn.textContent='Create Free Account';return false;
-}
+if(error){if(error.code==='23505'){errEl.textContent='This email is already registered. Try logging in.';}else{errEl.textContent='Error: '+error.message;}errEl.style.display='block';btn.disabled=false;btn.textContent='Create Free Account';return false;}
 var user={name:name,email:email,phone:phone,country:country,service:service,timestamp:new Date().toISOString()};
 localStorage.setItem('clevora_user',JSON.stringify(user));
 successEl.style.display='block';
-successEl.innerHTML='Account created successfully! Redirecting to dashboard...';
+successEl.innerHTML='<strong>Account created!</strong> Redirecting to dashboard...';
 setTimeout(function(){window.location.href='dashboard.html';},1500);
-}catch(err){
-errEl.textContent='Network error. Please check your connection and try again.';
-errEl.style.display='block';btn.disabled=false;btn.textContent='Create Free Account';
-}
-return false;
-}
+}catch(err){errEl.textContent='Network error. Please check connection and try again.';errEl.style.display='block';btn.disabled=false;btn.textContent='Create Free Account';}
+return false;}
 </script>
 </body>
 </html>
