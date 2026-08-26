@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>API — Clevora</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="js/app.js"></script>
+  <script>
+    window.Clevora.mountShell(`
+      <section class="section">
+        <div class="container" style="max-width:40rem">
+          <h1 style="margin:0;font-size:clamp(2rem,4vw,2.75rem)">API</h1>
+          <p style="margin:.75rem 0 0;color:var(--muted);line-height:1.65">
+            One OpenAI-compatible endpoint for your apps. Keys live on your desk after sign-in. Route traffic through your own Cloudflare Worker in production.
+          </p>
+          <pre class="code" style="margin-top:2rem">POST /v1/chat/completions
+Authorization: Bearer clev_live_...
+Content-Type: application/json
+
+{
+  "model": "clevora-core",
+  "messages": [{ "role": "user", "content": "Write a menu intro" }]
+}</pre>
+          <p style="margin:1.5rem 0 0;font-size:.875rem;color:var(--muted)">
+            Credits are sold as digital products. Usage is logged per key. Never put provider secrets in the browser.
+          </p>
+        </div>
+      </section>
+    `);
+  </script>
+</body>
+</html>

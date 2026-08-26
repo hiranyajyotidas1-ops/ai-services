@@ -1,47 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About — Clevora</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*{font-family:'Inter',sans-serif;box-sizing:border-box}
-.fd{font-family:'Space Grotesk',sans-serif}
-:root{--bg:#f8fafc;--card:rgba(255,255,255,.8);--text:#0f172a;--muted:#64748b;--border:rgba(0,0,0,.06)}
-[data-theme="dark"]{--bg:#0f172a;--card:rgba(30,41,59,.6);--text:#f1f5f9;--muted:#94a3b8;--border:rgba(255,255,255,.08)}
-body{background:var(--bg);color:var(--text);transition:background .3s}
-.nb{background:var(--card);backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--border)}
-.card{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--border);box-shadow:0 4px 24px rgba(0,0,0,.04)}
-.gt{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.link{color:#6366f1;text-decoration:none}
-.link:hover{text-decoration:underline}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About — Clevora</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-<nav class="fixed top-0 w-full nb z-50"><div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">C</div><span class="fd font-bold text-lg">Clevora</span></div><a href="index.html" class="text-sm link">← Home</a></div></nav>
-<div class="pt-24 sm:pt-28 px-4 sm:px-6 pb-16 max-w-3xl mx-auto">
-<h1 class="text-4xl fd font-bold mb-4">About <span class="gt">Clevora</span></h1>
-<div class="card rounded-3xl p-8 mb-6">
-<p class="text-lg mb-4" style="color:var(--muted)">Clevora is an AI-powered services marketplace that makes professional content, design, web development, and research accessible to everyone — at prices anyone can afford.</p>
-<p class="mb-4" style="color:var(--muted)">Founded in 2026, we believe that AI should work for everyone, not just big corporations. Our platform combines cutting-edge AI with human creativity to deliver high-quality services in 24-72 hours, at a fraction of traditional costs.</p>
-</div>
-<div class="grid sm:grid-cols-2 gap-6 mb-6">
-<div class="card rounded-3xl p-6"><div class="text-3xl mb-3">🎯</div><h3 class="font-bold mb-2">Our Mission</h3><p class="text-sm" style="color:var(--muted)">Make professional AI services accessible to creators, businesses, and entrepreneurs worldwide — starting at just Rs 29.</p></div>
-<div class="card rounded-3xl p-6"><div class="text-3xl mb-3">🌍</div><h3 class="font-bold mb-2">Our Vision</h3><p class="text-sm" style="color:var(--muted)">A world where anyone can start a business, create content, or build a website — regardless of budget or technical skills.</p></div>
-</div>
-<div class="card rounded-3xl p-8 mb-6">
-<h3 class="font-bold text-lg mb-4 fd">What We Offer</h3>
-<div class="grid sm:grid-cols-2 gap-3 text-sm">
-<div>✍️ Content Writing</div><div>🎨 Logo & Design</div><div>🌐 Website Building</div><div>📊 Data Research</div><div>🎬 Video Scripts</div><div>💬 AI Consultation</div>
-</div>
-</div>
-<div class="card rounded-3xl p-8">
-<h3 class="font-bold text-lg mb-4 fd">Technology</h3>
-<p class="text-sm" style="color:var(--muted)">Built on Supabase (PostgreSQL), Razorpay payments, GitHub Pages hosting, and cutting-edge AI. Secure, scalable, and reliable.</p>
-</div>
-</div>
-<script>var t=localStorage.getItem('clevora_theme')||'light';if(t==='system'){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);</script>
+  <div id="app"></div>
+  <script src="js/app.js"></script>
+  <script>
+    window.Clevora.mountShell(`
+      <section class="section">
+        <div class="container" style="max-width:36rem">
+          <h1 style="margin:0;font-size:clamp(2rem,4vw,2.75rem)">About Clevora</h1>
+          <p style="margin:1.5rem 0 0;color:var(--muted);line-height:1.65">
+            Clevora is an India-first AI services desk. We sell finished work — articles, brands, websites, research — at a one-time price, then generate it on your desk.
+          </p>
+          <p style="margin:1rem 0 0;line-height:1.65">
+            The shop is built like a restaurant: a menu you can read before you sit down, a kitchen that does not improvise the bill, and a table (your desk) where the plate arrives.
+          </p>
+          <p style="margin:1rem 0 0;line-height:1.65">
+            We study how Linear, Stripe, Framer and Lovable present product: quiet type, one accent, no carnival. Then we price for UPI and rupees.
+          </p>
+        </div>
+      </section>
+    `);
+  </script>
 </body>
 </html>

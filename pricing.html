@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Pricing — Clevora</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      const C = window.Clevora;
+      const country = C.getPrefs().country;
+      const cards = C.PLANS.map(
+        (p) => `
+        <div class="price-card ${p.featured ? "featured" : ""}">
+          <div class="price-name">${C.escapeHtml(p.name)}</div>
+          <div class="price-amount">${C.formatPrice(p.priceInr, country)}</div>
+          <p class="price-note">${C.escapeHtml(p.note)}</p>
+          <ul class="price-list">${p.items.map((i) => `<li>${C.escapeHtml(i)}</li>`).join("")}</ul>
+          <a class="btn btn-primary btn-block" href="signup.html">Start with ${C.escapeHtml(p.name)}</a>
+        </div>`
+      ).join("");
+
+      C.mountShell(`
+        <section class="page-hero">
+          <div class="container">
+            <h1>Pricing</h1>
+            <p>Pay once per job. Currency follows the country in the header.</p>
+          </div>
+        </section>
+        <section class="section" style="padding-top:1.5rem">
+          <div class="container price-grid">${cards}</div>
+        </section>
+      `);
+    })();
+  </script>
+</body>
+</html>
