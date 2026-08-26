@@ -1,0 +1,13 @@
+{
+  "name": "Clevora — AI Services",
+  "short_name": "Clevora",
+  "description": "Smart AI Services for Everyone — content, design, web, research from ₹29",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "faf8ff",
+  "theme_color": "#6366f1",
+  "icons": [
+    {"src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}
