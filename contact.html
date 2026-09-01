@@ -1,123 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact Clevora — Get in Touch</title>
-<meta name="description" content="Contact Clevora. India-based team, 24-hour response time. Email hello@clevora.ai or send a message and we'll reply within a day.">
-<meta name="keywords" content="contact Clevora, AI services contact, India AI platform, support">
-<meta property="og:title" content="Contact Clevora">
-<meta property="og:description" content="India-based team, 24-hour response time.">
-<meta property="og:type" content="website">
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*{font-family:'Inter',sans-serif;box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
-.fd{font-family:'Space Grotesk',sans-serif}
-:root{--bg:#fafafa;--card:#fff;--text:#0a0a0a;--muted:#737373;--dim:#a3a3a3;--border:#e5e5e5;--a1:#6366f1;--a2:#8b5cf6;--a3:#d946ef;--green:#22c55e;--amber:#f59e0b;--surface:#f5f5f5}
-[data-theme="dark"]{--bg:#0a0a0a;--card:#171717;--text:#fafafa;--muted:#a3a3a3;--dim:#737373;--border:#262626;--surface:#1a1a1a}
-body{background:var(--bg);color:var(--text);transition:background .3s,color .3s;overflow-x:hidden}
-.glass{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--border)}
-.btn-g{background:linear-gradient(135deg,var(--a1),var(--a2),var(--a3));color:#fff;transition:all .3s;cursor:pointer;border:none}
-.btn-g:hover{box-shadow:0 8px 32px rgba(99,102,241,.35);transform:translateY(-2px)}
-.gt{background:linear-gradient(135deg,var(--a1),var(--a2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.nb{background:rgba(250,250,250,.8);backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--border)}
-[data-theme="dark"] .nb{background:rgba(10,10,10,.8)}
-.nav-link{color:var(--muted);transition:color .2s;cursor:pointer;font-weight:500}
-.nav-link:hover{color:var(--text)}
-.nav-link.active{color:var(--text);font-weight:600}
-.field{width:100%;padding:12px 14px;border-radius:12px;font-size:14px;background:var(--card);border:1px solid var(--border);color:var(--text);transition:border-color .2s}
-.field:focus{outline:none;border-color:var(--a1)}
-label{font-size:13px;font-weight:600;margin-bottom:6px;display:block}
-.footer-link{color:var(--muted);transition:color .2s;cursor:pointer;font-size:14px}
-.footer-link:hover{color:var(--text)}
-.fade{opacity:0;transform:translateY(20px);transition:all .6s cubic-bezier(.23,1,.32,1)}
-.fade.in{opacity:1;transform:translateY(0)}
-.float{animation:fl 6s ease-in-out infinite}
-@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact — Clevora</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-<nav class="fixed top-0 w-full nb z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-<div class="flex items-center gap-3">
-<a href="index.html" class="flex items-center gap-3">
-<div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm float" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">C</div>
-<span class="fd font-bold text-lg">Clevora</span>
-</a>
-</div>
-<div class="hidden lg:flex items-center gap-7">
-<a href="services.html" class="nav-link text-sm">Services</a>
-<a href="index.html#pricing" class="nav-link text-sm">Pricing</a>
-<a href="blog.html" class="nav-link text-sm">Blog</a>
-<a href="about.html" class="nav-link text-sm">About</a>
-<a href="contact.html" class="nav-link active text-sm">Contact</a>
-</div>
-<div class="flex items-center gap-3">
-<a href="login.html" class="nav-link text-sm hidden md:block">Login</a>
-<a href="signup.html" class="btn-g px-5 py-2 rounded-xl text-sm font-semibold">Get Started</a>
-</div>
-</div>
-</nav>
-<section class="pt-32 sm:pt-36 pb-8 px-4 sm:px-6">
-<div class="max-w-3xl mx-auto text-center">
-<div class="fade inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-5"><span class="text-xs font-semibold" style="color:var(--a1)">CONTACT US</span></div>
-<h1 class="fade text-4xl sm:text-5xl fd font-bold tracking-tight leading-[1.05] mb-4">Let's <span class="gt">talk</span></h1>
-<p class="fade text-lg" style="color:var(--muted)">Questions, custom projects, or partnership ideas — we reply within 24 hours.</p>
-</div>
-</section>
-<section class="py-8 px-4 sm:px-6">
-<div class="max-w-5xl mx-auto grid lg:grid-cols-5 gap-8">
-<div class="lg:col-span-3 fade glass rounded-3xl p-7 sm:p-9">
-<h2 class="text-xl fd font-bold mb-1">Send us a message</h2>
-<p class="text-sm mb-6" style="color:var(--muted)">Fill in the form and our team will get back to you within 24 hours.</p>
-<form id="contact-form" onsubmit="handleSubmit(event)">
-<div class="grid sm:grid-cols-2 gap-4 mb-4">
-<div><label for="name">Name</label><input id="name" name="name" type="text" required class="field" placeholder="Your name"></div>
-<div><label for="email">Email</label><input id="email" name="email" type="email" required class="field" placeholder="you@email.com"></div>
-</div>
-<div class="mb-4"><label for="phone">Phone <span style="color:var(--dim);font-weight:400">(optional)</span></label><input id="phone" name="phone" type="tel" class="field" placeholder="+91 98XXX XXXXX"></div>
-<div class="mb-5"><label for="message">Message</label><textarea id="message" name="message" required rows="5" class="field" placeholder="Tell us about your project or question..."></textarea></div>
-<button type="submit" class="btn-g w-full px-6 py-3.5 rounded-xl text-sm font-semibold">Send Message →</button>
-<p id="form-status" class="text-xs mt-3 text-center" style="color:var(--green);display:none">✓ Thanks! We'll reply within 24 hours.</p>
-</form>
-</div>
-<div class="lg:col-span-2 space-y-4">
-<div class="fade glass rounded-2xl p-6">
-<div class="text-2xl mb-2">📧</div>
-<h3 class="font-bold mb-1">Email</h3><p class="text-sm" style="color:var(--muted)">hello@clevora.ai</p>
-</div>
-<div class="fade glass rounded-2xl p-6">
-<div class="text-2xl mb-2">⏱</div>
-<h3 class="font-bold mb-1">Response Time</h3><p class="text-sm" style="color:var(--muted)">Within 24 hours, Mon–Sat.</p>
-</div>
-<div class="fade glass rounded-2xl p-6">
-<div class="text-2xl mb-2">🇮🇳</div>
-<h3 class="font-bold mb-1">India-Based Team</h3><p class="text-sm" style="color:var(--muted)">Built and run from India. We understand the local market.</p>
-</div>
-<div class="fade glass rounded-2xl p-6" style="background:linear-gradient(135deg,rgba(99,102,241,.06),rgba(217,70,239,.06))">
-<h3 class="font-bold mb-1">Prefer to start now?</h3><p class="text-sm mb-4" style="color:var(--muted)">Skip the wait — explore our services and pricing.</p>
-<a href="services.html" class="btn-g inline-block px-5 py-2.5 rounded-xl text-sm font-semibold">View Services →</a>
-</div>
-</div>
-</div>
-</section>
-<footer class="py-12 px-4 sm:px-6 border-t mt-8" style="border-color:var(--border)">
-<div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<div><div class="flex items-center gap-3 mb-3"><div class="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-xs" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">C</div><span class="fd font-bold">Clevora</span></div><p class="text-sm mb-3" style="color:var(--muted)">AI-powered business services platform. Built for India, serving the world.</p><p class="text-xs" style="color:var(--dim)">© 2026 Clevora. All rights reserved.</p></div>
-<div><h4 class="font-bold text-sm mb-3">Services</h4><div class="space-y-2"><a href="services.html" class="footer-link block">Content Writing</a><a href="services.html" class="footer-link block">Logo & Design</a><a href="services.html" class="footer-link block">Web Development</a><a href="services.html" class="footer-link block">SEO</a><a href="services.html" class="footer-link block">Research</a><a href="services.html" class="footer-link block">Automation</a></div></div>
-<div><h4 class="font-bold text-sm mb-3">Company</h4><div class="space-y-2"><a href="about.html" class="footer-link block">About</a><a href="blog.html" class="footer-link block">Blog</a><a href="contact.html" class="footer-link block">Contact</a><a href="privacy.html" class="footer-link block">Privacy</a></div></div>
-<div><h4 class="font-bold text-sm mb-3">Account</h4><div class="space-y-2"><a href="login.html" class="footer-link block">Login</a><a href="signup.html" class="footer-link block">Get Started</a><a href="dashboard.html" class="footer-link block">Dashboard</a><a href="settings.html" class="footer-link block">Settings</a></div></div>
-</div>
-</footer>
-<script>
-function handleSubmit(e){e.preventDefault();
-var s=document.getElementById('form-status');s.style.display='block';
-e.target.reset();
-setTimeout(function(){s.style.display='none';},4000);
-}
-var t=localStorage.getItem('clevora_theme')||'light';if(t==='system'){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);
-var obs=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting)i.target.classList.add('in');});},{threshold:0.08});document.querySelectorAll('.fade').forEach(function(el){obs.observe(el);});
-</script>
+  <div id="app"></div>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      const C = window.Clevora;
+      C.mountShell(`
+        <section class="section">
+          <div class="container" style="max-width:28rem">
+            <h1 style="margin:0;font-size:clamp(2rem,4vw,2.75rem)">Contact</h1>
+            <p style="margin:.75rem 0 0;color:var(--muted)">India-based desk. We read every note.</p>
+            <form id="form" style="margin-top:2rem">
+              <div class="field"><label>Name</label><input required name="name"/></div>
+              <div class="field"><label>Email</label><input required type="email" name="email"/></div>
+              <div class="field"><label>Message</label><textarea required name="msg"></textarea></div>
+              <button type="submit" class="btn btn-primary btn-block" style="margin-top:1rem">Send</button>
+              <p class="success hidden" id="ok" style="margin-top:1rem">Received. We will reply to the address you entered.</p>
+            </form>
+          </div>
+        </section>
+      `);
+      C.qs("#form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        C.qs("#ok").classList.remove("hidden");
+        e.target.reset();
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Store — Clevora</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      const C = window.Clevora;
+      const country = C.getPrefs().country;
+      const cards = C.PRODUCTS.map(
+        (p) => `
+        <div class="card">
+          <h3>${C.escapeHtml(p.title)}</h3>
+          <p>${C.escapeHtml(p.blurb)}</p>
+          <div class="card-price">${C.formatPrice(p.priceInr, country)}</div>
+          <button type="button" class="btn btn-primary btn-block buy-btn" style="margin-top:1rem" data-slug="${p.slug}">
+            ${C.getUser() ? "Buy now" : "Sign in to buy"}
+          </button>
+        </div>`
+      ).join("");
+
+      C.mountShell(`
+        <section class="page-hero">
+          <div class="container">
+            <h1>Store</h1>
+            <p>Digital files. Instant on your desk after sign-in. No inventory, no shipping.</p>
+          </div>
+        </section>
+        <section class="section" style="padding-top:1.5rem">
+          <div class="container grid-3">${cards}</div>
+        </section>
+      `);
+
+      C.qsa(".buy-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const product = C.PRODUCTS.find((p) => p.slug === btn.dataset.slug);
+          if (!product) return;
+          const order = C.placeOrder({
+            slug: product.slug,
+            kind: "product",
+            title: product.title,
+            amountInr: product.priceInr,
+            brief: product.blurb,
+          });
+          if (!order) return;
+          order.deliverable =
+            "Digital product: " +
+            product.title +
+            "\n\n" +
+            product.blurb +
+            "\n\nDownload placeholder — connect storage (Supabase Storage / R2) for real files.";
+          order.status = "delivered";
+          const list = C.getOrders();
+          const idx = list.findIndex((o) => o.id === order.id);
+          if (idx >= 0) list[idx] = order;
+          C.saveOrders(list);
+          location.href = "dashboard.html";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

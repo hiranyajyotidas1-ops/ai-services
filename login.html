@@ -1,117 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Login — Clevora | Welcome Back</title>
-<meta name="description" content="Login to your Clevora account. Access AI-powered content, design, web, and research services.">
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*{font-family:'Inter',sans-serif;box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
-.fd{font-family:'Space Grotesk',sans-serif}
-:root{--bg:#fafafa;--card:#fff;--text:#0a0a0a;--muted:#525252;--dim:#a3a3a3;--border:#e5e5e5;--a1:#6366f1;--a2:#8b5cf6;--a3:#d946ef;--warm1:#f97316;--warm2:#ec4899;--surface:#f5f5f5}
-[data-theme="dark"]{--bg:#0a0a0a;--card:#161616;--text:#fafafa;--muted:#a3a3a3;--dim:#737373;--border:#262626;--surface:#1a1a1a}
-body{background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;transition:background .3s,color .3s}
-.bg-blob{position:fixed;border-radius:50%;filter:blur(80px);opacity:.15;z-index:0;pointer-events:none;animation:bfloat 20s ease-in-out infinite}
-.bg-blob.b1{width:500px;height:500px;background:#6366f1;top:-10%;left:-10%;animation-delay:0s}
-.bg-blob.b2{width:400px;height:400px;background:#d946ef;bottom:-10%;right:-5%;animation-delay:-7s}
-.bg-blob.b3{width:350px;height:350px;background:#f97316;top:40%;left:50%;animation-delay:-14s}
-@keyframes bfloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(60px,-40px) scale(1.1)}66%{transform:translate(-40px,60px) scale(.95)}}
-.grid-bg{position:fixed;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:48px 48px;opacity:.15;z-index:0;pointer-events:none}
-.wrapper{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.5rem}
-.glass{background:var(--card);backdrop-filter:blur(20px);border:1px solid var(--border);box-shadow:0 8px 40px rgba(0,0,0,.06)}
-.btn-g{background:linear-gradient(135deg,var(--a1),var(--a2),var(--a3));color:#fff;transition:all .3s;cursor:pointer;border:none;position:relative;overflow:hidden}
-.btn-g::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transition:left .5s}
-.btn-g:hover::before{left:100%}
-.btn-g:hover{box-shadow:0 12px 40px rgba(99,102,241,.4);transform:translateY(-2px)}
-.btn-g:active{transform:translateY(0)}
-.btn-g:disabled{opacity:.5;cursor:not-allowed;transform:none}
-.btn-g:disabled::before{display:none}
-.field{width:100%;padding:13px 16px;border-radius:12px;font-size:14px;background:var(--surface);border:1px solid var(--border);color:var(--text);transition:all .2s;box-sizing:border-box}
-.field:focus{outline:none;border-color:var(--a1);background:var(--card);box-shadow:0 0 0 3px rgba(99,102,241,.1)}
-.field::placeholder{color:var(--dim)}
-.gt{background:linear-gradient(135deg,var(--a1),var(--a2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.gt-warm{background:linear-gradient(135deg,var(--warm1),var(--warm2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.logo{width:64px;height:64px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:#fff;background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);animation:logoFloat 4s ease-in-out infinite;box-shadow:0 8px 32px rgba(99,102,241,.3)}
-@keyframes logoFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-8px) rotate(2deg)}}
-.error-box{color:#ef4444;font-size:13px;display:none;padding:10px 14px;border-radius:10px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.15);margin-top:12px}
-.link{color:var(--a1);text-decoration:none;transition:color .2s;font-weight:500}
-.link:hover{color:var(--a2);text-decoration:underline}
-.fade-in{animation:fadeIn .8s cubic-bezier(.23,1,.32,1)}
-@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.fade-in-delay{animation:fadeIn .8s cubic-bezier(.23,1,.32,1) .2s both}
-.fade-in-delay2{animation:fadeIn .8s cubic-bezier(.23,1,.32,1) .4s both}
-.dot{animation:blink 1.4s infinite}
-@keyframes blink{0%,100%{opacity:.2}50%{opacity:1}}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sign in — Clevora</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-<div class="bg-blob b1"></div>
-<div class="bg-blob b2"></div>
-<div class="bg-blob b3"></div>
-<div class="grid-bg"></div>
-<div class="wrapper">
-<div class="glass rounded-3xl p-8 sm:p-10 w-full max-w-md fade-in">
-<div class="flex flex-col items-center mb-6">
-<div class="logo mb-4">C</div>
-<h1 class="text-2xl fd font-bold text-center">Welcome <span class="gt">Back</span></h1>
-<p class="text-sm text-center mt-2" style="color:var(--muted)">Login to your Clevora account</p>
-</div>
-<form id="login-form" onsubmit="return handleLogin(event)" class="space-y-4 fade-in-delay">
-<div>
-<label class="text-xs font-semibold mb-1.5 block" style="color:var(--muted)">EMAIL</label>
-<input id="email" type="email" required class="field" placeholder="you@email.com">
-</div>
-<div>
-<label class="text-xs font-semibold mb-1.5 block" style="color:var(--muted)">PASSWORD</label>
-<input id="password" type="password" required class="field" placeholder="Your password">
-</div>
-<div id="error-msg" class="error-box"></div>
-<button id="submit-btn" type="submit" class="btn-g w-full py-3.5 rounded-xl font-bold text-sm">Login</button>
-</form>
-<div class="text-center mt-5 text-sm fade-in-delay2">Don't have an account? <a href="signup.html" class="link">Sign Up Free</a></div>
-<div class="text-center mt-3"><a href="index.html" class="text-xs" style="color:var(--dim)">← Back to home</a></div>
-</div>
-</div>
-<script>
-var t=localStorage.getItem('clevora_theme')||'light';
-document.documentElement.setAttribute('data-theme',t);
-function handleLogin(e){
-e.preventDefault();
-var btn=document.getElementById('submit-btn');
-var errEl=document.getElementById('error-msg');
-errEl.style.display='none';
-btn.disabled=true;
-btn.innerHTML='Logging in<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>';
-var email=document.getElementById('email').value.trim().toLowerCase();
-var password=document.getElementById('password').value;
-var user=JSON.parse(localStorage.getItem('clevora_user')||'null');
-if(user&&user.email===email){
-setTimeout(function(){window.location.href='dashboard.html';},800);
-}else{
-var SUPABASE_URL='https://ocuyxgocmtucdckiqqeh.supabase.co';
-var SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9jdXl4Z29jbXR1Y2Rja2lxcWVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1NzM2NzAsImV4cCI6MjEwMTE0OTY3MH0.UYQ6U2WcrTbQVRUTni_BcQxx8_AJ5ahpx5SWHqQJ140';
-var sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
-sb.from('users').select('*').eq('email',email).then(function(result){
-if(result.data&&result.data.length>0){
-var u=result.data[0];
-localStorage.setItem('clevora_user',JSON.stringify({name:u.name,email:u.email,phone:u.phone||'',country:u.country||'',service:u.service||'',timestamp:new Date().toISOString()}));
-window.location.href='dashboard.html';
-}else{
-errEl.textContent='Account not found. Please sign up first.';
-errEl.style.display='block';
-btn.disabled=false;btn.textContent='Login';
-}
-}).catch(function(){
-errEl.textContent='Connection error. Please try again.';
-errEl.style.display='block';
-btn.disabled=false;btn.textContent='Login';
-});
-}
-return false;
-}
-</script>
+  <div id="app"></div>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      const C = window.Clevora;
+      if (C.getUser()) {
+        location.href = "dashboard.html";
+        return;
+      }
+      C.mountShell(`
+        <div class="auth-box">
+          <h1>Sign in</h1>
+          <p class="sub">New here? <a href="signup.html">Create an account</a></p>
+          <div class="auth-stack">
+            <form id="form">
+              <div class="field"><label>Email</label><input type="email" id="email" required/></div>
+              <div class="field"><label>Password</label><input type="password" id="password" required minlength="6"/></div>
+              <p class="error hidden" id="err"></p>
+              <button type="submit" class="btn btn-primary btn-block" style="margin-top:1rem">Sign in</button>
+            </form>
+            <p style="font-size:.75rem;color:var(--subtle);margin:0">Demo auth stores accounts in this browser only. Connect Supabase Auth for production.</p>
+          </div>
+        </div>
+      `);
+      C.qs("#form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = C.qs("#email").value.trim().toLowerCase();
+        const password = C.qs("#password").value;
+        const accounts = JSON.parse(localStorage.getItem("clevora-accounts") || "{}");
+        if (!accounts[email] || accounts[email].password !== password) {
+          C.qs("#err").textContent = "Invalid email or password";
+          C.qs("#err").classList.remove("hidden");
+          return;
+        }
+        C.setUser({ email, name: accounts[email].name || email.split("@")[0] });
+        const next = new URLSearchParams(location.search).get("next") || "dashboard.html";
+        location.href = next;
+      });
+    })();
+  </script>
 </body>
 </html>
