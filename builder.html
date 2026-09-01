@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Website builder — Clevora</title>
+  <meta name="description" content="Name the site. Describe it. Receive multi-page HTML ready to host."/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      const C = window.Clevora;
+      const country = C.getPrefs().country;
+      const cats = ["Business", "Portfolio", "Store", "SaaS", "Restaurant", "Agency", "Education", "Health", "Real estate", "Blog"];
+      const catOpts = cats.map((c) => `<option>${C.escapeHtml(c)}</option>`).join("");
+      const langs = C.LANGUAGES.map((l) => `<option value="${l.code}">${C.escapeHtml(l.label)}</option>`).join("");
+
+      C.mountShell(`
+        <section class="section">
+          <div class="container split">
+            <div>
+              <h1 style="margin:0;font-size:clamp(2rem,4vw,2.75rem)">Name it. We build it.</h1>
+              <p style="margin:0.75rem 0 0;color:var(--muted);max-width:36rem">
+                A full multi-page HTML site from a name and a paragraph. You keep the code. Host on Cloudflare Pages, GitHub Pages or anywhere.
+              </p>
+              <div class="field">
+                <label for="siteName">Website name</label>
+                <input id="siteName" placeholder="North & Pine"/>
+              </div>
+              <div class="field">
+                <label for="siteCat">Category</label>
+                <select id="siteCat">${catOpts}</select>
+              </div>
+              <div class="field">
+                <label for="siteDesc">What should it do?</label>
+                <textarea id="siteDesc" placeholder="A quiet restaurant in Pune. Menu, reservations, story."></textarea>
+              </div>
+            </div>
+            <div class="order-panel">
+              <div class="order-price">${C.formatPrice(299, country)}</div>
+              <p class="order-hint">One-time website build. Sample HTML lands on your desk.</p>
+              <div class="field">
+                <label for="lang">Output language</label>
+                <select id="lang">${langs}</select>
+              </div>
+              <p class="success hidden" id="ok"></p>
+              <button type="button" class="btn btn-primary btn-block" id="orderBtn" style="margin-top:1rem">
+                ${C.getUser() ? "Place order" : "Sign in to order"}
+              </button>
+            </div>
+          </div>
+        </section>
+      `);
+
+      C.qs("#orderBtn").addEventListener("click", () => {
+        const name = C.qs("#siteName").value.trim() || "Custom website";
+        const cat = C.qs("#siteCat").value;
+        const desc = C.qs("#siteDesc").value.trim();
+        const brief = [`Site name: ${name}`, `Category: ${cat}`, desc].filter(Boolean).join("\n");
+        const order = C.placeOrder({
+          slug: "website",
+          kind: "builder",
+          title: name,
+          amountInr: 299,
+          brief,
+          language: C.qs("#lang").value,
+        });
+        if (!order) return;
+        order.deliverable = C.generateDeliverable(order);
+        order.status = "delivered";
+        const list = C.getOrders();
+        const idx = list.findIndex((o) => o.id === order.id);
+        if (idx >= 0) list[idx] = order;
+        C.saveOrders(list);
+        C.qs("#ok").textContent = "Site generated. Opening desk…";
+        C.qs("#ok").classList.remove("hidden");
+        setTimeout(() => (location.href = "dashboard.html"), 700);
+      });
+    })();
+  </script>
+</body>
+</html>

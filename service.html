@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Service — Clevora</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      const C = window.Clevora;
+      const slug = new URLSearchParams(location.search).get("slug") || "";
+      const service = C.SERVICES.find((s) => s.slug === slug);
+      const country = C.getPrefs().country;
+      const langs = C.LANGUAGES.map(
+        (l) => `<option value="${l.code}">${C.escapeHtml(l.label)}</option>`
+      ).join("");
+
+      if (!service) {
+        C.mountShell(`
+          <section class="page-hero"><div class="container">
+            <h1>Service not found</h1>
+            <p><a href="services.html">Back to services</a></p>
+          </div></section>`);
+        return;
+      }
+
+      C.mountShell(`
+        <section class="section">
+          <div class="container split">
+            <div>
+              <p class="card-cat">${C.escapeHtml(service.category)}</p>
+              <h1 style="margin:.5rem 0 0;font-size:clamp(2rem,4vw,2.75rem)">${C.escapeHtml(service.title)}</h1>
+              <p style="margin:1rem 0 0;color:var(--muted);font-size:1.0625rem;max-width:36rem">${C.escapeHtml(service.blurb)}</p>
+              <h2 style="margin:2.5rem 0 0;font-size:1.5rem">Included</h2>
+              <ul class="price-list">
+                ${service.includes.map((i) => `<li>${C.escapeHtml(i)}</li>`).join("")}
+              </ul>
+            </div>
+            <div class="order-panel">
+              <div class="order-price">${C.formatPrice(service.priceInr, country)}</div>
+              <p class="order-hint">One-time. We generate a sample on your desk after order.</p>
+              <div class="field">
+                <label for="brief">Brief</label>
+                <textarea id="brief" placeholder="What should we make?"></textarea>
+              </div>
+              <div class="field">
+                <label for="lang">Output language</label>
+                <select id="lang">${langs}</select>
+              </div>
+              <p class="error hidden" id="err"></p>
+              <p class="success hidden" id="ok"></p>
+              <button type="button" class="btn btn-primary btn-block" id="orderBtn" style="margin-top:1rem">
+                ${C.getUser() ? "Place order" : "Sign in to order"}
+              </button>
+            </div>
+          </div>
+        </section>
+      `);
+
+      C.qs("#orderBtn").addEventListener("click", () => {
+        const brief = C.qs("#brief").value.trim();
+        const language = C.qs("#lang").value;
+        const order = C.placeOrder({
+          slug: service.slug,
+          kind: "service",
+          title: service.title,
+          amountInr: service.priceInr,
+          brief,
+          language,
+        });
+        if (!order) return;
+        order.deliverable = C.generateDeliverable(order);
+        order.status = "delivered";
+        const list = C.getOrders();
+        const idx = list.findIndex((o) => o.id === order.id);
+        if (idx >= 0) list[idx] = order;
+        C.saveOrders(list);
+        C.qs("#ok").textContent = "Order placed. Opening your desk…";
+        C.qs("#ok").classList.remove("hidden");
+        setTimeout(() => (location.href = "dashboard.html"), 700);
+      });
+    })();
+  </script>
+</body>
+</html>

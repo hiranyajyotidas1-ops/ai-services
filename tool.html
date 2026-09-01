@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Tool — Clevora</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      const C = window.Clevora;
+      const slug = new URLSearchParams(location.search).get("slug") || "";
+      const tool = C.TOOLS.find((t) => t.slug === slug);
+      if (!tool) {
+        C.mountShell(`<section class="page-hero"><div class="container"><h1>Not found</h1><p><a href="tools.html">Tools</a></p></div></section>`);
+        return;
+      }
+
+      let body = "";
+      if (slug === "word-counter") {
+        body = `
+          <textarea id="text" class="field" style="width:100%;min-height:12rem;border:1px solid var(--border);border-radius:12px;padding:1rem;background:var(--elevated);color:var(--fg);font:inherit" placeholder="Paste copy…"></textarea>
+          <div class="tool-stats">
+            <div class="tool-stat"><span>Words</span><strong id="w">0</strong></div>
+            <div class="tool-stat"><span>Characters</span><strong id="c">0</strong></div>
+            <div class="tool-stat"><span>Read</span><strong id="m">0 min</strong></div>
+          </div>`;
+      } else if (slug === "meta-tags") {
+        body = `
+          <div class="field"><label>Title</label><input id="title"/></div>
+          <div class="field"><label>Description</label><input id="desc"/></div>
+          <div class="field"><label>URL</label><input id="url" value="https://example.com"/></div>
+          <pre class="code" id="out" style="margin-top:1rem"></pre>`;
+      } else if (slug === "color-studio") {
+        body = `
+          <div style="display:flex;gap:.75rem;align-items:center">
+            <input type="color" id="color" value="#2c456f" style="width:44px;height:44px;border:1px solid var(--border);border-radius:8px"/>
+            <input id="hex" value="#2c456f" style="flex:1;height:44px;border:1px solid var(--border);boder-radius:8px;padding:0 .75rem;background:var(--elevated);color:var(--fg);font-family:ui-monospace,monospace"/>
+          </div>
+          <div id="swatch" style="margin-top:1rem;padding:1.5rem;border-radius:16px;background:#2c456f;color:#faf7f0">Sample on this color</div>
+          <p style="margin-top:1rem;font-size:.875rem;color:var(--muted)">Safe text: <code id="safe">#faf7f0</code></p>`;
+      } else {
+        body = `
+          <div class="field"><label>Headline</label><input id="line" placeholder="Your headline"/></div>
+          <div class="tool-stats">
+            <div class="tool-stat"><span>Characters</span><strong id="len">0</strong></div>
+            <div class="tool-stat"><span>Score</span><strong id="score">0</strong></div>
+            <div class="tool-stat"><span>Tip</span><strong style="font-size:.9rem">35‍5<chars</strong></div>
+          </div>`;
+      }
+
+      C.mountShell(`
+        <section class="page-hero">
+          <div class="container">
+            <h1>${C.escapeHtml(tool.title)}</h1>
+            <p>${C.escapeHtml(tool.blurb)}</p>
+          </div>
+        </section>
+        <section class="section" style="padding-top:0">
+          <div class="container" style="max-width:40rem">
+            <div class="tool-panel">${body}</div>
+          </div>
+        </section>
+      `);
+
+      if (slug === "word-counter") {
+        C.qs("#text").addEventListener("input", (e) => {
+          const text = e.target.value;
+          const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+          C.qs("#w").textContent = words;
+          C.qs("#c").textContent = text.length;
+          C.qs("#m").textContent = Math.max(text.trim() ? 1 : 0, Math.round(words / 200)) + " min";
+        });
+      }
+      if (slug === "meta-tags") {
+        const render = () => {
+          const title = C.qs("#title").value;
+          const desc = C.qs("#desc").value;
+          const url = C.qs("#url").value;
+          C.qs("#out").textContent = `<title>${title}</title>\n<meta name="description" content="${desc}" />\n<meta property="og:title" content="${title}" />\n<meta property="og:description" content="${desc}" />\n<meta property="og:url" content="${url}" />`;
+        };
+        ["title", "desc", "url"].forEach((id) => C.qs("#" + id).addEventListener("input", render));
+        render();
+      }
+      if (slug === "color-studio") {
+        const apply = (hex) => {
+          C.qs("#hex").value = hex;
+          C.qs("#color").value = hex;
+          const n = hex.replace("#", "");
+          if (n.length !== 6) return;
+          const r = parseInt(n.slice(0, 2), 16),
+            g = parseInt(n.slice(2, 4), 16),
+            b = parseInt(n.slice(4, 6), 16);
+          const y = (r * 299 + g * 587 + b * 114) / 1000;
+          const safe = y > 140 ? "#161513" : "#faf7f0";
+          C.qs("#swatch").style.background = hex;
+          C.qs("#swatch").style.color = safe;
+          C.qs("#safe").textContent = safe;
+        };
+        C.qs("#color").addEventListener("input", (e) => apply(e.target.value));
+        C.qs("#hex").addEventListener("input", (e) => apply(e.target.value));
+      }
+      if (slug === "headline-lab") {
+        C.qs("#line").addEventListener("input", (e) => {
+          const line = e.target.value;
+          const len = line.length;
+          const score = Math.max(0, 100 - Math.abs(len - 42) * 2 - (line.split(" ").length < 4 ? 20 : 0));
+          C.qs("#len").textContent = len;
+          C.qs("#score").textContent = score;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

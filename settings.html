@@ -1,107 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Settings — Clevora</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*{font-family:'Inter',sans-serif;box-sizing:border-box}
-.fd{font-family:'Space Grotesk',sans-serif}
-:root{--bg:#f8fafc;--card:rgba(255,255,255,.8);--text:#0f172a;--muted:#64748b;--border:rgba(0,0,0,.06)}
-[data-theme="dark"]{--bg:#0f172a;--card:rgba(30,41,59,.6);--text:#f1f5f9;--muted:#94a3b8;--border:rgba(255,255,255,.08)}
-body{background:var(--bg);color:var(--text);transition:background .3s}
-.nb{background:var(--card);backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--border)}
-.card{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--border);box-shadow:0 4px 24px rgba(0,0,0,.04)}
-.input{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--text);width:100%;transition:all .3s;font-size:15px;box-sizing:border-box}
-.input:focus{outline:none;border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.1)}
-.btn{background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff;transition:all .3s;cursor:pointer;border:none}
-.btn:hover{box-shadow:0 8px 32px rgba(99,102,241,.3);transform:translateY(-2px)}
-.toggle{width:48px;height:24px;background:#cbd5e1;border-radius:999px;position:relative;cursor:pointer;transition:background .3s;flex-shrink:0}
-.toggle.on{background:#6366f1}
-.toggle::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;background:#fff;border-radius:50%;transition:transform .3s}
-.toggle.on::after{transform:translateX(24px)}
-.theme-opt{cursor:pointer;padding:16px;border-radius:12px;border:2px solid var(--border);transition:all .3s;text-align:center}
-.theme-opt:hover{border-color:#6366f1}
-.theme-opt.active{border-color:#6366f1;background:rgba(99,102,241,.05)}
-.link{color:#6366f1;text-decoration:none}
-.link:hover{text-decoration:underline}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Settings — Clevora</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-<nav class="fixed top-0 w-full nb z-50"><div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);color:#fff">C</div><span class="fd font-bold text-lg">Settings</span></div><a href="dashboard.html" class="text-sm link">← Dashboard</a></div></nav>
-<div class="pt-24 sm:pt-28 px-4 sm:px-6 pb-16 max-w-3xl mx-auto">
-<div class="card rounded-3xl p-6 mb-6">
-<h2 class="text-lg font-bold mb-4 fd">Appearance</h2>
-<p class="text-sm mb-4" style="color:var(--muted)">Choose how Clevora looks to you</p>
-<div class="grid grid-cols-3 gap-4">
-<div class="theme-opt" data-theme-val="light" onclick="setTheme('light')"><div class="text-2xl mb-2">☀️</div><div class="text-sm font-medium">Light</div></div>
-<div class="theme-opt" data-theme-val="dark" onclick="setTheme('dark')"><div class="text-2xl mb-2">🌙</div><div class="text-sm font-medium">Dark</div></div>
-<div class="theme-opt" data-theme-val="system" onclick="setTheme('system')"><div class="text-2xl mb-2">💻</div><div class="text-sm font-medium">System</div></div>
-</div>
-</div>
-<div class="card rounded-3xl p-6 mb-6">
-<h2 class="text-lg font-bold mb-4 fd">Language</h2>
-<div class="flex justify-between items-center"><span class="text-sm" style="color:var(--muted)">Display language</span><select id="lang-sel" onchange="setLang(this.value)" class="input" style="width:auto"><option value="en">English</option><option value="hi">हिन्दी (Hindi)</option></select></div>
-</div>
-<div class="card rounded-3xl p-6 mb-6">
-<h2 class="text-lg font-bold mb-4 fd">Account</h2>
-<div class="space-y-3">
-<div><label class="text-sm font-medium mb-1 block" style="color:var(--muted)">Name</label><input type="text" id="acc-name" class="input"></div>
-<div><label class="text-sm font-medium mb-1 block" style="color:var(--muted)">Email</label><input type="email" id="acc-email" class="input" readonly></div>
-<div><label class="text-sm font-medium mb-1 block" style="color:var(--muted)">Phone</label><input type="tel" id="acc-phone" class="input" placeholder="Add phone number"></div>
-<div><label class="text-sm font-medium mb-1 block" style="color:var(--muted)">Country</label><input type="text" id="acc-country" class="input" readonly></div>
-</div>
-<button onclick="saveAccount()" class="btn w-full py-3 rounded-xl font-bold text-sm mt-4">Save Changes</button>
-</div>
-<div class="card rounded-3xl p-6 mb-6">
-<h2 class="text-lg font-bold mb-4 fd">Notifications</h2>
-<div class="space-y-4">
-<div class="flex justify-between items-center"><div><div class="text-sm font-medium">Email updates</div><div class="text-xs" style="color:var(--muted)">Get notified about your projects</div></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
-<div class="flex justify-between items-center"><div><div class="text-sm font-medium">SMS updates</div><div class="text-xs" style="color:var(--muted)">Receive SMS for important updates</div></div><div class="toggle" onclick="this.classList.toggle('on')"></div></div>
-<div class="flex justify-between items-center"><div><div class="text-sm font-medium">Marketing</div><div class="text-xs" style="color:var(--muted)">Tips, offers, and product updates</div></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
-</div>
-</div>
-<div class="card rounded-3xl p-6 mb-6">
-<h2 class="text-lg font-bold mb-4 fd">Privacy & Data</h2>
-<div class="space-y-3">
-<a href="privacy.html" class="block py-3 px-4 rounded-xl text-sm transition" style="background:var(--bg);color:var(--text)">📋 Privacy Policy →</a>
-<button onclick="alert('Data export feature coming soon')" class="block w-full text-left py-3 px-4 rounded-xl text-sm transition" style="background:var(--bg);color:var(--text)">📦 Export my data →</button>
-<button onclick="if(confirm('Are you sure? This cannot be undone.')){localStorage.clear();window.location.href='index.html'}" class="block w-full text-left py-3 px-4 rounded-xl text-sm transition" style="background:rgba(239,68,68,.05);color:#ef4444">🗑 Delete account →</button>
-</div>
-</div>
-<div class="card rounded-3xl p-6 text-center">
-<div class="text-sm font-bold fd mb-2">Clevora</div>
-<div class="text-xs" style="color:var(--muted)">Version 1.0.0 · Built with AI</div>
-<div class="text-xs mt-2" style="color:var(--muted)">Powered by Supabase · Razorpay · GitHub Pages</div>
-</div>
-</div>
-<script>
-function setTheme(t){
-localStorage.setItem('clevora_theme',t);
-if(t==='system'){var d=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',d);}
-else{document.documentElement.setAttribute('data-theme',t);}
-document.querySelectorAll('.theme-opt').forEach(function(el){el.classList.toggle('active',el.dataset.themeVal===t);});
-}
-function setLang(l){localStorage.setItem('clevora_lang',l);}
-function saveAccount(){
-var user=JSON.parse(localStorage.getItem('clevora_user')||'{}');
-user.name=document.getElementById('acc-name').value;
-user.phone=document.getElementById('acc-phone').value;
-localStorage.setItem('clevora_user',JSON.stringify(user));
-alert('Settings saved!');
-}
-var t=localStorage.getItem('clevora_theme')||'light';
-setTheme(t);
-var user=JSON.parse(localStorage.getItem('clevora_user')||'null');
-if(!user){window.location.href='login.html';}
-else{
-document.getElementById('acc-name').value=user.name||'';
-document.getElementById('acc-email').value=user.email||'';
-document.getElementById('acc-phone').value=user.phone||'';
-document.getElementById('acc-country').value=user.country||'';
-}
-</script>
+  <div id="app"></div>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      const C = window.Clevora;
+      const user = C.getUser();
+      if (!user) {
+        location.href = "login.html?next=settings.html";
+        return;
+      }
+      const prefs = C.getPrefs();
+      const countryOpts = C.COUNTRIES.map(
+        (c) => `<option value="${c.code}" ${c.code === prefs.country ? "selected" : ""}>${C.escapeHtml(c.name)} · ${c.currency}</option>`
+      ).join("");
+      const langOpts = C.LANGUAGES.map(
+        (l) => `<option value="${l.code}" ${l.code === prefs.language ? "selected" : ""}>${C.escapeHtml(l.label)}</option>`
+      ).join("");
+
+      C.mountShell(`
+        <section class="section">
+          <div class="container" style="max-width:28rem">
+            <h1 style="margin:0;font-size:clamp(2rem,4vw,2.75rem)">Settings</h1>
+            <p style="margin:.5rem 0 0;font-size:.875rem;color:var(--muted)">${C.escapeHtml(user.email)}</p>
+            <div class="field">
+              <label>Country / currency</label>
+              <select id="country">${countryOpts}</select>
+            </div>
+            <div class="field">
+              <label>Language</label>
+              <select id="lang">${langOpts}</select>
+            </div>
+            <div class="field">
+              <label>Theme</label>
+              <select id="theme">
+                <option value="light" ${prefs.theme === "light" ? "selected" : ""}>Light</option>
+                <option value="dark" ${prefs.theme === "dark" ? "selected" : ""}>Dark</option>
+              </select>
+            </div>
+            <p class="success hidden" id="ok" style="margin-top:1rem">Saved.</p>
+          </div>
+        </section>
+      `);
+
+      const save = () => {
+        C.setPref("country", C.qs("#country").value);
+        C.setPref("language", C.qs("#lang").value);
+        C.setPref("theme", C.qs("#theme").value);
+        C.qs("#ok").classList.remove("hidden");
+      };
+      C.qs("#country").addEventListener("change", save);
+      C.qs("#lang").addEventListener("change", save);
+      C.qs("#theme").addEventListener("change", save);
+    })();
+  </script>
 </body>
 </html>
