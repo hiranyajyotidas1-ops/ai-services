@@ -81,3 +81,32 @@ None yet.
 ---
 
 **End of Day 1 entry.**
+
+## Day 2 — 2026-09-21 (Monday)
+
+**Run ID:** RUN-002
+**Date:** 2026-09-21
+
+### Changes
+- Rebuilt ai-services site: old Clevora storefront (login/signup/dashboard, broken flows) replaced with a single-page professional services site — Hiranyajyoti Digital. Orders via email, payment via UPI/Razorpay link. No fake backend.
+- clevora-ai: prototype archived — public page now redirects to the services site. Repo backup saved (clevora-ai-backup.zip).
+- New portfolio (all free-hosted on GitHub Pages):
+  - pariksha-saathi (CBSE Class 10/12 Hindi medium) — AdSense test
+  - upboard-saathi (UPMSP Class 10) — Adsterra test
+  - sasta-saudaa (Hindi buying guides) — Amazon affiliate test
+  - ai-services (this site) — freelance services test
+
+### Revenue
+- Gross: Rs 0 (no paid orders yet)
+
+### Costs
+- Rs 0 (GitHub Pages free tier)
+
+### Next Actions
+1. Send 5 outreach emails/WhatsApp with the services page link
+2. Apply Adsterra on upboard-saathi + sasta-saudaa
+3. Apply Amazon Associates, add links in sasta-saudaa
+4. Submit all sites to Google Search Console
+5. Decide winner segment after 2-week test, then buy domain
+
+**End of Day 2 entry.**

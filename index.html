@@ -1,103 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Clevora — AI services for everyone</title>
-  <meta name="description" content="Content, design, websites, research and scripts. One-time prices from ₹29. India-first AI desk."/>
-  <meta name="theme-color" content="#6366f1"/>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
-  <link rel="manifest" href="manifest.json"/>
-  <link rel="stylesheet" href="css/styles.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hiranyajyoti Digital — Content, Website & Research Services (Hindi/English)</title>
+<meta name="description" content="AI-supported digital services — content writing, website design, YouTube scripts, market research aur data automation. Hindi aur English dono mein. Pehle sample, phir payment.">
+<meta name="robots" content="index, follow">
+<style>
+:root{--ink:#101828;--blue:#1554c0;--blue-2:#eaf1fd;--accent:#e8710a;--muted:#556070;--line:#e4e9f1}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,'Noto Sans Devanagari',sans-serif;color:var(--ink);line-height:1.7;font-size:17px;background:#fff}
+a{color:var(--blue)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 16px}
+header.top{background:#0b1f44;color:#fff;padding:14px 0;position:sticky;top:0;z-index:9}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-weight:700;font-size:1.15rem;color:#fff;text-decoration:none}
+.brand span{color:#ffd166}
+nav.main ul{list-style:none;display:flex;gap:18px;flex-wrap:wrap}
+nav.main a{color:#cfe0ff;text-decoration:none;font-size:.92rem}
+.hero{background:linear-gradient(135deg,#0b1f44,#1554c0);color:#fff;padding:56px 0 64px;text-align:center}
+.hero .eyebrow{letter-spacing:.12em;font-size:.8rem;color:#ffd166;text-transform:uppercase}
+.hero h1{font-size:clamp(1.6rem,4vw,2.4rem);margin:10px 0;max-width:760px;margin-inline:auto}
+.hero p{max-width:640px;margin:0 auto 22px;color:#dbe7ff}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:12px 26px;border-radius:8px}
+.btn.ghost{background:transparent;border:1.5px solid #7ea2ec}
+.stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:10px 18px;font-size:.9rem}
+.stat b{display:block;font-size:1.25rem;color:#fff}
+section{padding:46px 0}
+h2.sec{font-size:1.45rem;margin-bottom:6px}
+p.sub{color:var(--muted);margin-bottom:26px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:12px;padding:22px;transition:.2s}
+.card:hover{border-color:var(--blue);box-shadow:0 6px 22px rgba(21,84,192,.08)}
+.card .tag{display:inline-block;background:var(--blue-2);color:var(--blue);border-radius:20px;padding:2px 12px;font-size:.78rem;font-weight:600}
+.card h3{margin:10px 0 6px;font-size:1.1rem}
+.card p{font-size:.94rem;color:var(--muted)}
+.card .price{margin-top:12px;font-weight:700;color:var(--accent);font-size:1.05rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.step{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:20px}
+.step .n{width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px}
+.trust{background:var(--blue-2);border-radius:14px;padding:26px;margin-top:34px}
+.trust ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:12px}
+.trust li{padding-left:26px;position:relative}
+.trust li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:8px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+th{background:#f8fafc}
+.contact{background:#0b1f44;color:#fff;text-align:center}
+.contact h2{font-size:1.5rem}
+.contact p{color:#cfe0ff;margin:10px auto 20px;max-width:560px}
+.mailto{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:8px;font-size:1.05rem}
+footer{padding:26px 0;color:var(--muted);font-size:.85rem;text-align:center}
+footer a{color:var(--blue)}
+</style>
 </head>
 <body>
-  <div class="bg-blob b1"></div>
-  <div class="bg-blob b2"></div>
-  <div class="bg-blob b3"></div>
-  <div id="app"></div>
-  <script src="js/app.js"></script>
-  <script>
-    (function () {
-      const C = window.Clevora;
-      const prefs = C.getPrefs();
-      const country = prefs.country;
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html">Hiranyajyoti <span>Digital</span></a>
+<nav class="main"><ul>
+<li><a href="#services">सेवाएँ</a></li>
+<li><a href="#pricing">कीमत</a></li>
+<li><a href="#process">प्रक्रिया</a></li>
+<li><a href="#contact">संपर्क</a></li>
+</ul></nav>
+</div></header>
 
-      const serviceCards = C.SERVICES.slice(0, 6)
-        .map(
-          (s) => "
-        <a class="card" href="service.html?slug=" + s.slug + "">
-          <div class="card-cat">" + C.escapeHtml(s.category) + "</div>
-          <h3>" + C.escapeHtml(s.title) + "</h3>
-          <p>" + C.escapeHtml(s.blurb) + "</p>
-          <div class="card-price">" + C.formatPrice(s.priceInr, country) + "</div>
-        </a>"
-        )
-        .join("");
+<div class="hero"><div class="wrap">
+<div class="eyebrow">AI-Supported · Human-Verified</div>
+<h1>आपका काम, AI की रफ़्तार से — इंसानी जाँच के साथ</h1>
+<p>कंटेंट राइटिंग, वेबसाइट डिज़ाइन, YouTube स्क्रिप्ट और रिसर्च — हिंदी और अंग्रेज़ी दोनों में। पहले फ्री सैंपल देखिए, पसंद आए तो पेमेंट कीजिए।</p>
+<a class="btn" href="#contact">मोल-भाव करें →</a>
+<a class="btn ghost" href="#services">सेवाएँ देखें</a>
+<div class="stats">
+<div class="stat"><b>₹0</b>पहले भुगतान नहीं — सैंपल पहले</div>
+<div class="stat"><b>2 भाषाएँ</b>हिंदी + English</div>
+<div class="stat"><b>24-72 घंटे</b>डिलीवरी समय</div>
+<div class="stat"><b>100%</b>रिविज़न शामिल</div>
+</div>
+</div></div>
 
-      const planCards = C.PLANS.map(
-        (p) => "
-        <div class="price-card " + (p.featured ? "featured" : "") + "">
-          <div class="price-name">" + C.escapeHtml(p.name) + "</div>
-          <div class="price-amount">" + C.formatPrice(p.priceInr, country) + "</div>
-          <p class="price-note">" + C.escapeHtml(p.note) + "</p>
-          <ul class="price-list">" + p.items.map((i) => "<li>" + C.escapeHtml(i) + "</li>").join("") + "</ul>
-          <a class="btn btn-primary btn-block" href="signup.html">Choose " + C.escapeHtml(p.name) + "</a>
-        </div>"
-      ).join("");
+<section id="services"><div class="wrap">
+<h2 class="sec">सेवाएँ — जो असल में डिलीवर होती हैं</h2>
+<p class="sub">हर काम AI टूल्स से शुरू होता है और मैन्युअल जाँच के बाद डिलीवर होता है — इसलिए कीमत एजेंसियों से बहुत कम, क्वालिटी गारंटीड।</p>
+<div class="grid">
+<div class="card"><span class="tag">सबसे लोकप्रिय</span><h3>कंटेंट राइटिंग</h3><p>ब्लॉग पोस्ट, वेबसाइट कंटेंट, प्रोडक्ट डिस्क्रिप्शन — SEO-फ्रेंडली, कॉपी-फ्री, हिंदी या English में।</p><div class="price">₹499 से / लेख</div></div>
+<div class="card"><span class="tag">हाई-वैल्यू</span><h3>वेबसाइट डिज़ाइन और डेवलपमेंट</h3><p>बिज़नेस/पर्सनल वेबसाइट — मोबाइल-फ्रेंडली, तेज़, SEO-रेडी। यह साइट खुद इसका नमूना है।</p><div class="price">₹2,999 से / साइट</div></div>
+<div class="card"><h3>YouTube स्क्रिप्ट और टाइटल</h3><p>8-मिनट तक की स्क्रिप्ट, हुक-आधारित, रिटेंशन के लिए लिखी हुई + 5 टाइटल-आइडिया फ्री।</p><div class="price">₹299 से / स्क्रिप्ट</div></div>
+<div class="card"><h3>मार्केट रिसर्च और रिपोर्ट</h3><p>प्रतिस्पर्धी विश्लेषण, प्राइसिंग रिसर्च, ट्रेंड रिपोर्ट — साफ़ टेबल और एक्शन-आइटम के साथ।</p><div class="price">₹999 से / रिपोर्ट</div></div>
+<div class="card"><h3>डेटा एंट्री और Sheets ऑटोमेशन</h3><p>Excel/Google Sheets की सफ़ाई, फ़ॉर्मूले, डैशबोर्ड और रिपीट काम का ऑटोमेशन।</p><div class="price">₹999 से / प्रोजेक्ट</div></div>
+<div class="card"><h3>अनुवाद</h3><p>हिंदी ⇄ English दस्तावेज़, लेख और वेबसाइट कंटेंट — अर्थ सटीक, टोन बरकरार।</p><div class="price">₹499 से / पृष्ठ</div></div>
+</div>
+</div></section>
 
-      C.mountShell("
-        <section class="hero">
-          <div class="container">
-            <p class="eyebrow">" + C.t("live") + "</p>
-            <h1>" + C.t("hero") + "</h1>
-            <p class="hero-lead">" + C.t("heroBody") + "</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="signup.html">" + C.t("start") + "</a>
-              <a class="btn btn-secondary" href="services.html">" + C.t("seeServices") + "</a>
-            </div>
-            <p class="guarantee">" + C.t("guarantee") + "</p>
-          </div>
-        </section>
+<section id="pricing" style="background:#f8fafc"><div class="wrap">
+<h2 class="sec">कीमत — एक नज़र में</h2>
+<p class="sub">हर काम का सटीक बजट काम समझकर बनता है — यह शुरुआती रेंज है। कोई छिपा शुल्क नहीं, रिविज़न शामिल।</p>
+<table>
+<tr><th>सेवा</th><th>शुरुआती कीमत</th><th>डिलीवरी</th><th>रिविज़न</th></tr>
+<tr><td>कंटेंट राइटिंग (1000 शब्द)</td><td>₹499</td><td>48 घंटे</td><td>2 मुफ़्त</td></tr>
+<tr><td>वेबसाइट (5 पेज तक)</td><td>₹2,999</td><td>5–7 दिन</td><td>3 मुफ़्त</td></tr>
+<tr><td>YouTube स्क्रिप्ट (8 मिनट)</td><td>₹299</td><td>24 घंटे</td><td>2 मुफ़्त</td></tr>
+<tr><td>रिसर्च रिपोर्ट</td><td>₹999</td><td>3 दिन</td><td>2 मुफ़्त</td></tr>
+<tr><td>Sheets ऑटोमेशन</td><td>₹999</td><td>3–5 दिन</td><td>2 मुफ़्त</td></tr>
+<tr><td>अनुवाद (प्रति पृष्ठ)</td><td>₹499</td><td>24–48 घंटे</td><td>2 मुफ़्त</td></tr>
+</table>
+</div></section>
 
-        <section class="stats">
-          <div class="container stats-grid">
-            <div><div class="stat-value">9</div><div class="stat-label">Services</div></div>
-            <div><div class="stat-value">12</div><div class="stat-label">Languages</div></div>
-            <div><div class="stat-value">" + C.formatPrice(29, country) + "</div><div class="stat-label">Starts at</div></div>
-            <div><div class="stat-value">30d</div><div class="stat-label">Refund window</div></div>
-          </div>
-        </section>
+<section id="process"><div class="wrap">
+<h2 class="sec">कैसे काम होता है</h2>
+<p class="sub">सिर्फ़ 3 चरण — बिना अकाउंट, बिना फ़ॉर्म भरवाए।</p>
+<div class="steps">
+<div class="step"><div class="n">1</div><h3>बताइए क्या चाहिए</h3><p>ईमेल पर अपना काम लिखकर भेजिए — जवाब 24 घंटे में, कीमत और समय के साथ।</p></div>
+<div class="step"><div class="n">2</div><h3>फ्री सैंपल देखिए</h3><p>बड़े कामों में पहले छोटा नमूना बनाकर दिखाता हूँ — पसंद आए तभी आगे।</p></div>
+<div class="step"><div class="n">3</div><h3>पेमेंट और डिलीवरी</h3><p>UPI/Razorpay लिंक से पेमेंट, तय समय पर डिलीवरी, रिविज़न शामिल।</p></div>
+</div>
+<div class="trust">
+<h3>क्यों भरोसा करें</h3>
+<ul>
+<li>पहले काम, फिर पैसा — नए ग्राहक पहले फ्री सैंपल लेते हैं</li>
+<li>कोई मंथली चार्ज नहीं, कोई हिडन कॉस्ट नहीं</li>
+<li>हिंदी और English दोनों में बात-काम</li>
+<li>डिलीवर हुए काम की फुल रिविज़न गारंटी</li>
+</ul>
+</div>
+</div></section>
 
-        <section class="section">
-          <div class="container">
-            <div class="section-head">
-              <h2>" + C.t("services") + "</h2>
-              <a class="link-all" href="services.html">All →</a>
-            </div>
-            <div class="grid-3">" + serviceCards + "</div>
-          </div>
-        </section>
+<section id="contact" class="contact"><div class="wrap">
+<h2>आज ही शुरू करते हैं</h2>
+<p>अपना काम एक लाइन में लिखकर भेजिए — जवाब और बजट 24 घंटे में।</p>
+<a class="mailto" href="mailto:hiranyajyotidas1@gmail.com?subject=सेवा पूछताछ — Hiranyajyoti Digital">hiranyajyotidas1@gmail.com पर ईमेल करें</a>
+</div></section>
 
-        <section class="how">
-          <div class="container">
-            <h2>" + C.t("how") + "</h2>
-            <div class="how-grid">
-              <div><div class="how-num">01</div><h3>Preview</h3><p>Read the offer. No account required.</p></div>
-              <div><div class="how-num">02</div><h3>Brief</h3><p>Name the job in your language.</p></div>
-              <div><div class="how-num">03</div><h3>Build</h3><p>The desk writes, designs or codes.</p></div>
-              <div><div class="how-num">04</div><h3>Keep</h3><p>Download from your desk. Revise if needed.</p></div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container">
-            <div class="section-head"><h2>" + C.t("pricing") + "</h2></div>
-            <div class="price-grid">" + planCards + "</div>
-          </div>
-        </section>
-      ");
-    })();
-  </script>
+<footer><div class="wrap">
+<p>© 2026 Hiranyajyoti Digital · <a href="privacy.html">प्राइवेसी पॉलिसी</a></p>
+</div></footer>
 </body>
 </html>
