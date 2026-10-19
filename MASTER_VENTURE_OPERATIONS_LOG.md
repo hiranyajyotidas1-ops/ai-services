@@ -66,3 +66,71 @@
 5. [AUTO] Once the site is restored, convert Proposal A and B into public gig listings on Fiverr + Upwork and a Contra profile.
 
 ---
+
+## Run VENTURE-2026-10-19-01 — 2026-10-19 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:06 IST / 03:36 UTC
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | OK / RECOVERED | https://hiranyajyotidas1-ops.github.io/ai-services/ now serves the full Clevora landing page (hero, 6 services, 4-step flow, 3 pricing tiers, testimonials, FAQ). Delta vs 2026-10-18 (which served the "retired" placeholder). CAVEAT: page shows hardcoded trust claims — "2,847 online", "424+ AI APIs", "195 countries", 3 named testimonials — confirm these are real/owner-approved before they drive paid traffic. |
+| Supabase (users) | BLOCKED (root cause found) | Query still fails: "Connection terminated due to connection timeout". Project metadata now shows status = **INACTIVE** (project "appmint-477290", region us-east-1, created 2026-08-01). Root cause is the paused/inactive project, not the network. No signup data retrievable. |
+| Razorpay (payments) | BLOCKED | API returned "Authentication failed" again (same as 2026-10-18). Keys invalid, expired or rotated. No payment events retrievable. |
+| GitHub log | OK | This file read and appended; committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals prepared (see Proposals). |
+
+### Key Findings
+- **Website recovered** — the Clevora storefront is live again and renders correctly. This closes the top action from the 2026-10-18 run.
+- **Supabase is INACTIVE** — confirmed via project metadata. The DB timeout is a consequence of the paused project. Owner must reactivate it before any signup tracking works.
+- **Razorpay auth still failing** — revenue signal remains unknown (not zero) until credentials are fixed.
+- Repo still contains only `index.html` (+ this log); no separate assets/analytics files were added.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-19)
+1. **Taskwyre** (taskwyre.com) — AI-native freelance marketplace; mandatory "AI Disclosure Score" and tool-stack visibility; 0% commission until $500, then tiered 15%→7%. Best for positioning AI-augmented delivery openly.
+2. **AI Agent Marketplace** (ai-agentmarketplace.com) — pay-per-result agent marketplace; 12% platform fee, providers keep 88%; $45/mo to list agents; Stripe escrow. Good for productized, repeatable deliverables.
+3. **Moltify.ai** — hire specialist AI agents per task; builders keep 88% (12% standard, 6% founding); agent-to-agent hiring. Low-friction for micro-service listings.
+4. **rgigs.com** — vetted AI-automation agencies & consultants; buyers post free, milestone escrow; only paid buyers can review. Strong for consulting/automation retainers.
+5. **OpenBazaar.ai** — open-source, 0% platform-fee marketplace for products + services + agents; self-hostable; crypto + Stripe. Zero-fee channel for templates and service gigs.
+6. **GetAgentic.io** — on-chain agent marketplace on Base L2; USDC payments, x402 instant settlement under $100; flat 2% escrow on larger jobs.
+7. **GigsHub.xyz** — decentralized freelancing for humans + AI agents; USDC escrow, TEE-verified delivery, 0.5% protocol fee. Lowest fee observed.
+8. **Toku** (toku.agency) — AI agent marketplace; 15% fee; API + webhooks; high job volume but heavy price competition.
+9. **dealwork.ai** — purpose-built for AI agents; ~3% AI-to-AI fee; API-first bidding + content publishing. Small job pool but very low fees.
+10. **FreAI** (freelanceai.ru) — Russian-language AI services marketplace (prompt engineering, chatbots, AI content/design); staged milestone payments, duel/ranking system. Useful for a non-English channel.
+
+*Also newly spotted (watchlist): Atelier (useatelier.ai), Ghost Broker AI (ghostbrokerai.xyz), ImagineAnything Marketplace (Q2 2026 launch).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal D — Content + SEO Sprint for a D2C / e-commerce brand**
+> Hi [Name], I noticed [Store] ranks for brand terms but misses most category keywords. I'll run a 30-day content sprint: 6 SEO product/guide articles (keyword-mapped to your catalog), 10 social captions, and a one-page "top 10 fixes" SEO audit. Delivered in 3 batches over 4 weeks, 2 revisions each. Rs 15,000 for the sprint, or Rs 1,800/article standalone. Want the keyword shortlist for [category] first — free?
+
+**Proposal E — AI Chatbot + Lead Automation for a coaching / ed-tech business**
+> Hi [Name], most enquiries to [Business] go cold because replies are slow. I'll set up an AI FAQ assistant (trained on your course/brochure) that answers instantly on WhatsApp/website, captures the lead, and pings you — plus auto follow-ups on Day 1 and Day 3. Fixed Rs 12,000 build + optional Rs 2,000/month upkeep, live in 4-5 days with a handover video. Which channel do most of your enquiries come from?
+
+**Proposal F — Brand Kit + Landing Page for a creator / freelancer**
+> Hi [Name], your work is strong but your online home doesn't sell it. I'll build a personal brand kit (logo, 2 colour themes, 3 social templates) + a one-page site with portfolio, services, testimonials and a UPI/Razorpay "Book me" button. Rs 7,999, delivered in 72 hours. I'll send a free 1-screen mockup first — no obligation. Shall I make it?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0.
+- Razorpay unreachable (auth failure) — payment events unknown.
+- Supabase INACTIVE — new-signup events unknown.
+- No payments, messages, or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 19 → 19 mod 5 = 4 → **TOPIC 4: Free Tool Discovery**.
+- Pick: Google AI Studio (free Gemini API) + Napkin AI (free visual/diagram generation) — both usable for zero-cost content + automation delivery.
+- Mini action: generate one free API key in Google AI Studio and wire it into a single content task.
+
+### Next Actions
+1. [OWNER] Reactivate the Supabase project (ocuyxgocmtucdckiqqeh / appmint-477290) — status is INACTIVE. Then signup tracking resumes.
+2. [OWNER] Rotate / verify Razorpay API credentials — auth has failed two runs in a row.
+3. [OWNER] Confirm the trust claims on the live site ("2,847 online", "424+ APIs", testimonials) are accurate before driving paid traffic.
+4. [AUTO] Re-run all health checks next cycle; log deltas (website now OK — keep monitoring).
+5. [AUTO] Turn Proposals D/E/F into public listings on Taskwyre + rgigs.com + OpenBazaar.ai once the owner approves copy.
+6. [AUTO] Try Google AI Studio free tier to lower delivery cost on content tasks.
+
+---
