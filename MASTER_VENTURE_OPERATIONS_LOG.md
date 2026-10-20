@@ -90,7 +90,7 @@
 - Repo still contains only `index.html` (+ this log); no separate assets/analytics files were added.
 
 ### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-19)
-1. **Taskwyre** (taskwyre.com) — AI-native freelance marketplace; mandatory "AI Disclosure Score" and tool-stack visibility; 0% commission until $500, then tiered 15%→7%. Best for positioning AI-augmented delivery openly.
+1. **Taskwyre** (taskwyre.com) — AI-native freelance marketplace; mandatory "AI Disclosure Score" and tool-stack visibility; 0% commission until $500, then tiered 15%->7%. Best for positioning AI-augmented delivery openly.
 2. **AI Agent Marketplace** (ai-agentmarketplace.com) — pay-per-result agent marketplace; 12% platform fee, providers keep 88%; $45/mo to list agents; Stripe escrow. Good for productized, repeatable deliverables.
 3. **Moltify.ai** — hire specialist AI agents per task; builders keep 88% (12% standard, 6% founding); agent-to-agent hiring. Low-friction for micro-service listings.
 4. **rgigs.com** — vetted AI-automation agencies & consultants; buyers post free, milestone escrow; only paid buyers can review. Strong for consulting/automation retainers.
@@ -121,7 +121,7 @@
 - No payments, messages, or approvals were performed (drafts only).
 
 ### Daily Growth Topic (PART 2)
-- Day number 19 → 19 mod 5 = 4 → **TOPIC 4: Free Tool Discovery**.
+- Day number 19 -> 19 mod 5 = 4 -> **TOPIC 4: Free Tool Discovery**.
 - Pick: Google AI Studio (free Gemini API) + Napkin AI (free visual/diagram generation) — both usable for zero-cost content + automation delivery.
 - Mini action: generate one free API key in Google AI Studio and wire it into a single content task.
 
@@ -132,5 +132,74 @@
 4. [AUTO] Re-run all health checks next cycle; log deltas (website now OK — keep monitoring).
 5. [AUTO] Turn Proposals D/E/F into public listings on Taskwyre + rgigs.com + OpenBazaar.ai once the owner approves copy.
 6. [AUTO] Try Google AI Studio free tier to lower delivery cost on content tasks.
+
+---
+
+## Run VENTURE-2026-10-20-01 — 2026-10-20 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:06 IST / 03:36 UTC
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | OK | https://hiranyajyotidas1-ops.github.io/ai-services/ loads the full Clevora landing page (hero, 6 services, 4-step flow, 3 pricing tiers, testimonials, FAQ). Stable for a 3rd day. Caveat unchanged: hardcoded trust claims ("2,847 online", "424+ AI APIs", "195 countries", named testimonials) still need owner confirmation. |
+| Supabase (users) | BLOCKED | Query still fails: "Connection terminated due to connection timeout". Project ocuyxgocmtucdckiqqeh (appmint-477290) still INACTIVE per prior run. No signup data retrievable. |
+| Razorpay (payments) | BLOCKED | "Authentication failed" for a 3rd run in a row. Keys invalid/expired/rotated. No payment events retrievable. |
+| GitHub log | OK | This file read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified — the agent-economy marketplace wave (see Leads). |
+| Proposals | OK | 3 fresh draft proposals prepared (G/H/I). |
+
+### Key Findings
+- Website healthy for a 3rd consecutive day; no change vs 2026-10-19.
+- Supabase + Razorpay both still blocked (same root causes as prior runs). Revenue and signup signals remain UNKNOWN (not zero) until fixed.
+- Notable market shift this cycle: the lead landscape is moving from human freelance marketplaces toward AI-agent / hybrid marketplaces (agents hiring agents + humans), with low fees (0-10%) and escrow. This is a strategic fit for Clevora, whose delivery is already AI-powered.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-20)
+1. **AI Freelance Hub** (ai-freelance-hub.com) — human experts keep 100% (membership-funded); disclosed AI-agent accounts pay a flat 5%; x402 machine payments; agent-to-agent hiring is first-class.
+2. **Agent Market — NEAR AI** (market.near.ai) — hire agents by the job; payouts via USD (Stripe Connect) or USDC; ~1,284 agents, 42k jobs/week; connects to Claude via MCP and supports A2A + x402.
+3. **AgenticTrade** (agentictrade.io) — list AI services; agents auto-discover via MCP and pay per use; 0% first month, capping at 10%; USDC payouts.
+4. **AgentGigs** (agentgigs.io) — AI agents + humans; escrow, "proofer" agents verify quality; fully API-driven lifecycle.
+5. **Gigiac** (gigiac.com) — agents commission real-world work from humans or other agents; workers keep 100% of payout (poster pays the fee).
+6. **Chowdr** (chowdr.net) — agent-to-agent marketplace; escrow-protected; live beta on test credits (real-money mode coming).
+7. **GoHireHumans** (gohirehumans.com) — AI + human marketplace; 1% platform + fixed 3% processing paid by the employer; sellers keep their full listed price.
+8. **Moltwork** — Solana-based agent marketplace; 12k+ tasks completed on-chain; SOL payments.
+9. **Moltask** (moltask.com) — bounty board for agents; $MOLT token rewards; Base smart-contract escrow; one-command onboarding.
+10. **Work402** — x402 payment protocol + ERC-8004 agent identity on Base; USDC instant settlement; 2.5% fee; pre-launch (watch, do not list yet).
+
+*Watchlist: Superteam Earn (Solana bounties, 0% fee, higher payouts), Enso (enterprise recurring automation), FreelanceNation (gig page 3-8%).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal G — POD / e-commerce content pack**
+> Hi [Name], your [Store] listings don't sell the product in words. I'll deliver a 30-piece content pack: 10 SEO product descriptions, 10 keyword-mapped listing titles/tags, and a 10-post launch calendar for Instagram/Pinterest — all in your brand voice. Rs 4,999, delivered in 72 hours, 2 revisions. Want a free sample description for one of your bestsellers first?
+
+**Proposal H — Google reviews + missed-call text-back automation (local business)**
+> Hi [Name], every missed call at [Business] is a lost booking. I'll set up two automations: (1) auto text-back to missed calls with your booking link, and (2) an automatic Google-review request 2 hours after each visit — using n8n/Make plus a WhatsApp/SMS gateway. Fixed Rs 7,500 build + optional Rs 1,500/month upkeep, live in 4-5 days with a handover video. How many calls do you miss on a busy day?
+
+**Proposal I — Founder LinkedIn ghostwriting retainer**
+> Hi [Name], you have the expertise but posting is the bottleneck. I'll ghostwrite 12 LinkedIn posts/month from a 30-min monthly call plus your voice notes — hook-driven, on-brand, scheduled. Rs 9,000/month, first two posts free so you can judge fit. Want me to draft a week of posts for [Company] to start?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0.
+- Razorpay unreachable (auth failure, 3rd run) — payment events unknown.
+- Supabase INACTIVE — new-signup events unknown.
+- No payments, messages, or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 20 -> 20 mod 5 = 0 -> **TOPIC 5: Upskilling Resource**.
+- Pick: **n8n Academy** (free, hands-on courses with certificates) — QS101 Quickstart, then the N8N101/102/103 Foundations program. Directly upgrades the automation service (the highest-margin Clevora offer).
+- Primary link: https://learn.n8n.io/ (hub: https://n8n.io/education/)
+- Secondary (design track): freeCodeCamp Responsive Web Design certification (free, verified) — https://www.freecodecamp.org/learn/responsive-web-design-v9/
+- Mini action: finish n8n QS101 and rebuild one client workflow as a public proof piece.
+
+### Next Actions
+1. [OWNER] Reactivate the Supabase project (ocuyxgocmtucdckiqqeh / appmint-477290) — signup tracking blocked 3 runs.
+2. [OWNER] Rotate / verify Razorpay API credentials — auth has failed 3 runs in a row.
+3. [OWNER] Confirm the live site's trust claims ("2,847 online", "424+ APIs", testimonials) are accurate before driving paid traffic.
+4. [AUTO] Re-run all health checks next cycle; log deltas (website now stable — keep monitoring).
+5. [AUTO] Given the agent-marketplace shift, prioritise listings on AI Freelance Hub + Agent Market (NEAR) + AgenticTrade once the owner approves copy.
+6. [AUTO] Turn Proposals G/H/I into public listings; start n8n QS101 to strengthen the automation offer.
 
 ---
