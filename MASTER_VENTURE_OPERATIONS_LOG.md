@@ -203,3 +203,71 @@
 6. [AUTO] Turn Proposals G/H/I into public listings; start n8n QS101 to strengthen the automation offer.
 
 ---
+
+## Run VENTURE-2026-10-21-01 — 2026-10-21 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:00 IST / 03:30 UTC
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | OK | https://hiranyajyotidas1-ops.github.io/ai-services/ loads the full Clevora landing page (hero, 6 services, 4-step flow, 3 pricing tiers, testimonials, FAQ). Healthy for a 4th consecutive day; no change vs 2026-10-20. Caveat unchanged: hardcoded trust claims ("2,847 online", "424+ AI APIs", "195 countries", named testimonials) still need owner confirmation before paid traffic. |
+| Supabase (users) | BLOCKED | Query still fails: "Connection terminated due to connection timeout". Project ocuyxgocmtucdckiqqeh (appmint-477290) still INACTIVE per prior runs. No signup data retrievable. |
+| Razorpay (payments) | BLOCKED | "Authentication failed" for a 4th run in a row. Keys invalid/expired/rotated. No payment events retrievable. |
+| GitHub log | OK | This file read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals prepared (J/K/L). |
+
+### Key Findings
+- Website healthy for a 4th day running — stable, no regression.
+- Supabase + Razorpay both still blocked (same root causes: inactive project; bad API keys). Revenue and signup signals remain UNKNOWN (not zero) until fixed. This is now the 4th consecutive blocked run for both — escalation to the owner is overdue.
+- Market note this cycle: the clearest *new* signal is the rise of **reverse / brief-first marketplaces** (you post a task, sellers and agents compete) and of **AI-production marketplaces** that bundle the tooling into the storefront. For Clevora this lowers the "cold start" problem — a brand-new seller can win work by answering posted briefs rather than needing an established review history.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-21)
+1. **ActMyAgent** (actmyagent.com) — reverse marketplace: post a task, specialised agents/sellers send proposals; 15% fee charged only on completion; Stripe escrow. Good for productized content/design/video tasks.
+2. **Aimatron** (aimatron.to) — AI production platform + storefront marketplace (design, software/UI, social, presentations, display ads); "low commission"; also has an Open Briefs board to bid on. Strong fit for the design + social offers.
+3. **Workappily** (workappily.com) — AI-projects marketplace; buyers post outcome-scoped briefs (automation, agents, content, data, design, training); experts pitch with proof + price. Suits consulting/automation retainers.
+4. **pofft AI** (pofft.com) — marketplace for AI agents + expert services; fixed-price packages, escrow; **no commission on your first 3 orders**. Low-risk first channel.
+5. **GenGigsAI** (gengigsai.com) — output-forward AI-creator marketplace (image, video, voice, copy, coding, websites, automation, audits); Canada-first, controlled rollout. Early-mover visibility.
+6. **AITasker** (agencytech.ai) — agent marketplace aimed at agency teams; 75+ task types, $5–$500 per task, multiple agents compete and you pick the best; escrow. Useful as both a delivery channel and a white-label fulfilment option.
+7. **Edison Moment** (edisonmoment.com) — AI×Human platform: a vetted specialist runs the models and ships finished files (design, copy, decks); subscription from $690/mo. Premium positioning benchmark.
+8. **Octogust** (octogust.com) — protected digital services marketplace; buy/sell/share in one account; escrow, on-record scope, dispute step. General-purpose, low-friction listing.
+9. **BotDigit** (botdigit.com) — AI freelance marketplace; freelancers keep 90% (10% fee), 0% buyer fees, escrow; **supports UPI and Razorpay** payouts — a good India-friendly channel.
+10. **Callibrate** (callibrate.io) — pay-per-lead platform for AI/automation experts (n8n, Make, LangChain); pre-qualified leads (budget + scope confirmed) instead of open bidding; no commission. Suits the automation offer.
+
+*Watchlist (this cycle): **Postwork** (postwork.ai, 0% commission for both sides), **Meetcatcher** (meetcatcher.com, matches automation builders to owners of manual processes), **FreelanceNation** (gig page you own, 3–8% — carried over), **Sikaty / workpido / Agenzias** (smaller general marketplaces).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal J — AI document-extraction automation (B2B wholesaler / distributor / freight forwarder)**
+> Hi [Name], I noticed [Company] still takes orders by email/PDF and retypes them into your system. I'll build an AI flow that reads each attachment, checks product codes against your price list, and creates a draft order for a person to approve — so your team stops keying data by hand. Fixed build Rs 35,000–Rs 55,000, live in ~2 weeks, with a handover video and error alerts. I can start with a free 1-hour audit of one order type — want me to map it?
+
+**Proposal K — Half-day "AI for your team" workshop (10–20 person SMB / agency)**
+> Hi [Name], your team is probably already using AI informally — without guardrails or a plan. I'll run a half-day hands-on workshop: safe + effective AI use, then a live exercise where each person lists their three most repetitive tasks. You leave with a ranked automation backlog and a fixed quote for the #1 item. Rs 9,000 for up to 20 people, on-site or online. Shall I send a 1-page agenda for [Company]?
+
+**Proposal L — Email flow + product-content pack (Shopify / D2C brand)**
+> Hi [Name], most [Store] visitors leave without a second touch. I'll set up a 4-email welcome + abandoned-cart flow (Klaviyo/Mailchimp) and write the product copy to feed it — subject lines, preview text and 8 SEO product descriptions in your brand voice. Rs 12,000, delivered in 5 days, 2 revisions. Want me to draft the flow map for your bestseller first — free?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0.
+- Razorpay unreachable (auth failure, 4th run) — payment events unknown.
+- Supabase INACTIVE — new-signup events unknown.
+- No payments, messages, or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 21 -> 21 mod 5 = 1 -> **TOPIC 1: Skill Tip + 5-min Exercise**.
+- Skill: **Canva Bulk Create** — turn a spreadsheet into dozens of on-brand designs in one click (design delivery at scale, directly upgrades the social/design offer).
+- Free resource: https://www.canva.com/help/bulk-create/ (Canva Help Center).
+- Mini action: build a 10-row CSV (product/post name + text + image) and generate 10 Instagram posts from one template in under 5 minutes.
+
+### Next Actions
+1. [OWNER] Reactivate the Supabase project (ocuyxgocmtucdckiqqeh / appmint-477290) — signup tracking blocked 4 runs running.
+2. [OWNER] Rotate / verify Razorpay API credentials — auth has failed 4 runs in a row.
+3. [OWNER] Confirm the live site's trust claims ("2,847 online", "424+ AI APIs", testimonials) are accurate before driving paid traffic.
+4. [AUTO] Re-run all health checks next cycle; log deltas (website stable — keep monitoring).
+5. [AUTO] Prioritise listings on the brief-first channels — ActMyAgent + Workappily + pofft AI (no commission on first 3 orders) — once the owner approves copy.
+6. [AUTO] Turn Proposals J/K/L into public listings; add BotDigit as the India-friendly (UPI/Razorpay) channel.
+
+---
