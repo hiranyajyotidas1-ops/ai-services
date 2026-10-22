@@ -271,3 +271,72 @@
 6. [AUTO] Turn Proposals J/K/L into public listings; add BotDigit as the India-friendly (UPI/Razorpay) channel.
 
 ---
+
+## Run VENTURE-2026-10-22-01 — 2026-10-22 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:08 IST / 03:38 UTC
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN (404)** | https://hiranyajyotidas1-ops.github.io/ai-services/ now returns **HTTP 404 "There isn't a GitHub Pages site here."** (verified via rendered fetch). Repo still contains only `index.html` (547 B, the "Site Retired" placeholder) + this log. **REGRESSION/CORRECTION:** prior runs (10-19 / 10-20 / 10-21) logged "OK — full Clevora landing page"; the live site is in fact NOT being served. GitHub Pages appears disabled/unpublished for this repo. |
+| Supabase (users) | BLOCKED | Query still fails: "Connection terminated due to connection timeout" (5th run). Project ocuyxgocmtucdckiqqeh (appmint-477290) INACTIVE per prior runs. No signup data retrievable. |
+| Razorpay (payments) | BLOCKED | "Authentication failed" for a 5th run in a row. Keys invalid/expired/rotated. No payment events retrievable. |
+| GitHub log | OK | This file read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals prepared (M/N/O). |
+
+### Key Findings
+- **Website is DOWN.** The public URL 404s. This corrects the last three runs, which reported the site healthy — the repo's only HTML file is the retired placeholder and GitHub Pages is not publishing. The Clevora storefront is effectively offline.
+- **Supabase + Razorpay both blocked for a 5th consecutive run** — revenue and signup signals remain UNKNOWN (not zero). Owner action is overdue.
+- Market note this cycle: the clearest *new* signal is **enterprise/cloud storefronts opening up for AI agents & services** (Salesforce AgentExchange, AWS Marketplace, Google Gemini Enterprise, Microsoft Marketplace) running alongside a **second wave of low-fee, escrow-first AI-talent marketplaces** (VibeBay, GiveGigs, Hivve). For a solo AI-services shop the low-fee SMB channels remain the realistic first move; the enterprise catalogues are a longer-horizon play.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-22)
+1. **VibeBay** (vibebay.ai) — AI-talent marketplace; clients post outcome briefs, escrow-protected, fixed-scope "Vibes"; 15% standard, founding seats 0% for 12 months up to $15k. Opens to clients 31 Oct 2026. NOTE: payout list excludes India — verify eligibility first.
+2. **GiveGigs** (givegigs.com) — 0% platform fees, direct hire, no account needed; positioned around "AI agents hiring humans"; workers keep 100% (paid off-platform). Very low-friction listing.
+3. **Hivve** (hivve) — AI-only talent marketplace; 0% commission, flat monthly membership for experts; waitlist/beta. Clean "AI expert" positioning.
+4. **FlowMarket** (flowmarket.pro) — n8n automation marketplace with a built-in service layer (template + setup + maintenance); Stripe Connect; tiered 13%→5%. Ideal for productized automation offers.
+5. **Poe** (poe.com) — creator marketplace with real monetization: set per-message pricing or earn subscription rev-share on your bot; immediate payouts; 17+ countries.
+6. **Relevance AI Agent Store** — cloneable sales/ops/research agents; publish productized agents to teams already on the platform.
+7. **Pickaxe** (pickaxe.co) — build & sell white-label AI agents under your own brand; ~$29/mo; billing + access control handled. Sell the agent as a service.
+8. **MindStudio** — multi-model workflow apps + a marketplace; free to start; good for shipping client-facing AI tools.
+9. **Salesforce AgentExchange** — enterprise agent marketplace; 15% ISVforce / 25% OEM royalty; $50M Builders Initiative; CRM/Slack buyers. Longer sales cycle, higher deal size.
+10. **AWS Marketplace — AI Agents & Tools** — deployable agents/tools sold through AWS unified billing; enterprise procurement; A2A + MCP via Bedrock AgentCore.
+
+*Watchlist (this cycle): **Google Gemini Enterprise Agent Platform** + **Google Cloud Marketplace**, **Microsoft Marketplace / Windows Agent Store** (85% to developer), **UpAgents** (pay-per-task), **AI Hive Marketplace**, **Moltverr**, **Atelier** (useatelier.ai).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal M — POD / Shopify design + listing pack (print-on-demand store)**
+> Hi [Name], your [Store] has good products but the designs and listings don't stop the scroll. I'll deliver a 30-piece pack: 10 original POD designs (bold-typography + icon, ready as transparent PNGs for tees/mugs/totes/phone cases), 10 keyword-mapped listing titles/tags, and a 10-post launch calendar for Instagram/Pinterest — all in your brand style. Rs 4,999, delivered in 72 hours, 2 revisions. Want a free sample design for your bestseller first?
+
+**Proposal N — AI WhatsApp auto-reply + booking automation (clinic / salon / coaching)**
+> Hi [Name], every enquiry to [Business] that waits for a reply is a lost booking. I'll set up an AI assistant on WhatsApp/website that answers FAQs instantly, captures the lead, books slots, and sends Day-1/Day-3 follow-ups — using n8n/Make plus a WhatsApp gateway. Fixed Rs 12,000 build + optional Rs 2,000/month upkeep, live in 4-5 days with a handover video. Which questions do customers ask most?
+
+**Proposal O — Landing page + brand refresh for a local service business**
+> Hi [Name], [Business] looks credible offline but its online home doesn't convert. I'll build a fast, mobile-first landing page (services, gallery, reviews, lead form + UPI/Razorpay "Book now" button) plus a mini brand kit (logo cleanup, 2 colour themes, 3 social templates). Rs 7,999, delivered in 72 hours. I'll send a free 1-screen mockup first — shall I?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0.
+- Razorpay unreachable (auth failure, 5th run) — payment events unknown.
+- Supabase INACTIVE — new-signup events unknown.
+- No payments, messages, or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 22 -> 22 mod 5 = 2 -> **TOPIC 2: POD Trend + Canva Design Idea** (Shopify: t-shirt/mug/phone case/tote bag).
+- Trend: **statement tote bags** — pattern/colour-led totes are rising (plaid tote +122%, colourful tote +120% YoY per Rising Trends, Aug 2026), while generic "personalized tote bag" is falling (0% YoY, -76% over 2 years). The angle beats the format.
+- Canva idea: bold **retro arched-text + simple icon** tote design (one design, reused across tee/mug/phone case). Canvas 4500x4500 px (tote) / 4500x5400 px (tee), export transparent PNG, preview with Canva Smartmockups.
+- Free resource: https://www.canva.com/create/t-shirt-mockups/ (free mockup generator) | templates: https://www.canva.com/t-shirts/templates/
+- Mini action: design ONE arched-text tote in Canva, export transparent PNG, drop it on a mockup, and list it on Shopify via Printify/Printful — ~20 min.
+
+### Next Actions
+1. [OWNER] **Restore the website** — the public URL 404s; re-enable GitHub Pages on this repo or re-deploy the Clevora landing page. (The prior "site OK" logs were inaccurate.)
+2. [OWNER] Reactivate the Supabase project (ocuyxgocmtucdckiqqeh / appmint-477290) — signup tracking blocked 5 runs.
+3. [OWNER] Rotate / verify Razorpay API credentials — auth has failed 5 runs in a row.
+4. [AUTO] Re-run all health checks next cycle; log deltas (website now DOWN — watch for recovery).
+5. [AUTO] Prioritise low-fee channels — GiveGigs + Hivve + FlowMarket + Poe — once the owner approves copy; treat Salesforce/AWS as longer-horizon.
+6. [AUTO] Turn Proposals M/N/O into public listings; keep the POD design pack ready as a productized offer.
+
+---
