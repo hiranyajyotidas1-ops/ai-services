@@ -340,3 +340,71 @@
 6. [AUTO] Turn Proposals M/N/O into public listings; keep the POD design pack ready as a productized offer.
 
 ---
+
+## Run VENTURE-2026-10-23-01 — 2026-10-23 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:09 IST / 03:39 UTC
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN (no Pages site)** | GitHub Pages API for this repo returns **404 "Not Found"** — Pages is not enabled/published. Direct fetch of the public URL is blocked by the sandbox egress proxy (github.io → HTTP 403 CONNECT) and the content-extraction fetch returned empty (consistent with a 404, not a rendered page). Repo still contains only `index.html` (547 B, the "Site Retired" placeholder) + this log. Clevora storefront remains offline. |
+| Supabase (users) | BLOCKED (6th run) | `select count(*) from users` fails: "Connection terminated due to connection timeout". Project ocuyxgocmtucdckiqqeh (appmint-477290) INACTIVE. No signup data retrievable. |
+| Razorpay (payments) | BLOCKED (6th run) | Fetch-all-payments returns "Authentication failed" (BAD_REQUEST_ERROR). Keys invalid/expired/rotated. No payment events retrievable. |
+| GitHub log | OK | This file read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals prepared (P/Q/R). |
+
+### Key Findings
+- **Website still not publishing.** GitHub Pages is not enabled for the repo (API 404). No recovery since 10-22.
+- **Supabase + Razorpay blocked for a 6th consecutive run** — signup and revenue signals remain UNKNOWN (not zero). Owner action is overdue.
+- New market signal this cycle: a distinct **India-first / UPI-native** layer of AI-freelance marketplaces has appeared (Versa, IN.MOM, Gignaati, TaskPiece, CollabMarket, Grit&Gigs, TaskMarket by DoTasks) — INR-priced, escrow-backed, paying out to bank/UPI. For a solo Indian operator these are the most frictionless channels found so far (no FX, no foreign-entity friction). Alongside them, a fresh wave of agent-native boards (SynapticRelay, Moltverr, Termix) competes on near-zero fees.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-23)
+1. **Versa** (versa.co.in) — India-first AI gig marketplace; **0% commission during early access**; instant **UPI** payouts (85% to freelancer); milestone-based; AI matching + skill verification. Most India-friendly channel found so far.
+2. **IN.MOM** (in.mom) — India AI-services marketplace (women-led); INR gigs (₹1,499–₹7,999) across AI art/writing/chatbots/voice/ML; gig model maps directly to our content/design offers.
+3. **Gignaati** (marketplace.gignaati.com) — India AI-gig marketplace (AI agents, trained LLMs, custom AI solutions); INR ₹2,999–₹8,000 per gig; positioned as "India's #1 AI Workforce Program". Good for productized agent/automation gigs.
+4. **TaskPiece** (taskpiece.com) — India freelancer marketplace; escrow, UPI/NEFT/RTGS, auto-invoicing, milestone releases; 5% platform fee (Individual) / 3.5% (Business). 50k+ freelancers claimed; corporate-friendly.
+5. **CollabMarket** (collabmarket.in) — India freelance marketplace; escrow; payouts to bank/PayPal/UPI; free listing; "Founding Freelancer" slots for early visibility. Low-friction India listing.
+6. **Grit&Gigs** (gritandgigs.in) — India skill marketplace; Razorpay-powered escrow, UPI/bank payouts, lower fees than Fiverr, plus zero-commission skill barter. Community feed for visibility.
+7. **TaskMarket by DoTasks** (dotasks.in/marketplace) — India marketplace, INR pricing, UPI/netbanking, weekly (Monday) payouts, has an AI Services category. Simple gig listing.
+8. **SynapticRelay** (synapticrelay.com) — no-commission freelance board for people + AI agents; 6 languages (auto-translated); HTTP API + MCP server so agents can post/apply; launched 23 Sep 2026; holds no money (direct payment).
+9. **Moltverr** (moltverr.com) — AI-agent freelance marketplace; trustless ETH escrow; zero platform fees; on-chain reputation. (Promoted from the 10-22 watchlist.) Categories: research, automation, content, code review, design.
+10. **Termix** (termix_ai) — agent-to-agent marketplace; **1–3% all-in fee** (vs ~20% legacy); on-chain escrow judged by a 3-evaluator panel; `.agent` on-chain identity so reputation is portable. New and agent-native.
+
+*Watchlist (this cycle): **Atelier** (useatelier.ai, USDC per job, $1/task), **ClawGig** (clawgig.ai, agents keep 90%), **Molt Market** (moltmarket.org, no payment processing), **Agent Venue on Arc** (agentbadge.xyz/market, USDC escrow, ERC-8004), **RelayMarket** (free beta, 10% planned), **DAiL** (escrow service orders, 10% fee), **Earnmet** (earnmet.com, sell AI prompts/digital products, UPI), **Hashn** (hashn.com) + **SwarmMemo** (swarmmemo.com) (USDC payouts).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal P — Marketplace-listing & SEO content pack (Amazon / Flipkart / IndiaMART seller)**
+> Hi [Name], your products are good but the listings don't rank or convert. I'll deliver a 20-SKU content pack: keyword-mapped titles + bullet points, A+ / description copy, and 3 back-end search-term sets per SKU — written to each platform's ranking rules and in your brand voice. Rs 3,999 for the first 10 SKUs, Rs 7,999 for 20, delivered in 4 days, 2 revisions. Want me to rewrite one of your best-selling listings free so you can judge the quality?
+
+**Proposal Q — WhatsApp + CRM lead automation for a coaching institute / academy**
+> Hi [Name], every enquiry to [Institute] that isn't followed up within an hour is a seat you lose. I'll set up an AI assistant on WhatsApp/your website that answers fee & batch FAQs instantly, captures the lead into a simple CRM sheet, sends Day-1/Day-3 follow-ups, and pings your counsellor for hot leads — built on n8n/Make. Fixed Rs 12,000 build + optional Rs 2,000/month upkeep, live in 4–5 days with a handover video. Which questions do parents ask most?
+
+**Proposal R — Portfolio / booking website for a freelancer, clinic or studio**
+> Hi [Name], [Name/Business] deserves a website that books clients while you sleep. I'll build a fast, mobile-first site with your services, portfolio/gallery, testimonials, a booking form that writes straight to your calendar, and UPI/Razorpay "Pay now" where needed — plus basic SEO so you show up locally. Rs 6,999, delivered in 72 hours. I'll send a free one-screen mockup first — shall I?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0.
+- Razorpay unreachable (auth failure, 6th run) — payment events unknown.
+- Supabase INACTIVE — new-signup events unknown.
+- No payments, messages, or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 23 -> 23 mod 5 = 3 -> **TOPIC 3: Content Idea** (LinkedIn post / Instagram reel / YouTube / blog / Twitter thread / Quora / Reddit).
+- Idea: a **LinkedIn carousel + Instagram reel repurpose — "Diwali-ready: 3 AI automations to survive the festive rush"**, aimed at D2C/e-commerce sellers and local businesses. Timely hook: Diwali 2026 falls on **Sun, 8 Nov** (16 days out); festive-sale traffic peaks now.
+- Free resource: https://www.canva.com/templates/s/carousel/ (free carousel templates; LinkedIn carousels post as a 1080×1350 PDF).
+- Mini action: write the 6-slide carousel (hook -> 3 automations -> proof -> CTA), export as PDF, post on LinkedIn, then screen-record it as a 20-sec reel.
+
+### Next Actions
+1. [OWNER] **Restore the website** — GitHub Pages is not enabled for the repo (API 404); re-enable Pages or re-deploy the Clevora landing page. Offline since 10-22.
+2. [OWNER] Reactivate the Supabase project (ocuyxgocmtucdckiqqeh / appmint-477290) — signup tracking blocked 6 runs.
+3. [OWNER] Rotate / verify Razorpay API credentials — auth has failed 6 runs in a row.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] Prioritise the India/UPI-native channels (Versa, TaskPiece, CollabMarket, Grit&Gigs, IN.MOM, Gignaati, TaskMarket) once the owner approves copy — no FX or foreign-entity friction.
+6. [AUTO] Turn Proposals P/Q/R into public listings; keep the marketplace-content and automation offers productized.
+
+---
