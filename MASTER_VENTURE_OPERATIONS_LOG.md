@@ -408,3 +408,71 @@
 6. [AUTO] Turn Proposals P/Q/R into public listings; keep the marketplace-content and automation offers productized.
 
 ---
+
+## Run VENTURE-2026-10-24-01 — 2026-10-24 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:04 IST / 03:34 UTC
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN (no Pages site) — 3rd day** | GitHub Pages API for this repo returns **404 "Not Found"** — Pages still not enabled/published. Direct fetch blocked by the sandbox egress proxy (github.io → HTTP 403 CONNECT); content-extraction fetch returns empty (consistent with a 404, not a rendered page). Repo still contains only `index.html` (547 B, the "Site Retired" placeholder) + this log. Clevora storefront remains offline since 10-22. |
+| Supabase (users) | BLOCKED (7th run) | `select * from users` fails: **"Database is possibly not accessible at the moment"** (BadRequestException). Project ocuyxgocmtucdckiqqeh (appmint-477290) still INACTIVE. No signup data retrievable. |
+| Razorpay (payments) | BLOCKED (7th run) | Fetch-all-payments returns **"Authentication failed"** (BAD_REQUEST_ERROR). Keys invalid/expired/rotated. No payment events retrievable. |
+| GitHub log | OK | This file read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals prepared (S/T/U). |
+
+### Key Findings
+- **Website still not publishing** (3rd consecutive day). GitHub Pages is not enabled for the repo (API 404) and `index.html` is still the retired placeholder.
+- **Supabase + Razorpay blocked for a 7th consecutive run** — signup and revenue signals remain UNKNOWN (not zero). Owner action is now a full week overdue; nothing downstream (signup tracking, revenue reconciliation) can work until both are fixed.
+- New market signal this cycle: the **"agent skills & artifacts" layer** is maturing — marketplaces where you list a *productized* asset (an agent, a prompt pack, an MCP tool, a scraper "Actor") rather than sell hours. This suits Clevora better than open bidding because a listing sells repeatedly without a new proposal each time. Payout rails are split: USDC/on-chain on the new boards, Stripe/Apify on the established ones.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-24)
+1. **Apify Store** (apify.com/store) — 52,000+ "Actors" (scrapers, AI agents, automations) sold **pay-per-result** or monthly rental; ~80% revenue share to developers. Best *established* channel found so far to productize data-extraction / research / automation as a repeat-sale asset.
+2. **LancerBase** (lancerbase.com) — Web3 freelance marketplace on **Base**; trustless **USDC escrow**; buy/sell AI agent skills, prompts, automation scripts and MCP tools. Payout in USDC — good for the automation/agent offer, but crypto-only.
+3. **MastersIn.ai** (mastersin.ai) — AI-certified specialist marketplace (operated by Agentica, EU-focused); **<5% acceptance**; specialists pay **0% commission**; escrow, milestone-based engagements; leans on EU AI Act compliance. Premium positioning benchmark.
+4. **mysoft.ai** (mysoft.ai) — AI marketplace for agents, workflows, custom GPTs, prompt packs and AI consulting; **founding sellers pay 5% for life**; escrow + Stripe payouts. Low-friction productized listing.
+5. **SkillExchange** (skillexchange.market) — AI agent marketplace with **MCP + A2A**; creators keep **85%** (15% fee); enterprise-ready. *(Verify legitimacy before listing — sourced from a roundup.)*
+6. **AgentForge** (agentforge.market) — B2B enterprise agent marketplace; ~20% fee; reported avg deal ~$11,700; enterprise/SMB buyers. Longer sales cycle, larger tickets. *(Roundup-sourced — verify.)*
+7. **BotHub** (bothub.market) — consumer AI-bot marketplace; ~15% + $0.10/txn; large consumer MAU; simpler consumer-grade bots. *(Roundup-sourced — verify.)*
+8. **Agent.ai** (agent.ai) — public network of business AI agents; hire / provide agents directly; discovery via profile. Useful as a free presence/discovery listing.
+9. **Agentverse** (agentverse.ai, Fetch.ai) — open **registry + discovery** for agents (register a service agent so other agents can find and call it). Not a paid marketplace itself — a distribution layer.
+10. **Swarms / Neura Market** (swarms.world) — list and sell agents, skills and templates; ~10% platform fee. *(Roundup-sourced — verify.)*
+
+*Watchlist (this cycle): **OpenAgent Exchange** (openagent.exchange, no transaction fee), **Agensi** + **MCP Market** (sell skills/MCP tools; 20–30% fee), **Hugging Face Spaces** (free hosting/discovery for AI demos), **Stack AI** (enterprise internal AI apps), **Lovable** (build/sell full AI SaaS), **CalStudio** (paywall a custom GPT).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal S — AI receptionist for a clinic / salon / studio (voice + WhatsApp)**
+> Hi [Name], [Business] misses calls at peak hours and every missed call is a lost appointment. I'll set up an AI receptionist that answers FAQs, books and reschedules appointments, and sends reminders over WhatsApp and voice — built on n8n/Make with a WhatsApp gateway. Fixed Rs 15,000 build + optional Rs 2,500/month upkeep, live in 5–6 days with a handover video. Roughly how many appointment calls do you miss on a busy day?
+
+**Proposal T — Local SEO + Google Business Profile + review engine (restaurant / retail store)**
+> Hi [Name], customers search "[category] near me" and pick whoever shows up first with the best reviews. I'll optimise your Google Business Profile, fix your local citations, publish 10 keyword posts, and set up an automatic review-request after each visit. Rs 6,000 one-time + optional Rs 1,000/month, delivered in 5 days. Want a free audit of how [Business] shows up in local search first?
+
+**Proposal U — Personal-brand content pack + one-page site (coach / creator / consultant)**
+> Hi [Name], your expertise doesn't come across online the way it does in person. I'll build a personal-brand pack: a one-page site (bio, services, testimonials, UPI/Razorpay booking), 10 LinkedIn posts, and 3 Canva carousel templates — all in your voice. Rs 8,999, delivered in 72 hours. Want a free one-screen mockup plus two sample posts to start?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0.
+- Razorpay unreachable (auth failure, 7th run) — payment events unknown.
+- Supabase INACTIVE — new-signup events unknown.
+- No payments, messages, or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 24 -> 24 mod 5 = 4 -> **TOPIC 4: Free Tool Discovery**.
+- Picks (both genuinely free, no card, verified this run): **Groq free tier** (OpenAI-compatible LLM API; free models incl. `openai/gpt-oss-120b` and `llama-3.1-8b-instant` at up to 14,400 req/day) + **Cloudflare Workers AI** (10,000 Neurons/day free, resets 00:00 UTC, deploy serverless AI at the edge).
+- Angle: run the *delivery* of content and automation on free-tier inference, so early client work costs near-zero while the offer is priced normally.
+- Mini action: create a Groq key, point the OpenAI SDK at `https://api.groq.com/openai/v1`, and rebuild one content task (e.g. 5 product descriptions) on it end-to-end.
+
+### Next Actions
+1. [OWNER] **Restore the website** — GitHub Pages is not enabled for the repo (API 404); re-enable Pages or re-deploy the Clevora landing page. Offline since 10-22 (3 days).
+2. [OWNER] Reactivate the Supabase project (ocuyxgocmtucdckiqqeh / appmint-477290) — signup tracking blocked 7 runs.
+3. [OWNER] Rotate / verify Razorpay API credentials — auth has failed 7 runs in a row.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] Productize one offer as a repeat-sale asset for **Apify Store** (e.g. a "local-business lead scraper" Actor) — the highest-leverage new channel found this cycle; no cold bidding needed.
+6. [AUTO] Turn Proposals S/T/U into public listings; keep the automation + local-SEO offers productized.
+
+---
