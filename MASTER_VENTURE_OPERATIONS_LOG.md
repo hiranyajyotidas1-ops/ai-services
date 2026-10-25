@@ -476,3 +476,72 @@
 6. [AUTO] Turn Proposals S/T/U into public listings; keep the automation + local-SEO offers productized.
 
 ---
+
+## Run VENTURE-2026-10-25-01 — 2026-10-25 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:07 IST / 03:37 UTC
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN (no Pages site) — 4th day** | GitHub Pages API for this repo returns **404 "Not Found"** — Pages still not enabled/published. Direct fetch via the sandbox egress proxy failed (HTTP 000); content-extraction fetch returned an empty result set (consistent with a 404, not a rendered page). Repo still contains only `index.html` (547 B, the "Site Retired" placeholder) + this log. Clevora storefront offline since 10-22. |
+| Supabase (users) | BLOCKED (8th run) | `select count(*) from users` fails: **"Database is possibly not accessible at the moment"** (BadRequestException). Project ocuyxgocmtucdckiqqeh (appmint-477290) still INACTIVE. No signup data retrievable. |
+| Razorpay (payments) | BLOCKED (8th run) | Fetch-all-payments returns **"Authentication failed"** (BAD_REQUEST_ERROR). Keys invalid/expired/rotated. No payment events retrievable. |
+| GitHub log | OK | This file read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals prepared (V/W/X). |
+
+### Key Findings
+- **Website still not publishing** (4th consecutive day). GitHub Pages is not enabled for the repo (API 404) and `index.html` is still the retired placeholder. Clevora's public storefront remains offline.
+- **Supabase + Razorpay blocked for an 8th consecutive run** — signup and revenue signals remain UNKNOWN (not zero). Owner action is now more than a week overdue; nothing downstream (signup tracking, revenue reconciliation) can work until both are fixed.
+- **New market signal this cycle: AI-search visibility (AEO/GEO) is now a sellable service line.** With Google AI Overviews, ChatGPT and Perplexity answering buying queries directly, SMBs are paying to be *cited* by AI engines — a natural extension of Clevora's content + SEO offer and a fresh wedge into the highest-volume workstream. A second signal: **vetted-expert networks (Awesomic, Seotal, TechBehemoths) now compete on vetting + zero/low commission** rather than open bidding — a better fit for a small, quality-led shop than legacy marketplaces.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-25)
+1. **Awesomic Supernova** (awesomic.com) — AI workplace where agents + **vetted experts** work the same project; experts are the top ~1% of applicants, matched within 24 h, free rematches; 4,000+ companies (500+ YC). Apply as a vetted design/dev/marketing expert — quality-led, no bidding.
+2. **TechBehemoths** (techbehemoths.com) — Berlin-based B2B directory, **62,900+ IT/design/marketing firms, 143+ countries, ~2M buyers/yr**. Free profile, **0% commission**, EXO Score (21 merit metrics, cannot be bought), free verification badge; revenue is only optional visibility tiers. Strong free discovery channel.
+3. **Seotal** (seotal.com) — vetted **SEO/AEO/GEO talent network** (India/Philippines/Vietnam, Kolkata-run); <5% acceptance, **no platform fees / no success fee**; $15–30/hr or $1,000–2,000/mo part-time. India-friendly and a direct fit for the content/SEO offer.
+4. **AIBusiness.ai** — directory connecting SMBs with **vetted AI consultants** by service/location/industry; **direct connection, no middlemen, no commission**. Free presence/discovery listing.
+5. **Kopai** (usekopai.com) — "cloud for AI agents": build an agent, publish it as an API, list it in the marketplace; **creators keep 70%**, pay-per-message instead of per-hour; also exportable into your own site. Good for productizing the automation offer.
+6. **DigitalJobs.com** — first job platform for **both humans and AI agents**; 120,000+ vetted digital jobs + an AI-agent marketplace where builders list the services their agents offer. New, low-competition listing surface.
+7. **OKX AI Agent Marketplace** — agent-to-agent marketplace with **10,000+ active agents and 20,000+ tasks** since July 2026; agents discover, hire and pay each other. Crypto-native (OKX), so treat as experimental.
+8. **AaaS Market** — non-custodial, machine-to-machine marketplace for **extraction/structured-data services**; USDC on Base via **x402**, wallet-to-wallet settlement, **0% fee during the promo** (10% planned, announced in advance); auto quality-scoring builds public reputation. Registration open, no review.
+9. **Botnexio** (botnexio.com) — marketplace for Discord bots, GPTs, prompt packs and vibe-coding templates; **creators keep 85%**; trending feed + built-in payments. Good for productized prompt/template assets.
+10. **Whop** — creator marketplace to sell prompt packs, AI access and digital products; one of the lowest take-rates observed (**~95% to seller**), built-in discovery + payments. Best for a productized "prompt/system pack" alongside the service offers.
+
+*Watchlist (this cycle): **Dock Agent Marketplace** (trydock.ai, YC S26 — hire specialist growth agents, launched 30 Sep), **A2G Marketplace** (a2gmarketplace.com, agent-commerce beta), **Gigged.AI Mobilise** (25,000+ vetted specialists network + agent library), **Payhip / Gumroad / Creem** (own-storefront + merchant-of-record for digital products), **PromptBase** (sell prompts; 0% own-link / 20% marketplace), **Framekit** (framekit.ai, sell prompt packs beside your portfolio).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal V — AI-search (AEO/GEO) visibility pack (any local SMB or D2C brand)**
+> Hi [Name], buyers now ask ChatGPT, Perplexity and Google's AI Overviews instead of scrolling search results — and those answers cite only a handful of sources. I'll get [Business] into them: fix crawler access and schema, run your real buyer questions through the AI engines, record who gets cited now, then restructure your key pages and publish 6 quotable answer posts to win those citations. Rs 7,500 one-time, delivered in 7 days, with a before/after citation report. Want a free check of how [Business] shows up in AI search today?
+
+**Proposal W — Booking + payments web app for a service business (clinic / studio / coaching)**
+> Hi [Name], a one-page site isn't enough once clients are ready to book. I'll build a small client portal for [Business]: service menu, live availability, online booking, Razorpay/UPI deposit, and automatic WhatsApp/email reminders — mobile-first and SEO-ready. Rs 14,999 build + optional Rs 1,500/month hosting and upkeep, live in 7–10 days with a handover video. Want a free clickable mockup of the booking flow first?
+
+**Proposal X — Automation-as-a-Service retainer (growing SMB / agency, monthly)**
+> Hi [Name], most businesses fix one workflow and stop — then new manual work piles up again. I offer an automation retainer: each month I audit where your team loses time, then build and maintain 1–2 automations (lead capture → CRM, invoice/receipt generation, review requests, content repurposing) using n8n/Make, with a monthly "what got automated" report. Rs 4,999/month, first automation free to prove value. Shall I map your top three time-drains on a 20-minute call?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0.
+- Razorpay unreachable (auth failure, 8th run) — payment events unknown.
+- Supabase INACTIVE — new-signup events unknown.
+- No payments, messages, or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 25 -> 25 mod 5 = 0 -> **TOPIC 5: Upskilling Resource**.
+- Pick (fresh vs the 10-20 n8n Academy pick): **OpenAI Academy** — free, self-paced courses with badges and pathway certificates of completion, open globally to anyone with a ChatGPT account. Highest-leverage tracks for Clevora: *Agents and Workflows*, *Scope AI Solutions*, *Design and Build Agentic Systems*, *Evaluate AI Applications*.
+- Primary link: https://academy.openai.com (courses index: https://help.openai.com/en/articles/20001270-openai-academy-courses)
+- Secondary (fast, certificate-backed): Santander Open Academy — "Creating Value with AI, Automation and Bots" (free, ~2 hrs, certificate, open until 31 Dec 2026) — https://app.santanderopenacademy.com/en/course/creating-value-with-ai-automation-and-bots
+- Mini action: finish the *Agents and Workflows* course this week, then turn its "define context, boundaries and checkpoints" checklist into a one-page template you reuse on every automation proposal.
+
+### Next Actions
+1. [OWNER] **Restore the website** — GitHub Pages is not enabled for the repo (API 404); re-enable Pages or re-deploy the Clevora landing page. Offline since 10-22 (4 days).
+2. [OWNER] Reactivate the Supabase project (ocuyxgocmtucdckiqqeh / appmint-477290) — signup tracking blocked 8 runs.
+3. [OWNER] Rotate / verify Razorpay API credentials — auth has failed 8 runs in a row.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] Package the **AI-search (AEO/GEO) visibility** offer as a productized listing — the clearest new revenue wedge found this cycle; list it on Seotal, AIBusiness.ai and TechBehemoths (all free / 0% commission).
+6. [AUTO] Turn Proposals V/W/X into public listings; keep the automation + local-SEO offers productized.
+
+---
