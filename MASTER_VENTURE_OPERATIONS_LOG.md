@@ -545,3 +545,80 @@
 6. [AUTO] Turn Proposals V/W/X into public listings; keep the automation + local-SEO offers productized.
 
 ---
+
+## Run VENTURE-2026-10-26-01 — 2026-10-26 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:06 IST / 03:36 UTC
+**Run ID:** VENTURE-2026-10-26-01
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN (no Pages site) — 5th day** | Repo root still holds only 2 files: `index.html` (547 B, unchanged SHA 9e080c7) + this log. Public URL fetch returned an empty result set (consistent with a 404, not a rendered page); direct sandbox curl blocked by egress proxy (HTTP 000). GitHub Pages is still not enabled/published. Clevora storefront offline since 10-22. |
+| Supabase (users) | BLOCKED (9th run) | Verified this run via project list: project `ocuyxgocmtucdckiqqeh` (appmint-477290, us-east-1) status = **INACTIVE**. SQL query fails with "Database is possibly not accessible at the moment". Signup data still UNKNOWN. (Second project `svmwinvvijrhliifzssy` / Sargam is also INACTIVE.) |
+| Razorpay (payments) | BLOCKED (9th run) | Fetch-all-payments returns **"Authentication failed"** (BAD_REQUEST_ERROR). Keys invalid/expired/rotated. Payment events UNKNOWN. |
+| GitHub log | OK | Read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals (Y/Z/AA). |
+
+### Key Findings
+- **Root cause of the Supabase block is now confirmed, not inferred:** the project is INACTIVE (paused), not misconfigured. Reactivating it in the Supabase dashboard is the only fix; no query-side workaround exists.
+- **Website unchanged for a 5th day.** Repo has not been touched since the 10-22 placeholder was committed — the landing page still needs to be written and Pages enabled.
+- **Market signal this cycle: the "India-first, INR-native" layer has caught up.** Several new marketplaces now settle in ₹ via Razorpay/UPI, issue GST invoices, and price AI gigs in the ₹3,000–₹8,000 band — the exact band Clevora already quotes. This removes the two biggest friction points of the global boards (USD payout rails, price compression against $5 bidders) and is the most actionable channel found so far.
+- **Second signal: service marketplaces are now agent-facing.** Saroi, AgenticTrade and G.A.M.E. are built so an AI agent (the buyer's) discovers, negotiates and pays per call. Listing a *fixed-scope, fixed-price* service with a written "done test" is what makes you discoverable there — which is exactly how Clevora's offers should be packaged anyway.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-26)
+
+**India-first / INR-native (highest fit — settle in ₹, GST invoices, UPI/Razorpay):**
+1. **TalentAIWorks** (talentaiworks.com) — India-built AI-only freelancer marketplace; 500+ AI experts, ₹50L+ paid out; **10% platform fee (freelancer keeps 90%)**; **Razorpay escrow**, INR pricing, UPI + card, Indian tax compliance; categories include AI Automation (n8n/Make), Prompt Engineering, AI Agents, AI Consulting. Lowest-friction domestic channel found.
+2. **ServedByAI** (servedbyai.com) — marketplace exclusively for AI services; 6 categories (automation, content, chatbots/voice, dev, marketing/SEO, consulting); **15% provider commission, 10% for founding providers**, 0% buyer fees; Stripe escrow; proposal-based pricing.
+3. **Lancerscape** (lancerscape.com) — Indian registered company (RoC Chennai) that **contracts the client and subcontracts the freelancer**; ₹0 to post, KYC-verified freelancers, **GST invoice in INR**, 10% taken from the freelancer's payout. Guaranteed-delivery model suits risk-averse SMB buyers.
+4. **Gignaati Marketplace** (marketplace.gignaati.com) — India's "AI Gigs" marketplace: AI agents, trained LLMs, ready-to-deploy automations priced in ₹ (live listings ₹2,999–₹8,000, e.g. "AI Talent Screening Workflow ₹6,000", "Smart Resume Processing ₹5,000"). Direct evidence of what Indian buyers pay for packaged agents — use it for price benchmarking.
+
+**Agent-native / productized listings (fixed price + written "done test"):**
+5. **Saroi** (saroi.ai) — "where AI agents buy and sell business services". Turn a service into a fixed-price product with a done-test; your own agent answers buyer agents inside limits you set; **free booth, 0% on your own clients, 20% only on buyers Saroi brings for 12 months**; MCP endpoint so Claude/ChatGPT/Gemini/Copilot/Perplexity can order.
+6. **AgenticTrade** (agentictrade.io) — list an AI service, agents discover it via MCP and **pay per call** (USDC); ~311 services / 1,243 agents live; **0% commission month 1, 5% months 2–3, capped at 10%**; 3-minute setup, no code.
+7. **Global Agentic Market Exchange / G.A.M.E.** (agenticmarket.exchange) — point it at a GitHub repo, MCP server or OpenAPI spec and you're **listed in 60 seconds**; **95/5 split in your favour**, escrow-backed calls, **daily Stripe Connect payouts** above $10; $10M prize challenge running. Best take-rate of any agent marketplace found.
+8. **Atelier** (useatelier.ai) — agent marketplace with **x402 on-chain settlement (Solana/Base)**; per-task pricing ($1/task, $5/week); agents can sub-contract other agents mid-task. Experimental, crypto-native.
+9. **Sigrix** (sigrix.io) — human-reviewed marketplace for prompts, personas, **skills (SKILL.md)**, assistants, agents, crews, MCP servers **and n8n workflows**; **85% to founding sellers (15% fee), 80% standard**; imports n8n JSON and scrubs credentials; no exclusivity. Launched 15 May 2026 — founding seats still open.
+
+**Automation-template storefronts (sell once, repeat revenue):**
+10. **AutomationMart** (automationmart.io) — open marketplace for Make.com / n8n / Zapier workflow files; **80% seller share, paid via Razorpay Route to an Indian bank account, weekly on Fridays** (₹500 minimum); no listing fee, no approval queue, live within 24h. The only template marketplace found that pays out natively in ₹.
+
+*Watchlist (this cycle): **n8n Basket** (n8nbasket.com — India-priced n8n listings, ₹799–₹2,999, creator pages + tracked links), **FlowMarket** (flowmarket.pro — service-layer n8n marketplace, tiered 13%→5% commission + Opportunity Finder for prospecting), **AI Agent Marketplace** (ai-agentmarketplace.com — 88% provider share but $45/mo listing fee), **spaza.sh** (agent-run P2P listings, e.g. "Custom Automation & AI Workflow Setup $75"), **BotDigit** (crypto-escrow freelance board with AI matching), **jobbers.io** (0% commission, credit-based proposals), **Callibrate** (pay-per-pre-qualified-lead, no commission), **ImagineAnything Marketplace** (agent sellers, launching Q2–Q3 2026).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal Y — WhatsApp catalogue + order automation (D2C brand / local store)**
+> Hi [Name], most of [Brand]'s orders probably start as a WhatsApp "price kya hai?" and end in a manual reply hours later. I'll set up a WhatsApp catalogue that answers price/size/stock instantly, takes the order, sends a Razorpay/UPI payment link, and pushes the confirmed order into a Google Sheet plus a courier-ready label — so nothing is retyped. Rs 9,999 build, live in 5 days, with a handover video and 30 days of tweaks included. Roughly how many order enquiries does [Brand] get on WhatsApp in a week?
+
+**Proposal Z — Invoice + payment-reminder automation (freelancers, agencies, contractors)**
+> Hi [Name], chasing payments is usually the most hated hour of a freelancer's week. I'll automate it: raise a GST-ready invoice from a Google Form or Sheet, send it by email/WhatsApp, follow up automatically on day 3, 7 and 14 with polite escalating reminders, and reconcile the paid ones back into your books. Built on n8n + Razorpay, Rs 6,999 one-time, delivered in 4 days. Want me to show you the flow on your current invoice format first?
+
+**Proposal AA — Content repurposing engine (YouTuber / podcaster / coach)**
+> Hi [Name], one video should become a week of posts, but doing that by hand is why most creators stop. I'll build a pipeline that takes each new upload and produces a blog draft, 5 LinkedIn posts, 3 Instagram reel scripts with hooks, a Twitter/X thread and an email newsletter — all in your voice, dropped into one review sheet where you approve before anything publishes. Rs 8,999 build + Rs 1,500/month to keep it running, first batch live within 5 days. Which platform do you want to grow first?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0.
+- Razorpay unreachable (auth failure, 9th run) — payment events unknown.
+- Supabase project INACTIVE (confirmed this run) — new-signup events unknown.
+- No payments, messages, or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 26 -> 26 mod 5 = 1 -> **TOPIC 1: Skill Tip + 5-min Exercise**.
+- Skill picked (new vs earlier runs): **Google Sheets `QUERY` function** — one formula that turns a raw data tab into a client-ready filtered, sorted report.
+- Why it matters commercially: every data-research / VA / reporting gig Clevora quotes is really "clean this sheet and show me the numbers". QUERY makes that a 10-minute job instead of an hour, which is the entire margin on a Rs 1,500–2,000 task.
+- Free resources: Google's official QUERY reference — https://support.google.com/docs/answer/3093343 ; Ben Collins' free QUERY/SQL-in-Sheets guide — https://www.benlcollins.com/spreadsheets/google-sheets-query-sql/
+- Mini action: build one "Client Snapshot" QUERY template that only needs the range swapped, and reuse it on the next data-cleanup enquiry.
+
+### Next Actions
+1. [OWNER] **Reactivate Supabase project** `ocuyxgocmtucdckiqqeh` — confirmed INACTIVE this run (not a query bug). Signup tracking blocked 9 runs.
+2. [OWNER] **Rotate / verify Razorpay API credentials** — auth has failed 9 runs in a row.
+3. [OWNER] **Write and deploy the Clevora landing page + enable GitHub Pages** — repo has held the 547-byte retired placeholder since 10-22; offline 5 days.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] Register Clevora on the two India-first channels that settle in ₹ — **TalentAIWorks** (10% fee, Razorpay escrow) and **AutomationMart** (80% share, Razorpay Route payouts). No USD payout rail needed.
+6. [AUTO] Package Proposals Y/Z/AA as fixed-price listings with a written "done test" so they can be listed on Saroi and AgenticTrade, where agents (not humans) do the buying.
+
+---
