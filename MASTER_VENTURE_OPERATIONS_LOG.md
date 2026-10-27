@@ -622,3 +622,82 @@
 6. [AUTO] Package Proposals Y/Z/AA as fixed-price listings with a written "done test" so they can be listed on Saroi and AgenticTrade, where agents (not humans) do the buying.
 
 ---
+
+## Run VENTURE-2026-10-27-01 — 2026-10-27 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:03 IST / 03:33 UTC
+**Run ID:** VENTURE-2026-10-27-01
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 6th day** | Repo tree still holds exactly 2 files: `index.html` (547 B, SHA `9e080c7` — unchanged since 10-22, i.e. the "retired" placeholder) + this log. Public URL fetch returns an empty result set (consistent with 404, not a rendered page); sandbox curl blocked by egress proxy (HTTP 000 / CONNECT 403). Pages still not published. Clevora storefront offline since 10-22. |
+| Supabase (users) | BLOCKED — **failure mode changed** | This run every Supabase call returned `MCP credential not connected` / `credential expired or revoked — re-authorization required` (AUTH_ERROR). That is a *different* failure from the previous 9 runs (project INACTIVE / DB timeout): the Supabase connection itself now needs to be re-authorised in the integration settings. No signup data retrievable. Signup count still UNKNOWN. |
+| Razorpay (payments) | BLOCKED (10th run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Keys invalid/expired/rotated. Payment events UNKNOWN. |
+| GitHub log | OK | Read, appended and committed in this run (repo is still the only durable state store). |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals (AB/AC/AD). |
+
+### Key Findings
+- **Two separate owner-side blockers are now stacked on Supabase:** first the project was paused (INACTIVE), now the MCP credential is disconnected. Fixing only one will not restore signup tracking. Order of repair: re-authorise the Supabase connection → then restore the project if it is still paused → then re-run the `auth.users` query.
+- **Website has now been offline for 6 days** with zero repo changes. Nothing on the automation side can fix this: the landing page has to be written and Pages enabled by the owner. Until then every lead channel in this log points at a dead URL — this is the single highest-cost open item.
+- **Market signal this cycle: the India-first board layer keeps deepening, and it now pays in ₹ with escrow.** Operalyn (0% commission on success, INR via Razorpay), TaskPiece (escrow + UPI, auto invoices) and HunarBox (1–2 day payouts, UPI + international) are all live and free to join. Combined with TalentAIWorks logged on 10-26, there are now four domestic channels that remove the USD-payout and price-compression problems entirely.
+- **Second signal: agent marketplaces are competing on take-rate, not reach.** Hirelli (12%→5% as you sell), Moltify (88% keep, 6% founding fee), AIMarkets (10%) and SettleGrid (per-call, SEO-indexed listing) all undercut the 20% human boards. The differentiator is now *packaging*: a fixed scope, fixed price and a written "done test" is what makes a listing machine-buyable.
+- **Third signal: day-rate AI work is a real Indian channel.** TatkalPro lists AI workflow/prompt/chatbot skills at ₹4,000–₹12,000 **per day**, which is well above Clevora's current per-project pricing on comparable work (e.g. Rs 6,999 invoice automation ≈ 1 day of work). Worth re-pricing the packaged offers against this benchmark.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-27)
+
+**India-first / INR-native (free to join, escrow, UPI/Razorpay):**
+1. **Operalyn** (operalyn.com) — India's professional freelance network; **0% commission, charged only on successfully completed work**, ₹0 to post, milestone escrow, INR payouts via Razorpay; 1,200+ verified freelancers, ₹2.5Cr+ paid out. Live briefs in exactly Clevora's lanes (SEO blog packs ₹5,000–8,000, logo/brand ₹8,000–15,000). Lowest-friction new channel found this cycle.
+2. **TaskPiece** (taskpiece.com) — 50,000+ verified Indian freelancers, ₹120Cr+ escrow processed; UPI/NetBanking, **auto-generated invoices**, milestone releases, 24–48h dispute SLA; 5% platform fee on the individual plan. Best fit for corporate/SMB buyers who need paperwork.
+3. **HunarBox** (hunarbox.in) — Indian marketplace with a dedicated **AI Services** category; **payouts in 1–2 days**, no minimum withdrawal, UPI + bank + international methods, escrow release on approval. Fast cash-cycle channel for small productized gigs.
+4. **TatkalPro** (tatkalpro.com) — India's on-demand *verified* workforce, day-rate bookings (1 day to 4 weeks); AI skills band is **₹4,000–₹12,000/day** (prompt engineer, AI workflow builder, chatbot builder, AI tool trainer); Razorpay escrow, free to register, live in 48h. Use it for short engagements and as a **pricing benchmark**, not just a lead source.
+5. **ai2hum** (ai2hum.ai) — human-in-the-loop layer for AI agents: AI agents post bounties that need a real person (portal logins, calls, verification), paid **instantly via UPI**, 85% payout, ₹0 joining, Aadhaar KYC in 24h. Niche, but it is the one place where "I will do the part the bot can't" is the product.
+
+**Agent / productized marketplaces (fixed price + written done-test):**
+6. **Hirelli** (hirelli.com) — AI-agent marketplace selling into **Dubai/GCC and global** companies; free listing, **12% commission dropping to 8% then 5%** as sales grow, manual verification of claimed capabilities, payouts to bank on the 1st. Requirement that matters: the agent must produce a **real work output, not chat** — which is exactly how Clevora's deliverables should be scoped.
+7. **Moltify** (moltify.ai) — per-task agent marketplace; **builders keep 88%**, founding builders pay **6% instead of 12%** for 6 months; webhook integration, escrow, auto-payout at $100+. Agents can hire other agents, so a workflow can be composed from listed parts.
+8. **AIMarkets** (aimarkets.cloud) — AI-development marketplace with both a **service/template store** and a **freelancer contract** side; free to list, **10% commission**, 7-day hold, $50 minimum withdrawal, free education hub. Good for listing the POD design pack and landing-page templates as products.
+9. **SettleGrid** (settlegrid.ai/marketplace) — indexes MCP servers, models, APIs, agent tools, automations and datasets (458 tools across 4 ecosystems); **every registered tool gets its own SEO-optimised marketplace page**, per-call pricing, multi-protocol settlement. Best distribution play for turning an n8n/MCP workflow into a discoverable product.
+10. **VibeBay** (vibebay.ai) — AI talent marketplace for fixed-scope "Vibes"; clients fund escrow upfront, auto-release 7 days after delivery; **founding seats pay 0% commission for 12 months on the first $15,000** (then 15%/12%/10% by level). CAVEAT: opens to clients **31 Oct 2026** and its published payout list (US, CA, MX, BR, UK, EU, CH, NO, AU, NZ, JP, SG, HK, MY, TH, ID, UAE) **does not include India** — verify payout eligibility before spending time on the profile.
+
+*Watchlist (this cycle): **SkillSwarm** (skillswarm.app — India-priced autonomous agents from ₹0.40/task; buyer-side, but shows the price floor agents will be judged against), **pofft AI** (₺-priced, 0% on first 3 orders — Turkey-first, useful as a design reference), **IndianSoftwares / Mindware** (₹1,200+GST one-time listing fee, 3% per side — paid, so deprioritised), **Taskgen** (₹199 lifetime registration — paid, deprioritised), **AI Agent Marketplace** ($45/mo listing fee — already on watchlist), **DigitalJobs.com** and **AIBusiness.ai** (free directories, still unclaimed).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal AB — Google review + local visibility engine (clinic, salon, coaching centre, restaurant)**
+> Hi [Name], most of [Business]'s new customers check the Google listing before they call — and the listing is usually the weakest asset the business owns. I'll fix it end to end: complete and optimise the Google Business Profile (categories, services, photos, hours, Q&A), build a one-tap review link plus a WhatsApp message that goes out after every visit, set up automatic replies and monthly review alerts, and add a simple local-SEO page so you rank for "[service] near me" in [area]. Rs 5,999 one-time, live in 4 days, plus a monthly one-page report showing calls, direction requests and new reviews. Want me to pull up how [Business] currently appears on Google first?
+
+**Proposal AC — Creator / coach merch store, launched in a week (YouTuber, fitness coach, podcaster)**
+> Hi [Name], your audience already asks where to buy the stuff you wear — right now that revenue goes nowhere. I'll launch a print-on-demand store for [Name] with zero inventory: 8 original designs built from your catchphrases and inside jokes (tees, hoodies, mugs, phone cases, tote bags), product mockups that match your channel's look, keyword-mapped listing titles/tags, and a 14-day launch calendar for Instagram and YouTube community posts. Store live on Shopify + Printify in 7 days for Rs 7,999, and I handle the first design round free so you can see the quality. Which three phrases do your viewers repeat most?
+
+**Proposal AD — Two-hour AI workshop for a team (agency, CA firm, school, D2C ops team)**
+> Hi [Name], most teams have ChatGPT open in a tab and no idea what to do with it beyond rewriting emails. I run a two-hour, hands-on session for [Company]'s team: the three workflows worth automating first, live builds on your own real documents (proposal drafting, meeting notes to action list, invoice data to sheet, content repurposing), a written prompt library the team keeps, and a one-page "what to automate next" plan. Rs 4,999 for up to 10 people, online or at your office, workbook included. Shall I send the session outline so you can see the modules?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0.
+- Razorpay unreachable (auth failure, 10th consecutive run) — payment events unknown, not zero.
+- Supabase connection unauthorised (credential disconnected) — new-signup events unknown, not zero.
+- No payments, messages, listings or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 27 -> 27 mod 5 = 2 -> **TOPIC 2: POD Trend + Canva Design Idea** (Shopify: t-shirt/mug/phone case/tote bag).
+- Trend: **western graphic tees** — a fresh, different pick from the 10-22 statement-tote angle. Four mall/boutique brands shipped 11 western and horse-girl graphic tees in a single week; "black cowboy hat" search jumped ~50% in a week in mid-October; the season peaks Oct–Dec (concert season, December rodeo, Nashville bachelorette trips, holiday gifting). Boutique versions retail ~$48, leaving wide POD margin. The 2026 formula is one phrase, one object, a washed colour and a joke worth wearing.
+- What to avoid: basic meme cat tees (60+ near-identical listings on page one), coastal preppy (down ~55% from July), millennial grey palettes (Etsy's 2026 guidance moves to Patina Blue, oxblood, butter yellow), generic inspirational quotes, and licensed fandom-adjacent art (Q4 takedown enforcement).
+- Canva idea: **stacked slab-serif phrase + one object** — e.g. "I Don't Two-Step For Free" over a single cowboy boot, or "The Horse Is My Date" with an arched condensed headline over a horse portrait. Palette: washed sand / dusty rose / faded denim / butter yellow base with brown, cream or burgundy ink. Keep the phrase under six words. Canvas 4500x5400 px (tee), 4500x4500 px (tote/case), export transparent PNG.
+- Upsell: turn the same motifs into a **seamless western pattern** (boots and stars, bronco repeat) for mugs, phone cases and totes — one design, four products, a set instead of a single listing. Bachelorette "last rodeo" sets are the easiest bulk order in POD (6–8 shirts per order).
+- Free resources: https://www.canva.com/create/t-shirt-mockups/ (free mockup generator) | https://www.canva.com/t-shirts/templates/ | trend source: https://playgroundai.com/blog/western-graphic-tees-funny-cat-stickers-print-on-demand-trends
+- Mini action: design ONE western tee in Canva (phrase + single object, washed palette), export a transparent PNG, drop it on a mockup, and list it on Shopify via Printify/Printful — ~25 min. Then reuse the same motif as a phone-case pattern.
+
+### Next Actions
+1. [OWNER] **Re-authorise the Supabase connection** — this run's block is a disconnected credential, not the paused project. Do this first, then restore the project if still INACTIVE.
+2. [OWNER] **Rotate / verify Razorpay API credentials** — 10 consecutive auth failures.
+3. [OWNER] **Write and deploy the Clevora landing page + enable GitHub Pages** — offline 6 days; every lead channel currently points at a 404.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] Register Clevora on **Operalyn** (0% on success, INR/Razorpay) and **TaskPiece** (escrow + auto invoices) — both free, both settle in ₹.
+6. [AUTO] Re-price the packaged offers against the **TatkalPro ₹4,000–₹12,000/day** AI day-rate benchmark; the current Rs 6,999 invoice-automation build is roughly one day of that market's work.
+7. [AUTO] Package Proposals AB/AC/AD as fixed-price listings with written done-tests for Hirelli and Moltify (lowest take-rates found: 5–12%).
+
+---
