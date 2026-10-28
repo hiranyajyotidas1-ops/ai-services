@@ -701,3 +701,81 @@
 7. [AUTO] Package Proposals AB/AC/AD as fixed-price listings with written done-tests for Hirelli and Moltify (lowest take-rates found: 5–12%).
 
 ---
+
+---
+
+## Run VENTURE-2026-10-28-01 — 2026-10-28 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:01 IST / 03:31 UTC
+**Run ID:** VENTURE-2026-10-28-01
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 7th day** | Repo tree verified this run: still exactly 2 files — `index.html` (547 B, SHA `9e080c7` — byte-identical to the 10-22 "retired" placeholder) + this log. Public URL fetch returned an empty result set again (consistent with a 404, not a rendered page); sandbox curl still blocked by the egress proxy (HTTP 000 / CONNECT 403). Pages never published. Clevora storefront offline since 10-22. |
+| Supabase (users) | BLOCKED (11th run) | No authorised Supabase connection is available to this run at all — the integration is not connected in the current tool set, so the `users` table in `ocuyxgocmtucdckiqqeh` could not be queried. Signup count still UNKNOWN. |
+| Razorpay (payments) | BLOCKED (11th consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Keys invalid/expired/rotated. Payment events UNKNOWN, not zero. |
+| GitHub log | OK | Read, appended and committed in this run. Repo remains the only durable state store. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals (AE/AF/AG). |
+
+### Key Findings
+- **Website: 7 days offline with zero repo changes.** Nothing on the automation side can fix this — the landing page has to be written and Pages enabled by the owner. Every lead channel logged across 11 runs points at a 404, so lead work is currently generating traffic with no destination. This is still the single highest-cost open item.
+- **Both money/signup rails have now been dark for 11 straight runs.** Razorpay auth failure and the Supabase block are unchanged; no revenue or signup signal can be confirmed either way. Treat all figures as UNKNOWN, not zero.
+- **Market signal this cycle: the agent-marketplace layer has settled on "pay on acceptance" and is competing purely on take-rate.** dealwork (10%, 3% agent-to-agent), TermiX (1–3% all-in, on-chain panel of 3 evaluators), HumanLink (0% to the solver) and AaaS Marketplace (0% during launch) all sit far below the 20% human boards. What a listing needs to qualify is the same in every case: fixed scope, fixed price, written acceptance test, escrow. Clevora's offers already look like that — they are just not listed anywhere.
+- **Second signal: India's own rails are now good enough to skip the global boards.** SiteYatra (UPI + USDT, 10% flat), Versa (instant UPI + milestone escrow, regional-language support), Grit&Gigs (UPI, 1–2 day payouts) and Kworkly (freelancer keeps 100%, client pays a flat fee) remove FX and payout friction entirely. Combined with BodhicAI's 80/20 Razorpay-UPI split, there are now five domestic rails that pay into an Indian bank account without a USD detour.
+- **Third signal: selling the *build* once and the *care* monthly is the emerging default.** Brainlancer (80% standardised system + 20% per-client customisation, setup fee plus recurring "Care Packages") and TaskMatch (paid plans, pay only for validated delivery) both monetise repeat delivery rather than hours. That is the model Clevora's automation offers should be priced on, instead of one-time builds.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-28)
+
+**India-first / INR-native (UPI or Razorpay settlement, no FX):**
+1. **BodhicAI** (bodhicai.tech) — India-built marketplace for selling **AI agent skills, prompts and MCP tools**; live payments via **Razorpay (UPI + cards)**, **80/20 split to the creator with automatic UPI payouts**, built-in bounty board for requested skills, MCP integration so Cursor/Claude Desktop agents can search and buy without a browser. Best-fit new channel found this cycle — it is the only one that pays out in ₹ *and* sells machine-readable skills.
+2. **SiteYatra** (siteyatra.in) — India-focused fixed-price marketplace, **494 live services across 30+ categories**, pay in **₹ via UPI** (or USDT), **10% flat commission**, Hindi/regional-language talent pool. Direct competitor set for Clevora's packaged offers at Indian price points.
+3. **Versa** (versa.co.in) — India-focused AI-matched freelancing marketplace with **instant UPI payouts, milestone security** and regional-language support; skill verification built in. Fast cash cycle, low entry friction.
+4. **Grit&Gigs** (gritandgigs.in) — India's all-in-one skill marketplace: **UPI / RuPay / bank transfer native, 1–2 day payouts**, low fees, plus a **skill-barter** mode (free to trade services) and project collaboration. Barter is a genuinely useful way to buy design/video help without cash while the storefront is down.
+5. **Kworkly** (kworkly) — AI-matched marketplace where **the freelancer keeps 100% of earnings** and the client pays a small flat fee instead; Stripe payments, reduced proposal spam. Zero-commission economics are rare — worth an early profile.
+
+**Agent / productized marketplaces (fixed scope + written acceptance test + escrow):**
+6. **dealwork** — "Humans hire AI. AI hires humans. AI hires AI." Escrow-protected, outcome-based, pay only on approval; **10% per contract, 3% when both sides are AI agents**; provider may auto-complete if the client stays silent. Lowest-friction agent listing to set up.
+7. **TermiX** (termix_ai) — marketplace where agents hire agents; **1–3% all-in fees**, on-chain escrow, disputes settled by a **random panel of 3 evaluators**, and each agent gets a `.agent` on-chain identity so reputation follows it between jobs. Cheapest take-rate of any live agent market.
+8. **Qwikyo.ai** — bounty marketplace for **digital** work by AI agents: market/competitor research, structured datasets, prospect research, content and documentation, design/media, software and automation. Bounty is defined with evidence + acceptance criteria up front; payment released on approval. Categories map almost 1:1 onto Clevora's offers.
+9. **Brainlancer** (brainlancer.com) — curated marketplace where businesses **buy and install AI systems** built by independent builders; 80% standardised / 20% customised per client; **free to join, 20% of earnings only**, plus recurring monthly "Care Packages"; onboarding the first 20 founding Brainlancers. The recurring-revenue structure is the most commercially interesting model this cycle.
+10. **N8N Central** — marketplace for **n8n workflows and freelance automation experts**, built Fiverr-style but exclusively for the n8n/workflow-automation niche; expert profiles, service listings, affiliate/marketing system, error-monitoring and API-integration work. Narrow audience, but zero competition from generic writers.
+
+*Watchlist (this cycle): **HumanLink** (5% to task creator, 0% to solver — invite-only pilot), **TaskMatch** (€9/€19 monthly plans, pay only for validated delivery), **AaaS Marketplace** (agents-as-a-service, USDC on Base, **0% commission during launch** then 10%), **Daydreams TaskMarket** (Base mainnet, USDC escrow, five task modes — bounty/claim/pitch/benchmark/auction), **Independ** (xlancr, India, escrow + AI-assisted negotiation), **Growlancer** (India-first, escrow + AI matching, pre-soft-launch), **Ultra Hustle** (ultrahustle.io — India-based AI automation/chatbot/CRM specialists), **DAiL** (closed-loop DAIL credit, 10% fee — no fiat exit), **TaskPool** (agents hiring humans for real-world tasks; free for workers, no commission on payout), **AiDOOS** (managed Delivery Units, not an open market), **RelayMarket** (open registry, zero verified sales — listing only).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal AE — AI-search (AEO) visibility audit + fix (B2B SaaS, D2C brand, or clinic chain)**
+> Hi [Name], your buyers are increasingly asking ChatGPT, Perplexity or Google's AI answers instead of scrolling search results — and right now those tools probably describe [Company] from an old directory listing, or not at all. I'll audit exactly what the major AI assistants say about [Company] today, then fix the inputs they read: a clean, quotable "about + services + pricing" block on your site, structured data, consistent listings across the directories LLMs cite, and 4 comparison-style pages written to be the answer for "[your category] in India". Rs 4,999 for the audit and the first fixes, Rs 6,000/month to keep the pages and citations current, with a monthly one-page report showing what changed. Want me to run the audit on [Company] first so you can see what the models currently say?
+
+**Proposal AF — Monthly reporting dashboard on autopilot (CA firm, agency, or D2C ops team)**
+> Hi [Name], someone on your team probably spends the first three days of every month rebuilding the same report by hand from Tally/Sheets/ads exports. I'll build it once: your sources feed a Google Sheet automatically, and a Looker Studio dashboard shows revenue, spend, collections and outstanding — refreshed every morning, shareable as a link, exportable to PDF for clients. Rs 7,999 one-time build, live in 5 days, with a handover video and 30 days of tweaks. Which numbers do you currently assemble manually each month?
+
+**Proposal AG — Hindi + English content pack for a coaching institute / edtech (reels + WhatsApp)**
+> Hi [Name], [Institute]'s students and parents decide in Hindi but most of the content in this category is English-only — that gap is the whole opportunity. I'll deliver 12 short-form scripts (6 Hindi, 6 English) written for your actual courses, 12 matching reel covers, 4 WhatsApp broadcast messages for admission season, and a simple posting calendar — all in your tone, reviewed by you before anything goes out. Rs 6,999 for the full pack, first two scripts free so you can judge the language quality. Which two courses fill fastest for you right now?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0 (no confirmed revenue signal).
+- Razorpay unreachable (auth failure, 11th consecutive run) — payment events unknown, not zero.
+- Supabase not connected (no authorised integration) — new-signup events unknown, not zero.
+- No payments, messages, listings or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 28 -> 28 mod 5 = 3 -> **TOPIC 3: Content Idea**.
+- Idea (deliberately different from the 10-23 visual carousel/reel): **a Quora + Reddit "demand-capture" answer play** — 3 Quora answers and 2 Reddit comments/posts written against questions buyers already type, instead of another post on your own feed. Two jobs in one: it catches high-intent search traffic, and because ChatGPT/Perplexity/Google AI answers lean heavily on Reddit and Quora, it doubles as AI-search (AEO) visibility for the Clevora name.
+- Target questions to answer: "how to automate WhatsApp orders for my store", "best n8n automation agency in India", "how much should I pay for a landing page in India", "how to stop chasing clients for invoice payments", "is it worth paying for Google review management".
+- Structure that works: one-line honest answer first -> the actual steps (numbered) -> what it costs in ₹ -> one soft line naming the service, no link-spam. Reddit: check each sub's self-promo rule first (r/smallbusiness, r/IndiaBusiness, r/n8n, r/Entrepreneur) and answer 3 questions before you ever mention your own work.
+- Free resource: https://answerthepublic.com/ (free daily searches to find the exact phrasings people use) | https://www.quora.com/topic/Automation (follow the topic, answer 1 question a day).
+- Mini action: pick ONE question, write a 200-word answer with the honest number in it (e.g. "a landing page should cost ₹5,000–₹12,000 in India, here is what changes the price"), and post it on Quora today — ~20 min. Repeat tomorrow with a different question.
+
+### Next Actions
+1. [OWNER] **Write and deploy the Clevora landing page + enable GitHub Pages** — offline 7 days; every lead channel logged points at a 404.
+2. [OWNER] **Re-authorise the Supabase connection** (and restore the project if still INACTIVE) — signup tracking blocked 11 runs.
+3. [OWNER] **Rotate / verify Razorpay API credentials** — 11 consecutive auth failures.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] List the packaged offers on **BodhicAI** (80/20, Razorpay UPI payouts) and **SiteYatra** (10% flat, UPI) — the two new channels that settle natively in ₹.
+6. [AUTO] Re-model pricing on the **Brainlancer** structure: one-time setup fee + a small monthly "care package", instead of pure one-time builds. Applies directly to the WhatsApp catalogue, invoice automation and reporting-dashboard offers.
+7. [AUTO] Start the Quora/Reddit answer play from the topic section — it is the only content channel that works while the website is down, because the answer itself is the landing page.
