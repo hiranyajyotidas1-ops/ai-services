@@ -779,3 +779,81 @@
 5. [AUTO] List the packaged offers on **BodhicAI** (80/20, Razorpay UPI payouts) and **SiteYatra** (10% flat, UPI) — the two new channels that settle natively in ₹.
 6. [AUTO] Re-model pricing on the **Brainlancer** structure: one-time setup fee + a small monthly "care package", instead of pure one-time builds. Applies directly to the WhatsApp catalogue, invoice automation and reporting-dashboard offers.
 7. [AUTO] Start the Quora/Reddit answer play from the topic section — it is the only content channel that works while the website is down, because the answer itself is the landing page.
+
+---
+
+## Run VENTURE-2026-10-29-01 — 2026-10-29 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:07 IST / 03:37 UTC
+**Run ID:** VENTURE-2026-10-29-01
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 8th day** | Public URL fetch returned an empty result set again (consistent with a 404, not a rendered page); sandbox curl still blocked by the egress proxy (CONNECT 403). No repo change observed. Clevora storefront offline since 10-22. |
+| Supabase (users) | BLOCKED (12th run) | No authorised Supabase connection in this run's tool set — the `users` table in `ocuyxgocmtucdckiqqeh` could not be queried. Signup count UNKNOWN. |
+| Razorpay (payments) | BLOCKED (12th consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment events UNKNOWN, not zero. |
+| GitHub log | OK | Read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals (AH/AI/AJ). |
+
+### Key Findings
+- **Website: day 8 offline, zero change.** Nothing automation-side can fix it; the landing page must be written and Pages enabled by the owner. This is still the single highest-cost open item — every channel logged across 12 runs points at a 404.
+- **Both money/signup rails dark for 12 straight runs.** Razorpay auth failure and the Supabase block are unchanged. All revenue/signup figures remain UNKNOWN, not zero.
+- **Market signal this cycle: India's *demand-side* marketplaces are cheaper and better-targeted than the global freelance boards.** IndiaMART's AI-services category already lists real, live price points (₹1,200–₹5,000/hour for AI consulting, ₹60,000–₹1,00,000 for a WhatsApp chatbot build, ₹15,000/month for a recommender system) — which means Clevora's ₹15,000 chatbot offer is priced at roughly a quarter of the visible market. Sulekha sells leads pay-per-accept with a free verified-profile trial. Both are buyer-intent channels, not proposal-competition channels.
+- **Second signal: "sell the file, not the hour" is now the default on the creative side too.** PromptBase now explicitly accepts **agent skills (SKILL.md files)** alongside prompts, at 20% marketplace / 0% via own referral link / 10% on custom jobs — the same productized-asset logic as the agent marketplaces, but with a consumer audience that already buys files.
+- **Third signal: free infrastructure is now good enough to run client delivery at ₹0.** Brevo's free plan is 300 emails/day with 100,000 contacts and no card; Chatwoot's Community Edition is MIT-licensed and free to self-host with a full WhatsApp inbox and API/webhooks. The only thing Chatwoot's free *cloud* plan lost (16 July 2026) is API/webhook access — which is exactly what self-hosting restores.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-29)
+
+**A. India demand-side / buyer-intent marketplaces (INR, no proposal bidding):**
+1. **IndiaMART** (indiamart.com) — B2B supplier directory with a live **"Artificial Intelligence Services"** category; free seller account, paid visibility plans (Mini Dynamic Catalog ₹40,000/yr, TrustSEAL Pro ₹60,000/yr). Live competitor pricing observed: AI services ₹1,200–₹5,000/hr, AI chatbot dev ₹1,00,000/pack, **AI WhatsApp bot ₹60,000/piece**, recommender ₹15,000/month. Use it as a *price anchor* first, a listing second.
+2. **Sulekha** (sulekha.com) — ~30 lakh monthly visitors, ~8 lakh enquiries/month; free business profile + **pay-per-lead** (deduction only when you *accept* a lead), free trial leads after document verification. Best low-risk way to buy buyer intent rather than chase it.
+3. **UrbanPro** — India's tutor/trainer marketplace; demand is for *teaching*, not building. Fit: paid "AI for your business" workshops and 1:1 AI upskilling for local SMB owners. *(Positioning inferred — verify current categories and pricing before listing.)*
+4. **Truelancer** (truelancer.com) — India-based global freelance marketplace, INR payouts, project + contest model. Broader competition than the niche agent boards, but a working ₹ payout rail. *(Fee structure to verify.)*
+
+**B. Sell the file, not the hour (productized digital assets):**
+5. **PromptBase** (promptbase.com) — prompt marketplace that now also lists **agent skills (SKILL.md)**; **20% fee via marketplace, 0% via your own referral link, 10% on custom jobs**; payouts via Stripe (min $30) or Zoneless/USDC daily. Best-fit asset channel: turn each Clevora offer into a sellable prompt/skill pack.
+6. **Gumroad** (gumroad.com) — the default storefront for prompt packs, Notion templates, automation blueprints and mini-courses; instant delivery, audience email built in. *(Fee ~10% + processing — verify current rate.)*
+7. **Payhip** (payhip.com) — digital-product storefront, no monthly fee on the free plan, handles EU VAT; good second storefront for the same files. *(Fee 5% on free plan / 0% on paid — verify.)*
+8. **Lemon Squeezy** (lemonsqueezy.com) — merchant-of-record checkout: it collects and remits tax (incl. GST/VAT) on your behalf, which removes a real compliance headache when selling to foreign buyers. *(~5% + 50¢ — verify.)*
+9. **Canva Creators / Creative Market** — sell Canva template packs (carousels, reel covers, proposal decks) as a second income stream off design work you already do for clients. *(Both are approval-based; verify current royalty terms.)*
+10. **Braintrust** (usebraintrust.com) — talent-owned network, **0% fee to the freelancer** (client pays), vetted enterprise clients. Slower to enter, but the highest-value global rail found so far. *(Verify current fee model.)*
+
+*Watchlist (this cycle): **Etsy digital downloads** (huge template demand, ~6.5% transaction fee + listing fee), **Notion Marketplace** (template listings), **FlowGPT / PromptHero** (free prompt distribution), **TradeIndia** (B2B alternative to IndiaMART), **JustDial** (local lead packs), **Zoho/Cal.com/Tally free tiers** (client-facing booking + forms at ₹0).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal AH — Marketplace listing content pack (IndiaMART / TradeIndia / Sulekha sellers)**
+> Hi [Name], your listings on IndiaMART compete with hundreds of identical ones, and most buyers skim only the title, the first three lines and the price. I'll rewrite 30 of your product listings — keyword-rich titles, a 3-line benefit-first description, spec table, and a matching Hindi version — so your catalogue reads like a specialist instead of a reseller. Rs 2,999 for 30 listings, delivered in 3 days, first 3 free so you can see the difference in enquiries. Which product category gets you the most enquiries right now?
+
+**Proposal AI — 60-second lead-response automation (Sulekha / IndiaMART / JustDial advertisers)**
+> Hi [Name], you pay per lead, but leads go cold in minutes — Sulekha's own guidance is to call within 2–3 hours or lose the customer. I'll connect your lead channels to a WhatsApp + email auto-responder that replies in under 60 seconds, qualifies with 3 questions, books a slot on your calendar, and pings your phone only for serious buyers. Rs 9,999 one-time build, live in 4 days, plus optional Rs 1,500/month upkeep. Roughly how many leads do you buy in a month, and how many actually get called?
+
+**Proposal AJ — Team AI playbook + training (agency, CA firm, or D2C ops team)**
+> Hi [Name], your team is probably using ChatGPT ad-hoc — different people, different prompts, no consistency, and no idea what's safe to paste in. I'll build a short internal AI playbook: 8 tested prompts for your actual recurring tasks (client emails, proposals, listing copy, report summaries), a one-page "what never goes into an AI tool" data-safety sheet, and a 60-minute recorded training for the team. Rs 5,999 flat, delivered in 4 days, and it stays useful after I'm gone. Which three tasks does your team repeat most every week?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0 (no confirmed revenue signal).
+- Razorpay unreachable (auth failure, 12th consecutive run) — payment events unknown, not zero.
+- Supabase not connected (no authorised integration) — new-signup events unknown, not zero.
+- No payments, messages, listings or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 29 -> 29 mod 5 = 4 -> **TOPIC 4: Free Tool Discovery**.
+- Picks (both genuinely free, verified this run, and different from the 10-19 Google AI Studio / Napkin and 10-24 Groq / Cloudflare picks): **Brevo free plan** (300 emails/day, up to 100,000 contacts, no credit card, no time limit) and **Chatwoot Community Edition** (MIT licence, free to self-host, full WhatsApp shared inbox + API/webhooks).
+- Angle: this is a complete **₹0 lead-response stack** — Chatwoot as the shared WhatsApp/website inbox your leads land in, Brevo for the follow-up sequence. It directly powers Proposal AI above, and it costs nothing but a small VPS (Chatwoot CE idles around 810 MB RAM, so plan for 2 GB).
+- Important nuance: Chatwoot's free **cloud** plan lost API/webhook access on 16 July 2026 (Hacker plan: 2 agents, 500 conversations/month). Self-hosting the `-ce` image restores it — use the `-ce` tag, not `latest`.
+- Free resource: https://www.brevo.com/pricing/ | https://www.chatwoot.com/pricing/ | self-host guide: https://www.chatwoot.com/docs/self-hosted
+- Mini action: create a Brevo account, import one CSV of 20 past enquiries, and send one plain-text follow-up email today — ~15 minutes, zero rupees.
+
+### Next Actions
+1. [OWNER] **Write and deploy the Clevora landing page + enable GitHub Pages** — offline 8 days; every channel logged points at a 404.
+2. [OWNER] **Re-authorise the Supabase connection** (and restore the project if still INACTIVE) — signup tracking blocked 12 runs.
+3. [OWNER] **Rotate / verify Razorpay API credentials** — 12 consecutive auth failures.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] **Reprice the WhatsApp chatbot offer against the IndiaMART anchor**: market listings sit at ₹60,000–₹1,00,000; Clevora quotes ₹15,000. Either raise the price or explicitly sell the ₹15,000 tier as a "starter" with a paid upgrade path.
+6. [AUTO] Turn one Clevora offer into a **PromptBase skill pack + Gumroad listing** — the first genuinely one-to-many revenue line, and it needs no storefront.
+7. [AUTO] Create the free **Sulekha verified profile** (pay-per-accept leads) and draft the IndiaMART catalogue copy from Proposal AH — both are buyer-intent channels, unlike the proposal-competition boards.
