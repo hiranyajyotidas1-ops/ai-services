@@ -857,3 +857,84 @@
 5. [AUTO] **Reprice the WhatsApp chatbot offer against the IndiaMART anchor**: market listings sit at ₹60,000–₹1,00,000; Clevora quotes ₹15,000. Either raise the price or explicitly sell the ₹15,000 tier as a "starter" with a paid upgrade path.
 6. [AUTO] Turn one Clevora offer into a **PromptBase skill pack + Gumroad listing** — the first genuinely one-to-many revenue line, and it needs no storefront.
 7. [AUTO] Create the free **Sulekha verified profile** (pay-per-accept leads) and draft the IndiaMART catalogue copy from Proposal AH — both are buyer-intent channels, unlike the proposal-competition boards.
+
+---
+
+## Run VENTURE-2026-10-30-01 — 2026-10-30 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:09 IST / 03:39 UTC
+**Run ID:** VENTURE-2026-10-30-01
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 9th day** | Verified through the GitHub contents API: repo root still holds only `index.html` (547 bytes) + this log, and `index.html` is still the "This website has been retired." placeholder (blob `9e080c7c`). Public URL unreachable from the sandbox — the egress proxy returns `CONNECT tunnel failed, 403` for `*.github.io` (example.com and api.github.com both return 200, so it is a domain block, not a dead network), and the web fetch returned an empty result set. No change vs 10-29. |
+| Supabase (users) | BLOCKED (13th run) | No authorised Supabase connection in this run's tool set — the `users` table in `ocuyxgocmtucdckiqqeh` could not be queried. Signup count UNKNOWN. |
+| Razorpay (payments) | BLOCKED (13th consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment events UNKNOWN, not zero. |
+| GitHub log | OK | Read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals (AK/AL/AM). |
+
+### Key Findings
+- **Website: day 9 offline, byte-identical.** The blocker is unchanged and is entirely owner-side: a landing page has to be written into `index.html` and Pages served. Nothing in the automation loop can produce a customer-facing page until that happens.
+- **Both money rails dark for 13 straight runs.** Razorpay auth failure and the Supabase block are unchanged. All revenue and signup figures remain UNKNOWN, not zero.
+- **Market signal this cycle: India's AI marketplaces have gone to 0% commission, and they settle in ₹.** Gvika takes 0% (paid straight to the professional's own UPI/Razorpay/Stripe gateway), TalentAIWorks takes 10% with Razorpay escrow, Lancerscape takes 10% out of the freelancer's payout and puts an Indian registered company behind the contract (one GST invoice, KYC-verified bidders), Metty.ai lets the client pay only after delivery. Compare that with Upwork/Fiverr fees of 10–20% plus USD payout friction. For an India-based AI services business, this is now the cheapest and most credible place to be listed.
+- **Second signal: the "file" marketplaces have specialised down to n8n and AI assets.** FlowMarket sells templates *plus* setup *plus* monthly maintenance on a 13%→5% tiered commission; n8n Basket prices listings in ₹ (₹999–₹2,999) with a per-creator referral link; n8nplace runs 9,200+ templates on an 80/20 split; implo.ai accepts seven asset types (prompts, workflows, agents, custom GPTs, MCP servers, Cursor rules, Notion templates) at 80/20 with 0% for its first 10 founding sellers. One workflow pack can be listed on four of these at once.
+- **Third signal: AIMarket24 opens today.** Its n8n template marketplace goes live 30 Oct 2026, 12:00 New York time — i.e. ~21:30 IST tonight — with an early waitlist giving 7 days of Premium plus 50 build tokens. Being in the first cohort of sellers on a brand-new marketplace is the cheapest visibility available.
+- **Fourth signal: the recurring "care plan" is now the standard business model on these platforms.** Gvika's listing structure explicitly pairs every agent/workflow with a monthly care plan so "a one-off sale becomes a monthly relationship"; Brainlancer (logged 10-28) does the same. Clevora's offers are still priced as one-time builds — that is the single biggest revenue-model gap in this log.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-30)
+
+**A. India-first AI marketplaces that settle in ₹ (0–10% fee):**
+1. **Gvika** (gvika.com) — India-built AI marketplace for people *and* agents: AI freelancers, agent builders, AI film makers, mentors. **0% commission** — each milestone is paid straight to the professional's own gateway (UPI / Razorpay / Stripe), auto-approved after 7 quiet days. Pro plans ₹4,995/yr Standard, ₹19,995/yr Ultra Premium (+GST); proposals included, no pay-to-apply. Listings pair an agent/workflow with a **monthly care plan** (exact model recommended for Clevora). Their own sample listings: WhatsApp clinic receptionist from ₹24,999, lead follow-up workflow for coaching institutes from ₹9,999, invoice-to-ledger workflow from ₹7,999 — a direct price anchor for the same offers.
+2. **TalentAIWorks** (talentaiworks.com) — "India's AI freelancer marketplace": post a project, experts bid, **Razorpay escrow**, INR pricing, UPI + cards, Indian tax handling, **10% platform fee**. Categories line up with Clevora: AI automation, prompt engineering, AI agents, AI consulting, RAG, voice AI. Claims 500+ experts / ₹50L+ paid out — small enough that a new profile can still rank.
+3. **Lancerscape** (lancerscape.com) — the client contracts **Lancerscape Global Pvt Ltd** (an Indian company), which contracts the freelancer: **₹0 to post, 10% fee taken from the freelancer's payout, one GST invoice in INR, KYC-verified bidders only**. Best fit where the buyer is a company that needs a GST invoice and a counterparty that is not an individual.
+4. **Metty.ai** — AI-matched Indian white-collar marketplace (15M+ professionals claimed). Providers clear a 20-minute AI video interview, ID check and skill assessment; **clients pay after delivery, providers pay only after winning work**. Fit: AI upskilling, content, design and marketing work for Indian SMBs.
+5. **TatkalPro** (tatkalpro.com) — day-rate verified professionals, Bengaluru-first. Its **AI track is explicitly the highest-earning at ₹4,000–₹12,000/day** (AI prompt engineer, AI integration specialist, AI workflow builder, chatbot builder, LLM fine-tuning). Good for short burst engagements (1 day – 4 weeks) rather than fixed-scope builds.
+
+**B. n8n / AI-asset marketplaces (sell the file and the setup, not the hour):**
+6. **FlowMarket** (flowmarket.pro) — service-layer n8n marketplace: sell templates, **assisted setup, custom builds and monthly maintenance**; **tiered commission 13% → 5%** by cumulative volume, free to publish, Stripe Connect payouts, plus an "Opportunity Finder" to prospect clients. The only one of the four that sells the retainer, not just the file.
+7. **n8n Basket** (n8nbasket.com) — small, new, template-first (95 workflows from 42 creators) with **₹ pricing already in use** (₹999–₹2,999) and a per-creator public page + tracked referral link that pays a share on every sale it brings.
+8. **implo.ai** — accepts **7 AI asset types** (prompts $3–29, workflows $9–79, agents $19–149, custom GPTs, MCP servers, Cursor rules, Notion templates); **80% revenue share, 0% for the first 10 "founding sellers" for 90 days**, $0 listing fee, Stripe payouts at $50 minimum. One catalogue, one dashboard — the broadest single upload target found.
+9. **AIMarket24** (aimarket24.pro) — n8n template marketplace **opening 30 Oct 2026, 12:00 New York time**; escrow release on buyer confirmation, near-duplicate listings (95%+) rejected. Early-mover visibility while the catalogue is empty.
+10. **LeadSutra** (leadsutra.in/marketplace) — the *demand* side, inverted: Indian businesses post marketing/SEO/web/content briefs free and **vetted agencies pitch them directly** (claimed sub-6-hour response). Register as an agency and let the briefs come in instead of bidding on them; the category list (SEO, content marketing, email marketing, website design, branding, lead gen) maps onto Clevora's offers almost 1:1.
+
+*Watchlist (this cycle): **BharatCaller** (AI-negotiated rates, 10/50/40 Razorpay installments), **Frelo** (startup freelancer marketplace, 10% project / 20% first month on retainers), **n8nfind.com** (n8n-only job board with live paid briefs, e.g. $35/hr Shopify+n8n), **n8nplace** (9,200+ templates, 80% rev share), **AI Workflow Hub** (n8n/Langflow/Make/Zapier/Dify templates), **Picxele** (gig taskforce, pay-per-task), **Freelancer.in AI storefront** (packaged AI agent services — voice agent, support agent — sold as fixed packages).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal AK — Automation "care plan" retainer (every past one-time client)**
+> Hi [Name], the workflow I built for you runs fine until one of the apps changes something — and then it stops quietly, usually on a busy day. Instead of billing you for emergency fixes, I now offer a care plan: monthly monitoring of your automations, broken-step fixes within 24 hours, small tweaks and additions, a quarterly review of what else can be automated, and a one-page monthly note on what ran and what it saved you. Rs 1,999/month, cancel anytime, no lock-in. You already own the build — this is just keeping it alive. Want me to switch you onto it from this month?
+
+**Proposal AL — WhatsApp AI receptionist for a clinic / dental / physio studio**
+> Hi [Name], most patients who message a clinic on WhatsApp get a reply the next morning — by then they have booked somewhere else. I build a WhatsApp assistant that answers your FAQs, shares timings, fees and directions, books and reschedules appointments, sends reminders the day before, and hands over to your staff for anything clinical. Setup Rs 14,999 (Rs 24,999 with calendar + payment integration), live in 5–7 days, then Rs 1,999/month to keep it running. It never misses a message, even at 11pm. How many patient enquiries do you get on WhatsApp in a week right now?
+
+**Proposal AM — Festive-season catalogue refresh for a D2C / Shopify store**
+> Hi [Name], your product pages are doing the selling this season, and most of them read like a supplier spec sheet. I'll rewrite 10 of your best-selling product pages — benefit-first headline, 5 bullets, a 2-line description that answers the buyer's real objection, size/ingredient/shipping table, and a matching Hindi version — plus 5 festive ad captions sized for Instagram and WhatsApp. Rs 4,999 for the full set, delivered in 4 days, first 2 pages free so you can see the difference before paying. Which 10 products should I start with?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0 (no confirmed revenue signal).
+- Razorpay unreachable (auth failure, 13th consecutive run) — payment events unknown, not zero.
+- Supabase not connected (no authorised integration) — new-signup events unknown, not zero.
+- No payments, messages, listings or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 30 -> 30 mod 5 = 0 -> **TOPIC 5: Upskilling Resource**.
+- Pick (fresh vs the 10-20 n8n Academy and 10-25 OpenAI Academy picks): **HubSpot Academy — AEO Fundamentals Certification** (free, product-agnostic, under ~2 hours, badge on completion; a second free "Implementing AEO With HubSpot" certification completes an "AEO Dual Certified" badge).
+- Why this one: it is the only free credential that directly underwrites Proposal AE (the AI-search / AEO visibility audit offer logged on 10-22) — it teaches how answer engines select and cite content, and defines the metrics to report on (visibility score, share of voice, sentiment, citation rate), which is exactly the one-page monthly report that offer promises.
+- Primary link: https://academy.hubspot.com/ (AEO certifications: https://offers.hubspot.com/academy-aeo-certifications)
+- Secondary (different skill, free): **Google Analytics 4 certification on Skillshop** — free exam, 50 questions, 75 minutes, 80% to pass, valid 12 months, retake free after 1 day; study material + GA4 demo account included. Pairs with the reporting-dashboard offer (Proposal AF). https://skillshop.withgoogle.com/ | Analytics Academy: https://support.google.com/analytics/answer/15440208
+- Mini action: finish the AEO Fundamentals certification tonight (~2 hrs) and turn its metric list into a one-page "AEO audit" template — then run that audit on one real prospect and attach the result to the Proposal AE outreach. Certification becomes proof, not just a badge.
+
+### Next Actions
+1. [OWNER] **Write and deploy the Clevora landing page + enable GitHub Pages** — offline 9 days; `index.html` is still the retired placeholder. Every channel logged across 13 runs points at a dead page.
+2. [OWNER] **Re-authorise the Supabase connection** (and restore the project if still INACTIVE) — signup tracking blocked 13 runs.
+3. [OWNER] **Rotate / verify Razorpay API credentials** — 13 consecutive auth failures; revenue status cannot be known until this works.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] **Open a Gvika professional profile** (0% commission, paid to own UPI/Razorpay gateway) and list three offers with a monthly care plan attached — the cheapest recurring-revenue rail found so far.
+6. [AUTO] **Register on TalentAIWorks and Lancerscape** (both INR, both escrow, 10% fee) — these are the two channels where an Indian buyer can pay with a GST invoice.
+7. [AUTO] **Package one n8n workflow pack and list it on implo.ai + n8n Basket + AIMarket24** (AIMarket24 opens tonight 21:30 IST) — first-mover placement on an empty catalogue.
+8. [AUTO] **Convert one existing offer to a care-plan model** (Proposal AK) — every platform this cycle monetises recurring upkeep; Clevora still prices one-time only.
+9. [AUTO] Post one LeadSutra agency brief response or one Quora answer (the 10-28 play) — still the only channel that works while the website is down.
