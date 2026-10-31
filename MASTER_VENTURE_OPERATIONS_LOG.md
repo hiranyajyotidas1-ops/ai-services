@@ -938,3 +938,83 @@
 7. [AUTO] **Package one n8n workflow pack and list it on implo.ai + n8n Basket + AIMarket24** (AIMarket24 opens tonight 21:30 IST) — first-mover placement on an empty catalogue.
 8. [AUTO] **Convert one existing offer to a care-plan model** (Proposal AK) — every platform this cycle monetises recurring upkeep; Clevora still prices one-time only.
 9. [AUTO] Post one LeadSutra agency brief response or one Quora answer (the 10-28 play) — still the only channel that works while the website is down.
+
+---
+
+## Run VENTURE-2026-10-31-01 — 2026-10-31 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:05 IST / 03:35 UTC
+**Run ID:** VENTURE-2026-10-31-01
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 10th day** | Repo root still holds only `index.html` (547 B) + this log; `index.html` re-fetched this run and is still the "This website has been retired." placeholder (byte-identical to the 10-22 SHA `9e080c7`). Public URL fetch returned an empty result set (consistent with 404, not a rendered page); sandbox curl still blocked by the egress proxy (HTTP 000). No change vs 10-30. |
+| Supabase (users) | BLOCKED (14th run) | No authorised Supabase connection in this run's tool set — the `users` table in `ocuyxgocmtucdckiqqeh` could not be queried. Signup count UNKNOWN. |
+| Razorpay (payments) | BLOCKED (14th consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment events UNKNOWN, not zero. |
+| GitHub log | OK | Read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals (AN/AO/AP). |
+
+### Key Findings
+- **Website: day 10 offline, byte-identical.** Nothing automation-side can change this. The retired placeholder has now been served for 10 consecutive days across 14 logged runs — every lead channel in this file still points at a dead URL.
+- **Both money rails dark for 14 straight runs.** Razorpay auth failure and the Supabase block are unchanged. Revenue and signups remain UNKNOWN, not zero.
+- **Market signal this cycle: the AI market has split into two very different demand shapes, and Clevora is positioned for neither yet.** On one side, *AI agents are now buyers of human time* — Humwork (YC-backed) pays verified experts a flat $0.70/min when an agent hits a wall, and RentAHuman formalises the same idea for physical errands. On the other, *the human boards have moved to "name your own commission"* — PerHire lets talent set its own fee anywhere from 0–15%. Both remove the old 20% platform tax, but both require a profile with a verifiable track record, which is exactly what a dead storefront cannot provide.
+- **Second signal: India's AI marketplaces have published ₹ price anchors that are well above Clevora's quotes.** Gignaati lists real AI gigs at ₹2,999–₹8,000 per packaged workflow; VettedAI scopes WhatsApp assistants and lead-qualification builds at 3–4 week pilots with per-milestone INR billing and GST invoicing. Clevora's ₹6,999–₹14,999 builds sit at or below the visible floor for equivalent scope.
+- **Third signal: the "sell the file" layer has consolidated onto a flat 80–90% creator share and is now an easy multi-listing play.** Sigrix (85% founding), Swarms (90%), Neura Market (90%), .ctx (80%) and Amp (85% founding) all accept the same artefacts — n8n workflow JSON, prompt packs, MCP servers, SKILL.md packs. One workflow pack can be listed on all five in an afternoon with no exclusivity clause on any of them.
+- **Fourth signal: n8n's own template library has 10,000+ community workflows and no payout mechanic.** That is the specific gap Sigrix was built to close — evidence that the "already-built work" in this space is worth money the moment someone puts a checkout in front of it.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-10-31)
+
+**A. India-first AI marketplaces that price in ₹ (0–15% fee):**
+1. **IndiiAgent** (indiiagent.com) — India's pre-launch AI agent marketplace: businesses discover, compare, hire and pay for agents built by independent developers. **Founding Seller Program open for the first 100 builders** — the cheapest early-positioning slot available this cycle, and it is India-native. Build in public, so listings can be shaped while the catalogue is empty.
+2. **Gignaati** (marketplace.gignaati.com) — "verified AI gigs" marketplace for AI agents, trained LLMs and ready-to-deploy solutions, priced in ₹. Live listings run ₹2,999–₹8,000 for packaged workflows (resume processing ₹5,000, AI talent-screening workflow ₹6,000, email triage ₹6,999). Doubles as a **price anchor** for Clevora's productized offers; free AI Academy included.
+3. **VettedAI.in** (vettedai.in) — India-focused, AI-only, hand-matched: a 20-minute scoping call produces a one-page scope in 48h, then one vetted specialist delivers a 3–4 week pilot, **paid per milestone in INR via Razorpay with GST invoicing**; **15% commission on successful transactions only**, scoping free. Requires passing a 4-layer vetting process (technical, human review, track record, India context) — high bar, but the buyers are funded founders, not price-shoppers.
+4. **PerHire.ai** (perhire.ai) — WhatsApp-first hiring: the client sends a brief on WhatsApp, AI structures it and returns **3 pre-screened professionals**. Talent uses a **"Name Your Own Commission" model (0–15%)** — the lowest forced take-rate found so far; clients pay 15% or ₹2,500, whichever is lower, and coordination fees are waived during beta. Unusual channel, zero listing friction.
+5. **INNFILL** (innfill.in) — Indian freelancing + AI-matching ecosystem spanning talent, AI agents/automation, web/app development and CRM; **5–10% commission only**, Stripe/Razorpay rails, end-to-end project management. Broad enough to sell a bundled "content + automation + site" package rather than a single deliverable.
+6. **Humwork** (humwork.ai) — YC-backed **real-time marketplace where AI agents hire verified human experts** when they get stuck on a bug, a design call or a decision; experts pass an interview, then earn a **flat $0.70/min (~₹65/min)** per chat, reachable in ~30 seconds. Agents integrate via an MCP server. Niche and new, but it is the first channel where the buyer is a *machine with a budget* and no RFP.
+
+**B. Flat-fee creator/asset marketplaces (sell the file, not the hour):**
+7. **Sigrix** (sigrix.io) — n8n-only marketplace built on the gap that n8n's own library has 10,000+ workflows and **no payout mechanic**. Import your workflow JSON, credentials are **scrubbed automatically**, every listing human-reviewed, **85% to founding sellers (80% standard)**, payouts 14 days post-sale via Stripe, no listing or monthly fee. The cleanest place to sell the automation packs Clevora already builds for clients.
+8. **Swarms Marketplace** (swarms.ai/marketplace) — **flat 10% fee, 90% to seller**, card or crypto; accepts five asset types: agents (runnable code + deps), prompts, Python tools, **MCP servers**, and **Anthropic SKILL.md skills**. Also exposes an MCP server so an agent can publish and manage its own listings. No approval queue, no minimum reputation.
+9. **Neura Market** (neura.market) — 27,000+ workflows/prompts/agents across n8n, Make, Zapier, Activepieces and Pipedream; **90% to creators, 10% platform**, one-time pricing with lifetime access, human quality review, plus a custom-build request board. Highest existing buyer traffic of the five asset channels — the volume play.
+10. **.ctx** (dotctx.ai) — curated marketplace for **"harnesses"** (a full working agent system: `CLAUDE.md` + skills + MCP + hooks + scripts, not a prompt fragment), plus prompts and skills; **80% payout**, manual review, Stripe checkout, security-first curation. Best fit for selling a complete, opinionated Clevora delivery system rather than a loose prompt pack.
+
+*Watchlist (this cycle): **Amp** (ampplugins.com — plugins/skills/prompt packs/MCP configs, 15% founding rate for life, first 50 sellers), **MoneMee** (own storefront, fee drops 29%→9% as you grow, EU invoices + affiliate network + MCP publish), **CoreDhristi** (verified agents/automations/MCP servers, 80% share, INR + USD payouts via Razorpay/Stripe, Sept 2026 launch, founding cohort open), **Pro Bazaar AI** (81% share), **Cognithor** (70% share, creator marketplace opens Q4 2026), **Kaamvio** (India micro-gig, early access), **SupervalueAI** (India AI-asset exchange, pre-launch), **RentAHuman.ai** (AI agents hire humans for physical tasks — note independent reporting that almost no real hires have occurred, treat as speculative).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal AN — Festive WhatsApp broadcast + follow-up system (D2C brand, pre-Diwali)**
+> Hi [Name], Diwali is eight days away and most stores will send one generic broadcast that gets muted. I'll build a three-message festive sequence instead — an early-access note to your warm list, a cart-recovery nudge, and a last-day reminder — each written for WhatsApp, with the customer's name and last product viewed, plus a simple opt-out and a reply-tracking sheet so you can see who actually engaged. Setup Rs 7,999, live in 3 days, and I'll write the copy for you. How many people are on your WhatsApp list right now, and have you messaged them in the last 30 days?
+
+**Proposal AO — Catalogue data cleanup: PDF/photos to clean, uploadable sheet (distributor / wholesaler / D2C ops)**
+> Hi [Name], your product data is probably spread across supplier PDFs, WhatsApp photos and three versions of an Excel sheet — which is why uploading to IndiaMART or Shopify takes weeks. I'll extract and standardise it: product name, SKU, MRP, category, size/variant, HSN where applicable, and a clean description, all in one sheet formatted for direct upload, with a "needs your confirmation" tab for anything unclear. Rs 1,200 per 100 SKUs, first 25 free so you can check the accuracy, delivered in 48 hours per batch. Roughly how many SKUs do you have, and where does the data live today?
+
+**Proposal AP — Founder content repurposing retainer (1 long-form piece to 12 assets a month)**
+> Hi [Name], you already have the ideas — they just never leave your head or your voice notes. I'll take one long-form piece a month (a blog, a webinar, or a 20-minute recorded call) and turn it into a month of content: 4 LinkedIn posts, 4 Instagram captions with a matching Canva template, 2 short-video scripts, a newsletter section and a one-page summary you can send to leads. Rs 6,999/month, first month at Rs 3,999, delivered in one batch on the 1st with your voice kept intact — no generic AI tone. What did you last explain to a client that they found genuinely useful?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0 (no confirmed revenue signal).
+- Razorpay unreachable (auth failure, 14th consecutive run) — payment events unknown, not zero.
+- Supabase not connected (no authorised integration) — new-signup events unknown, not zero.
+- No payments, messages, listings or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 31 -> 31 mod 5 = 1 -> **TOPIC 1: Skill Tip + 5-min Exercise**.
+- Skill picked (new vs the 10-21 Canva Bulk Create and 10-26 Google Sheets QUERY picks): **the single-file HTML delivery page** — wrapping any deliverable (audit, proposal, report, catalogue) in one self-contained `.html` file with inline CSS and a `@media print` block, so it opens on the client's phone and prints to a clean PDF without any hosting, Drive permission or design tool.
+- Why it matters commercially: every Clevora deliverable currently ships as a Google Doc or a Canva link, which reads as "freelancer work". A single HTML file reads as a product, needs no login to open, and can carry the price, the scope and the next step in the same file. It is also the cheapest possible differentiator — zero cost, zero hosting, one template reused forever.
+- Free resources: MDN `@media` (print stylesheets) — https://developer.mozilla.org/en-US/docs/Web/CSS/@media ; web.dev Learn HTML — https://web.dev/learn/html ; single-file embedding reference — https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style
+- Mini action: build one reusable "Clevora Delivery" HTML template (header with client name, 3 sections, a pricing block, a "next step" button, print CSS) and ship the next deliverable in it instead of a Doc.
+
+### Next Actions
+1. [OWNER] **Write and deploy the Clevora landing page + enable GitHub Pages** — offline 10 days; `index.html` is still the retired placeholder. Every channel logged across 14 runs points at a dead page.
+2. [OWNER] **Re-authorise the Supabase connection** (and restore the project if still INACTIVE) — signup tracking blocked 14 runs.
+3. [OWNER] **Rotate / verify Razorpay API credentials** — 14 consecutive auth failures; revenue status cannot be known until this works.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] **Apply to IndiiAgent's Founding Seller Program (first 100 builders)** — free, India-native, empty catalogue; the cheapest early positioning available.
+6. [AUTO] **List one existing n8n workflow pack on Sigrix + Swarms + Neura Market in the same afternoon** — all three accept the same JSON, none require exclusivity, and Sigrix scrubs credentials on import.
+7. [AUTO] **Reprice against the ₹ anchors**: Gignaati sells packaged workflows at ₹2,999–₹8,000 and VettedAI scopes WhatsApp assistants as multi-week pilots. Clevora's ₹6,999–₹14,999 builds should be sold as a starter tier with a named upgrade path, not as the whole offer.
+8. [AUTO] **Build the "Clevora Delivery" HTML template** (Topic 1 mini action) and use it for the next three deliverables — the fastest visible quality upgrade available with zero spend.
+9. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels that work while the website is down.
