@@ -1018,3 +1018,84 @@
 7. [AUTO] **Reprice against the ₹ anchors**: Gignaati sells packaged workflows at ₹2,999–₹8,000 and VettedAI scopes WhatsApp assistants as multi-week pilots. Clevora's ₹6,999–₹14,999 builds should be sold as a starter tier with a named upgrade path, not as the whole offer.
 8. [AUTO] **Build the "Clevora Delivery" HTML template** (Topic 1 mini action) and use it for the next three deliverables — the fastest visible quality upgrade available with zero spend.
 9. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels that work while the website is down.
+
+---
+
+## Run VENTURE-2026-11-01-01 — 2026-11-01 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:06 IST / 03:36 UTC
+**Run ID:** VENTURE-2026-11-01-01
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 11th day** | Repo root still holds only `index.html` (547 B, SHA `9e080c7`) + this log. The placeholder is byte-identical to 10-22 — nothing has been deployed. Public URL fetch returned an empty result set again (consistent with a 404 / no rendered page); sandbox curl still blocked by the egress proxy (HTTP 000). No change vs 10-31. |
+| Supabase (users) | BLOCKED (15th run) | No authorised Supabase connection in this run's tool set — the `users` table in `ocuyxgocmtucdckiqqeh` could not be queried. Signup count UNKNOWN. |
+| Razorpay (payments) | BLOCKED (15th consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment events UNKNOWN, not zero. |
+| GitHub log | OK | Read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals (AQ/AR/AS). |
+
+### Key Findings
+- **Website: day 11 offline, still byte-identical.** This is now the single blocking constraint on the entire venture. Fifteen logged runs have produced offers, channels and price anchors; none of it can convert because every one of them points at a retired placeholder.
+- **Market signal this cycle: the "AI-only marketplace" category has consolidated and is now charging 10–15%, not 20%.** ServedByAI (15%, 10% founding), BotGigs (5% hire fee on paid client tiers), AiGigs.me (expert keeps 100%), AiStaff Global (15% client-side, 85% to the freelancer) and Tasksyy all launched or relaunched into the same six categories Clevora sells into — automation, content, chatbots, web. The differentiator on all of them is **verification and escrow**, which is precisely what a dead storefront cannot supply.
+- **Second signal: automation marketplaces are now explicitly selling *maintenance*, not just builds.** AI Freelance Hub charges a **1% platform fee on maintenance retainers** (vs 0% on the build), FlowMarket lists "maintenance or setup packages" as a first-class seller product, and Gvika (logged 10-31) sells care plans. This is the fourth consecutive cycle confirming that the recurring-revenue model in Proposal AK is the market default, not an upsell.
+- **Third signal: the cheapest lead-generation tool found so far is free and already published by a competitor.** FlowMarket's public "website automation audit" and "opportunity finder" produce a ready prospect report the seller can send cold. Clevora can rebuild the same artefact in an afternoon and use it as the top of its own funnel — a document that *is* the outreach.
+- **Fourth signal: India-first rails have moved to 0% commission with UPI payouts.** GigOrbit runs 0% for founding members, ₹200 minimum payout, 3-day cycle, direct UPI/GPay; SIRF charges **0% under ₹10,000 and 10% above**; Versa pays 85% with instant UPI and 0% during early access. For Clevora's price band (₹4,999–₹14,999), SIRF's ₹10,000 threshold means roughly half the catalogue can be sold at zero platform cost.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-01)
+
+**A. AI-only marketplaces (10–15% fee, escrow, verification):**
+1. **ServedByAI** (servedbyai.com) — marketplace built exclusively for AI services across six categories (automation, content creation, development, chatbots/voice, consulting, data); **15% provider commission, 10% for founding providers**, 0% buyer fees, Stripe escrow with dispute resolution, proposal-based pricing. Its example provider list already shows ₹-market names at $95/hr — the strongest single fit for a content + automation + chatbot catalogue.
+2. **BotGigs** (botgigs.com) — "one specialist board, not a quality lottery": every freelancer is an LLM/RPA/scraping/chatbot builder, and buyers can hire **either a person or a ready-made agent** from the same board. Buyers pay $99/mo (Growth) or $399/mo (Scale, 5% hire fee); specialists apply directly and are paid milestone-by-milestone. A channel where the buyer is already paying to be there.
+3. **AI Freelance Hub** (ai-freelance-hub.com) — n8n / Make / Zapier / agent specialists only; **clients pay 0% platform fee**, every project runs through protected payment with a **7-day warranty**, and every delivery requires a **"Handover Pack"** so any future expert can maintain the work. Maintenance retainers carry only a **1% platform fee** — the lowest recurring-revenue tax found. Runs in six languages with auto-translated chat.
+4. **Tasksyy** (tasksyy.com/ai-services) — AI services marketplace with two modes: buy a pre-scoped **Service**, or post a **Project** for proposals. Explicitly briefs buyers on n8n/Make/Zapier/GoHighLevel automation, agents and integrations, which maps onto Clevora's builds; low friction, general-purpose fee structure.
+5. **AiGigs.me** (aigigs.me) — AI freelancers and trainers; headline promise is **"you keep 100% — no 15–20% platform cut"**, plus a GitHub-portfolio feature and a permanent-roles board (no recruiter fees). Best used as a zero-cost profile that ranks on AI-specific search terms.
+6. **AiStaff Global** (aistaffglobal.com) — "AI workforce" marketplace where clients hire AI talent *and* agents; **15% client-side fee, freelancer nets 85%**, escrow with a 30-second veto window, 7-day warranty, portable reputation credentials. Heavier and more enterprise-flavoured than the others; suits the agent-installation offers.
+
+**B. Automation-native and hybrid boards:**
+7. **FlowMarket** (flowmarket.pro) — marketplace dedicated to business automation (n8n, Make, Zapier, Airtable, Notion, CRMs, APIs, AI agents). Sellers list **services, ready-to-install systems and maintenance packages**; founded 2026, actively recruiting sellers on LinkedIn. Also publishes a free **website automation audit** and **opportunity finder** — copy the artefact, use it as Clevora's own cold-outreach lead magnet.
+8. **dealwork.ai** — the first hybrid marketplace where **AI agents and humans bid on the same jobs and either side can be the employer**; flat **10% fee on human contracts, 3% on AI-to-AI**, escrow on everything, minimum job $0.01, 240 open tasks at time of check, ~1.1 day median delivery. Agents connect via a single `skill.md` file — no SDK. A distribution rail for any agent Clevora builds.
+
+**C. India-first, low-or-zero commission, UPI rails:**
+9. **GigOrbit** (gigorbit.co) — Indian marketplace with escrow, milestone payouts, a 100-point trust score and **gamified fees that fall from 15% to 10% as the seller levels up — 0% for founding members**; **₹200 minimum payout, direct UPI/GPay, 3-day payout cycle** (vs Fiverr's 14). Also sells digital products alongside services. Best cash-flow terms of any channel logged.
+10. **SIRF** (sirf.one/freelance) — Indian marketplace with a **0% commission tier for every order under ₹10,000 ($100)** and a flat 10% above it, zero buyer markups, and direct WhatsApp connection with the client. For Clevora's ₹4,999–₹9,999 offers this is effectively a zero-fee channel, and the WhatsApp handoff converts into an off-platform retainer legally and immediately.
+
+*Watchlist (this cycle): **Versa** (versa.co.in — India, 85% payout, instant UPI, 0% commission during early access), **PeerHire** (peerhire.in — 0% commission, blockchain escrow, student-first, Noida-based), **ZEM Marketplace** (zemmarketplace.com — verified AI services, recruiting AI experts/agencies with limited founding spots), **Maya** (heymaya.pro — an AI agent that sources, screens and negotiates with freelancers across 20+ platforms; freelancer pool is <12% acceptance, but it is pure inbound demand), **Hivve** (pre-launch AI-only marketplace, 0% commission, 200-seat beta waitlist), **jobbers.io** (0% commission, paid proposal credits), **Znole** (zero commission in India until 31 Dec 2026), **HunarBox** (hunarbox.in — India, low commission, 1–2 day payouts), **Clawtasks.art** (agent-only bounty board, crypto payouts — speculative).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal AQ — Google Business Profile + review flywheel (clinic, salon, coaching centre, local service)**
+> Hi [Name], when someone searches "[your service] near me" on Google, the three businesses in the map box get almost all the calls — and the ranking is driven by reviews and profile activity, not by your website. I'll fix that: rewrite your profile so it reads like a customer wrote it, add 8 service entries and 12 geotagged photos, set up a review request that goes out on WhatsApp after every visit, and reply to your existing reviews so Google sees an active listing. Rs 3,999 one-time, then Rs 999/month to keep the review requests running and send you a one-page monthly report on calls, direction requests and new reviews. How many Google reviews do you have today, and when did you last post on the profile?
+
+**Proposal AR — SOP + knowledge base build from your existing WhatsApp and Drive chaos (small agency / clinic / D2C ops)**
+> Hi [Name], your team's actual process lives in WhatsApp groups, three Google Sheets and one person's memory — which is why every new hire takes two months and every holiday is a crisis. I'll interview you for 45 minutes, read through what you already have, and turn it into a searchable SOP library: one page per process, written as numbered steps with screenshots, a "who does what" sheet, and a new-hire checklist that gets someone productive in week one. Rs 8,999 for up to 12 processes, delivered in 7 days as a Google Drive folder plus a printable PDF, with one round of corrections. Which three tasks would break your business if the person doing them left tomorrow?
+
+**Proposal AS — 48-hour website rescue (any SMB whose site loads slowly or looks broken on mobile)**
+> Hi [Name], I opened your site on a phone and timed it — [X] seconds to load, and the enquiry button sits below the fold on mobile. That is the whole problem: the traffic is arriving and leaving. I'll fix the three things that actually cost you enquiries — compress and resize the images, make the layout usable one-handed on a phone, and put a working WhatsApp/call button at the top of every page — and send you a before-and-after speed report as a single page you can forward to anyone. Rs 2,499 flat, done in 48 hours, no redesign, no new site, nothing else changed. Want me to send the one-page report first so you can see the numbers before you decide?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0 (no confirmed revenue signal).
+- Razorpay unreachable (auth failure, 15th consecutive run) — payment events unknown, not zero.
+- Supabase not connected (no authorised integration) — new-signup events unknown, not zero.
+- No payments, messages, listings or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 1 -> 1 mod 5 = 1 -> **TOPIC 1: Skill Tip + 5-min Exercise**.
+- Skill picked (new vs the 10-21 Canva Bulk Create, 10-26 Google Sheets QUERY and 10-31 single-file HTML picks): **IMPORTHTML / IMPORTXML in Google Sheets** — pulling a public directory table or list straight into a sheet so a 100-row prospect list builds itself instead of being typed.
+- Why it matters commercially: it is the one skill that turns "lead research" from an hour of copying into a five-minute refresh, and it feeds every other play in this file — the LeadSutra briefs, the FlowMarket-style audit outreach, the cold proposal list. It is also a sellable deliverable in its own right under Data Entry / VA: "clean, deduplicated, ready-to-upload list, 500 rows, 48 hours."
+- Free resources: Google's IMPORTHTML reference — https://support.google.com/docs/answer/3093339 ; IMPORTXML reference — https://support.google.com/docs/answer/3093342 ; Ben Collins' practical walkthrough — https://www.benlcollins.com/spreadsheets/importxml/
+- Mini action: build a 25-row prospect sheet for one Clevora offer today — `=IMPORTHTML(url,"table",1)` into A1, then `=UNIQUE()` to dedupe, then add `Status` and `Next step` columns — and send exactly three of those rows a Proposal AQ/AS draft tonight.
+
+### Next Actions
+1. [OWNER] **Write and deploy the Clevora landing page + enable GitHub Pages** — offline 11 days; `index.html` is still the retired placeholder. Every channel logged across 15 runs points at a dead page.
+2. [OWNER] **Re-authorise the Supabase connection** (and restore the project if still INACTIVE) — signup tracking blocked 15 runs.
+3. [OWNER] **Rotate / verify Razorpay API credentials** — 15 consecutive auth failures; revenue status cannot be known until this works.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] **Register as a founding provider on ServedByAI (10% instead of 15%)** and list three offers — automation, content, chatbot — in the six categories it already indexes.
+6. [AUTO] **List the same three offers on SIRF** — 0% commission under ₹10,000 means the ₹4,999 and ₹8,999 tiers cost nothing to sell, and the WhatsApp handoff converts to a retainer immediately.
+7. [AUTO] **Build the "website automation audit" lead magnet** (FlowMarket's free tool is the template) as a single HTML page — it doubles as the deliverable for Proposal AS and the Topic 1 outreach artefact.
+8. [AUTO] **Attach a maintenance retainer to every listing** — AI Freelance Hub charges 1% on maintenance, FlowMarket sells upkeep as a product; Clevora still prices one-time only.
+9. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels that work while the website is down.
