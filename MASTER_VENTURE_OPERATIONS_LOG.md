@@ -1099,3 +1099,88 @@
 7. [AUTO] **Build the "website automation audit" lead magnet** (FlowMarket's free tool is the template) as a single HTML page — it doubles as the deliverable for Proposal AS and the Topic 1 outreach artefact.
 8. [AUTO] **Attach a maintenance retainer to every listing** — AI Freelance Hub charges 1% on maintenance, FlowMarket sells upkeep as a product; Clevora still prices one-time only.
 9. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels that work while the website is down.
+
+---
+
+## Run VENTURE-2026-11-02-01 — 2026-11-02 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:06 IST / 03:36 UTC
+**Run ID:** VENTURE-2026-11-02-01
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 12th day** | Repo root still holds only `index.html` (547 B, SHA `9e080c7`) + this log. `index.html` SHA is unchanged since 10-22 — nothing has been deployed. Public URL fetch returned an empty result set again (consistent with a 404 / no rendered page); sandbox curl still blocked by the egress proxy. No change vs 11-01. |
+| Supabase (users) | BLOCKED (16th run) | No authorised Supabase connection in this run's tool set — the `users` table in `ocuyxgocmtucdckiqqeh` could not be queried. Signup count UNKNOWN. |
+| Razorpay (payments) | BLOCKED (16th consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment events UNKNOWN, not zero. |
+| GitHub log | OK | Read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals (AT/AU/AV). |
+
+### Key Findings
+- **Website: day 12 offline, byte-identical.** Sixteen logged runs of offers, channels and price anchors still convert to nothing because every one of them points at a retired placeholder. This remains the single blocking constraint; nothing automation-side can change it.
+- **Market signal this cycle: the "AI-native" marketplace category has finished its price war and moved to *disclosure and subscriptions* as the differentiator.** Taskwyre makes sellers publish an **AI Disclosure Score** (how much of the work is AI) and lets buyers filter on it — a direct answer to the "is this really you or ChatGPT?" objection that Clevora currently dodges. Gvika and MastersIn.ai have gone the other way and charge the seller a **flat yearly subscription (Gvika: ₹4,995/yr) with 0% commission on contracts**. Both models beat a 15–20% cut for a seller doing ₹5,000–₹15,000 tickets, but both require a real profile page — again, the thing a dead storefront cannot supply.
+- **Second signal: India's rails now pay to UPI with fees between 0% and 10%, and several are still in founding-seller windows.** TalentAIWorks charges a flat 10% with Razorpay escrow and INR pricing; Pro X takes tier-based fees **from 5%** with ₹0 bidding and Aadhaar/PAN KYC; AgentBaazar charges a **4% network fee** and wraps an uploaded prompt+workflow into a black-box MCP endpoint discoverable across the Beckn/ONEST network, billed as a ₹/month subscription. That last one is the first channel found where a **recurring** price is native rather than bolted on.
+- **Third signal: "agents hire humans" is now a live India channel, not a US curiosity.** ai2hum routes AI-agent tasks that need a physical or portal-bound human (verify a PG listing, file a GST return, call a municipal office, tatkal booking) to Aadhaar-verified people, with bounties of ₹300–₹2,000 and instant UPI at 85% payout. It is the closest thing to Humwork (logged 10-31) with Indian rails and Indian task pricing.
+- **Fourth signal: VibeBay opened to clients on 1 November 2026 with a founding-seat offer of 0% commission for 12 months on the first $15,000 — but India is not on its payout-country list.** Logged as watchlist only; do not build a plan on it until payouts to India are confirmed.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-02)
+
+**A. AI-native marketplaces that reward disclosure or charge subscription instead of commission:**
+1. **Taskwyre** (taskwyre.com) — the first marketplace built explicitly for *AI-augmented* work: every seller publishes an **AI Disclosure Score**, tool stack and prompt portfolio, and buyers filter by how much AI involvement they want. Founding sellers pay **0% commission until $500 lifetime GMV**, then 15% → 10% → 7% as they level (Elite keeps 93%). The best structural fit for Clevora, which should stop hiding AI use and start selling it as a speed-and-cost advantage.
+2. **Gvika** (gvika.com) — hire people *and* agents; **0% commission on contracts**, revenue comes from a **₹4,995/yr Standard plan** (10 listings, 10 proposals/month); milestones pay straight to the professional's own UPI/Razorpay/Stripe gateway, 7-day auto-approval, and builders can attach **monthly care plans** to their agents. Already logged as a watchlist item on 10-31 — now confirmed as the cheapest recurring-revenue channel for a low-ticket catalogue.
+3. **MastersIn.ai** — "AI-certified specialist marketplace": **0% commission for specialists**, <5% acceptance, escrow, milestone-based, EU AI Act framing, positioned around fractional AI officers. Very high bar, but the buyer is a company that has already decided to spend.
+4. **Clevrs** (clevrs.com) — AI expert network with **0% platform commission on both sides**, AI-powered matching and a **direct WhatsApp connection** with no middleman; categories run across AI engineers, ML engineers, generative-AI specialists and automation experts. Zero-fee and zero-listing-friction; the whole conversion happens off-platform.
+
+**B. India-first, INR/UPI rails (5–10% fee):**
+5. **TalentAIWorks** (talentaiworks.com) — India-first AI freelancer marketplace: post in ₹INR, **Razorpay escrow**, UPI/card, **flat 10% platform fee (90% to freelancer)**, verified reviews, Indian tax compliance built in. Claims 500+ AI experts and ₹50L+ paid out. The cleanest direct substitute for Upwork for an Indian AI seller.
+6. **Pro X** (prox.co.in) — India's KYC-verified marketplace: **100% Aadhaar/PAN-verified talent**, **₹0 bidding fees**, milestone escrow, UPI/IMPS/bank settlement, **service fee from 5% (tier-based)**, 10+ categories including **content writing, data entry & virtual assistance, social media and SEO** — i.e. four of Clevora's existing service lines already indexed.
+7. **AgentBaazar** (agentbaazar.com) — India's open-network AI skill exchange: upload a prompt + workflow, it is auto-wrapped as a **black-box MCP HTTP endpoint** and published across the **Beckn + ONEST** network, discoverable from any MCP client; **4% network fee**, direct UPI payout, subscription pricing (e.g. ₹999/mo per skill). Invite-only beta with a waitlist. The only channel found where an agent *product* (not an hour) is the unit of sale and recurring billing is native.
+8. **ai2hum** (ai2hum.ai) — AI agents route tasks that need a human body or a human login to Aadhaar-verified people: PG-listing verification, GST filing, municipal calls, wedding-venue checks, tatkal booking. Bounties ₹300–₹2,000, **85% payout, instant UPI, ₹0 joining fee**, KYC in 24h. Small money per task, but it is inbound demand that needs no portfolio.
+9. **CollabMarket** (collabmarket.in/freelance) — Indian marketplace with escrow, free gig listing, Basic/Standard/Premium packages and payouts to bank, PayPal or UPI. Currently in a **founding-freelancer window (first 250, ~201 spots left)** with a permanent badge and early-buyer visibility — the same low-competition positioning as IndiiAgent, but live today.
+
+**C. Low-fee global boards worth a free profile:**
+10. **Freelancea** (freelancea.com) — **flat 7% freelancer fee, 0% client fees**, $1 contract initiation, AI-powered matching, plus a separate digital-products section for templates, scripts and automations. Cheapest flat fee of any general board logged so far, and it accepts both services and files.
+
+*Watchlist (this cycle): **VibeBay** (vibebay.ai — opened to clients 1 Nov 2026; founding seats 0% for 12 months on first $15,000, then 15%/12%/10%, but **India is not in its payout-country list** — verify before investing time), **AgentGigs** (agentgigs.io — fully autonomous agent marketplace, REST + API-key, Stripe Connect payouts, independent "proofer" agents score deliverables before payment releases), **Atelier** (useatelier.ai — per-task USDC settlement over x402 on Solana/Base, agents sub-contract agents), **AI Agent Marketplace** (ai-agentmarketplace.com — 88% to builder, 12% platform, $45/mo to list), **Your Talent Hub** (yourtalenthub.in — Maharashtra non-profit, zero commission, human+AI teams), **TheBananaHive** (thebananahive.com — creator/UGC marketplace, real-time UPI payouts, ₹599/mo Pro).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal AT — Diwali-week "where is my order" automation (D2C store shipping through Delhivery/Shiprocket/Bluedart)**
+> Hi [Name], the week after Diwali is when your support inbox doubles — not from new buyers, but from people asking "where is my order" on WhatsApp and Instagram, and most of them are asking about an order that is already on its way. I'll set up automatic order-status messages that go out at dispatch, at out-for-delivery and on delivery day, each with the tracking link and a one-line "reply here if it's late" that opens a real ticket instead of getting lost. It plugs into your existing shipping account, needs no new software on your side, and I'll hand it over with a short video. Setup Rs 7,999, live in 3 working days, and I'll write all the message copy. Which shipping partner are you using, and roughly how many orders a day are you dispatching right now?
+
+**Proposal AU — "AI visibility" audit: are you what ChatGPT recommends? (any local or D2C brand)**
+> Hi [Name], I asked ChatGPT, Gemini and Perplexity for the best [your category] in [your city] this week, and [Company] did not come up in any of the three answers — your competitors did. That is a new problem with a fixable cause: these tools quote whichever pages are structured, consistent and cited elsewhere, and most Indian business sites are none of those. I'll run the same set of 15 real buyer questions across the three engines, show you exactly who gets named instead of you, and then fix the underlying issues — clean business schema on your site, consistent name/address/phone everywhere it appears, a properly written "about + services + FAQ" block, and three pieces of citable content. Rs 4,999 for the audit plus the fixes, report in 5 days, and you keep a one-page sheet showing the before-and-after answers. Want me to run the 15 questions on your category first, free, so you can see where you stand?
+
+**Proposal AV — Admission-enquiry follow-up system for coaching institutes / skill academies (Nov–Jan intake season)**
+> Hi [Name], every enquiry that comes in on Instagram DM or a phone call right now is worth ₹15,000–₹60,000 to you, and most of them go cold because nobody follows up after the second call. I'll build the follow-up so it runs itself: one sheet where every enquiry lands with its source, an automatic WhatsApp sequence over 10 days (fee structure, a batch-timing message, one student-result story, a final "seats closing" nudge), a counsellor reminder task for anyone who replies, and a weekly one-page report showing enquiries, calls connected and admissions by source — so you finally know which channel actually fills batches. Rs 8,999 setup, live in 5 days, first month of message support included. How many enquiries did you get last month, and where do most of them come from?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0 (no confirmed revenue signal).
+- Razorpay unreachable (auth failure, 16th consecutive run) — payment events unknown, not zero.
+- Supabase not connected (no authorised integration) — new-signup events unknown, not zero.
+- No payments, messages, listings or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 2 -> 2 mod 5 = 2 -> **TOPIC 2: POD Trend + Canva Design Idea** (Shopify: t-shirt/mug/phone case/tote bag).
+- Trend: **Christmas wrapping-paper / seamless gift-pattern designs** — a different pick from the 10-22 statement-tote and 10-27 western-tee angles. Searches for wrapping paper and gift-wrap designs rose roughly **7x month-on-month in October 2026**, and wrapping paper has the **longest runway of any holiday product** (search interest peaks the week before Christmas, not on the day). One pattern also prints on tissue paper, tote bags and pajama pants, so a single design file becomes a product family rather than one listing. Design supply is still thin — only a few dozen wrapping-paper designs exist in the big template libraries.
+- Timing: **list Christmas designs by 20 November** — new listings need 6–8 weeks of review history before the December peak, so anything listed after that earns almost nothing this year. Black Friday weekend (27 Nov) is when the same designs should be bundled into "gifts for her / dog moms / teachers" collections.
+- What to avoid: Halloween and pumpkin/fall designs (searches peaked in September, template use down ~40% since mid-September), brand-new Thanksgiving listings (26 Nov is too close to get found), generic "personalized tote bag" (flat YoY, down 76% over two years — the format is fine, the angle expired), and unedited AI art uploaded at volume, which is now the single most saturated POD strategy.
+- Canva idea: a **seamless repeating pattern** built once in Canva (Magic Media or a hand-built motif grid, 3000x3000 px, then "Duplicate > Tile" and export as a flat PNG) — three motifs per pattern is enough: a vintage Santa face, a scattered snowflake/star and a small evergreen. Keep it **two-colour** (cream + one of oxblood, forest green or dusty pink) so it prints cleanly on sublimation mugs and phone cases. Test the same file on a canvas tote mockup, an 11oz mug wrap and a phone case; whichever mockup looks best becomes the hero image.
+- Upsell: sell it as a **set, not a single file** — wrapping paper + gift tags + a matching tote — because the buyer is already shopping for a gift occasion and a bundle lifts order value without a new design.
+- Free resources: https://www.canva.com/create/wrapping-paper/ (Canva's own wrapping-paper designer) | https://www.canva.com/t-shirts/templates/ (pattern + mockup templates) | trend source: https://playgroundai.com/blog/november-2026-print-on-demand-design-trends
+- Mini action: build ONE two-colour seamless Christmas pattern in Canva today (~25 min), export a flat PNG, drop it on a tote and a mug mockup, and publish both to Shopify via Printify/Printful before 20 November.
+
+### Next Actions
+1. [OWNER] **Write and deploy the Clevora landing page + enable GitHub Pages** — offline 12 days; `index.html` is still the retired placeholder. Every channel logged across 16 runs points at a dead page.
+2. [OWNER] **Re-authorise the Supabase connection** (and restore the project if still INACTIVE) — signup tracking blocked 16 runs.
+3. [OWNER] **Rotate / verify Razorpay API credentials** — 16 consecutive auth failures; revenue status cannot be known until this works.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] **Create a Taskwyre profile and set an AI Disclosure Score honestly** — 0% commission until $500, and disclosure is the differentiator rather than something to hide.
+6. [AUTO] **Register on TalentAIWorks (10%, Razorpay escrow) and Pro X (from 5%, ₹0 bidding)** — both are India-native, both already index content writing, social media, SEO and data entry, and neither costs anything to list.
+7. [AUTO] **Claim a CollabMarket founding-freelancer spot** while ~201 remain — free badge, low competition, UPI payouts.
+8. [AUTO] **Join the AgentBaazar waitlist** and prepare one prompt+workflow as a black-box MCP skill at a ₹/month price — the first channel where a Clevora automation earns recurring revenue without a retainer conversation.
+9. [AUTO] **Attach a maintenance/care plan to every listing** — Gvika, FlowMarket and AI Freelance Hub all price upkeep as a product; Clevora still quotes one-time only.
+10. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels that work while the website is down.
