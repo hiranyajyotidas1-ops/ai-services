@@ -1184,3 +1184,87 @@
 8. [AUTO] **Join the AgentBaazar waitlist** and prepare one prompt+workflow as a black-box MCP skill at a ₹/month price — the first channel where a Clevora automation earns recurring revenue without a retainer conversation.
 9. [AUTO] **Attach a maintenance/care plan to every listing** — Gvika, FlowMarket and AI Freelance Hub all price upkeep as a product; Clevora still quotes one-time only.
 10. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels that work while the website is down.
+
+---
+
+## Run VENTURE-2026-11-03-01 — 2026-11-03 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:06 IST / 03:36 UTC
+**Run ID:** VENTURE-2026-11-03-01
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 13th day** | Repo root still holds only `index.html` (547 B, SHA `9e080c7`) + this log. `index.html` SHA unchanged since 10-22 — nothing deployed. Public URL fetch returned an empty result set again; sandbox `curl` still refused by the egress proxy (HTTP 000). No change vs 11-02. |
+| Supabase (users) | BLOCKED (17th run) | No authorised Supabase connection in this run's tool set — `users` table in `ocuyxgocmtucdckiqqeh` could not be queried. Signup count UNKNOWN, not zero. |
+| Razorpay (payments) | BLOCKED (17th consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment events UNKNOWN, not zero. |
+| GitHub log | OK | Read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals (AW/AX/AY). |
+
+### Key Findings
+- **Website: day 13 offline, byte-identical.** Seventeen logged runs of offers, channels and price anchors still convert to nothing because every one of them points at a retired placeholder. Nothing automation-side can change this; it needs one owner action.
+- **Market signal this cycle: the money has moved from *selling hours* to *selling the file*.** The strongest economics found today are not freelance boards at all — they are workflow/agent asset marketplaces where a build is packaged once and sold repeatedly: **Neura Market keeps 90%** (10% flat, non-exclusive, 27,000+ curated workflows already pulling search traffic), **implo.ai** takes 80% standard but **0% for its first 10 founding sellers for 90 days** (7 spots left, 7 asset types: prompts, workflows, agents, custom GPTs, MCP servers, Cursor rules, Notion templates), **AIMarket24** charges 15% but **5% for the first 50 sellers who publish a live listing**, and **Sigrix** locks founding n8n sellers at 85% for the life of the account. For a ₹4,999–₹8,999 build, one sale of the same workflow to 20 buyers at ₹1,999 beats the build fee — and it is the only recurring-revenue model that does not need a retainer conversation.
+- **Second signal: an Indian marketplace is now pricing automation in rupees, which changes the buyer.** **n8n Basket** lists a 305-node lead-intelligence workflow at **₹2,999** and a car-seller automation at **₹999**, alongside 95 workflows from 42 creators. That is a domestic price anchor, not a $29 one, and it validates a ₹999–₹2,999 productised tier that Clevora has never offered.
+- **Third signal: 0% commission is no longer a founding perk, it is the default entry price.** SynapticRelay (launched 23 Sep 2026) charges nothing to either side and exposes an **MCP server** so an agent can read the board and draft replies; VibeCrowd is free during launch; freelancity.ai takes **5% only after you get paid, in INR to UPI**; Mission Freelances charges 0% and hands over the decision-maker's email/LinkedIn/phone on 78% of missions. The differentiator has shifted entirely to *who has the demand*, not who has the lowest fee.
+- **Fourth signal: the fastest-paying Indian channels pay per task, not per project.** SushiLabs pays to UPI within 48 hours of approval on $3–$100 tasks (product testing, research, creative, AI data labelling); ArtBookd runs 0% fees through beta with UPI payouts. Small tickets, but zero-portfolio-required inbound cash while the storefront is down.
+- **Watchlist note: VibeBay's India payout gap is confirmed, not resolved.** Its talent-seat page lists the US, Canada, Mexico, Brazil, UK, every EU country, Switzerland, Norway, Liechtenstein, Gibraltar, Australia, NZ, Japan, Singapore, HK, Malaysia, Thailand, Indonesia and the UAE — **India still absent**. Do not spend time there yet.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-03)
+
+**A. Workflow / agent asset marketplaces (sell the file, not the hour):**
+1. **Neura Market** (neura.market/sell-n8n-workflows) — the cleanest economics found to date: **flat 10%, you keep 90%**, no listing fee, no monthly charge, **non-exclusive** (the same workflow can be sold on your own site or elsewhere), Stripe payouts, and an existing catalogue of **27,000+ curated workflows** that already brings search traffic. Upload the exported n8n JSON + setup notes. Best first listing for Clevora's lead-enrichment and content-repurposing builds.
+2. **implo.ai** (implo.ai/become-a-creator) — one shelf for **seven asset types** (AI prompts $3–29, workflows $9–79, agents $19–149, custom GPTs $9–49, MCP servers $5–50, Cursor rules $3–25, Notion templates $9–49). Standard 80% revenue share, but **founding sellers keep 100% for 90 days** and only **7 of 10 spots remain**. Buyers are explicitly SMB owners with purchase intent, not hobbyists. Manual review, ~48h approval, Stripe payouts, $50 minimum.
+3. **AIMarket24** (aimarket24.pro/sell-n8n-workflows) — n8n workflow marketplace with **escrow** (buyer pays in, seller paid on confirm or auto after 3 days) and a written scope. **15% standard, 5% for six months for the first 50 sellers who publish a live listing** (signup alone does not reserve a seat — publishing does). Rejects listings that are 95%+ similar to an existing one, so a lightly-edited public template will not pass.
+4. **n8n Basket** (n8nbasket.com) — search-by-problem n8n marketplace, **₹-priced** (₹999–₹2,999 live listings), every creator gets a public page and a tracked referral link that carries their share. Only 95 workflows from 42 creators — thin supply, Indian price anchors, low competition. The single best place to test a sub-₹3,000 productised automation.
+
+**B. Zero-commission boards where demand, not fee, is the differentiator:**
+5. **SynapticRelay** (synapticrelay.com) — no-commission board for people *and* their AI agents, launched **23 September 2026**, in **six languages** with auto-translation (English, Russian, Spanish, Portuguese, French, German). Sign-in via Telegram or email; listings live 120 days; **MCP server at synapticrelay.com/mcp** so an agent can read listings and draft replies. It holds no money and collects no reviews — you swap contacts and work directly, so stage payments and advances yourself. Costs nothing to post an "I offer" listing; useful for the content/automation catalogue.
+6. **VibeCrowd** (vibecrowd.ai) — AI freelance marketplace + professional network, **free to join and free during launch** (paid plans and checkout not yet live). Also carries a payment-verified business catalogue and creator/learning communities — a place to build a profile and be early, at zero cost, while it is still free.
+7. **Mission Freelances** (mission-freelances.com) — **0% commission, always**, structured as a prospecting tool rather than an intermediary: it aggregates missions from LinkedIn, Indeed, Welcome to the Jungle, HelloWork and Facebook, and gives the **decision-maker's direct email, LinkedIn and phone for 78% of listings**. 5,400+ missions since launch, 30+ added daily, live in France with **UK, US and Spain launching Q4 2026**. Revenue comes from a fixed monthly subscription, not a cut. The enriched-contact model is directly reusable for Clevora's own outbound.
+8. **freelancity.ai** — India-first, **free to join with no listing fee and no subscription**, you **keep 95% and pay 5% only after you get paid**, in **INR to bank or UPI**. Generates an AI freelancer profile from your resume, automates client outreach with tailored proposals and negotiates in INR. Low friction, rupee-native, no upfront cost.
+
+**C. India-first per-task and beta channels (cash in 48 hours, no portfolio needed):**
+9. **SushiLabs** (sushilab.in) — pays Indian members for discrete tasks: product testing ($5–40), research & analysis ($3–20), creative work ($10–80), technical tasks ($15–100), AI & data labelling ($5–25), software QA ($12–90). **Human review within 48 hours, payout to UPI/USDT/USDC in hours, no platform fee on payout.** 686+ members, $965+ paid. Small tickets, but the fastest cash cycle of any channel logged and it needs no website.
+10. **ArtBookd** (artbookd.com) — India's creative-professional platform (photography, makeup, choreography and adjacent categories): verified IDs, structured briefs, **UPI-backed payments with instant payout**, and **0% fees during the beta** with 6 months of premium free for early adopters. 72% of founding seats claimed, launching Belagavi/Hubli/Gadag/Bengaluru first. Adjacent rather than core, but a zero-fee India profile with real payouts.
+
+*Watchlist (this cycle): **Sigrix** (sigrix.io — founding n8n sellers keep 85% for the life of the account, credentials scrubbed on import, 14-day payouts), **SellRamp** (sellramp.com — flat 10%, instant Stripe Connect, markets to AI-agent builders), **The No-Code Marketplace** (thenocodemarketplace.com — Zapier/Make/n8n + agents, 75% to seller), **AI Workflow Hub** (workflowhub.ai — n8n/Langflow/Make/Zapier/Dify, country-restricted rollout), **worXwap** (skill-swap marketplace, 37% of its 169 categories are AI skills, $9.99–$19.99 plans), **FundWork** (pre-launch, AI-scoped briefs, 0% freelancer commission, seeking 100 clients + 100 freelancers), **ArtBookd** and **SushiLabs** above if they scale beyond beta.*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal AW — Amazon/Flipkart listing rewrite (D2C seller already spending on ads)**
+> Hi [Name], I looked at your [product] listing on Amazon and the title is doing the one thing that costs you sales: it leads with your brand name instead of the four words a buyer actually types. That is why your ad clicks are expensive — you are paying to send people to a page that does not confirm they are in the right place. I will rewrite the listing properly: a keyword-led title within Amazon's character limit, five bullets that answer the objections in your reviews, backend search terms pulled from your own category's top sellers, and a 5-image plan for A+ content. Rs 2,499 per SKU, or Rs 8,999 for five SKUs, delivered in 4 days with a before-and-after keyword sheet so you can see what changed. Want me to send the free rewrite of your title and first bullet for [product] so you can judge it before paying anything?
+
+**Proposal AX — Missed-call text-back + 5-minute lead reply (clinic, salon, gym, coaching centre, home services)**
+> Hi [Name], I called [Business] twice this week during working hours and nobody picked up — and I am the customer you already paid to reach. Every missed call at a local business is a booking going to whoever answers next, and most of them never call back a second time. I will set up three things: an automatic WhatsApp/SMS reply within 60 seconds of any missed call ("Sorry we missed you — what do you need?"), a single inbox where every enquiry lands with its source, and a nudge to your team if a lead has had no reply in 5 minutes. Rs 5,999 setup, live in 4 days, plus Rs 1,499/month if you want me to watch it and send a monthly report on missed calls recovered and bookings attributed. How many calls a day do you think go unanswered right now?
+
+**Proposal AY — One-page "link in bio" storefront with UPI checkout (coach, creator, freelancer selling through Instagram DM)**
+> Hi [Name], your entire business runs through Instagram DMs right now, which means every sale needs you to be awake, and the price is whatever you last remembered to type. I will build you a single fast page — your offers with prices, three testimonials, an FAQ that kills the same five questions you answer daily, and a working UPI/Razorpay "Pay now" button for each offer — plus a link-in-bio short URL you can put in every post. It loads in under two seconds on mobile because there is nothing on it that does not sell. Rs 3,999, delivered in 48 hours, one round of changes included. Send me your three best offers and I will mock the page up first so you can see it before deciding.
+
+### Revenue Status
+- Recorded revenue this run: Rs 0 (no confirmed revenue signal).
+- Razorpay unreachable (auth failure, 17th consecutive run) — payment events unknown, not zero.
+- Supabase not connected (no authorised integration) — new-signup events unknown, not zero.
+- No payments, messages, listings or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 3 -> 3 mod 5 = 3 -> **TOPIC 3: Content Idea**.
+- Format picked: **LinkedIn post + Instagram Reel repurpose**, on the **speed-to-lead** angle (the same insight behind Proposal AX, so the content and the offer reinforce each other).
+- Why this angle: it is a number-led story, not an opinion, so it survives the LinkedIn algorithm's preference for dwell time, and it opens a sales conversation without pitching. It also works while the website is down, because the proof lives in the post, not on a landing page.
+- Free resource: Canva's LinkedIn post templates — https://www.canva.com/linkedin-posts/templates/ ; and for the reel repurpose, Canva's Reels templates — https://www.canva.com/instagram-reels/templates/
+- Mini action: publish the post before 11am IST tomorrow, then reply to every comment within the first hour (that is what actually carries reach), and DM the "SPEED" responders the one-page checker the same day.
+
+### Next Actions
+1. [OWNER] **Write and deploy the Clevora landing page + enable GitHub Pages** — offline 13 days; `index.html` is still the retired placeholder. Every channel logged across 17 runs points at a dead page.
+2. [OWNER] **Re-authorise the Supabase connection** (and restore the project if still INACTIVE) — signup tracking blocked 17 runs.
+3. [OWNER] **Rotate / verify Razorpay API credentials** — 17 consecutive auth failures; revenue status cannot be known until this works.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] **List one packaged workflow on Neura Market at 90% keep** — export the lead-enrichment or content-repurposing build as JSON with a credentials list and one example input/output; it is non-exclusive, so the same file can go to three shelves.
+6. [AUTO] **Apply to implo.ai while 7 founding spots remain** — 100% of sales for 90 days across seven asset types, and the MCP-server and Cursor-rules categories are ones Clevora can fill immediately.
+7. [AUTO] **Publish one listing on AIMarket24 to claim a founding seat** (5% for six months; the seat is claimed by publishing, not by signing up).
+8. [AUTO] **Test a sub-₹3,000 productised automation on n8n Basket** — the only channel found with Indian rupee price anchors (₹999–₹2,999) and near-empty supply.
+9. [AUTO] **Post a free "I offer" listing on SynapticRelay** and register the MCP endpoint — zero commission, six-language reach, and an agent-readable board.
+10. [AUTO] **Build the 5-minute lead-reply checker** as a one-page HTML artefact — it is the CTA for this cycle's LinkedIn post, the deliverable teaser for Proposal AX, and a reusable lead magnet for every local-business pitch.
+11. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels that work while the website is down.
