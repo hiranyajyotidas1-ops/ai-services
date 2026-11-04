@@ -1268,3 +1268,85 @@
 9. [AUTO] **Post a free "I offer" listing on SynapticRelay** and register the MCP endpoint — zero commission, six-language reach, and an agent-readable board.
 10. [AUTO] **Build the 5-minute lead-reply checker** as a one-page HTML artefact — it is the CTA for this cycle's LinkedIn post, the deliverable teaser for Proposal AX, and a reusable lead magnet for every local-business pitch.
 11. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels that work while the website is down.
+
+---
+
+## Run VENTURE-2026-11-04-01 — 2026-11-04 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:05 IST / 03:35 UTC
+**Run ID:** VENTURE-2026-11-04-01
+**Run number:** 18th logged run
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 14th day** | `index.html` still 547 B, SHA `9e080c7c42e311ca9abb9a4167e3690543d19960` — byte-identical to 10-22. Public URL: page-fetch returned an empty result set again; sandbox `curl` refused by the egress proxy (HTTP 000, CONNECT 403). No change vs 11-03. |
+| Supabase (users) | BLOCKED (18th run) | No authorised Supabase integration in this run's tool set — `users` table in `ocuyxgocmtucdckiqqeh` could not be queried. Signup count UNKNOWN, not zero. |
+| Razorpay (payments) | BLOCKED (18th consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment events UNKNOWN, not zero. |
+| GitHub log | OK | Read, appended and committed in this run. |
+| Lead research | OK | 10 NEW platforms identified (see Leads). |
+| Proposals | OK | 3 fresh draft proposals (AZ/BA/BB). |
+
+### Key Findings
+- **Website: day 14 offline, still byte-identical.** Eighteen logged runs of offers, price anchors and channel signups still point at a retired placeholder. Nothing automation-side can move this; it needs one owner action — or a 10-minute workaround (see Topic 4).
+- **Market signal this cycle: the SKILL.md file has become a sellable unit, and the fee is no longer the story.** **Swarms Marketplace** takes a flat 10% (keep 90%) across five asset types — agents, prompts, tools, MCP servers and Anthropic-format skills — with an MCP server at `swarms.world/mcp` so an agent can search 6,000+ listings and publish its own; **Agensi** pays creators 70% on one-time or subscription sales of SKILL.md packs, lists 17,000+ skills from 2,500+ creators, and pushes every listing into buyers' agents through its own MCP; **MCP Marketplace** keeps 15% and adds what nobody else does — licence keys, subscriptions, a public security score and creator analytics. Clevora already writes prompts and workflows daily; packaging them as `SKILL.md` is a copy-and-zip job, not a new product.
+- **Second signal: the MCP ecosystem is monetising badly, and the reason is structural.** Of 12,000+ public MCP servers tracked in March 2026, **fewer than 5% have monetised**, and the big directories (Smithery, Glama, mcp.so, PulseMCP) pay **$0** — Smithery in fact charges creators ~$30/month for hosting. Roughly 75% of tracked servers are stdio-only, so they can never bill per call. Any MCP work Clevora does should be a **hosted HTTPS endpoint** sold through a marketplace with payment rails, or not built at all.
+- **Third signal: six India-first boards launched into the same "0% commission" space, and that is now table stakes, not a differentiator.** Versa (0% during early access, UPI, AI matching), PeerHire (0%, blockchain escrow, Noida-based, student-first), LanceGuru (founded 2026, INR-first, milestone escrow), bxFreelancer (0% for first 1,000 users for a year, then 0.5% freelancer / 1.5% client), GigOrbit (0% founding members, gamified tiers down to lower fees, ₹200 minimum UPI payout) and Grit&Gigs (UPI/RuPay, 1–2 day payouts, plus a skill-barter market). Listing costs nothing on any of them; the scarce thing is **demand**, and none of these six has much yet. Register where a profile is free, but do not expect inbound from them this quarter.
+- **Watchlist note: per-run execution is the next pricing model.** Sealed (80/20, source never reaches the buyer, leak-scanned output), Capafy (80/20 server-side sandbox runs, $0.99 certification) and MCPize (80% share, x402 pay-per-call in USDC) sell *runs*, not files. Worth watching; not worth building for until there is one paying retainer.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-04)
+
+**A. Asset marketplaces where one build sells many times:**
+1. **Swarms Marketplace** (swarms.ai/marketplace) — flat **10% fee, keep 90%**, no listing fee, no approval queue, no minimum reputation before you can charge. Five asset types: agents, prompts, tools, MCP servers and **Anthropic SKILL.md skills** (drag a file onto the launch form and it self-fills). Card (Stripe) or crypto per listing. Its MCP portal at `swarms.world/mcp` lets an agent search 6,000+ listings and publish its own — the only board found where an agent can list autonomously. Also runs tokenised and token-gated listings; ignore those, sell direct.
+2. **Agensi** (agensi.io/sell) — sells **SKILL.md packs** on one-time purchase or monthly subscription, **70% to the creator**, 30% all-in (taxes, refunds and merchant-of-record handled for you). 17,000+ skills, 2,500+ creators, 8-point automated security scan + AI + human review inside 24–48 h. Every listing is distributed into buyers' agents through the Agensi MCP, so the buyer never downloads a file. Payouts via Stripe or USDC; minimum $3.50.
+3. **MCP Marketplace** (mcp-marketplace.io) — **85% to the creator**, and the only MCP storefront with **licence-key infrastructure, subscriptions, a public per-server security score and a creator analytics dashboard**. Automated security scan, most servers approved in 24 h, same-day listing. Both local and remote servers accepted. Best route if Clevora ever ships a hosted automation endpoint.
+4. **AgentStack** — 70/30 split via Stripe Connect across MCP servers, skills and toolkits, security-reviewed per version, and it publishes a real number: **$102.3K paid to creators across 140,140 listings**. Useful as the benchmark, not the jackpot.
+
+**B. India-first boards (free to join, rupee payouts, thin demand):**
+5. **Versa** (versa.co.in) — India-first tech freelance marketplace: **0% commission during early access** (the same page also states an 85% freelancer payout — confirm which applies before relying on it), AI matching instead of blind bidding, milestone payments, **instant UPI payouts**, free starter credits, escrow "coming next". Small and new; a free profile is worth having.
+6. **PeerHire** (peerhire.in) — student- and early-career-first board in public beta, **0% commission**, blockchain smart-contract escrow, no connects, INR or fiat payouts, AI matching, campus verification. Noida-registered (WeWork Berger Tower, Sector 16B). Demand is thin and student-priced — treat as a portfolio channel, not a revenue channel.
+7. **LanceGuru** (lanceguru.com) — founded **2026** by Algo Point Ai: INR-first pricing, **UPI and bank payouts**, milestone escrow on every project, verified profiles plus skill assessments, support within 24 h Mon–Sat, explicitly "lower commissions than the industry norm" without publishing a rate. Early enough that a well-filled profile gets search placement.
+8. **bxFreelancer** (bxfreelancer.com) — **0% commission for the first 1,000 users for a full year**, then 0.5% freelancer / 1.5% client per project — the lowest post-launch rate found anywhere. Escrow, AI matching, built-in IDE. Blue/grey/white-collar positioning, but it indexes coding, AI/ML and data work.
+9. **GigOrbit** (gigorbit.co) — seller-gamified marketplace: **0% commission for founding members**, then a tier ladder (Starter → Rising → Pro → Elite) that lowers commission as you sell; escrow with milestone payouts, 3-day payouts, **₹200 minimum via direct UPI/GPay**, AI pricing guidance ("sellers at your level charge ₹2,000–₹4,500"), 60-day referral commissions. The tier ladder is the interesting part — commission falls with volume.
+10. **Grit&Gigs** (gritandgigs.in) — India-first skill marketplace: **UPI, RuPay and bank transfers natively**, escrow, **1–2 day payouts** (fastest published cycle on any board logged), and the one feature nobody else has — a **skill-barter market where trades are commission-free**. Low fees on cash work; INR pricing throughout.
+
+*Watchlist (this cycle): **MCPize** (80% share, x402 per-call USDC billing, $25 minimum), **Capafy** (80/20 server-side sandbox runs, $0.99 certification fee), **Sealed** (sealed.run — 80/20 per call, source encrypted at rest and never shipped, leak-scanned outputs), **FlowMarket** (13% → 5% tiered by cumulative sales, and it sells maintenance plans as a product type), **Automation Workflows** (automationworkflows.io — Make/n8n/Zapier + AI agents), **FiatDock** (0% first month then 1% on x402 per-call, non-custodial).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal AZ — Turn the agency's SOPs into an AI skill pack their team can actually run (marketing agency / design studio / 5–30 person services firm)**
+> Hi [Name], every agency I speak to has the same hidden asset and the same problem: the way you write a proposal, brief a designer or QA a landing page lives in three senior people's heads and one 40-page Notion doc nobody opens. So the work is only as good as whoever is free that week. I turn that into a **skill pack** — the method written once as machine-readable instructions your team's AI tools (Claude, ChatGPT, Cursor) can load and follow, so a junior produces what your best person would have produced, with your rules and your examples built in. Typically 4–6 skills: proposal writing, client brief, content QA, design feedback, reporting. You get the files, a one-page "how to run this" sheet, and a 20-minute walkthrough. Rs 7,999 for the pack, delivered in 5 working days, and I'll do the first skill free from your best existing document so you can test it on real work. Which single task, if a junior could do it tomorrow without asking you, would save you the most time?
+
+**Proposal BA — Shopify store speed fix, priced as a number not a promise (Shopify store doing 50–500 orders/month)**
+> Hi [Name], I ran your store through PageSpeed on mobile and it scored [XX] — which is costing you money in the least visible way possible: roughly half of Indian mobile shoppers leave a page that takes more than three seconds, and every one of them was paid for by your ads. The usual causes on Shopify are fixable in a day: too many apps loading on every page, unoptimised hero images, a theme carrying fonts and scripts you don't use, and product images served at full resolution. I'll fix the top issues, show you the before-and-after score with screenshots, and leave a one-page rule sheet so the next app you install doesn't undo it. Rs 3,499, delivered in 48 hours, and if the mobile score doesn't improve by at least 15 points you don't pay. Want me to send the free audit of your top three pages first?
+
+**Proposal BB — One interview, thirty days of content (coach, consultant, or founder who posts "whenever I get time")**
+> Hi [Name], your last three posts did well and then nothing for a month — which is the normal pattern when content depends on you having a free evening. Here's a cheaper way to run it: one 45-minute recorded conversation with me, on the three topics your buyers actually ask about. From that recording I produce **30 days of content** — 8 LinkedIn posts in your voice, 4 short-video scripts with hooks and on-screen text, 4 carousel outlines, and a posting calendar with the best slot for each. You approve once, then the month runs without you writing anything. Rs 2,999 for the full month, first batch of 4 posts within 3 days of the call so you can check the voice before I build the rest. If the first four don't sound like you, you pay nothing. Shall I send two possible topics for the call?
+
+### Revenue Status
+- Recorded revenue this run: Rs 0 (no confirmed revenue signal).
+- Razorpay unreachable (auth failure, 18th consecutive run) — payment events unknown, not zero.
+- Supabase not connected (no authorised integration) — new-signup events unknown, not zero.
+- No payments, messages, listings or approvals were performed (drafts only).
+
+### Daily Growth Topic (PART 2)
+- Day number 4 -> 4 mod 5 = 4 -> **TOPIC 4: Free Tool Discovery**.
+- Picks (both genuinely free, no card, verified this run, and different from the 10-19 Google AI Studio / Napkin, 10-24 Groq / Cloudflare Workers AI and 10-29 Brevo / Chatwoot picks): **Cloudflare Pages** + **Cloudflare Web Analytics** — a complete ₹0 hosting-and-measurement stack that also happens to be the fastest way around the 14-day website outage.
+- Why this pair: Cloudflare Pages free plan gives **unlimited bandwidth and requests**, 500 builds/month, 20,000 files per site (25 MiB each), 100 custom domains per project, HTTPS included, **no credit card**. Crucially it accepts a **drag-and-drop direct upload** of a ZIP or folder — so a static `index.html` goes live at `<project>.pages.dev` in about two minutes without GitHub Pages, without a repo, without a build step. Web Analytics is free on every plan, cookieless, **no pageview cap**, up to 10 non-proxied sites (unlimited if proxied), six months of history.
+- Honest limits: a Direct Upload project **cannot be converted to Git integration later** (you'd create a new project), dashboard drag-and-drop caps at 1,000 files and cannot compile a `functions` folder (use Wrangler for that), Web Analytics has **no custom events** and downsamples unsampled data to ~10% after 7 days, and Cloudflare has said new feature work goes to Workers rather than Pages. None of that matters for a brochure/landing page.
+- Free resources: https://developers.cloudflare.com/pages/get-started/direct-upload/ (drag-and-drop deploy) | https://developers.cloudflare.com/pages/platform/limits/ (free-plan limits) | https://www.cloudflare.com/web-analytics/
+- Mini action: zip the Clevora `index.html` (plus any assets) and drop it into Workers & Pages → Create application → Drag and drop → Deploy. Live URL with HTTPS in ~2 minutes, then paste the Web Analytics beacon into the page. This is the one action that ends the 14-day outage without touching GitHub Pages.
+
+### Next Actions
+1. [OWNER] **Deploy the Clevora landing page** — offline 14 days, `index.html` byte-identical since 10-22. Fastest path is now Cloudflare Pages drag-and-drop (see Topic 4), not GitHub Pages.
+2. [OWNER] **Re-authorise the Supabase connection** (and restore the project if still INACTIVE) — signup tracking blocked 18 runs.
+3. [OWNER] **Rotate / verify Razorpay API credentials** — 18 consecutive auth failures; revenue cannot be known until this works.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] **Package the lead-enrichment and content-repurposing builds as `SKILL.md` packs** and list on Agensi (70%, subscription-capable, MCP distribution) — the cheapest first sale of the whole backlog.
+6. [AUTO] **Cross-list the same files on Swarms Marketplace** at 10% flat — no approval queue, no minimum reputation, and its MCP portal lets an agent publish and refresh listings without a browser.
+7. [AUTO] **Ship one hosted MCP endpoint, not a stdio package**, if an MCP offer is built at all — 75% of tracked servers are stdio-only and structurally cannot bill per call.
+8. [AUTO] **Register the free India-first profiles** — LanceGuru, Versa, GigOrbit, bxFreelancer (0% for a year) — with one consistent bio and one price card; expect no inbound this quarter, treat it as SEO and credibility.
+9. [AUTO] **Attach a maintenance/care plan to every listing** — FlowMarket prices upkeep as a product type and Gvika sells care plans; Clevora still quotes one-time only.
+10. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels that work while the website is down.
