@@ -1350,3 +1350,83 @@
 8. [AUTO] **Register the free India-first profiles** — LanceGuru, Versa, GigOrbit, bxFreelancer (0% for a year) — with one consistent bio and one price card; expect no inbound this quarter, treat it as SEO and credibility.
 9. [AUTO] **Attach a maintenance/care plan to every listing** — FlowMarket prices upkeep as a product type and Gvika sells care plans; Clevora still quotes one-time only.
 10. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels that work while the website is down.
+
+---
+
+## Run VENTURE-2026-11-05-01 — 2026-11-05 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:09 IST / 03:39 UTC
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | DOWN | Day 15 offline. `index.html` is still 547 bytes with SHA `9e080c7c42e311ca9abb9a4167e3690543d19960` — byte-identical to 10-22, still the "This website has been retired." placeholder. Page fetch returns no content at all. |
+| Supabase (users) | BLOCKED | No authorised Supabase connection available in this environment, so the users query cannot be issued (19th run). Signups are unknown, not zero. |
+| Razorpay (payments) | BLOCKED | `Authentication failed` (BAD_REQUEST_ERROR) again — 19th consecutive run. Payment state is unknown, not zero. |
+| GitHub log | OK | This entry appended to `MASTER_VENTURE_OPERATIONS_LOG.md` and committed to `main`. |
+| Lead research | OK | 10 new platforms, all distinct from the 18 previous runs' lists. |
+| Proposals | OK | 3 fresh drafts (BC / BD / BE). |
+
+### Key Findings
+
+- **Website: day 15 offline, still byte-identical.** Nineteen logged runs of price anchors, offers and channel signups point at a retired placeholder. This is now the single binding constraint on the whole venture — no listing, directory profile or proposal converts into anything without a page to land on. The 10-minute fix (Cloudflare Pages drag-and-drop, logged under Topic 4 on 11-04) is still unactioned.
+- **Market signal this cycle: the free Indian directory layer is the cheapest distribution Clevora has, and two of them now index for AI assistants, not just Google.** WeHelp.in states outright that listings are surfaced to ChatGPT and Gemini as well as search, with 1-hour approval and a 365-day listing at no cost. That is the same AEO thesis behind Proposal AE / AU, available as a free listing rather than a paid audit — worth using as proof-of-work rather than as a product.
+- **Second signal: agency directories have moved from paid placement to verification, which flips the barrier from money to paperwork.** Vettd is free forever with 50 founding spots but checks GSTIN against MCA records before you go live; SEO Sadhu lists free in 153 Indian and US cities but rejects coworking desks, virtual offices and mailbox addresses. For a home-based solo operator the blocker is now a GST registration and a verifiable office address, not a listing fee — so those two stay parked until the paperwork exists.
+- **Third signal: AI-written copy is now actively penalised at the directory level.** OneTapListing states that AI-generated descriptions are auto-flagged and that a violation means permanent rejection and account suspension. Since most Indian SMBs now paste ChatGPT output straight into their Google Business Profile and directory submissions, "make this sound like a human who has actually been to your shop" has quietly become a sellable service (Proposal BE).
+- **Fourth signal: the AI asset marketplaces keep multiplying, and the split has settled at 80–85%.** Kainotomic pays 85% with no listing fee, monthly payouts and an AI review engine that checks a listing does what it claims before buyers see it. It accepts agents, apps, APIs, workflows and templates — the same artefacts Clevora already builds — so it is a free cross-listing alongside Sigrix, Swarms and Neura Market, not a new build.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-05)
+
+**A. Free Indian business + agency directories (discovery, do-follow backlinks, AI-assistant indexing):**
+
+1. **AgencyGenius** (agencygenius.co/join-our-directory) — free, curated agency/freelancer directory that reviews every submission within 48 hours. The category list names the exact work Clevora does: "automation + Zapier nerds", "AI & workflow thinkers", "web builders". Best-fit free listing found this cycle; needs only a name, website URL and description.
+2. **WeHelp.in** (wehelp.in) — free Indian business listing, live in about 1 hour, active 365 days, and the only directory here that explicitly markets discovery by **AI assistants such as ChatGPT and Gemini**, not just Google. Registration under a minute, WhatsApp login supported. Weakest on backlink value, strongest on the AEO narrative.
+3. **OneTapListing** (in.onetaplisting.com) — free, 3,878+ manually verified listings across every state, 1–2 business-day review, no card or subscription. **Caveat that matters:** AI-generated descriptions are auto-flagged and permanently rejected — write the copy by hand.
+4. **ListMyBusinesses** (listmybusinesses.com) — free plan, manually verified before going live, and advertises **do-follow backlinks** plus multi-category placement. The best backlink value of the Indian free tier.
+5. **Plumint** (plumint.com) — free forever with no hidden charges, unlimited products and services on one listing, plus per-listing view and traffic-source analytics. The analytics are the reason to use it: it is the only free directory here that tells you whether the listing is being seen.
+6. **Beezinfo** (beezinfo.com) — free digital business profiles, claims 10 lakh+ Indian businesses, verified profiles with customer reviews. Volume play; useful for the long-tail "AI services in <city>" queries.
+7. **IndiaBizFinder** (indiabizfinder.com) — free listing across all industries including IT services, no charge and no subscription. Bulk-fill alongside the others in the same sitting.
+8. **SEO Sadhu Agency Directory** (seosadhu.com/list-your-agency) — free, hand-checked, publishes agency lists for **153 cities across India and the USA**. **Blocker:** requires a real local office address that appears on your own website; coworking desks, virtual offices and mailbox addresses are explicitly excluded. Park until there is a verifiable address.
+9. **Vettd** (vettdhq.com) — India's first "verified" agency directory: every review verified by a work email, **GSTIN checked against MCA records**, zero paid placements or paid rankings, free forever, **50 founding spots**, live within 48 hours. The most credible Indian agency listing found in 19 runs — and gated on GST registration, so it is a reason to complete that paperwork rather than a task for today.
+10. **Kainotomic Marketplace** (kainotomic.com/marketplace) — **85% kept**, no listing fee, monthly payouts, and an **AI review engine** that verifies a listing does what it says before buyers see it. Sells agents, AI apps, APIs, workflows and templates, each with your own pricing. The cleanest new home for the n8n workflow packs already prepared for Sigrix/Swarms/Neura.
+
+*Watchlist (this cycle): **Poniak Labs** (0% fee launch offer for agent creators — REST-API agents, Streamlit apps, code-repo agents; terms still thin, verify before relying), **AgentMarket** (agentmarket.fly.dev — 0% platform fees, escrow in SOL/USDC, but read-only Solana **devnet**, so not a revenue rail yet), **shopexperts** (curated Shopify expert directory, commission-free for merchants, optional paid subscription for experts — the right home for the Proposal BA speed-fix offer once the site is up), **Agency Navigator / njgraphica** (500+ verified Indian agencies, 25+ cities — paid placement model, so deprioritised).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal BC — "Get found in the ten places your customer actually looks" listing pack (local SMB: clinic, salon, coaching centre, boutique, CA firm)**
+> Hi [Name], when someone in [city] searches for [service], they don't only look at Google — they check Justdial, the local directories, and increasingly they just ask ChatGPT. I checked and your business is on Google but missing from most of the free Indian directories, which is why your competitor with a worse service shows up in more places than you. I'll list you properly on ten of them — WeHelp, OneTapListing, ListMyBusinesses, Plumint, Beezinfo, IndiaBizFinder and the rest — with your name, address and phone written identically on every one, because mismatched details are what stops Google trusting a listing. You get a one-page sheet with every live link and login, so it's yours to keep. Rs 2,999, done in 3 working days, and if any listing gets rejected for a reason on my side I fix it free. Want me to send the free check of where you currently appear first?
+
+**Proposal BD — Half-day AI session for your team, ending with a government certificate (agency, CA firm, school, 10–40 person services company)**
+> Hi [Name], most teams I meet have two or three people quietly using ChatGPT and everyone else pretending AI isn't happening — which means the output quality varies wildly and nobody can tell you what's safe to paste into a client email. I run a half-day session for your team: what these tools are actually good at, how to write a prompt that returns something usable, what must never go into them (client data, pricing, PAN/GST details), and a written one-page policy you can hand to a new joiner. Everyone finishes by enrolling in the government's free **Yuva AI for All** course from the IndiaAI Mission — 4.5 hours, 12 Indian languages, MeitY certificate — so your team ends the month with a credential, not just a workshop. Rs 4,999 for up to 15 people, in person in [city] or on Zoom, and the policy document is yours to reuse. Which team would benefit most — sales, accounts, or operations?
+
+**Proposal BE — "Make it sound like a human": rewrite of the listings and profile copy that got rejected or ignored (any SMB already using ChatGPT for marketing)**
+> Hi [Name], your Google Business description reads like it was written by AI — because it was, and it's costing you twice. Directory sites like OneTapListing now auto-flag AI-written descriptions and reject the submission permanently, and the ones that don't reject you rank you lower because every competitor's copy sounds identical. I rewrite your public copy in a voice that sounds like the person who actually runs the place: Google Business profile, your top three directory listings, Instagram bio, and the "about us" block on your website — with real specifics (your area, your years, what customers actually say) instead of "we are passionate about excellence". Rs 1,999 for all of it, delivered in 48 hours, one round of changes included. Send me your current description and I'll rewrite the first paragraph free so you can judge the difference before paying anything.
+
+### Revenue Status
+- Recorded revenue this run: Rs 0 (no confirmed revenue signal).
+- Razorpay unreachable (auth failure, 19th consecutive run) — payment events unknown, not zero.
+- Supabase not connected (no authorised integration) — new-signup events unknown, not zero.
+- No payments, messages, listings or approvals were performed (drafts and log only).
+
+### Daily Growth Topic (PART 2)
+- Day number 5 -> 5 mod 5 = 0 -> **TOPIC 5: Upskilling Resource**.
+- Pick (fresh vs the 10-20 n8n Academy, 10-25 OpenAI Academy, 10-30 HubSpot AEO and 11-04 Cloudflare picks): **Yuva AI for All** — a free, 4.5-hour, self-paced AI foundation course from the **IndiaAI Mission (MeitY)**, delivered on FutureSkills Prime in **12 Indian languages** including Hindi, Bengali, Tamil, Telugu, Marathi and Gujarati, six modules from "what AI is" to ethics and safe use, ending in a **Government of India certificate**. Launched November 2025 with the stated aim of skilling one crore people.
+- Why this one, for this business: it is the only free credential found in 19 runs that a *client* will recognise without explanation. An Indian SMB owner does not know what an "AEO certification" is, but a MeitY certificate on the wall or in a proposal footer changes the conversation — and the same course is the curriculum backbone for Proposal BD (team AI session), so studying it and selling it are the same afternoon's work.
+- Primary link: https://www.futureskillsprime.in/course/yuva-ai-for-all/ (IndiaAI Mission page: https://indiaai.gov.in)
+- Secondary (different skill, free, technically deeper): **Microsoft's "AI Agents for Beginners"** — 18 lessons, MIT-licensed, ~70k stars, with written lessons, short videos, Python code samples and full translations in Hindi, Bengali, Tamil, Telugu, Kannada, Malayalam, Marathi and Punjabi. Caveat: the code samples require an Azure account, so treat the lessons as the free part. https://microsoft.github.io/ai-agents-for-beginners/ | repo: https://github.com/microsoft/ai-agents-for-beginners
+- Mini action: block 4.5 hours tonight, finish Yuva AI for All in Hindi, download the certificate, and put it in the proposal footer of BC/BD/BE plus the LinkedIn headline. Then draft the one-page "safe AI use" policy that Proposal BD promises — it is the deliverable that turns the certificate into revenue.
+
+### Next Actions
+1. [OWNER] **Deploy the Clevora landing page** — offline 15 days, `index.html` unchanged since 10-22. Fastest path is still Cloudflare Pages drag-and-drop (Topic 4, 11-04), about 10 minutes.
+2. [OWNER] **Re-authorise the Supabase connection** (and restore the project if still INACTIVE) — signup tracking blocked 19 runs.
+3. [OWNER] **Rotate / verify Razorpay API credentials** — 19 consecutive auth failures; revenue cannot be known until this works.
+4. [AUTO] Re-run all health checks next cycle; log deltas.
+5. [AUTO] **Register the seven directories that need neither GST nor an office** — AgencyGenius, WeHelp, OneTapListing, ListMyBusinesses, Plumint, Beezinfo, IndiaBizFinder — in one sitting with one identical NAP block and one bio. This is the only distribution channel that works while the site is down, and it costs nothing but an afternoon.
+6. [AUTO] **Write every directory description by hand.** OneTapListing permanently rejects AI-generated copy and suspends the account — do not paste model output into a submission form.
+7. [AUTO] **Park Vettd until GSTIN is available and SEO Sadhu until there is a verifiable office address** — both are gated on paperwork, not on money. Note Vettd's 50 founding spots as a reason to finish the GST registration.
+8. [AUTO] **Cross-list one n8n workflow pack on Kainotomic** (85%, no listing fee) alongside the existing Sigrix / Swarms / Neura Market plan — same JSON, no exclusivity anywhere.
+9. [AUTO] **Finish Yuva AI for All and write the one-page safe-AI policy** — certificate plus policy is Proposal BD ready to send, and both are free to produce.
+10. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels producing any signal while the website is down.
