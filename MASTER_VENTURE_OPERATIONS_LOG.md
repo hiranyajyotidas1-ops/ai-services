@@ -1430,3 +1430,80 @@
 8. [AUTO] **Cross-list one n8n workflow pack on Kainotomic** (85%, no listing fee) alongside the existing Sigrix / Swarms / Neura Market plan — same JSON, no exclusivity anywhere.
 9. [AUTO] **Finish Yuva AI for All and write the one-page safe-AI policy** — certificate plus policy is Proposal BD ready to send, and both are free to produce.
 10. [AUTO] Keep the Quora/Reddit + LeadSutra brief plays running — still the only channels producing any signal while the website is down.
+
+---
+
+## Run VENTURE-2026-11-07-01 — 2026-11-07 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:08 IST / 03:38 UTC
+**Run:** #20 logged
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 17th day** | Page fetch returned an empty result set again (no rendered content). `index.html` re-fetched this run: still 547 bytes, `<title>Site Retired</title>`, byte-identical to the 10-22 placeholder. Repo root still holds only `index.html` + this log. |
+| Supabase (users) | BLOCKED (20th run) | No authorised Supabase integration in this run's tool set, so the `users` query cannot be issued at all. Project `ocuyxgocmtucdckiqqeh` state unverified. Signups UNKNOWN, not zero. |
+| Razorpay (payments) | BLOCKED (20th consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment state UNKNOWN, not zero. |
+| GitHub log | OK | This entry appended to `MASTER_VENTURE_OPERATIONS_LOG.md` and committed to `main`. |
+| Lead research | OK | 10 new platforms, none repeated from the previous 19 runs. |
+| Proposals | OK | 3 fresh drafts (BF / BG / BH). |
+
+### Key Findings
+
+- **Website: day 17 offline.** Twenty runs of lead research, price anchors and proposal drafts still terminate at a page that says "Site Retired". Nothing in this engine can convert while that is true. The fix is a single file drag-and-drop (Cloudflare Pages) or re-enabling Pages under repo Settings → Pages → `main` / `/ (root)`. Ten minutes, owner-only.
+- **Razorpay and Supabase have now failed for 20 consecutive runs each.** This is no longer an incident, it is the steady state: the engine has been blind to revenue and signups for three weeks. Until the Razorpay keys are rotated and the Supabase connector authorised, every revenue line in this log is "unknown", and no run can tell the owner whether the venture has earned anything.
+- **Market signal this cycle: the AI-talent marketplaces are consolidating around verification rather than fees.** ZEM (verified AI services marketplace) and CoreDhristi (6-layer security review of listed agents, 80% to sellers) both sell *trust* as the product. For a solo operator the implication is that a documented, reproducible delivery process — same scope, same turnaround, same handover — is now a listing asset, not just good practice.
+- **Second signal: listing directories have gone free-and-forever as the default, with verification as the only gate.** CodersAgent, AgencyOra (India) and Hivemindd all list free and vet manually. The barrier has moved from money to paperwork and portfolio proof, which favours an operator who can show three shipped examples.
+- **Third signal: hybrid human+agent marketplaces are where a services shop can sell workflows, not hours.** ImagineAnything and AgentMarket let a seller publish a *task* that either an agent or a human fulfils; AI Agent Store runs the same model through Claw Earn. Clevora's n8n workflow packs fit this shape exactly — sell the workflow once, deliver it many times.
+- **Fourth signal (India-specific): escrow + UPI + founding-seller slots are the standard launch package.** CollabMarket and Tewdy both lead with escrow and low/no commission and are actively recruiting early sellers. Early-seller slots are the cheapest visibility available to a new shop and cost nothing but a signup.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-07)
+
+**A. Verified AI-services / AI-agent marketplaces:**
+
+1. **ZEM — Verified AI Services Marketplace** (zemmarketplace.com) — positions itself on *verified* AI service providers rather than open bidding. Best fit for a shop selling defined deliverables (content packs, automation builds, landing pages) with a review gate that keeps out the low-price noise.
+2. **CoreDhristi** (coredhristi) — global marketplace for verified AI agents, automations and MCP servers; **sellers keep 80%**, listing free, 6-layer security review before buyers see a listing. Accepts automations, which maps directly onto the n8n packs.
+3. **HireAIDevelopers.app** (hireaidevelopers.app) — AI-specific freelance hiring board. Smaller and less noisy than Upwork; buyers arrive already convinced they want AI work, so proposals need less education and can price higher.
+4. **AI Agent Store / Claw Earn** (aiagentstore.ai) — 1,300+ agent directory plus **Claw Earn**, where published tasks are picked up by agents and their operators. Two uses: free directory presence, and a place to post the repeatable task types Clevora already sells.
+5. **ImagineAnything Marketplace** (imagineanything.com) — lets an agent (or its operator) earn from published capabilities. Early, thin terms — treat as a free cross-listing and a distribution experiment, not a revenue line yet.
+6. **AgentMarket** (agentmarket.chitacloud.dev) — professional directory for autonomous agents, 0% platform fees. Directory value only until payment rails are live; verify escrow terms before relying on it.
+
+**B. Agency / expert directories (free listing, manual vetting):**
+
+7. **CodersAgent** (codersagent.com) — curated directory of software development agencies and AI/automation shops. Free listing, human review. Good backlink and a plausible source of inbound "who can build this" enquiries.
+8. **AgencyOra** (agencyora.in) — India-focused verified network connecting buyers to IT and digital agencies. Free to list, manual verification. The most India-relevant agency directory found this cycle.
+9. **Hivemindd** (hivemindd.com) — fractional IT-expert network aimed at US SMBs. Higher rate ceiling than Indian-market platforms; requires a strong profile and referenceable work.
+
+**C. Hybrid / early-seller platforms:**
+
+10. **Tewdy** (tewdy.com/offer-your-skills) — offer skills directly, low single-digit commission, AI matching, global buyers. **Also worth a signup this cycle: CollabMarket** (collabmarket.in) — Indian marketplace with escrow, UPI payouts and open founding-freelancer slots; early-seller placement is free visibility.
+
+*Watchlist (this cycle): **Brandvibe** (AI consulting platform — hire expert AI consultants; positioning good, terms unverified), **MarketClaw** (Replit-hosted agent marketplace; too early to trust with delivery), **TheBananaHive** (creator marketplace with realtime payouts — creator-shaped, not services-shaped).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal BF — AI Answer Engine audit ("be the answer ChatGPT gives") — D2C brand, clinic chain, coaching institute, B2B SaaS**
+> Hi [Name], I asked ChatGPT, Gemini and Perplexity the five questions your customers actually type before they buy — "best [category] in [city]", "is [Company] good", "[competitor] vs [Company]" — and [Company] came up in [0-1] of them. Your competitor came up in [3]. That is not a content problem, it is a structure problem: those tools quote pages that answer a question directly, in the first two sentences, in plain language, with the facts on the page. I fix that. Deliverable: a 6-page answer-engine pack — one page per buying question, schema markup, a comparison page, and a one-page sheet of exactly what I changed and why. Rs 4,999 fixed, 5 working days. I'll send the free 5-question audit first so you can see the gap before you spend anything. Shall I run it?
+
+**Proposal BG — Product content pack for a Shopify / D2C catalogue (store doing 20-200 orders/month)**
+> Hi [Name], I looked at [store] and the product pages are doing the selling on price alone — the descriptions are supplier copy, the titles miss the words people search, and nothing on the page answers "will this fit / will this last / what's it made of". That is why the traffic converts at [x]% and the returns come from the same three products. I'll rewrite 30 products: search-led title, 120-word description that answers the three objections, 5 bullet specs, alt text, and a Google-friendly meta description — plus a short note on which 5 products to feature and why. Rs 6,000 for 30 products, delivered in 5 days, one round of revisions. Want me to send 2 rewritten products free so you can compare?
+
+**Proposal BH — WhatsApp + voice AI receptionist for a clinic, salon or coaching centre (missed-call problem)**
+> Hi [Name], every call that rings out at [business] after 7pm is a booking that went to whoever answered. I set up a WhatsApp auto-reply plus a simple AI receptionist that answers the four questions you get all day — timings, price, location, availability — books the slot into your Google Calendar, and hands anything complicated to a human with a summary. Setup Rs 8,000 one-time, Rs 1,500/month for the messaging and monitoring, live in 4 working days, and you keep every login. I'll show you a working demo on your own number before you pay anything. Worth 15 minutes this week?
+
+### Revenue Status
+
+- Recorded revenue this run: **Rs 0** (nothing observable).
+- Razorpay: `Authentication failed` — payment events not retrievable. State UNKNOWN.
+- Supabase: no authorised connection — signup events not retrievable. State UNKNOWN.
+- No payments taken, no messages sent, no customer-facing action performed. Drafts only, per standing instruction.
+
+### Next Actions
+
+1. **[OWNER — blocking, day 17]** Restore the storefront. Fastest path: drag the Clevora `index.html` into Cloudflare Pages (free, custom domain optional). Alternative: repo Settings → Pages → Source `main` / `/ (root)` → Save, then confirm the URL renders. Nothing else in this engine pays until this is done.
+2. **[OWNER — 20 runs overdue]** Rotate the Razorpay API keys in the connector so payment checks stop returning `Authentication failed`.
+3. **[OWNER — 20 runs overdue]** Authorise the Supabase integration (project `ocuyxgocmtucdckiqqeh`) so the `users` table is queryable again; confirm the project is not paused.
+4. **[ENGINE — next run]** Re-verify website, Razorpay and Supabase first; only then repeat lead research. Continue rotating the proposal bank (BF/BG/BH drafted today) and the lead list.
+5. **[OWNER — cheap, 20 minutes]** Sign up free to AgencyOra, CodersAgent and CollabMarket once the site is live — all three need a working URL as the entry ticket.
