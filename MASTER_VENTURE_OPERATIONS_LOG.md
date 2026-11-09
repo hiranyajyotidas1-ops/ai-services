@@ -1507,3 +1507,82 @@
 3. **[OWNER — 20 runs overdue]** Authorise the Supabase integration (project `ocuyxgocmtucdckiqqeh`) so the `users` table is queryable again; confirm the project is not paused.
 4. **[ENGINE — next run]** Re-verify website, Razorpay and Supabase first; only then repeat lead research. Continue rotating the proposal bank (BF/BG/BH drafted today) and the lead list.
 5. **[OWNER — cheap, 20 minutes]** Sign up free to AgencyOra, CodersAgent and CollabMarket once the site is live — all three need a working URL as the entry ticket.
+
+---
+
+## Run VENTURE-2026-11-09-01 — 2026-11-09 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:06 IST / 03:36 UTC
+**Run:** #21 logged
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 19th day** | Two independent fetches of https://hiranyajyotidas1-ops.github.io/ai-services/ returned no rendered content. `index.html` re-fetched: still **547 bytes**, SHA `9e080c7c42e311ca9abb9a4167e3690543d19960`, `<title>Site Retired</title>` — byte-identical to the 10-22 placeholder, unchanged across all 19 days. GitHub Pages API returns 404 for this repo (no Pages site configured on this repo/branch), so the URL is not being served from `main`. Repo root still holds only `index.html` + this log. |
+| Supabase (users) | BLOCKED (21st run) | No authorised Supabase connection in this run's tool set, so the `users` query on project `ocuyxgocmtucdckiqqeh` cannot be issued at all. Signups UNKNOWN, not zero. |
+| Razorpay (payments) | BLOCKED (21st consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment state UNKNOWN, not zero. |
+| GitHub log | OK | This entry appended to `MASTER_VENTURE_OPERATIONS_LOG.md` and committed to `main`. |
+| Lead research | OK | 10 new platforms, none repeated from the previous 20 runs (checked against the full lead list in this file). |
+| Proposals | OK | 3 fresh drafts (BI / BJ / BK). |
+
+### Key Findings
+
+- **Website: day 19 offline, and the cause is now pinned down.** The repo's Pages endpoint returns `404 Not Found` — this repository has **no GitHub Pages site configured**. The 10-19 "recovery" was a short-lived deployment that no longer exists; since 10-22 every URL fetch has landed on the retired placeholder or nothing at all. Fix is not a content edit, it is re-enabling the site: repo Settings → Pages → Source `main` / `/ (root)` → Save, then wait for the first build. Alternatively drop the same `index.html` into Cloudflare Pages (already connected in the toolset) — 10 minutes, owner-only, no code.
+- **Razorpay and Supabase have now failed for 21 consecutive runs each.** Three weeks with zero observability on revenue and signups. Every revenue line in this log is "unknown", not "zero". No amount of lead research changes that.
+- **Market signal this cycle: the buyer-side market has moved to "fixed scope, published price, escrow" and the seller-side to "founding seat = permanent fee cut".** RemoteAI, ComeUp, VibeBay, mysoft.ai, Aiphra and CollabMarket all lead with the same three things. The practical implication for Clevora: list a **price card** (not "contact me for a quote") on every channel, because buyers are now comparing published packages side by side.
+- **Second signal: automation-specific talent pools are now a distinct category from general freelancing.** HireAutomators, Worksflow.ai, Workli, AgenMart, AI Freelance Hub and AutoGineer all index builders by *tool* (n8n / Make / Zapier / MCP) rather than by job title. A one-line "n8n + Make + MCP workflows" positioning beats "digital services" on every one of them.
+- **Third signal: the clip-repurposing market has an open-source floor.** OpenShorts (MIT, self-hosted, MCP server, n8n-drivable) makes "1 long video → 10 reels" a zero-marginal-cost delivery for any operator with a laptop. That is the cheapest new service Clevora can add this quarter — no subscription, no watermark, no per-minute billing.
+- **Fourth signal (India): campus and verified-professional Indian platforms are competing on trust paperwork, not price.** DoItForMe, AssistMe, Foontro and Pro X all lead with Aadhaar/KYC verification and UPI escrow. For Clevora the entry ticket is the same on all of them: a live site + three shipped samples.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-09)
+
+**A. AI-workflow / automation talent pools (highest fit for the n8n packs):**
+
+1. **RemoteAI** (remoteai.io) — n8n / Zapier / Make expert pool with ready-made fixed-price services ("from $150, 3-day delivery"); founding sellers get placement, platform takes **no commission** on agreed contracts. Closest existing pricing to Clevora's own — list the same productized packs.
+2. **Worksflow.ai** (worksflow.ai) — 4,200+ verified automation engineers, 3-stage skill test, top 5% only; 6 workflow categories incl. e-commerce and lead-gen. Higher bar, higher buyer intent; apply as an engineer, not as a generic freelancer.
+3. **HireAutomators** (hireautomators.com) — verified builder pool for n8n/Make/Zapier/MCP/voice AI; recruiters search and message directly, free during launch, builders never pay. Pure inbound channel — no bidding.
+4. **Workli** (workli.tech) — automation-expert hiring with skill-ranked shortlists and milestone proposals; takes **no cut** and does not hold funds (payment direct). Free job proposals; good for written-scope discipline.
+5. **AgenMart** (agenmart.com) — AI automation marketplace: clients post projects, verified experts deliver, escrow on milestones. Free expert listing; smaller volume, low competition.
+
+**B. AI product / agent marketplaces (sell the workflow once, deliver many times):**
+
+6. **Swfte** (swfte.com/creators) — enterprise-facing marketplace for **workflows, datasets, fine-tunes and agents**; per-execution / per-seat pricing; creator keeps **85%** standard, 80% featured. Highest price ceiling found this cycle ($2K–$30K/mo quoted for workflow listings) but a real quality gate (validator + provenance checks).
+7. **Aiphra** (aiphra.com) — AI-agent marketplace; free plan 7% fee (5% Pro, 4% Elite), payouts in 1–7 days, first 3 listings free. Low-friction cross-listing for agent-shaped deliverables.
+8. **mysoft.ai** (mysoft.ai) — AI-only marketplace covering agents, workflows, GPTs **and AI consulting**; founding sellers 5% for life (standard 10%), escrow, LinkedIn/GitHub-verified badges. Note: supply-side was near-empty at last public check — treat as a free founding-seat land-grab, not a revenue line.
+9. **Sigrix** (sigrix.io/sell) — human-reviewed marketplace for prompts, skills, assistants, agents, MCP servers; keep **80–85%**, no listing or monthly fee, no exclusivity. Best channel for turning Clevora's prompt packs and MCP connectors into passive listings.
+
+**C. General / regional marketplaces worth one profile each:**
+
+10. **ComeUp** (comeup.com) — European Fiverr-alike with a live automation category: median order ~$270, median delivery 6–7 days, 99% positive reviews. Non-US/EU buyer base is less saturated than Fiverr's automation niche.
+    *Also new this cycle:* **YunoJuno** (yunojuno.com — UK/global freelance management, day rates, compliant contracts in 165+ countries; enterprise-shaped, needs a strong profile), **Foontro** (foontro.com — Pune-based, manually vetted Indian marketplace; content and design demand) and **AssistMe** (assistme.co.in — Indian, Aadhaar-verified, early access open).
+
+*Watchlist (this cycle): **DoItForMe** (doitforme.in — India campus freelance network, 5–10% fee; wrong buyer for Clevora's ticket size but a cheap source of sub-contract capacity), **Being Teen** (teen gig platform — not a fit, age-gated), **Katto / proclips / ClipPod** (clip tools, not marketplaces — noted for the service line below).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal BI — LinkedIn ghostwriting retainer for a founder, consultant or agency owner (8 posts/month)**
+> Hi [Name], your profile is the first thing a prospect checks after a referral, and right now it reads like a CV — job titles and services, nothing that makes someone want to reply. I write founder-voice LinkedIn posts from a 30-minute call a month: 8 posts, no AI-sounding filler, each one built around something you already know (a client problem, a number, a mistake you fixed), plus a comment-reply playbook so the posts don't die in the feed. Rs 8,000/month, first two posts free so you can judge the voice. Want me to draft those two from our next call?
+
+**Proposal BJ — Google Business Profile + review engine for a clinic, salon, gym or coaching centre**
+> Hi [Name], I searched "[your service] near me" from two locations in [city] and [business] didn't show in the top three — the map pack is being held by competitors with more photos, more reviews and a filled-in profile. I fix the profile (categories, services, hours, 10 geo-tagged photos, Q&A), set up a review link that goes out on WhatsApp after every visit, and send you a one-page sheet for replying to reviews. Rs 3,499 one-time, live in 3 working days, and I'll send you the free 10-point profile audit first so you can see exactly what's missing. Shall I run the audit?
+
+**Proposal BK — Prospect list + first-line personalisation for an agency or B2B service (500 contacts)**
+> Hi [Name], cold lists fail on two things: wrong people and no reason to reply. I build 500 contacts matched to your actual buyer (role, company size, city, tech stack where visible), each with a verified email, a LinkedIn URL and a one-line personalisation note written from something real on their site — so your first line isn't "I hope this finds you well". Delivered as a clean sheet with a simple status column for your outreach tool. Rs 2,500 for 500, Rs 4,500 for 1,000, 4 working days, 90% deliverability on the email column or I replace the bad rows free. Want a free 25-row sample first?
+
+### Revenue Status
+
+- Recorded revenue this run: **Rs 0** (nothing observable).
+- Razorpay: `Authentication failed` — payment events not retrievable. State UNKNOWN.
+- Supabase: no authorised connection — signup events not retrievable. State UNKNOWN.
+- No payments taken, no messages sent, no customer-facing action performed. Drafts and log only, per standing instruction.
+
+### Next Actions
+
+1. **[OWNER — blocking, day 19]** The repo has **no Pages site configured** (API 404). Repo Settings → Pages → Source `main` / `/ (root)` → Save. If that is blocked, drag the Clevora `index.html` into Cloudflare Pages instead. Nothing in this engine converts until a URL renders.
+2. **[OWNER — 21 runs overdue]** Rotate the Razorpay API keys in the connector.
+3. **[OWNER — 21 runs overdue]** Authorise the Supabase connector (project `ocuyxgocmtucdckiqqeh`) and confirm the project is not paused.
+4. **[OWNER — 15 minutes, no site needed]** Claim the free founding seats while they exist: mysoft.ai (5% for life), RemoteAI, HireAutomators, AgenMart, Sigrix. These need a profile and a price card, not a live site.
+5. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first; then continue lead rotation (BI/BJ/BK drafted today) and start a proposal bank index so drafts can be reused per channel.
+6. **[OWNER — one afternoon, new revenue line]** Add "video → 10 reels" as a productized service: OpenShorts is MIT-licensed, self-hosted, free, has an MCP server and an n8n node. Zero marginal cost, so it can be sold at Rs 1,500–2,500 per long video.
