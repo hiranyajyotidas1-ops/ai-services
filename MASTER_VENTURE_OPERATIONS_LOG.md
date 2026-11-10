@@ -1586,3 +1586,90 @@
 4. **[OWNER — 15 minutes, no site needed]** Claim the free founding seats while they exist: mysoft.ai (5% for life), RemoteAI, HireAutomators, AgenMart, Sigrix. These need a profile and a price card, not a live site.
 5. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first; then continue lead rotation (BI/BJ/BK drafted today) and start a proposal bank index so drafts can be reused per channel.
 6. **[OWNER — one afternoon, new revenue line]** Add "video → 10 reels" as a productized service: OpenShorts is MIT-licensed, self-hosted, free, has an MCP server and an n8n node. Zero marginal cost, so it can be sold at Rs 1,500–2,500 per long video.
+
+---
+
+## Run VENTURE-2026-11-10-01 — 2026-11-10 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:03 IST / 03:33 UTC
+**Run:** #22 logged
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 20th day** | Checked three ways this run: (1) page fetch of the Pages URL returned an empty result set — no rendered content; (2) the repo page on github.com shows no `github-pages` environment and no Pages link; (3) `api.github.com/.../pages` returned 403 (unauthenticated rate limit, so inconclusive on its own). Default branch is `main`. Nothing has changed since 10-22. |
+| Supabase (users) | BLOCKED (22nd run) | No authorised Supabase integration in the tool set — the `users` query cannot be issued at all. Project `ocuyxgocmtucdckiqqeh` state unverified. Signups UNKNOWN, not zero. |
+| Razorpay (payments) | BLOCKED (22nd consecutive run) | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment state UNKNOWN, not zero. |
+| GitHub log | OK (different route) | The sandbox `GH_TOKEN` is now **invalid** (`gh auth status` → token invalid), so the previous git-push path is dead. This entry was committed through the GitHub MCP integration instead. Worth noting: if the MCP connector is ever removed, the log has no working write path. |
+| Lead research | OK | 10 new platforms, none repeated from the previous 21 runs. |
+| Proposals | OK | 3 fresh drafts (BL / BM / BN). |
+
+### Key Findings
+
+- **The automation-template marketplaces have become a genuine second channel, and 90% payouts are now the baseline.** Neura Market (10% fee), SellRamp (10%) and Nexora Aero's founding program (0% for the first 1,000 accounts) all publish a 90%+ keep rate. Fees are no longer the differentiator — verification is: BotAisle security-scans every upload, Nexora founder-reviews every listing, mysoft/Sigrix use badges. For Clevora this means a listing needs proof of delivery, not a lower price.
+- **FlowMarket is the single best structural fit found in 22 runs.** It sells four things from one account — custom workflow, assisted setup, monthly maintenance, and a ready-to-import JSON base — with commission falling 13% → 5% as volume grows. That is exactly the Clevora service ladder (build → setup → retainer → template), so one listing can carry all four price points.
+- **Founding-seller windows are the cheapest option value available right now:** implo.ai (0% for 90 days, first 10 sellers), Nexora Aero (0% for first 1,000 accounts), AIMarket24 (5% for six months, first 50), BotAisle (founding creators, pre-launch). All cost a profile, none cost money.
+- **Only one platform found this cycle solves distribution rather than listing:** Brainlancer brings the clients, runs the ads, and takes 20% — the seller builds an 80%-standard system once and redeploys it. Worth an application; it is the closest thing to a sales function the venture currently lacks.
+- **Still true after 22 runs:** the website is the bottleneck, not the supply of channels. There are now 30+ places to list Clevora and zero places a buyer can read about it.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-10)
+
+**A. Automation / workflow marketplaces (sell the build once, deliver many times):**
+
+1. **FlowMarket** (flowmarket.pro) — n8n/Make/Zapier/Airtable marketplace with **four ways to sell from one account**: custom workflow, assisted setup, monthly maintenance, ready-to-import JSON base. Free to publish, Stripe Connect payouts, **tiered commission 13% → 5%** on cumulative volume (€0–€2,000). Best fit for Clevora's build→retainer ladder.
+2. **Neura Market** (neura.market) — Make / Zapier / n8n / Activepieces / Pipedream templates; **flat 10%, seller keeps 90%**; free to list; every template is import-tested before it goes live. Their own guidance is that cross-platform packs (same use case for Make + Zapier + n8n) sell to three audiences at once.
+3. **SellRamp** (sellramp.com) — AI-workflow marketplace for builders; **keep 90%**, flat 10% fee, no monthly charge, instant Stripe Connect payouts, buyer community actively hunting automations.
+4. **The AI Agent Marketplace** (theaiagentmarketplace.com) — Claude skills, Make/Zapier/n8n flows, custom GPTs and bundles; **85% to seller, 15% fee**, no listing fee, prices $9–$999, 24-hour quality review, Stripe payouts.
+5. **AIMarket24** (aimarket24.pro) — n8n-focused marketplace, free listing, **15% standard fee but 5% for six months for the first 50 founding sellers**. Also documents n8n's own Creator Hub route (paid templates after three approved submissions; commission not published).
+6. **implo.ai** (implo.ai/become-a-creator) — prompts, workflows, agents, templates sold to SMBs; standard 80/20, but **first 10 sellers keep 100% for 90 days** then a locked-in 80%. Price bands published per asset type (workflows $9–$79, agents $19–$149) — useful as ready-made price anchors.
+
+**B. Curated / verification-gated platforms:**
+
+7. **Nexora Aero** (nexoraaero.com) — automation marketplace with escrow, invoices and payouts handled; **10% fee, 90% to seller, 0% for the first 1,000 accounts**; founder reviews every listing; accepts n8n, agents, scrapers, plugins, RPA and Adobe scripts. Also publishes free scripts/prompts as a lead magnet — a content-marketing model worth copying.
+8. **BotAisle** (botaisle.com) — bots, prompts, workflows, MCP servers, skills, agents; **80% to creator, 20% platform**, 14-day refund window, every upload security-scanned before it goes live, six languages at launch. Pre-launch (payments "launching soon"), so treat as a free founding-creator seat, not a revenue line yet.
+9. **Swarms Marketplace** — agents, prompts, tools, MCP servers and skills; **10% fee, keep 90%**, free to publish, MCP servers and skills in open formats so listings are portable. Good for the MCP/prompt-pack assets specifically.
+
+**C. One to apply to for demand, not for listing:**
+
+10. **Brainlancer** — curated marketplace where businesses buy *installed* AI systems built by independent builders; the platform brings clients and runs ads; seller keeps **80%**, builds 80%-standard/20%-customised systems, and earns recurring "Care Package" revenue. Free to join, no subscription, onboarding the first 20 founding builders. The only channel this cycle that supplies buyers.
+
+*Also new this cycle (not counted in the ten): **Automation Workflows** (automationworkflows.io — 85% to seller, 15% fee, no listing or monthly fee, PayPal/bank payouts, lifetime updates), **The No-Code Marketplace** (thenocodemarketplace.com — 75% to seller, 2–5 day admin review), **AI Agent Marketplace** (ai-agentmarketplace.com — 88% to provider but a **$45/month listing fee**, so skip until there is revenue).*
+
+*Watchlist: **FlowMarket's LinkedIn seller drive** (actively recruiting n8n/Make freelancers as of June 2026 — an application there is also a warm intro), **n8n Creator Hub** (three approved free templates unlocks paid templates; the cheapest credibility asset available).*
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal BL — Long video → 10 short clips (coach, creator, podcast, webinar-led B2B)**
+> Hi [Name], you already have the hard part — an hour of video where you explain something you know better than most people. What you don't have is the 10 clips that would actually get watched. I cut one long video into 10 vertical clips, each with a hook in the first two seconds, burned-in captions, and a written caption plus 5 hashtags per clip — delivered as ready-to-post files with a suggested posting order. Rs 2,500 per long video, 3 working days, first clip free from your last upload so you can see the style before you commit. Send me the link to one video and I'll cut that free clip today.
+
+**Proposal BM — Monthly numbers → one-page dashboard + 5-line summary (agency, clinic chain, D2C brand)**
+> Hi [Name], your month-end report is probably a spreadsheet someone rebuilds by hand every month, and by the time it's ready nobody has read past page one. I build it once as a live dashboard — ad spend, leads, conversions, revenue, cost per lead, month-on-month — pulling from your Sheets/GA4/Ads/Meta accounts, then send a 5-line plain-English summary on the 1st of every month saying what moved and what to do about it. Setup Rs 6,000 one-time, Rs 2,000/month to keep it running and write the summary. I'll build the first version free from last month's export — if the numbers don't make you act differently, don't pay for it.
+
+**Proposal BN — Email flows for a D2C store already getting traffic (Shopify/WooCommerce, 500+ visitors/month)**
+> Hi [Name], [store] is paying for traffic and then letting it leave — no welcome email when someone joins the list, no reminder when a cart is abandoned, no follow-up after a first order. Those three emails are the cheapest revenue in e-commerce because the customer has already shown intent. I build all three: a 3-email welcome sequence, a 2-email abandoned-cart sequence, and a post-purchase email that asks for a review — written in your brand voice, wired into Klaviyo/Mailchimp, tested with a live send. Rs 7,500 for the set, live in 5 working days, and I'll show you the projected revenue per 1,000 visitors before you decide. Want the free flow audit of your current setup first?
+
+### Topic of the Day (Part 2)
+
+- Day number 10 -> 10 mod 5 = 0 -> **TOPIC 5: Upskilling Resource**.
+- Pick (fresh vs 10-20 n8n Academy, 10-25 OpenAI Academy, 10-30 HubSpot AEO, 11-04 Cloudflare, 11-05 IndiaAI Yuva AI for All): **Claude Academy** (`academy.claude.com`, formerly Anthropic Academy) — 28 free courses, ~434 lessons / ~83 hours, 24 with LinkedIn-shareable completion badges, free email signup, no credit card. The old `anthropic.skilljar.com` site closes in early December 2026, so certificates there should be exported now.
+- Why this one: two courses (Introduction to Agent Skills, 6 lessons/1 hr; Introduction to Model Context Protocol, 10 lessons/1 hr) produce exactly the artefacts Clevora can sell — a `SKILL.md` pack and an MCP connector — and both are what the new marketplaces in this cycle's lead list are paying 80–90% for.
+- Primary link: https://academy.claude.com (Build-with-Claude collection: https://academy.claude.com/collections/build-with-claude)
+
+### Revenue Status
+
+- Recorded revenue this run: **Rs 0** (nothing observable).
+- Razorpay: `Authentication failed` — payment events not retrievable. State UNKNOWN.
+- Supabase: no authorised connection — signup events not retrievable. State UNKNOWN.
+- No payments taken, no messages sent, no customer-facing action performed. Drafts and log only, per standing instruction.
+
+### Next Actions
+
+1. **[OWNER — blocking, day 20]** Restore the storefront. Fastest path: drag the Clevora `index.html` into Cloudflare Pages (free). Alternative: repo Settings → Pages → Source `main` / `/ (root)` → Save. Nothing in this engine pays until a URL renders.
+2. **[OWNER — 22 runs overdue]** Rotate the Razorpay API keys in the connector.
+3. **[OWNER — 22 runs overdue]** Authorise the Supabase integration (project `ocuyxgocmtucdckiqqeh`) and confirm it is not paused.
+4. **[OWNER — note]** The sandbox GitHub token is invalid; the log now commits via the GitHub MCP connector. If that connector is ever removed, replace the token in the same sitting.
+5. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first; rotate to a fresh lead set (avoid the 10 today); continue the proposal bank at BL/BM/BN.
+6. **[OWNER — 30 minutes, free option value]** Claim the founding seats while they are open: FlowMarket, Nexora Aero (0% for first 1,000), implo.ai (0% for 90 days), AIMarket24 (5% for six months), BotAisle, Swarms. Profile + price card, no site needed for most.
+7. **[OWNER — one application]** Apply to **Brainlancer** as a founding builder — it is the only channel found that brings buyers rather than listings.
