@@ -1673,3 +1673,86 @@
 5. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first; rotate to a fresh lead set (avoid the 10 today); continue the proposal bank at BL/BM/BN.
 6. **[OWNER — 30 minutes, free option value]** Claim the founding seats while they are open: FlowMarket, Nexora Aero (0% for first 1,000), implo.ai (0% for 90 days), AIMarket24 (5% for six months), BotAisle, Swarms. Profile + price card, no site needed for most.
 7. **[OWNER — one application]** Apply to **Brainlancer** as a founding builder — it is the only channel found that brings buyers rather than listings.
+
+---
+
+## Run VENTURE-2026-11-11-01 — 2026-11-11 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:03 IST / 03:33 UTC
+**Run:** #23 logged
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | DOWN | `https://hiranyajyotidas1-ops.github.io/ai-services/` returns **HTTP 404** — the Pages site is not being served at all (previous runs got the "retired" placeholder; now nothing). |
+| Supabase (users) | BLOCKED | No authorised connection for project `ocuyxgocmtucdckiqqeh`; `users` table not queryable. Signup count UNKNOWN, not zero. |
+| Razorpay (payments) | BLOCKED | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. 23rd consecutive run. |
+| GitHub log | OK | Read via GitHub MCP (file 242 KB, sha `d6fc04f6`), entry appended and committed this run. |
+| Lead research | OK | 10 new channels identified, none repeated from earlier runs. |
+| Proposals | OK | 3 fresh drafts (BO / BP / BQ), no outreach sent. |
+
+### Key Findings
+- **The storefront has moved from "wrong page" to "no page".** Earlier runs saw the 547-byte "This website has been retired." placeholder; today the URL 404s, which means GitHub Pages is not enabled/published for `main` at all. Every lead channel in this file assumes a URL a buyer can open.
+- **Revenue and signup signals are still UNKNOWN, not zero** — both connectors remain unusable, so no conclusion about demand can be drawn from the silence.
+- **Structural shift worth acting on:** the last three cycles mined agent/workflow marketplaces (FlowMarket, Neura, Nexora, Swfte, etc.). Those channels sell *artefacts*. This cycle's ten sell *reputation and time* — a call, a profile, a review, a fixed-scope service. For a solo operator with no site and no reviews yet, the reputation channels (Topmate, Refrens, Whop, Truelancer) are the only ones that can convert **before** the website is fixed.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-11)
+
+*Theme this cycle: India-native storefronts, vetted talent networks and review-led agency directories — deliberately not another agent-marketplace list.*
+
+**A. India-native storefronts and marketplaces (INR, UPI, no FX friction):**
+1. **Topmate** (topmate.io) — India-first creator storefront: 1:1 calls, Priority DM, packages, digital products, memberships, all from one link. **10% commission on sales through your own link, 20% when a new buyer finds you on the Topmate marketplace, plus a 2% INR transaction charge** (a ₹1,000 booking through your own link nets ~₹880 before tax). Payouts to bank within 7 days, UPI accepted. Best first use: a paid **"AI audit — 30 minutes"** call at ₹999–₹2,499 and a ₹299 prompt-pack download.
+2. **Refrens** (refrens.com) — Bengaluru-based B2B freelance marketplace bundled with free invoicing, quotations, expense and GST/TDS reporting. **0% marketplace commission**, escrow available, bank payout in ~2 business days, category "hire" pages that rank in Google (e.g. `/hire/freelance-web-designer`). The invoicing side alone is worth having: GST-compliant invoices for Indian clients at zero cost.
+3. **Truelancer** (truelancer.com) — Indian-owned global marketplace (132+ countries, 2,300+ skills). **8–10% service fee by membership plan, 20 free proposals a month**, free INR bank withdrawal, extra proposal credits from ₹200 for 5. Lower budgets than Upwork, but Indian buyers and INR settlement, and the AI/automation category is far less crowded.
+4. **WorkNHire** (worknhire.com) — India-based, escrow-backed bidding site; free to join, 20 proposals/month, ~5.6% service fee on invoices (third-party review figure — confirm on signup). Small, quiet, low competition; treat as a low-effort second listing next to Truelancer.
+
+**B. Creator / product storefront (sell the pack once, deliver many times):**
+5. **Whop** (whop.com) — host offers, courses, paid communities, templates and memberships behind one checkout. **2.7% + $0.30 domestic card, +1.5% international, no monthly fee**; 100+ payment methods, affiliate program and instant delivery built in. The cleanest place to sell a **"Clevora Automation Pack"** (n8n JSON + video walkthrough + 30-day support) as a product rather than a project.
+
+**C. Vetted talent networks (fewer buyers, much higher rates):**
+6. **MarketerHire** — top-1% marketing talent network, 48-hour matching, monthly engagements in the $5,000+ range. Publishes no contractor rate card (confirm rate and markup separately on the call). Only worth applying once there are 2–3 case studies with numbers.
+7. **A.Team** — curated teams of senior builders (7+ years minimum, six-stage vetting incl. peer code review), one stated rate per builder on the service order, published conversion fee. High bar; the right home for "AI product build" work, not content gigs.
+8. **Outsourcely** — long-term remote engagements, **0% worker fee**, employers pay a subscription and hire direct. Slower to start, but the only channel here built for retainers rather than one-off tasks.
+
+**D. Review-led agency directories (free profile, credibility layer):**
+9. **Sortlist** (sortlist.com) — Brussels-based matchmaking directory, 90,000+ providers, strongest in Europe. **Free profile with unlimited works and reviews**; Sortlist+ is €129/month plus credits (visibility and messaging limited on free). Needs ≥6 recent works per service — a post-website task.
+10. **DesignRush** (designrush.com) — design/web/marketing directory plus an RFP marketplace (80%+ of marketplace briefs are US-based). **Free profile, manually approved**; sponsorship from $500/month (Basic), $2,000 Standard, $5,000 Premium, billed quarterly and non-refundable. Enter the design awards for a badge instead of paying for placement.
+
+*Adjacent, free, hold until portfolio exists:* **Clutch** (free profile, verified badge ~$499/yr) and **GoodFirms** (free listing, PRO $49/month) — both are review-gated, so they need delivered clients first.
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal BO — Hindi + English content pack for a D2C brand, edtech or fintech (bilingual storefront and ads)**
+> Hi [Name], most Indian brands write everything in English and then lose the buyer who shops in Hindi. I produce the same content twice — once in English, once in natural Hindi (not translated-sounding) — for your product pages, WhatsApp broadcasts, ad copy and the 8 most-asked customer questions. 20 product descriptions + 10 ad variants + 10 FAQ answers, both languages, delivered in 7 days for Rs 9,000. The Hindi versions are written for how people actually speak, not machine-translated. Want me to do your three best-selling products free so you can compare?
+
+**Proposal BP — AI usage policy + 3 SOPs + 90-minute team training (small business, agency, clinic, school)**
+> Hi [Name], your team is already using ChatGPT on client work — there's just no rule about what goes in, what comes out, or who checks it. That's a data-leak and a quality problem waiting to happen. I write a one-page AI usage policy in plain language, three SOPs for the tasks your team does most (client emails, proposals, social posts), and run a 90-minute hands-on session so people actually follow them. Rs 7,500 total, delivered in a week, policy and SOPs in your letterhead, editable files included. Shall I send a one-page outline of what the policy would cover?
+
+**Proposal BQ — Tender / RFP response writing for an MSME bidding on GeM or state tenders (₹2,000 crore+ of public buying)**
+> Hi [Name], most MSMEs lose tenders not on price but on the technical bid — the eligibility matrix half-filled, the compliance annexures missing, the past-performance section written in one paragraph. I read the tender document, build a compliance matrix of every clause you must answer, draft the technical proposal in the evaluator's language, and give you a checklist of the exact documents to attach. Rs 4,000 per bid, 48-hour turnaround from the day you send the RFP, one revision included. Send me one live tender you're considering and I'll return the compliance matrix free — that alone usually shows whether it's worth bidding.
+
+### Topic of the Day (Part 2)
+
+- Day number 11 -> 11 mod 5 = 1 -> **TOPIC 1: Skill Tip + 5-min Exercise**.
+- Skill picked (new vs the 10-21 Canva Bulk Create, 10-26 Sheets QUERY, 10-31 single-file HTML and 11-01 IMPORTHTML/IMPORTXML picks): **WordPress synced patterns** (formerly reusable blocks) — build one "Offer Card" block once and edit it in one place to update every page that uses it.
+- Why it matters commercially: it is the cheapest way to sell a *maintenance retainer*. A client with 12 service pages normally pays someone to change a price in 12 places; with synced patterns it is one edit, which justifies Rs 1,500–2,000/month for "site upkeep" instead of a one-time Rs 4,999 build.
+- Free resources: WordPress Pattern Directory — https://wordpress.org/patterns/ ; Learn WordPress (free courses on the block editor) — https://learn.wordpress.org/
+- Mini action: in any WordPress site, build one "Clevora Offer Card" pattern (icon + service name + one-line outcome + price + button), register it as synced, and place it on three pages — then change the price once and confirm all three update.
+
+### Revenue Status
+
+- Recorded revenue this run: **Rs 0** (nothing observable).
+- Razorpay: `Authentication failed` — payment events not retrievable. State UNKNOWN.
+- Supabase: no authorised connection — signup events not retrievable. State UNKNOWN.
+- No payments taken, no messages sent, no customer-facing action performed. Drafts and log only, per standing instruction.
+
+### Next Actions
+
+1. **[OWNER — blocking, day 21]** The storefront now 404s (Pages not published). Fastest path that needs no GitHub settings: drag the Clevora `index.html` into **Cloudflare Pages** (free, custom domain optional). Alternative: repo Settings → Pages → Source `main` / `/ (root)` → Save, then confirm the URL renders a page, not a 404. Nothing in this engine converts until a URL opens.
+2. **[OWNER — 23 runs overdue]** Rotate the Razorpay API keys in the connector.
+3. **[OWNER — 23 runs overdue]** Authorise the Supabase integration (project `ocuyxgocmtucdckiqqeh`) and confirm the project is not paused.
+4. **[OWNER — 20 minutes, works without a website]** Open the four reputation channels that need only a profile and a price card: **Topmate** (₹999 "AI audit" call + ₹299 prompt pack), **Refrens** (services + free GST invoicing), **Whop** (Automation Pack product), **Truelancer** (AI/automation profile, 20 free proposals).
+5. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first; rotate to a fresh lead set (avoid today's 10); continue the proposal bank at BO/BP/BQ → BR/BS/BT.
+6. **[OWNER — one application]** Apply to **Brainlancer** as a founding builder (carried over — still the only channel found that supplies buyers rather than listings).
