@@ -1756,3 +1756,88 @@
 4. **[OWNER — 20 minutes, works without a website]** Open the four reputation channels that need only a profile and a price card: **Topmate** (₹999 "AI audit" call + ₹299 prompt pack), **Refrens** (services + free GST invoicing), **Whop** (Automation Pack product), **Truelancer** (AI/automation profile, 20 free proposals).
 5. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first; rotate to a fresh lead set (avoid today's 10); continue the proposal bank at BO/BP/BQ → BR/BS/BT.
 6. **[OWNER — one application]** Apply to **Brainlancer** as a founding builder (carried over — still the only channel found that supplies buyers rather than listings).
+
+## Run VENTURE-2026-11-12-01 — 2026-11-12 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:03 IST / 03:33 UTC
+**Run:** #24 logged
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | DOWN | `https://hiranyajyotidas1-ops.github.io/ai-services/` returns **HTTP 404** on an independent external fetch (second source, not the sandbox proxy). Pages is still not published for this repo. 22nd consecutive day without a storefront. |
+| Supabase (users) | BLOCKED | No authorised connection for project `ocuyxgocmtucdckiqqeh`; `users` table not queryable. Signup count UNKNOWN, not zero. 24th run. |
+| Razorpay (payments) | BLOCKED | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. 24th consecutive run. |
+| GitHub log | OK | Repo cloned over HTTPS, entry appended and pushed this run. |
+| Lead research | OK | 10 new channels identified, none repeated from the 23 prior cycles (see Leads). |
+| Proposals | OK | 3 fresh drafts (BR / BS / BT), no outreach sent. |
+
+### Key Findings
+- **Two independent checks now agree the site is dead, not misrouted.** The sandbox proxy blocks `*.github.io` outright (egress allowlist), so the 404 was confirmed through a separate external fetch tool. This is a publishing problem on the repo, not a network problem on our side.
+- **Most of the writing marketplaces this engine has been recommending are closed to an India-based operator.** Checked and rejected today, with the disqualifying rule in each case: **WriterAccess** — applications accepted only from the US, UK, Canada, Australia, New Zealand, South Africa and Ireland, and now "U.S.-based professional writers only"; **Verblio** — requires U.S. citizenship and a valid Social Security Number for its W-9; **Bark.com** — exited the Indian market in early 2025 and the site has been closed to Indian professionals since 28 February 2025. Three of the ten channels in this file's history are therefore dead ends for this account, and the earlier runs' lists did not screen for that.
+- **The screen that matters from now on is "does it accept an Indian freelancer, and can it pay one."** nDash, for example, pays only through Stripe, which is invite-only in India — a real friction point that has to be solved before any nDash work is worth chasing.
+- **Today's ten are split by that test**: five that take international/Indian creators and pay them (Contently, Twine, Peak Freelance, Superpath Jobs, ProBlogger), two high-bar engineering networks worth a single application each (Arc.dev, Gun.io), and three free local-discovery surfaces that double as *things to sell to clients* (Google Business Profile, Justdial, and the free-tier review of both).
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-12)
+
+*Theme this cycle: buyer-intent surfaces that a solo operator with no website can actually use this week — screened for "accepts India" and "can pay India".*
+
+**A. Content networks that take international writers and pay well:**
+1. **Contently** (contently.com) — the highest-paying content network on this list and free to join. Contributors are **individuals only** (no agency or company accounts), and your portfolio needs a minimum of **10 projects from at least 3 different clients**, with topics and skills tagged on at least 3 clips, before the Creative Marketplace team will review it — they review every Monday, with unlimited resubmissions. Published rate floors: **$300 for a 500–700 word short article, $425 for 701–1,000 words, $595 for a reported article, $1,250 for a 1,000–1,500 word long report** — B2B finance and enterprise tech sit at the top of those ranges. There is no bidding: once approved and marked "Available to Work", you wait for a Creative Lead to invite you to a team, so the portfolio *is* the sales pitch.
+2. **Twine** (twine.net) — open platform, no application, free portfolio. Free tier gives **1 application per day**; **Twine Pro is $18.99/month or $9.49/month billed yearly** and unlocks 50 pitches a month plus direct client contact. Client-side commission is **10% on payments up to $10,000 and 5% above**, charged only when money moves through Twine Vault (0% if the client pays you directly). Published day rates: **copywriter $150–750, graphic designer $150–750, web developer $200–1,000**. Best use: the design and landing-page offers, where a single $300 job beats a week of content pitching.
+3. **Peak Freelance** (peakfreelance.com) — the free job board is open to all and carries **B2B gigs from brands like Ahrefs and ClickUp** that rarely post publicly; the Slack community and the members area are also free (paid courses and templates sit outside it). Its own FAQ says members are spread across the world including **India, Nigeria and the Philippines**, which makes it one of the few writer communities that does not quietly assume a US bank account.
+4. **Superpath Jobs** (jobs.superpath.co) — the content-marketing job board is **free, with listings posted 48 hours late**; Superpath Pro ($50/month or $500/year after a 30-day trial) gets them within hours plus a 300-person private Slack. For a first client this is a free lead source; the paid tier only becomes worth it once content work is the main line of business.
+5. **ProBlogger Job Board** (problogger.com/jobs) — free to browse and free to apply, no account needed; employers pay $80–$160 per listing. Honest caveat: the board skews to **low rates ($6/post to $13 per 1,000 words)** and every listing draws hundreds of applicants, so it is a volume play for portfolio clips, not a rate play. Optional Premium Candidate profile is $49/year.
+
+**B. High-bar engineering networks (one application each, not a channel to work daily):**
+6. **Arc.dev** — vetted remote-developer network, **freelance client rates $15–$110+/hour** published on its pricing page, **20% of annual salary on full-time hires**, two-week risk-free trial. Its how-it-works page states roughly **2% of applicants pass**. Relevant only if the "website build + automation" offer is being sold as engineering, not design.
+7. **Gun.io** — roughly **100 developers accepted per month out of 1,000 applications**, 70% of the pool with 10+ years' experience, average time-to-hire 13 days, **no standard prices (retainer set per engagement) and 20% of first-year salary on full-time placements**. Treat as a long shot with a real payoff.
+
+**C. Free local-discovery surfaces — the fastest revenue path while the website is down:**
+8. **Google Business Profile** (business.google.com/in) — **free** to create, verify and manage, and in India it now feeds Google Maps, the local pack, the knowledge panel and Gemini-powered "Ask Maps" answers (launched in India March 2026). Google states plainly there is **no paid way to rank higher in the organic map results** — position is earned through relevance, distance and prominence, where prominence means reviews, photos and citations. Two uses: list Clevora free today, and sell **"GBP setup + review engine"** to every local business that has an unclaimed or half-empty profile. Anyone cold-calling to say you must pay Google to verify or rank is lying.
+9. **Justdial** — free basic listing; paid visibility packages have **no public rate card** and are negotiated by sales reps, landing anywhere from **₹12,000 to ₹52,000 a year** (Justdial's own Q2 FY27 filing implies roughly **₹20,900 per paid campaign per year** across 6.5 lakh campaigns, and third-party reports put Standard at about ₹36,500). Critically, **the same lead is sold to several businesses at once**, so response speed decides the sale — which is exactly the argument for the WhatsApp-lead-automation offer. Use the free listing; do not buy a package on the first call.
+10. **Sulekha (free tier) + the "directory audit" as a product** — free basic listing, lead packs sold by category and area, same shared-lead model as Justdial. The sellable service: a one-page audit of a business's Justdial + Sulekha + GBP presence (wrong category, missing photos, unclaimed listing, no review replies) delivered as a PDF for ₹999, which converts into a ₹1,500–2,500/month upkeep retainer.
+
+*Checked and ruled out this cycle (recorded so no future run re-lists them):* WriterAccess (7 English-speaking countries only, now "U.S.-based writers only"), Verblio (US citizenship + SSN), Bark.com (India exit, February 2025).
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal BR — Google Business Profile + directory cleanup for a local business (clinic, salon, gym, CA firm, interior studio)**
+> Hi [Name], I searched for [category] in [area] and found your listing on Google — it's missing photos, the category is wrong, and there are 14 reviews with none of them answered. That's the first thing a customer sees before they ever call you. I fix the whole thing: correct primary category and services, 10 real photos, a 700-character description, opening hours, and a WhatsApp reply drafted for every unanswered review. ₹1,500 one-time, done in 2 days, and I send you a before-and-after screenshot so you can see exactly what changed. Then, if you want, ₹1,500/month to keep it posting and collecting reviews. Want me to send the audit of your listing first — free, one page?
+
+**Proposal BS — WhatsApp review-request automation (any business with 20+ customers a month)**
+> Hi [Name], you finish a job, the customer is happy, and then nobody asks for a review — so your competitor with 200 reviews wins the search even if your work is better. I set up one automation: your job is marked done in a Google Sheet, and 2 hours later the customer gets a WhatsApp message with your Google review link and their name in it. No app for them to install, no chasing. Setup ₹2,500 one-time, runs on your existing WhatsApp Business number, and I hand over a 5-minute video showing how to change the message. Most businesses get their first 10 reviews within a fortnight. Shall I show you the flow on a sample sheet?
+
+**Proposal BT — "Answer-engine" content pack: 12 pages written to be quoted by AI search (SaaS, clinic chain, edtech, B2B service)**
+> Hi [Name], your buyers now ask ChatGPT or Google's AI Mode "which [category] in [city] is best for X" and get an answer with three names in it. Being one of those names is a writing problem, not an ads problem: the pages that get quoted answer one specific question, state the price, name the city, and carry a clear author and date. I write 12 such pages — 8 question pages your customers actually type, 2 comparison pages against the obvious alternatives, 1 pricing page and 1 "who we are" page — each 800–1,200 words, with FAQ schema and internal links. ₹12,000 for the pack, delivered in 10 days, first page free so you can test whether AI search picks it up. Which three questions do your customers ask most often?
+
+### Topic of the Day (Part 2)
+
+- Day number 12 -> 12 mod 5 = 2 -> **TOPIC 2: POD Trend + Canva Design Idea** (Shopify: t-shirt/mug/phone case/tote bag).
+- Trend: **personalised matching sets — "Friendsmas" and family-name shirts**. A different pick from the 10-22 statement tote, the 10-27 western tee and the 11-02 Christmas wrapping-pattern angles. The strongest Christmas signal tracked in October 2026 was not a design style but a *format*: **personalised family sets are the top-selling Christmas shirts on Etsy**, and searches for **personalised friend gifts are up ~1,400% year on year**. Adjacent numbers from the week to 5 November 2026: "christmas gift" 331,027 estimated sales (+28.5%), "personalized gift" 213,152 (+15.0%), "christmas stocking" 79,583 (+76.8%, the biggest jump on the board), "christmas decor" (+40.5%). Buyers are in stocking-stuffer mode — small, cheap, bought in bulk — which is exactly what a 6-shirt friend-group order is.
+- Why this one is worth the effort: a group order is 6–8 shirts at once, not one. At a $8–13 blank and $22–28 retail, one Friendsmas order is a week of single-shirt sales, and the personalisation makes it un-copyable by the generic Christmas listings.
+- Timing: **list by 20 November** — new listings need 6–8 weeks of history before the December peak. Second window: start Galentine's/Valentine's in early December; winter and ski designs keep selling to February.
+- What to avoid: another generic Christmas pattern (the 11-02 pick already covers it), plain "Merry Christmas" text tees, unedited AI art at volume (still the most saturated POD strategy), and any licensed fandom or brand-adjacent art — Q4 takedown enforcement is at its peak.
+- Canva idea: a **name-tile stack** — canvas 4500x5400 px (tee) or 4500x4500 px (tote/case), one arched serif headline ("FRIENDSMAS 2026" or "MAMA MAKES THE MAGIC") with each person's name set in the same typeface, stacked or in a 2-column grid, and a single small motif (snowflake, cookie, mug) between names. Two colours maximum. Then use **Canva Bulk Create** with a Google Sheet of names to generate all six versions in one run instead of six manual edits, and export transparent PNGs at 300 DPI.
+- Upsell ladder: same name-tile file → mug wrap (11oz), tote, and a phone case, so one design fills a "gift set" listing. Bundle "shirt + mug" at a higher price instead of discounting the shirt.
+- Free resources: https://www.canva.com/create/t-shirt-mockups/ (free mockup generator) | https://www.canva.com/t-shirts/templates/ | trend source: https://playgroundai.com/blog/november-2026-print-on-demand-design-trends
+- Mini action: in Canva, build ONE name-tile design with the headline "FRIENDSMAS 2026" and 6 name slots, export a transparent PNG, drop it on a t-shirt mockup, and list it on Shopify via Printify/Printful with a personalisation field before 20 November — ~25 min.
+
+### Revenue Status
+
+- Recorded revenue this run: **Rs 0** (nothing observable).
+- Razorpay: `Authentication failed` — payment events not retrievable. State UNKNOWN.
+- Supabase: no authorised connection — signup events not retrievable. State UNKNOWN.
+- No payments taken, no messages sent, no customer-facing action performed. Drafts and log only, per standing instruction.
+
+### Next Actions
+
+1. **[OWNER — blocking, day 22]** The storefront still 404s. Cheapest path that needs no GitHub settings: drop the Clevora `index.html` into **Cloudflare Pages** (free) and point the bio link there. Alternative: repo Settings → Pages → Source `main` / `/ (root)` → Save, then confirm a page renders. Note for future runs: the sandbox cannot reach `*.github.io` at all (egress allowlist), so site checks must go through the external fetch tool.
+2. **[OWNER — 24 runs overdue]** Rotate the Razorpay API keys in the connector.
+3. **[OWNER — 24 runs overdue]** Authorise the Supabase integration (project `ocuyxgocmtucdckiqqeh`) and confirm the project is not paused.
+4. **[OWNER — today, 15 minutes, no website needed]** Create the **free Google Business Profile** for Clevora (services listed individually, WhatsApp contact on, 10 photos, real name only — no keywords in the name). This is the only channel found in 24 runs that can produce a phone call without a website.
+5. **[OWNER — 30 minutes]** Build the **Contently portfolio** (10 projects, 3 clients, 3 tagged clips) — the single highest-paying network on today's list, free, and reviewable every Monday.
+6. **[OWNER — 20 minutes]** Post a free **Twine** profile and a **Peak Freelance** job-board bookmark; skip Pro subscriptions until the first paid job lands.
+7. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first; rotate to a fresh lead set (avoid all 240 platforms now listed); continue the proposal bank BR/BS/BT → BU/BV/BW; and screen every new channel for "accepts an Indian freelancer" before it goes in the file.
