@@ -1841,3 +1841,87 @@
 5. **[OWNER — 30 minutes]** Build the **Contently portfolio** (10 projects, 3 clients, 3 tagged clips) — the single highest-paying network on today's list, free, and reviewable every Monday.
 6. **[OWNER — 20 minutes]** Post a free **Twine** profile and a **Peak Freelance** job-board bookmark; skip Pro subscriptions until the first paid job lands.
 7. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first; rotate to a fresh lead set (avoid all 240 platforms now listed); continue the proposal bank BR/BS/BT → BU/BV/BW; and screen every new channel for "accepts an Indian freelancer" before it goes in the file.
+
+## Run VENTURE-2026-11-15-01 — 2026-11-15 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:07 IST / 03:37 UTC
+**Run:** #25 logged
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | DOWN | `https://hiranyajyotidas1-ops.github.io/ai-services/` still returns **HTTP 404** on an independent external fetch. Repo contents verified this run: `index.html` **is** present on `main` (commit `26d1cd1`) — so this is a Pages-publishing setting, not a missing file. 23rd consecutive day without a storefront. |
+| Supabase (users) | BLOCKED | No authorised connection for project `ocuyxgocmtucdckiqqeh`. Signup count UNKNOWN, not zero. 25th run. |
+| Razorpay (payments) | BLOCKED | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. 25th consecutive run. |
+| GitHub log | OK | Repo cloned over HTTPS, entry appended and pushed this run. |
+| Lead research | OK | 10 new channels, none repeated from the 24 prior cycles (250 platforms now logged). |
+| Proposals | OK | 3 fresh drafts (BU / BV / BW). Nothing sent. |
+
+### Key Findings
+- **The website problem is now precisely diagnosable.** `index.html` sits in the repo root on `main`, and the Pages URL 404s. That combination means Pages is either switched off or pointed at the wrong branch/folder — no code change is needed. One click in Settings → Pages fixes a 23-day outage.
+- **This cycle's theme: vendor partner directories.** The marketplaces logged in earlier runs are places where you compete with 200 other sellers. A SaaS vendor's certified-partner directory is the opposite: the vendor's own sales team routes buyers to you, and listing is free. Four of today's ten leads are of that kind (Zapier, Make, Zoho, Shopify), and three of them are blocked by exactly one thing — a real domain and website, which is also the thing that has been down for 23 days. **The website is now blocking revenue in two independent ways.**
+- **Content networks that pay by Wise or PayPal (not Stripe) are the India-viable subset.** nDash pays by Stripe only; Constant Content pays international writers by Wise and ClearVoice by PayPal. Stripe India is invitation-only for new merchants, so nDash should be treated as unavailable until a Stripe account exists.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-15)
+
+*Theme this cycle: (A) free vendor partner directories where the vendor sends you buyers, (B) the last few content networks that will actually pay an India-based writer.*
+
+**A. Vendor partner directories — free to join, leads come from the vendor:**
+1. **Zapier Solution Partner Program** (zapier.com/l/solution-partner) — **free**, formerly "Zapier Experts". Hard entry gates: an **active business website** (applications relying only on LinkedIn/Fiverr are refused) and a **custom-domain email** (no Gmail/Outlook). US-sanctioned countries excluded — India is fine. Applications reviewed in **7–21 business days**; tiers run Certified → Silver → Gold → Platinum, with referral commission on net-new customers plus lead-sharing and directory visibility. Best single fit for the automation offer once a domain exists.
+2. **Make Solution Partner Program** (make.com/solution-partners) — **free for qualifying applicants**, and the only one of the four that does **not** demand a website up front: it demands **proven automation client work, one certified automation expert and completion of Partner Training** (Make Academy is separate and does not count). Onboarding can take **up to two months**. **Vendor-supplied leads only reach Silver, Gold and Platinum partners** — so this is a 6–12 month build, not a quick win. Worth starting the free training now because it costs nothing but hours.
+3. **Zoho Consulting Partner Program** (zoho.com/partners) — **free to join, no fee**, recurring commission for the client's lifetime, and 100% of implementation/migration/training revenue stays with the partner. The catch: **Authorized status (and therefore the public Partner Directory listing) needs US$5,000 of Zoho licensing revenue plus certifications and demonstrated implementations within 4–6 months** of onboarding. Applicants must be a **registered business** (independent consultants under a registered entity may apply). Strongest long-game option here — India's SMB market runs on Zoho, and the owner already has Zoho Books/Invoice/Inventory connectors working.
+4. **Shopify Partner Program — Service track** (shopify.com/partners) — **free to join**, and partner accounts earn referral payouts on merchants they bring. Directory listing, however, is **invitation-only from the Select tier**, which under the new tiers (live 1 January 2027) becomes **Silver = US$25K attributed GMV + 1 launched shop measured over one year**. Translation: a free partner account today, no directory traffic for a while. Use it for the referral payouts and the free Shopify Academy "Verified Skills" badges, which count toward tier.
+
+**B. Agency/service directories — free profile, buyer-side discovery:**
+5. **Clutch** (clutch.co/get-listed) — **Basic profile is free** and takes about 10–20 minutes; you get a profile, limited case studies and basic analytics. Honest limitation: a free profile gets **no link to your website from directory pages**, competitors can appear on your profile, and you are not ranked above verified firms. Verified is **US$499/year paid upfront** on a 12-month, auto-renewing contract (cancel in writing 5 business days before renewal). Also puts you on sister site The Manifest. Free tier only until there is revenue.
+6. **GoodFirms** (goodfirms.co/get-listed) — **free forever, no card**, with a **4-step research verification**, public profile, portfolio and buyer RFPs. Accepts roughly **23% of applicants**, decided in 5–10 business days. PRO is **US$49/month billed annually (US$588/yr)**, sponsorships from **US$300/month**. Free tier is a legitimate credibility asset for a services firm with no site.
+
+**C. Content networks that can actually pay an India-based writer:**
+7. **ClearVoice** (clearvoice.com) — free to join, **25% platform commission** already baked into the quoted rate, paid by **PayPal within 10 days of approval** (often 24 hours). Entry needs a CV portfolio at **70%+ complete with at least 6 work samples**, a role (writer/editor/strategist), bio and published example, then manual editor approval (expect ~14 days). Caveat: there is no open job board — editors match you — and work volume has thinned since 2023, so treat it as a slow background channel.
+8. **Constant Content** (constant-content.com) — free registration, **5-question English quiz at 80% pass (4/5)** plus a writing sample, decision within **5 working days**. Writers keep **55% of each sale**. Critically, **international writers are paid by Wise**, not Stripe — the only one of these three that needs no US bank and no Stripe. Rate ceiling is low (it is a content marketplace), so use it for clips and cash flow, not as the main line.
+
+**D. High-bar, high-pay technical marketplace:**
+9. **Codeable** (codeable.io) — WordPress/WooCommerce-only, and the pay is genuinely professional: estimates anchored to **US$80–120/hour** with a **flat 17.5% platform fee**, escrow, and a 28-day bug-fix warranty. Vetting is a **six-step funnel (application, intro video, coding quiz, code project, live interview, certification) with roughly 2.2% acceptance**, then a 90-day monitored onboarding; **applications close when a skill area is full**. Only worth the weeks of effort if the website-build offer is being sold as engineering — but a single accepted project at these rates beats a month of ₹1,500 listings.
+
+**E. Specialist B2B writing network:**
+10. **nDash** (ndash.com) — free writer account, **you set your own rates**, brands pay a fee **on top of** your rate rather than out of it, and you talk to the client directly (no middleman). Caveats that matter: **payment is Stripe-only** (Stripe India is invitation-only for new merchants — check before investing time), **pen names are not allowed**, full approval is granted to "a small percent" of applicants, and **open assignments are under 2% of all payments** — the work comes from pitching, so it is a sales job with a writing chaser. It has also widened beyond writers to designers, SEO strategists and **AI strategists**, which fits this venture better than pure copywriting.
+
+*Checked and ruled out / deferred this cycle (recorded so no future run re-lists them):* Superpath Pro and Twine Pro (both paid tiers — no spend without revenue), WriterAccess and Verblio (already ruled out), any directory requiring a paid verification before first revenue (Clutch Verified, GoodFirms PRO, Make sponsorship).
+
+### Proposals (FRESH DRAFTS — do not send without owner approval)
+
+**Proposal BU — one-page website + WhatsApp button for a local service business (clinic, salon, gym, CA firm, interior studio)**
+> Hi [Name], right now when someone searches for [category] in [area], they find your Google listing but there's nowhere to send them — no site, or a site that doesn't open properly on a phone. I build one clean page: who you are, what you do, 6 photos, prices or a price range, your timings, a map, and a WhatsApp button that opens a chat with you in one tap. It loads in under 2 seconds on 4G, works on any phone, and I hand it over on your own domain so it's yours, not rented. ₹6,500 one-time, live in 4 working days, and I show you a phone screenshot of the finished page before you pay anything. Want me to send you a 30-second mock-up with your business name on it first — free?
+
+**Proposal BV — WhatsApp order updates + abandoned-cart nudge for a small D2C store (Shopify or WooCommerce, 20+ orders a month)**
+> Hi [Name], two leaks in most small stores: customers message "where is my order?" all day, and people fill a cart and vanish. Both are one automation. Order confirmed in your store → customer gets a WhatsApp with the order number and a tracking link the moment you mark it shipped; cart left for 2 hours → one polite WhatsApp with the product photo and a direct checkout link, capped at one message per person per day. Setup ₹7,500 one-time on your existing WhatsApp Business number, ₹2,000/month to keep it running and monitored, and I hand over a 5-minute video showing how to switch it off or change the wording yourself. Shall I send you the exact three messages it would send, so you can approve the language first?
+
+**Proposal BW — LinkedIn ghostwriting for a founder (8 posts a month, B2B services / D2C / edtech)**
+> Hi [Name], your buyers check your LinkedIn before they reply to your email — and right now the profile is silent, which reads as "small". I write 8 posts a month in your voice: two on a problem your customers actually have, two short client stories (numbers, not adjectives), two opinion posts on something happening in [industry], one hiring/behind-the-scenes, one soft offer. You approve everything in a shared sheet, I never post without your yes, and every post is under 200 words so it doesn't read like a brochure. ₹8,000/month, first month ₹4,000 so you can judge the writing before committing. Send me your last 3 posts (or your last 3 emails to a client) and I'll show you what the first week would look like — free.
+
+### Topic of the Day (Part 2)
+
+- Day number 15 -> 15 mod 5 = 0 -> **TOPIC 5: Upskilling Resource**.
+- Resource: **Meta Blueprint — WhatsApp marketing learning path + free Meta Small Business Academy skill test** (facebookblueprint.com). Chosen because it is the exact credential behind proposals BS and BV: the path covers "Use WhatsApp for a business", "Help your customers connect to your business on WhatsApp", "Reach your customers with ads that click to WhatsApp" and the "WhatsApp Business Platform overview" — 15–30 minute lessons, free, and the WhatsApp skill test issues a **free Meta Small Business Academy certificate**. The paid certifications (Digital Marketing Associate etc.) cost US$99–150 — skip them for now; the free certificate is enough to put in a proposal.
+- Why this and not another AI course: the previous five Topic-5 runs covered Claude Academy, OpenAI Academy, HubSpot Academy, n8n Level 1/2, freeCodeCamp and Microsoft's AI Agents course. This one is the only free credential that matches a service already priced in the proposal bank (₹7,500 WhatsApp setup), so the study time converts directly into a sales asset.
+- Free link: https://www.facebookblueprint.com/student/collection/507003-whatsapp-marketing (learning path) | https://www.facebookblueprint.com/student/catalog (full free catalogue) | live session: "Elevate your ad strategy with the WhatsApp Business Platform", 17 Nov 2026, free to enroll.
+- Mini action: do the 15-minute "Use WhatsApp for a business" lesson today, take the free WhatsApp skill test, screenshot the certificate and paste it into the Proposal BV draft as proof of competence — ~30 minutes total.
+
+### Revenue Status
+
+- Recorded revenue this run: **Rs 0** (nothing observable).
+- Razorpay: `Authentication failed` — payment events not retrievable. State UNKNOWN, 25th run.
+- Supabase: no authorised connection — signup events not retrievable. State UNKNOWN.
+- No payments taken, no messages sent, no customer-facing action performed. Drafts and log only, per standing instruction.
+
+### Next Actions
+
+1. **[OWNER — blocking, day 23, 60 seconds]** Repo Settings → Pages → Source `main` / `/ (root)` → Save. `index.html` is already in the repo; the 404 is only a publishing switch. This now blocks three separate revenue paths: Zapier partner status, Clutch/GoodFirms credibility, and every proposal that says "see my site".
+2. **[OWNER — 20 minutes, no spend]** If Pages stays broken, deploy the same `index.html` to **Cloudflare Pages** (free) and use that URL. Buy one cheap domain (₹700–900/yr) and set up `name@thatdomain` — that single step unlocks the Zapier partner application, which refuses Gmail addresses.
+3. **[OWNER — 24 runs overdue]** Rotate the Razorpay API keys in the connector.
+4. **[OWNER — 24 runs overdue]** Authorise the Supabase integration (project `ocuyxgocmtucdckiqqeh`) and confirm the project is not paused.
+5. **[OWNER — free, 15 minutes]** Create the **Google Business Profile** for Clevora. Unchanged from the last five runs: still the only channel found that can produce a phone call with no website.
+6. **[OWNER — free, start this week]** Begin **Make Partner Training** (free) and open a **Shopify partner account** (free) — both cost only hours and both are 6–12 month plays that should be running in the background.
+7. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first; rotate to a fresh lead set (avoid all 250 platforms now listed); continue the proposal bank BW → BX/BY/BZ; screen every new channel for "accepts an Indian freelancer **and** pays by Wise/PayPal/bank transfer, not Stripe-only" before it goes in the file.
