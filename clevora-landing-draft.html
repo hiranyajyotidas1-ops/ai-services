@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- CLEVORA — DRAFT LANDING PAGE
+     Status: draft, not deployed. To publish:
+       1. Replace the two placeholders below (WhatsApp number, email).
+       2. Rename this file to index.html (or upload it to Cloudflare Pages).
+     No external requests, no frameworks, no build step. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clevora — AI services for small businesses: content, automation, websites</title>
+<meta name="description" content="Clevora builds the boring parts of your online presence: SEO-ready content, WhatsApp and order automation, and fast mobile-first websites. Fixed prices, 2-5 day delivery.">
+<meta property="og:title" content="Clevora — content, automation and websites for small businesses">
+<meta property="og:description" content="Fixed prices. 2-5 day delivery. Content writing, workflow automation and landing pages for D2C brands and local businesses.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --ink:#111827; --muted:#5b6472; --line:#e5e7eb; --bg:#ffffff;
+    --soft:#f7f8fa; --accent:#1f4fd8; --accent-soft:#eef2ff; --ok:#0f7b52;
+    --radius:14px; --max:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.94);
+    backdrop-filter:blur(8px);z-index:10}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:1.1rem}
+  .mark{width:26px;height:26px;border-radius:8px;background:var(--accent);display:grid;place-items:center;
+    color:#fff;font-size:.82rem;font-weight:800}
+  .nav nav{display:none;gap:22px;font-size:.94rem}
+  .nav nav a{color:var(--muted)}
+  .nav nav a:hover{color:var(--ink)}
+  @media(min-width:760px){.nav nav{display:flex}}
+  .btn{display:inline-block;padding:11px 18px;border-radius:10px;font-weight:600;font-size:.94rem;
+    border:1px solid transparent;transition:.15s}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#1a43b8}
+  .btn-ghost{border-color:var(--line);color:var(--ink);background:#fff}
+  .btn-ghost:hover{border-color:#c9ced8}
+
+  .hero{padding:64px 0 48px;border-bottom:1px solid var(--line)}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent);background:var(--accent-soft);padding:6px 10px;border-radius:999px;margin-bottom:18px}
+  h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 16px;max-width:20ch}
+  .lede{font-size:clamp(1rem,2.2vw,1.15rem);color:var(--muted);max-width:56ch;margin:0 0 26px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px}
+  .fineprint{font-size:.86rem;color:var(--muted)}
+
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(1.35rem,3vw,1.75rem);letter-spacing:-.01em;margin:0 0 8px}
+  .sub{color:var(--muted);margin:0 0 32px;max-width:60ch}
+
+  .grid{display:grid;gap:18px}
+  @media(min-width:720px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:#fff}
+  .card h3{margin:0 0 6px;font-size:1.05rem}
+  .card p{margin:0 0 14px;color:var(--muted);font-size:.94rem}
+  .price{font-weight:700;font-size:.95rem;color:var(--ink)}
+  .price span{font-weight:500;color:var(--muted);font-size:.86rem}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ok);background:#e8f6f0;padding:4px 8px;border-radius:6px;margin-bottom:12px}
+
+  ul.clean{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  ul.clean li{padding-left:26px;position:relative;color:var(--muted);font-size:.96rem}
+  ul.clean li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ok);font-weight:700}
+
+  .steps{counter-reset:s;display:grid;gap:18px}
+  @media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{counter-increment:s;border-left:2px solid var(--accent);padding-left:16px}
+  .step::before{content:"0" counter(s);display:block;font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:4px}
+  .step h3{margin:0 0 4px;font-size:1rem}
+  .step p{margin:0;color:var(--muted);font-size:.93rem}
+
+  .panel{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .cta-final{display:grid;gap:18px;align-items:center}
+  @media(min-width:760px){.cta-final{grid-template-columns:1.4fr 1fr}}
+  footer{padding:28px 0;font-size:.86rem;color:var(--muted)}
+  .foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="mark">C</span> Clevora</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <!-- PLACEHOLDER 1: replace 91XXXXXXXXXX with the real WhatsApp number -->
+    <a class="btn btn-primary" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Clevora%2C%20I%20need%20help%20with%20">WhatsApp us</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">AI-assisted, human-checked</span>
+    <h1>The boring parts of your online presence, done properly.</h1>
+    <p class="lede">Clevora writes your content, automates the follow-ups you keep forgetting, and builds the page that turns a visitor into an enquiry. Fixed prices. Delivered in 2–5 days. Built for D2C brands, agencies and local businesses.</p>
+    <div class="cta-row">
+      <!-- PLACEHOLDER 1 (same number) -->
+      <a class="btn btn-primary" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Clevora%2C%20I%20need%20help%20with%20">Get a free sample first</a>
+      <a class="btn btn-ghost" href="#services">See what we do</a>
+    </div>
+    <p class="fineprint">No retainer needed to start. First deliverable is free so you can judge the work before paying.</p>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Three things we do well</h2>
+    <p class="sub">We do not do everything. These three cover most of what a small business actually needs, and each one has a fixed price and a fixed delivery time.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <span class="tag">Content</span>
+        <h3>SEO-ready content writing</h3>
+        <p>Blog articles, product pages, service pages and social posts — keyword-mapped to what your customers actually search, written to sound like a person.</p>
+        <p class="price">₹1,500 <span>/ article · ₹12,000 / month for 8</span></p>
+      </div>
+      <div class="card">
+        <span class="tag">Automation</span>
+        <h3>Workflow automation</h3>
+        <p>Order confirmations, WhatsApp updates, lead capture into a sheet or CRM, and content repurposing — built on n8n or Make with a handover video.</p>
+        <p class="price">₹6,000–₹15,000 <span>/ workflow, one-time</span></p>
+      </div>
+      <div class="card">
+        <span class="tag">Web</span>
+        <h3>Fast, mobile-first websites</h3>
+        <p>Landing pages and small sites: responsive, SEO basics done, lead form, WhatsApp button, UPI/Razorpay payment link where you need one.</p>
+        <p class="price">₹4,999 <span>one page · ₹12,000 three pages</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub">No discovery-call theatre. You tell us the outcome, we send something you can look at.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>You send the brief</h3>
+        <p>One message with your business, the outcome you want, and any example you like. Ten minutes of your time.</p>
+      </div>
+      <div class="step">
+        <h3>You get a free sample</h3>
+        <p>One article, one workflow plan or a wireframe — free, within 48 hours, before any money moves.</p>
+      </div>
+      <div class="step">
+        <h3>We deliver, you approve</h3>
+        <p>Fixed scope, 2 revisions included, payment only after you approve the first delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <h2>What is included, plainly</h2>
+    <p class="sub">Every project includes these. They are not upsells.</p>
+    <div class="panel">
+      <ul class="clean">
+        <li>Two rounds of revisions on everything — no revision fees.</li>
+        <li>Mobile-first delivery: we check every page on a phone before sending it.</li>
+        <li>Files and access handed to you. You own the work, the domain and the account.</li>
+        <li>A short handover video or document, so you are not dependent on us afterwards.</li>
+        <li>Payment after approval of the first delivery, by UPI or bank transfer.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-final">
+      <div>
+        <h2>Send one message and see the first sample</h2>
+        <p class="sub" style="margin-bottom:0">Tell us what you sell and what you want more of. If we are not the right fit, we will say so and point you somewhere better.</p>
+      </div>
+      <div class="panel" style="background:#fff">
+        <!-- PLACEHOLDER 1: WhatsApp number · PLACEHOLDER 2: email address -->
+        <p style="margin:0 0 12px"><strong>WhatsApp:</strong> <a href="https://wa.me/91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
+        <p style="margin:0 0 12px"><strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a></p>
+        <p style="margin:0;color:var(--muted);font-size:.9rem">Replies within one working day, Monday to Saturday, IST.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="y">2026</span> Clevora · AI-assisted services for small businesses</span>
+    <span>Content · Automation · Websites</span>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>

@@ -1925,3 +1925,83 @@
 5. **[OWNER — free, 15 minutes]** Create the **Google Business Profile** for Clevora. Unchanged from the last five runs: still the only channel found that can produce a phone call with no website.
 6. **[OWNER — free, start this week]** Begin **Make Partner Training** (free) and open a **Shopify partner account** (free) — both cost only hours and both are 6–12 month plays that should be running in the background.
 7. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first; rotate to a fresh lead set (avoid all 250 platforms now listed); continue the proposal bank BW → BX/BY/BZ; screen every new channel for "accepts an Indian freelancer **and** pays by Wise/PayPal/bank transfer, not Stripe-only" before it goes in the file.
+
+---
+
+## Run VENTURE-2026-11-16-01 — 2026-11-16 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:08 IST / 03:38 UTC
+**Run:** #26 logged
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | DOWN — and cause corrected | `https://hiranyajyotidas1-ops.github.io/ai-services/` returns **HTTP 404** on an independent external fetch (26th day). **New finding this run:** the `index.html` on `main` is only **547 bytes** and its own text reads *"This website has been retired."* So the 404 is **not** only a Pages toggle — even with Pages switched on, the page would serve a retired notice. Two separate fixes are needed, and both are now prepared (see below). |
+| Supabase (users) | BLOCKED | No authorised connection for project `ocuyxgocmtucdckiqqeh`. Signup count UNKNOWN, not zero. 26th run. |
+| Razorpay (payments) | BLOCKED | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. 26th consecutive run. |
+| GitHub log | OK | Repo cloned over HTTPS; entry + landing-page draft committed this run. |
+| Lead research | OK | 10 new channels, none repeated across 25 prior cycles (250 platforms logged so far). New theme: **AI training / expert networks**, a category never covered before. |
+| Proposals | OK | 3 fresh drafts (BX / BY / BZ). Nothing sent. |
+
+### Key Findings
+
+- **The website diagnosis in the last three runs was incomplete, and that matters.** The log said "`index.html` is present, so it is only a publishing setting." The file is present — but it is a 547-byte `noindex` "Site Retired" placeholder, not the Clevora landing page. Turning Pages on today would publish a page that tells every visitor the business is closed. Correct sequence: **(1)** replace `index.html` with a real page, **(2)** then enable Pages.
+- **Prepared this run:** `clevora-landing-draft.html` is now committed to the repo root — a complete, self-contained Clevora one-pager (services, pricing, CTA, no external dependencies, mobile-first). It is a **draft, not deployed**: renaming/replacing `index.html` with it is a one-step owner decision, so nothing customer-facing was changed without approval. Two placeholders in it (WhatsApp number, email) must be filled before it goes live.
+- **This cycle's lead theme is deliberately different from the last 25.** Every prior cycle hunted *marketplaces and directories* where clients post work. Today's ten are **platforms that pay for AI-adjacent skill directly** — model evaluation, expert answers, annotation, content review. Reason: they are the only channel found in 26 runs where a solo operator can earn **this week**, with no storefront, no reviews, no portfolio and no client conversation — which is exactly the constraint the 26-day site outage has created. They are bridge income, not the Clevora business.
+- **The India-payment screen from the last cycle still applies and it now decides the order.** Outlier (PayPal/Airtm), Mercor (Stripe→INR or Wise), Mindrift (Payoneer/Tipalti), micro1 (Deel) all have a working India payout rail. That is why they lead the list and why marketplace entries that pay only via invite-only Stripe stay at the bottom.
+- Cross-checked and deliberately **excluded** because they are already logged or are client-side: Gvika, Lancerscape, TalentAIWorks, PeerHire, Brainlancer (all in prior cycles). Pepper Content and Remogrid kept as watchlist only.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-16)
+
+*Theme: AI training / expert networks — direct-pay channels that work with no website. Country and payout rules read from platform/aggregator pages, dated 13–14 Nov 2026.*
+
+1. **Outlier (Scale AI)** — India is on Outlier's approved list (117 countries, effective 15 Jul 2026). Rates shown per project, published range $10–50/hr. Pays PayPal, Airtm or ACH, weekly on Tuesdays. India-specific projects exist (personal finance, medicine, Indian-language speech). VPN banned; Indian ID + Indian mobile required.
+2. **Mercor** — India on its supported-countries list; Indian residents contract as independent contractors, paid weekly via Stripe into an Indian bank account in rupees (Wise also listed). Live India-relevant example at check: *Bilingual Hindi Generalist Expert — AI Safety*, $18–22/hr. Screening is an AI interview; listings without a stated region default to US/CA/UK/EU, so confirm India on the listing first.
+3. **Mindrift (run by Toloka)** — India appears on neither its sanctioned nor its unsupported list, so it is open. Pays Payoneer or Tipalti, twice a month. Project-based with qualification tests; India STEM listings seen (e.g. CFD Engineer – AI Trainer) with wide posted ranges. Best fit for a technically strong profile; weakest fit for generalist writing.
+4. **micro1** — each role sets its own location rules (read the listing, do not assume). Paid via Deel in USD, twice a month. Platform-advertised range $15–135/hr with roughly 42 India-eligible roles open at check — the highest ceiling of the ten, and the hardest bar.
+5. **DataAnnotation** — long-running AI-training platform for writers and coders; no published country list, PayPal payout, entry assessment in your chosen track. Treat India eligibility as "apply and see"; the writing track is the realistic entry.
+6. **Alignerr (Labelbox)** — expert AI-training arm; country rules set per listing and billing configured after approval. Worth one application in a domain where you can show evidence (writing/QA/SEO), not a broad spray.
+7. **Toloka** — crowd annotation and content rating; per-task pay, effective rates near $8/hr on general projects, 10–20 hrs/week during active phases. Live India (New Delhi) annotator listings on its Workable board. Low ceiling, fast start, zero portfolio needed.
+8. **Wiingy AI Experts** — expert network across 20+ domains; posted rates $15–20/hr (video contribution) up to $100–120/hr (clinical). Approved work paid monthly, by Wise or bank transfer, and **Indian experts are paid in INR** — the cleanest payout rail on this list.
+9. **eQOURSE+ (freelancers)** — Indian academic-content and AI-data freelance arm with an **India contract entity, TDS and GST workflows**, plus a recorded earnings ledger. The only entry here built for Indian tax paperwork; suits subject-matter content and question/answer authoring.
+10. **WensWork** — newer escrow-protected marketplace with content writing, translation, SEO and growth categories. Small and unproven, but escrow means payment is held before work starts. Verify the India payout route before bidding.
+
+*Watchlist (client-side, not applicant-side): Pepper Content (curated Indian enterprise content hub, Net-30 via bank/UPI), Remogrid.*
+
+### Proposals (DRAFTS — do not send without owner approval)
+
+**Proposal BX — Website rescue audit for a business that already has a site but no enquiries**
+> Hi [Name], I looked at [Company]'s site on my phone and found three things costing you enquiries: it takes [X] seconds to load on 4G, the phone number is not tappable, and the contact form does not confirm anything after submit. I'll send you a one-page audit with the exact fixes, ranked by impact, for Rs 2,500 — and if you want me to implement them, that's Rs 6,000 flat with a before/after speed score. Most fixes are done in two days. Want the audit for [Company]?
+
+**Proposal BY — Product catalogue + description writing for a D2C / Shopify seller**
+> Hi [Name], I write product pages that read like a human wrote them and still rank. For [Company] I'd take 50 SKUs: title, 80–120 word description, 5 bullet benefits, meta title + description, and alt text for the images — delivered in 6 days, Rs 4,000 for the first 50, with a free rewrite of any 5 you don't like. I'll do your 3 best-selling products free first so you can judge the voice before paying. Shall I start with those 3?
+
+**Proposal BZ — Google Business Profile setup + review engine for a clinic / salon / gym / CA firm**
+> Hi [Name], most local customers find you on Google Maps, not on a website — and [Company]'s profile is missing photos, hours and categories, which is why you show up lower than you should. I'll set it up properly (categories, services, hours, 10 photos, first 3 posts) for Rs 3,500, then run a simple review-request flow — a WhatsApp message with a direct review link sent after every visit — for Rs 1,000/month. No website needed on your side. Want me to send a screenshot of what your profile looks like today?
+
+### Topic of the Day (Part 2)
+
+- Day number 16 -> 16 mod 5 = 1 -> **TOPIC 1: Skill Tip + 5-min Exercise**.
+- Skill picked (new vs the six prior Topic-1 picks: Canva Bulk Create, Sheets QUERY, single-file HTML, IMPORTHTML/IMPORTXML, WordPress synced patterns, WhatsApp/Meta Blueprint): **deploying a static HTML site by drag-and-drop on Cloudflare Pages — no Git, no terminal, no build step, live in about three minutes.**
+- Why it matters commercially, right now: it is the exact fix for the 26-day outage. GitHub Pages has been 404 for 26 days waiting on one settings click; Cloudflare Pages Direct Upload needs no repo setting at all. Drag the folder, get `project-name.pages.dev`, put that link in every proposal. Free plan: unlimited requests and bandwidth, 1,000 files per drag-and-drop upload, 25 MiB per file, custom domains included. One caveat logged: a Direct Upload project **cannot** be converted to Git integration later — fine here, since the goal is a URL today.
+- Free resources: Cloudflare's own Direct Upload guide — https://developers.cloudflare.com/pages/get-started/direct-upload/ ; Cloudflare dashboard — https://dash.cloudflare.com/ (Workers & Pages → Create application → Drag and drop your files).
+- Mini action: download `clevora-landing-draft.html` from this repo, rename it `index.html` inside an empty folder, drag that folder into Cloudflare Pages, and paste the resulting `*.pages.dev` link into Proposal BX and BZ. ~5 minutes, Rs 0, and the "no website" objection disappears from every pitch.
+
+### Revenue Status
+
+- Recorded revenue this run: **Rs 0** (nothing observable).
+- Razorpay: `Authentication failed` — payment events not retrievable. State UNKNOWN, 26th run.
+- Supabase: no authorised connection — signup events not retrievable. State UNKNOWN.
+- No payments taken, no messages sent, no customer-facing page published. Drafts and log only, per standing instruction.
+
+### Next Actions
+
+1. **[OWNER — 2 minutes, blocking, corrected this run]** Two steps, in this order: **(a)** replace `index.html` with `clevora-landing-draft.html` (fill the WhatsApp number and email placeholders first), **(b)** then Settings → Pages → Source `main` / `/ (root)` → Save. Doing (b) before (a) publishes a "retired" notice.
+2. **[OWNER — 5 minutes, no spend, works even if Pages stays broken]** Deploy the same file to **Cloudflare Pages** by drag-and-drop and use the `pages.dev` URL in proposals. This bypasses the Pages setting entirely.
+3. **[OWNER — 26 runs overdue]** Rotate the Razorpay API keys in the connector.
+4. **[OWNER — 26 runs overdue]** Authorise the Supabase integration (project `ocuyxgocmtucdckiqqeh`) and confirm the project is not paused.
+5. **[OWNER — free, 15 minutes]** Create the **Google Business Profile** for Clevora — now doubly relevant, since Proposal BZ sells exactly this service.
+6. **[OWNER — free, 60 minutes this week, bridge income]** Apply to **Outlier, Mercor and Wiingy AI Experts** (best payout rails for India). Even one accepted project covers the domain cost and removes the "no revenue ever recorded" problem from this log.
+7. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first. Rotate to a fresh lead theme again (all 260 platforms now logged): candidate next theme is **Indian SMB channel partners — CA firms, ad agencies and Shopify agencies that white-label content/automation** (reseller route, not marketplace route). Continue proposal bank BZ → CA/CB/CC.
