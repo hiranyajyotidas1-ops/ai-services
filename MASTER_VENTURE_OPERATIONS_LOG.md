@@ -2005,3 +2005,87 @@
 5. **[OWNER — free, 15 minutes]** Create the **Google Business Profile** for Clevora — now doubly relevant, since Proposal BZ sells exactly this service.
 6. **[OWNER — free, 60 minutes this week, bridge income]** Apply to **Outlier, Mercor and Wiingy AI Experts** (best payout rails for India). Even one accepted project covers the domain cost and removes the "no revenue ever recorded" problem from this log.
 7. **[ENGINE — next run]** Re-verify site / Razorpay / Supabase first. Rotate to a fresh lead theme again (all 260 platforms now logged): candidate next theme is **Indian SMB channel partners — CA firms, ad agencies and Shopify agencies that white-label content/automation** (reseller route, not marketplace route). Continue proposal bank BZ → CA/CB/CC.
+
+---
+
+## Run VENTURE-2026-11-17-01 — 2026-11-17 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:05 IST / 03:35 UTC
+**Run:** #27 logged
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | DOWN | `https://hiranyajyotidas1-ops.github.io/ai-services/` → **HTTP 404** on an independent external fetch (27th day). `index.html` on `main` is still the 547-byte "This website has been retired." placeholder. `clevora-landing-draft.html` remains committed but undeployed. |
+| Supabase (users) | BLOCKED | No authorised connection for project `ocuyxgocmtucdckiqqeh`. Signups UNKNOWN, not zero. 27th run. |
+| Razorpay (payments) | BLOCKED | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. 27th consecutive run. |
+| GitHub log | OK | This entry appended and committed via the GitHub connector (HTTPS git push is still unauthenticated in the sandbox — the connector is the working write path). |
+| Lead research | OK | 10 new channels, none repeated across 26 prior cycles (270 platforms logged). New theme: **Indian white-label agency backends + B2B partner marketplaces** — the reseller route, as planned by run #26. |
+| Proposals | OK | 3 fresh drafts (CA / CB / CC), aimed at agencies rather than end clients. Nothing sent. |
+
+### Key Findings
+
+- **No change on any of the three blocking items.** Site 404 (27 days), Razorpay auth failure (27 runs), Supabase unauthorised (27 runs). Everything the engine can do without owner action is now preparation, not execution — and the two cheapest owner actions in the log remain a 2-minute file rename and a 5-minute Cloudflare Pages drag-and-drop.
+- **The lead theme changed route, not just niche.** Twenty-six cycles hunted places where a *client* posts work. This cycle targets the layer above: Indian white-label agencies that resell content, SEO and web builds under someone else's brand, and B2B marketplaces where agencies look for subcontractors. The pitch is wholesale and repeatable — one agency partner is a monthly volume commitment instead of a one-off ₹4,000 job, and it needs no storefront, which is why it survives the 27-day outage.
+- **Honest read on the white-label shops (leads 1–6):** they are competitors for end clients, not clients. Clevora's angle with them is **capacity, not customers** — they publish 3–7 day turnarounds on 1,200–1,800-word SEO articles and openly run on freelancer capacity. This is a subcontractor pitch, and it should be priced at 40–50% of their resale rate, not at retail.
+- **Two of the ten solve the recurring-revenue gap** the log has flagged since October: Freelancers Spot lists *subscription gigs* (weekly/monthly retainers) and ServicePlex charges **no commission** on what two businesses agree. Every prior channel was per-project.
+- **A newer, under-supplied service line showed up twice:** Serpwize and Above The Fold both sell **GEO / AI-answer-engine content** — writing that gets a brand cited by ChatGPT, Perplexity and AI Overviews. Almost no Indian freelance writer lists it. It is a defensible positioning for Clevora's content offer, and it is written into Proposal CA.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-17)
+
+*Theme: Indian white-label agency backends + B2B partner marketplaces. Details read from each platform's own page on 17 Nov 2026. Leads 1–6 are agencies that buy production capacity; 7–10 are marketplaces where businesses find each other.*
+
+1. **Above The Fold** (abovethefold.in, Mumbai + Jaipur, 30+ team) — runs a published white-label partner programme across seven lines: social content, reels editing, AI product photography, design, SEO + content writing, paid media, WordPress/Shopify builds. Stated turnarounds: 24–48h for static creative, 3–5 days for a 1,200–1,800-word SEO article, 4–10 weeks for a website. NDA-first, no public rate card, **paid pilot on a real brief** is their standard start. Angle: overflow SEO writing + AI product-image batches.
+2. **Kodewood** (kodewood.com) — silent production backend for Indian and overseas agencies; mutual NDA, **GST-compliant INR invoicing**, project / hourly / dedicated-retainer models, written non-solicitation of end clients. Angle: content and marketing-automation capacity inside their SEO line.
+3. **Weboo Tech** (weboo.in) — white-label programme whose sellable list is almost exactly Clevora's stack: SEO blog writing, website/landing copy, email campaigns, **WhatsApp automation setup + copywriting**, bulk SMS, video scripts, press releases. 3–7 day delivery. Angle: WhatsApp automation + copy as one bundle — the only lead here already selling automation as a product.
+4. **The Monk Media** (themonkmedia.in) — white-label SEO for agencies; states partners mark up **50–150%**; includes content writing, white-label local SEO, **Google Business Profile management** and unbranded monthly reports. Angle: GBP/local-SEO fulfilment at wholesale — the same service as Proposal BZ, sold B2B.
+5. **Lenoretech** (lenoretech.in) — white-label digital marketing; 30-strong team; quoted **30–50% reseller margin**; SEO, PPC, content, design, development under NDA. Angle: overflow content/design when their team is at capacity.
+6. **Serpwize** (serpwize.com) — white-label SEO reseller with an India-based delivery team; explicitly sells **AI SEO / GEO**, local SEO and content, no lock-in, per-project or monthly retainer. Angle: GEO-first content writing — the least crowded skill on this list.
+7. **ServicePlex** (serviceplex.in) — Indian **B2B** marketplace where businesses subcontract to businesses, not just hire freelancers. Free profile, 10 free credits, 1 credit opens a chat, and **no commission** on whatever the two sides agree. Angle: register as a business that takes subcontracted web/automation work.
+8. **Think4Ever** (think4ever.com) — outsourcing marketplace with two modes: task-level gigs and full-project outsourcing, with scoped access and audit trails per contract. Angle: list automation projects as fixed-scope tasks rather than open-ended services.
+9. **Outzo** (outzo.in/marketplace) — outcome-first B2B marketplace: you describe the result you need, their team verifies partners and returns a shortlist in **48 working hours**. Angle: register as a verified partner for website/automation outcomes — the buyer is already qualified by Outzo's team.
+10. **Freelancers Spot** (freelancerspot.in) — Indian marketplace, **zero platform fees**, Cashfree escrow released on approval, chat in Tamil or English, and — the differentiator — **subscription gigs** (weekly/monthly/quarterly retainers) plus agency/team accounts. Small (95+ verified freelancers at check). Angle: publish one retainer listing (social/SEO upkeep) instead of another per-project gig.
+
+*Watchlist (white-label SEO providers with no public rates, worth one enquiry each): Impexive, Mind Mingles, Clixlogix, Media Search Group. Also Blackbear (managed freelance marketplace, sourcing done for the buyer).*
+
+### Proposals (DRAFTS — do not send without owner approval)
+
+**Proposal CA — White-label content partner for an SEO / digital agency (10 articles a month, wholesale)**
+> Hi [Name], your site says you deliver SEO content for agency partners in 3–5 days. I'm the writer you can hand the overflow to: 10 articles a month, 1,200–1,800 words, keyword-mapped, with meta title/description and internal-link suggestions — delivered under your brand, in your template, with no byline and no contact details anywhere in the file. I write for both classic search and AI answers (GEO): direct-answer paragraphs, entity mentions, FAQ blocks, so the piece can get cited by ChatGPT and Perplexity, not just ranked. ₹700 per article at 10/month, first two free so you can test the voice on a live brief. Want me to take one article off your queue this week?
+
+**Proposal CB — Overflow landing-page build partner for an agency (48-hour turnaround, agency rate)**
+> Hi [Name], when a client signs and your designer is booked for two weeks, the launch slips and the retainer starts late. I build single landing pages — one offer, one CTA, mobile-first, under 2 seconds on 4G, form wired to email/WhatsApp — delivered in 48 hours as a clean file your team can edit. ₹4,500 per page at 3+ pages a month, unbranded with no comments or credits in the code, and you review before it ever reaches the client. Send me one live brief and I'll return the first page as a paid pilot at ₹2,500. Should I take the next one off your board?
+
+**Proposal CC — White-label WhatsApp + lead follow-up automation for an agency's local clients**
+> Hi [Name], most of your local clients lose enquiries between the form and the first reply. I set up a simple automation under your brand: form/Instagram lead → instant WhatsApp message → 3 follow-ups over 7 days → a shared sheet the client can read. No new software for them, no monthly SaaS bill — runs on tools they already have. ₹6,000 setup per client, ₹1,000/month to monitor and fix, and I stay invisible: your logo on the handover doc, your name on the calls. I'll build one free demo flow on your own number so you can feel it before selling it. Want the demo this week?
+
+### Topic of the Day (Part 2)
+
+- Day number 17 -> 17 mod 5 = 2 -> **TOPIC 2: POD Trend + Canva Design Idea** (Shopify: t-shirt/mug/phone case/tote bag).
+- Trend: **funny Christmas animals with attitude — and the mug as the hero product.** A different pick from the four earlier Topic-2 angles (10-22 statement tote, 10-27 western tee, 11-02 Christmas wrapping pattern, 11-12 Friendsmas name sets). Playground's November 2026 scan puts **farm animals with sass** — highland cows in Santa hats, geese in scarves, punny chickens — among the most-used Christmas templates of October, and notes dog breeds as the easiest swap. The same report shows Christmas template use more than **tripled from mid-September** and passed Halloween in the second week of October. Why the mug and not the tee: it has no size variants to manage, ships cheapest, sits in the stocking-stuffer price band buyers are in right now, and the small print area suits one animal + one short pun better than a full-front tee.
+- Timing: **list by 20 November** — that is 3 days from today, and it is the same cutoff the log has carried since 2 November. A mug listing needs the least review history of any product, so a mug listed today can still catch the 15 December gifting peak.
+- What to avoid: another generic "Merry Christmas" text mug, Halloween/fall/pumpkin art (searches peaked in September, template use down ~40%), new Thanksgiving listings (26 Nov is too close to be found), unedited AI art at volume (still the most saturated POD strategy), and any licensed fandom art — Q4 takedown enforcement is at its peak.
+- Canva idea: **one animal, one pun, two colours.** Canvas **2475 × 1155 px** for an 11oz mug wrap (300 DPI), art centred in the middle band and kept ~1 cm off both edges so the handle seam never cuts it. Example: a highland cow in a Santa hat with "MERRY CHRISTMAS, YA BEAST" in a chunky slab serif, or a goose in a scarf with "HONK IF YOU'RE FESTIVE". Palette: cream background, one ink colour (oxblood, forest or butter yellow). Export transparent PNG, then reuse the same motif on a tote (4500×4500) and a phone case — one design, three products.
+- Upsell: sell the **mug + matching tote** as a set rather than discounting either; and run the same animal across a breed series (cow, goose, chicken, plus one dog breed) so a buyer can pick their person — that is the same trick that made the Friendsmas name sets sell in groups.
+- Free resources: https://www.canva.com/create/mugs/ (free mug mockup generator) | https://www.canva.com/templates/?query=mug (mug-wrap templates) | trend source: https://playgroundai.com/blog/november-2026-print-on-demand-design-trends
+- Mini action: Canva kholo, 2475×1155 px canvas banao, ek highland cow + Santa hat + ek chhota pun lagao, transparent PNG export karo, mug mockup pe chadhao, aur Printify ke through Shopify pe list kar do — ~20 minute. Bas ek design, aaj hi.
+
+### Revenue Status
+
+- Recorded revenue this run: **Rs 0** (nothing observable).
+- Razorpay: `Authentication failed` — payment events not retrievable. State UNKNOWN, 27th run.
+- Supabase: no authorised connection — signup events not retrievable. State UNKNOWN.
+- No payments taken, no messages sent, no customer-facing page published. Drafts and log only, per standing instruction.
+
+### Next Actions
+
+1. **[OWNER — 2 minutes, blocking, 27 days]** Replace `index.html` with `clevora-landing-draft.html` (fill the WhatsApp number and email placeholders), **then** Settings → Pages → Source `main` / `/ (root)` → Save. In that order.
+2. **[OWNER — 5 minutes, bypasses the Pages setting entirely]** Drag the same folder into **Cloudflare Pages** (Direct Upload) and use the `*.pages.dev` link in every proposal.
+3. **[OWNER — 27 runs overdue]** Rotate the Razorpay API keys in the connector.
+4. **[OWNER — 27 runs overdue]** Authorise the Supabase integration (project `ocuyxgocmtucdckiqqeh`) and confirm the project is not paused.
+5. **[OWNER — free, 15 minutes]** Create the **Google Business Profile** for Clevora — the only channel found in 27 runs that can produce a phone call without a website.
+6. **[ENGINE — next run]** Send nothing; instead turn Proposal CA into a one-page white-label rate card (per-article, per-page, per-automation) so leads 1–6 can be approached with a price sheet rather than a paragraph.
+7. **[ENGINE — next run]** Rotate the lead theme again (280 platforms logged): candidate is **Indian D2C brand operators and Shopify app partners** — brands already paying for content and automation, reached through app-partner and agency directories rather than job boards.
+8. **[ENGINE — next run]** Continue the proposal bank CC → CD/CE/CF; re-verify site, Razorpay and Supabase first and log the deltas.
