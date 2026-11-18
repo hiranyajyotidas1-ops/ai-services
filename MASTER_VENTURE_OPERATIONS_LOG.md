@@ -2089,3 +2089,74 @@
 6. **[ENGINE — next run]** Send nothing; instead turn Proposal CA into a one-page white-label rate card (per-article, per-page, per-automation) so leads 1–6 can be approached with a price sheet rather than a paragraph.
 7. **[ENGINE — next run]** Rotate the lead theme again (280 platforms logged): candidate is **Indian D2C brand operators and Shopify app partners** — brands already paying for content and automation, reached through app-partner and agency directories rather than job boards.
 8. **[ENGINE — next run]** Continue the proposal bank CC → CD/CE/CF; re-verify site, Razorpay and Supabase first and log the deltas.
+
+---
+
+## Run VENTURE-2026-11-18-01 — 2026-11-18 (IST)
+
+**Run type:** Scheduled automated (Growth & Venture Engine)
+**Timestamp:** 09:02 IST / 03:32 UTC
+**Run:** #28 logged
+
+### Workstream Status
+
+| Workstream | Status | Notes |
+|---|---|---|
+| Website (GitHub Pages) | **DOWN — 28th day** | `https://hiranyajyotidas1-ops.github.io/ai-services/` → **HTTP 404** on an independent external fetch. Sandbox `curl` still refused by the egress proxy (CONNECT 403). `index.html` on `main` is still the 547-byte "This website has been retired." placeholder; `clevora-landing-draft.html` remains committed but undeployed. |
+| Supabase (users) | **BLOCKED (28th run)** | No authorised Supabase connection in this run's tool set — `users` table in project `ocuyxgocmtucdckiqqeh` could not be queried. Signups UNKNOWN, not zero. |
+| Razorpay (payments) | **BLOCKED (28th consecutive run)** | `RAZORPAY_FETCH_ALL_PAYMENTS` → `BAD_REQUEST_ERROR: Authentication failed`. Payment events UNKNOWN, not zero. |
+| GitHub log | OK | This entry appended and committed in this run. |
+| Lead research | OK | 10 new platforms, none repeated across 27 prior cycles (280 platforms logged). |
+| Proposals | OK | 3 fresh drafts (CD / CE / CF). Nothing sent. |
+
+### Key Findings
+
+- **Zero movement on all three blockers.** Site 404 (28 days), Razorpay auth failure (28 runs), Supabase unauthorised (28 runs). The engine is now producing preparation only; the two cheapest owner fixes in the log remain a 2-minute file rename and a 5-minute Cloudflare Pages drag-and-drop.
+- **Theme this cycle: the app-ecosystem partner directory.** Instead of hunting for buyers who post jobs, this cycle looks at places where merchants are *already paying* for the exact problems Clevora solves — WhatsApp commerce, shoppable video, storefront conversion. Spur's partner directory, ReelUp's and Quoli's all publish their partners, which means two things at once: a listing route, and a free competitor price book (Spur's India partners state WhatsApp copy + creatives, CRO and store builds as their mix; store builds listed at **$300–$1,000**, SEO **from $200**).
+- **The delivery-network route from run #27 is confirmed, not saturated.** Seven more Indian agencies publish open partner/subcontractor pages this week (Retales, Nico Digital, Zenspire, Growth Limit, Trumpet, Morphuse, BYOB) — all with no joining fee, NDA-first, pilot-project-first. Their stated economics tell us the real wholesale price band: Zenspire keeps **up to 40%** for the reseller, Lenoretech quotes **30–50%**, Nico Digital quotes **45–65% gross margin** to the agency. So an agency's buying price for a blog article sits well under half of retail. That is the number to price CD/CE/CF against, not retail.
+- **One structural note for the offer:** every delivery network found today sells *production*, none sells *measurement*. Nobody in this set offers "show my client they are cited by ChatGPT / Perplexity / AI Overviews, monthly, in a one-page PDF." That is the gap Proposal CD fills, and it is the cheapest retainer to run.
+
+### Leads — 10 NEW Platforms to Offer AI Services (checked 2026-11-18)
+
+*Theme: commerce-SaaS partner directories (buyers are already paying merchants) + Indian agency delivery networks (recurring wholesale volume). Read from each platform's own page on 18 Nov 2026. Leads 1–3 are directories; 4–10 are agencies/networks that buy capacity.*
+
+1. **Spur Partner Directory** (spurnow.com/en/partners/directory) — WhatsApp-commerce platform's approved-partner directory, listed by city and capability (WhatsApp, ads, CRO, Shopify, SEO, content). Partners are vetted on application and profiled publicly. Angle: apply as an automation + copy partner — the merchants browsing this page already run broadcasts and abandoned-cart flows, so they buy fixes, not education.
+2. **Quoli Partners Directory** (quoli.io/partners-directory) — Shopify agency/app partner directory segmented by region (South Asia prominent), tagged by Shopify development, brand design, performance marketing, AI. Angle: claim a South Asia listing for store builds + product-copy packages; free and fast to appear.
+3. **ReelUp Partners Directory** (reelup.io/pages/partners-directory) — shoppable-video app's agency directory (Shopify Plus experience design, UGC, reviews, loyalty). Angle: partner listing for short-form video scripts + product-page copy — the content half of their video stack.
+4. **Retales** (retales.in/agency-partnership) — India-based white-label + referral partnership: **no joining fee**, three models (white-label, referral commission, joint delivery), services span market research, content/copywriting and execution. Requires NDA + written agreement; five-minute application, pilot first. Angle: research + content fulfilment for agencies that win more work than they can staff.
+5. **Nico Digital** (nicodigital.com/partners) — white-label fulfilment for agencies and fractional CMOs across SEO, PPC, content, social, web and **AI-search (GEO)**; senior India-based delivery, NDA-backed, no volume minimums, pilot client first; partners keep **45–65% gross margin**. Angle: GEO/AI-search delivery is already a named line here — subcontract into it with the citation-report product (CD).
+6. **Zenspire Media** (zenspiremedia.com/white-label/content-writing) — white-label content desk (blogs, service pages, bulk product descriptions, email/WhatsApp copy, Hindi/Punjabi native writing), 48-hour standard turnaround, plagiarism + AI-check reports under the partner's logo, reseller margin **up to 40%**, Shopify Partner. Angle: capacity for bulk product-description batches at wholesale.
+7. **Growth Limit** (growthlimit.com/partnerships) — specialist delivery network: writers, developers, SEO techs, designers and **AI builders** deliver under the Growth Limit brand; Growth Limit owns client, billing and acceptance; **net-30 payment terms**; prefers 3+ years' discipline experience. Angle: register as an AI-builder specialist — the only entry here that names AI builds as a supply line.
+8. **Trumpet Media** (trumpetmedia.co.in/partner-program) — white-label partner programme across web performance, social and SEO, delivered by their team under the partner's brand; application form, response in 24–48h. Angle: overflow content + landing pages when their design queue blocks a launch.
+9. **Morphuse Digital** (morphuse.com/work-with-us) — ecommerce growth-systems shop openly recruiting white-label agencies, subcontractors and sales partners for development, technical fixes, **CRM setup, integrations and content implementation**. Angle: CRM/integration + content implementation — the automation half of their ecommerce builds.
+10. **BYOB — Build Your Own Brand** (byob.net.in/service/b2b-white-label-partnerships) — B2B white-label partnerships for agencies and coaches; positioning is explicitly "we stay invisible in the background". Angle: a coach's funnel needs landing pages + email sequences; sell it as a bundle behind their brand.
+
+*Watchlist (0 hits in prior logs, worth one enquiry each, not yet profiled): Hyrve AI (hyrveai.com, agent marketplace with escrow), Agex (agexmarket.com, Razorpay payouts, 80/20 split, ₹100 withdrawal floor — the lowest INR payout threshold seen so far), Above The Fold's partner programme.*
+
+### Proposals (DRAFTS — do not send without owner approval)
+
+**Proposal CD — Monthly "AI citation report" for a D2C brand (the GEO retainer nobody sells)**
+> Hi [Name], your customers increasingly ask ChatGPT or Google's AI summary what to buy instead of scrolling search results — and right now nobody can tell you whether [Company] gets mentioned in those answers. I'll run that check for 20 questions your buyers actually type, show you exactly which brands get cited instead of you, and rewrite the pages that should be winning those answers. ₹3,500 for the first report plus fixes on two pages; ₹2,500 a month after that for the re-check and one new optimised page. The first report takes four days. Want me to run the 20-question check on [Company] this week?
+
+**Proposal CE — AI product-photo + catalogue refresh for a Shopify seller's new collection**
+> Hi [Name], your new collection goes live with the photos you have, not the photos you want — studio shoots cost ₹150–₹400 a shot and take a week. I take your existing product shots and return clean white-background images, 3 lifestyle scenes per product, and the 5 sizes Shopify needs (square, 4:5, story, PDP zoom, OG image), plus rewritten titles and 80–120 word descriptions with alt text. ₹60 per product for the full set, 40 products in five days, first 5 free so you can judge quality before paying. Send me your 5 bestsellers and I'll turn them around in 24 hours — shall I?
+
+**Proposal CF — Agency month-end reporting pack on autopilot (Sheets + automation, agency-branded)**
+> Hi [Name], month-end reporting is the job nobody at the agency has time for — pulling Meta, Google, GA4 and Search Console numbers into a deck for each client. I build one Google Sheet per client that pulls the numbers automatically and emails a branded one-page PDF on the 1st, with a plain-English "what changed and what we're doing about it" block your account manager only has to approve. ₹6,000 to set up for the first 5 clients, ₹1,200 per additional client, and it runs without you. I'll build the template free on one client's data so you can see the output first. Which client should I use?
+
+### PART 2 — DAILY TOPIC
+
+- Day number 18 -> 18 mod 5 = 3 -> **TOPIC 3: Content Idea** (LinkedIn post / Instagram reel / YouTube / blog / Twitter thread / Quora / Reddit).
+- Format picked (deliberately different from the three earlier Topic-3 picks — carousel+reel, Quora/Reddit answers, LinkedIn post+reel): **a long-form YouTube build video + a blog post repurpose.** One screen-recorded, unedited build of a real automation, published as a 12–18 min video, then cut into a blog post and a 60-second Short.
+- Why this one: video is the only content format that survives a dead website — the proof is in the recording, and YouTube search keeps sending traffic for months. A build video also answers the buyer's real objection ("can you actually do it?") better than any carousel, and it gives every future proposal a link to attach.
+- Free resources: OBS Studio (free screen recorder) — https://obsproject.com/download ; DaVinci Resolve (free editor, no watermark) — https://www.blackmagicdesign.com/products/davinciresolve ; YouTube Creator resources — https://www.youtube.com/creators/
+- Mini action: record ONE 20-minute build — WhatsApp order-confirmation automation from a Google Sheet to a message — with no cuts, no intro, just the build and the finished result at the end. Upload as-is today; polish nothing.
+
+### Next Actions
+1. **[OWNER — 28 days overdue]** Deploy the landing page. `index.html` is still the retired placeholder; `clevora-landing-draft.html` is already in the repo — a rename and a push fixes 28 days of dead links.
+2. **[OWNER — 28 runs overdue]** Rotate / verify the Razorpay API keys. Revenue state is unknowable until this works.
+3. **[OWNER — 28 runs overdue]** Authorise the Supabase integration for `ocuyxgocmtucdckiqqeh` and confirm the project is not paused.
+4. **[ENGINE — next run]** Turn Proposal CD into the actual deliverable: a 20-question GEO check template + one-page report format, so the first reply can attach a real sample instead of a promise.
+5. **[ENGINE — next run]** Apply to Spur and Quoli partner directories (free, no fee, merchant buyers already on the page) and log the listing URLs in this file.
+6. **[ENGINE — next run]** Price the whole proposal bank against the wholesale band found this cycle (reseller margin 30–65%) — the current retail numbers are too high for an agency buyer.
+7. **[ENGINE — next run]** Continue the proposal bank CF -> CG/CH/CI; re-verify site, Razorpay and Supabase first and log the deltas.
